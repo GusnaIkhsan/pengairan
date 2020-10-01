@@ -5,10 +5,11 @@
               <img src="<?php echo base_url(); ?>/asset/admin/dist/img/users.gif" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <?php 
-                // $usr = $this->db->query("SELECT * FROM users where username='".$this->session->username."'")->row_array(); 
-                // echo "<p>$usr[nama_lengkap]</p>";
-                echo "<p>Gusna Ikhsan</p>";
+              <?php                 
+                $usr = $this->db->query("SELECT * FROM users where username='".$this->session->username."'")->row_array(); 
+                echo "<p>$usr[nama_lengkap]</p>";
+                // echo "<p>Gusna Ikhsan</p>";
+                // print_r($this->session);
               ?>
               
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>

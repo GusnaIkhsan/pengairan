@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>WELCOME ADMINISTRATOR</title>
-    <meta name="author" content="lokomedia.web.id">
+    <meta name="author" content="gusnavanila">
     <link rel="shortcut icon" href="<?php echo base_url()?>asset/images/favicon.png" />
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -119,19 +119,19 @@
         });
       });
     </script>
-    <script>
+    <!-- <script>
     CKEDITOR.replace('editor1' ,{
       filebrowserImageBrowseUrl : '<?php echo base_url('asset/kcfinder'); ?>'
     });
-  </script>
+  </script> -->
   <script type="text/javascript">
   // To make Pace works on Ajax calls
-  $(document).ajaxStart(function() { Pace.restart(); });
-    $('.ajax').click(function(){
-        $.ajax({url: '#', success: function(result){
-            $('.ajax-content').html('<hr>Ajax Request Completed !');
-        }});
-    });
+  // $(document).ajaxStart(function() { Pace.restart(); });
+  //   $('.ajax').click(function(){
+  //       $.ajax({url: '#', success: function(result){
+  //           $('.ajax-content').html('<hr>Ajax Request Completed !');
+  //       }});
+  //   });
 
 
     var url = window.location;

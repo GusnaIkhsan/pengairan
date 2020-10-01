@@ -62,3 +62,9 @@ $route['sarjana'] = 'Sarjana/SarjanaController/index';
 $route['magister'] = 'Magister/MagisterController/index';
 $route['doktor'] = 'Doktor/DoktorController/index';
 $route['content'] = 'Sarjana/SarjanaController/profilContent';
+
+// admin - dosen
+$route['form/download']['GET'] = 'admin/DosenController/generate_template';
+$route['form/upload']['POST'] = 'admin/DosenController/recieve_from_upload_template';
+$route['fakultas']['GET'] = 'admin/DosenController/get_fakultas';
+

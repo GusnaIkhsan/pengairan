@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Administrator extends CI_Controller {
+
 	function index(){
 		if (isset($_POST['submit'])){
 			$username = $this->input->post('a');
@@ -13,16 +14,23 @@ class Administrator extends CI_Controller {
 				$this->session->set_userdata(array('username'=>$row['username'],
 								   'level'=>$row['level']));
 
-				redirect('administrator/home');
+                redirect('administrator/home');
+                // var_dump($this->session->userdata);
+                // var_dump($row);
 			}else{
 				$data['title'] = 'Administrator &rsaquo; Log In';
-				$this->load->view('administrator/view_login',$data);
+                $this->load->view('administrator/view_login',$data);
+                // echo "ikhsan";
 			}
 		}else{
 			$data['title'] = 'Administrator &rsaquo; Log In';
 			$this->load->view('administrator/view_login',$data);
 		}
-	}
+    }
+    
+    function ceksession(){
+        print_r($this->session->userdata);
+    }
 
 	function home(){
 		cek_session_admin();
@@ -976,11 +984,11 @@ class Administrator extends CI_Controller {
 
     // Controller Dosen
     function dosen(){
-        if ($this->session->level=='admin'){
+        // if ($this->session->level=='admin'){
             $data['record'] = $this->model_app->view_join_one('dosen','fakultas','id_fakultas','id_dosen','DESC');
-        }else{
-            $data['record'] = $this->model_app->view_join_where('dosen','fakultas','id_fakultas',array('dosen.username'=>$this->session->username),'id_dosen','DESC');
-        }
+        // }else{
+        //     $data['record'] = $this->model_app->view_join_where('dosen','fakultas','id_fakultas',array('dosen.username'=>$this->session->username),'id_dosen','DESC');
+        // }
         $this->template->load('administrator/template','administrator/mod_dosen/view_dosen',$data);
     }
 
@@ -994,7 +1002,8 @@ class Administrator extends CI_Controller {
             $hasil=$this->upload->data();
             if ($hasil['file_name']==''){
                 $data = array('id_fakultas'=>$this->input->post('a'),
-                            'username'=>$this->session->username,
+                            // 'username'=>$this->session->username,
+                            'username'=>"admin",
                             'nm_dosen'=>$this->input->post('b'),
                             'dosen_seo'=>seo_title($this->input->post('b')),
                             'keterangan'=>$this->input->post('c'),
@@ -1002,7 +1011,8 @@ class Administrator extends CI_Controller {
                 			'hp'=>$this->input->post('e'));
             }else{
                 $data = array('id_fakultas'=>$this->input->post('a'),
-                            'username'=>$this->session->username,
+                            // 'username'=>$this->session->username,
+                            'username'=>"admin",
                             'nm_dosen'=>$this->input->post('b'),
                             'dosen_seo'=>seo_title($this->input->post('b')),
                             'keterangan'=>$this->input->post('c'),
@@ -1050,11 +1060,11 @@ class Administrator extends CI_Controller {
             redirect('administrator/dosen');
         }else{
             $record = $this->model_app->view_ordering('fakultas','id_fakultas','DESC');
-            if ($this->session->level=='admin'){
+            // if ($this->session->level=='admin'){
                 $proses = $this->model_app->edit('dosen', array('id_dosen' => $id))->row_array();
-            }else{
-                $proses = $this->model_app->edit('dosen', array('id_dosen' => $id, 'username' => $this->session->username))->row_array();
-            }
+            // }else{
+            //     $proses = $this->model_app->edit('dosen', array('id_dosen' => $id, 'username' => $this->session->username))->row_array();
+            // }
             $data = array('rows' => $proses,'record' => $record);
             $this->template->load('administrator/template','administrator/mod_dosen/view_dosen_edit',$data);
         }

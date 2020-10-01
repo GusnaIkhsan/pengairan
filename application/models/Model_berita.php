@@ -68,8 +68,13 @@ class Model_berita extends CI_model{
     }
 
     function kategori_berita_tambah(){
+        // $datadb = array('nama_kategori'=>$this->db->escape_str($this->input->post('a')),
+        //                 'username'=>$this->session->username,
+        //                 'kategori_seo'=>seo_title($this->input->post('a')),
+        //                 'aktif'=>$this->db->escape_str($this->input->post('b')),
+        //                 'sidebar'=>$this->db->escape_str($this->input->post('c')));
         $datadb = array('nama_kategori'=>$this->db->escape_str($this->input->post('a')),
-                        'username'=>$this->session->username,
+                        'username'=>"admin",
                         'kategori_seo'=>seo_title($this->input->post('a')),
                         'aktif'=>$this->db->escape_str($this->input->post('b')),
                         'sidebar'=>$this->db->escape_str($this->input->post('c')));
@@ -138,7 +143,8 @@ class Model_berita extends CI_model{
             }
             if ($hasil['file_name']==''){
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-                                    'username'=>$this->session->username,
+                                    // 'username'=>$this->session->username,
+                                    'username'=>"admin",
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>$this->db->escape_str($this->input->post('d')),
@@ -156,7 +162,7 @@ class Model_berita extends CI_model{
                                     'status'=>$status);
             }else{
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-                                    'username'=>$this->session->username,
+                                    'username'=>"admin",
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>$this->db->escape_str($this->input->post('d')),
