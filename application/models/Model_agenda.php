@@ -104,4 +104,11 @@ class Model_agenda extends CI_model{
     function agenda_delete($id){
         return $this->db->query("DELETE FROM agenda where id_agenda='$id'");
     }
+
+    function lastAgenda($limit){
+        $data = $this->db->query("SELECT * FROM agenda                                 
+                                    ORDER BY id_agenda 
+                                    DESC LIMIT 0,$limit");;
+        return $data->result();
+    }
 }

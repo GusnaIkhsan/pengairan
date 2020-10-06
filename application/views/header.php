@@ -18,15 +18,15 @@
                 <div class="kingster-header-background"></div>
                 <div class="kingster-header-container  kingster-container">
                     <div class="kingster-header-container-inner clearfix">
-                        <div class="kingster-logo  kingster-item-pdlr">
+                        <div class="kingster-logo  kingster-item-pdlr" style="margin: 0 0 0 10%;">
                             <div class="kingster-logo-inner">
                                 <a class="" href="index.html"><img src="<?php echo base_url('asset/images/logo.png'); ?>" alt="" /></a>
                             </div>
                         </div>
-                        <div class="kingster-navigation kingster-item-pdlr clearfix ">
-                            <div class="kingster-main-menu" id="kingster-main-menu">
+                        <div class="kingster-navigation kingster-item-pdlr clearfix" style="margin-top: -20px;">
+                            <div class="kingster-main-menu" id="kingster-main-menu" >
                                 <ul id="menu-main-navigation-1" class="sf-menu">
-                                    <li class="menu-item menu-item-home current-menu-item menu-item-has-children kingster-normal-menu"><a href="index.html" class="sf-with-ul-pre">Beranda</a>
+                                    <li class="menu-item menu-item-home current-menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Beranda</a>
                                         <!-- <ul class="sub-menu">
                                             <li class="menu-item menu-item-home" data-size="60"><a href="index.html">Homepage 1</a></li>
                                             <li class="menu-item" data-size="60"><a href="homepage-2.html">Homepage 2</a></li>
@@ -69,10 +69,41 @@
                                         </div>
                                     </li> -->
                                 
-                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Layanan</a>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Profile</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Janji Layanan</a></li>
-                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Prosedur</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Visi, Misi dan Tujuan</a></li>
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Sejarah</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Struktur Organisasi</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Renstra & Program Kerja</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">SDM</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Kerjasama</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Akreditasi & Sertifikasi</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Prestasi & Penghargaan</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Brosur</a></li>                                                                                   
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Akademik</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Informasi Pendaftaran</a></li>
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Program Studi</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">SOP & Formulir</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Jurnal</a></li>                                                                                   
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Penelitian & Pengabdian</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Penelitian Dosen</a></li>
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Penelitian Mahasiswa</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Pubikasi</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Pengabdian Kepada Masyarakat</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Jurnal</a></li>                                                                                   
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Alumni</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Tracer Studi</a></li>
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Data Lulusan</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Forum Alumni Pengairan</a></li>                                                                                   
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Fasilitas</a>
@@ -80,9 +111,25 @@
                                             <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Akses Komputer</a></li>
                                             <li class="menu-item" data-size="60"><a href="campus-tour.html">Ruang Baca</a></li>
                                             <li class="menu-item" data-size="60"><a href="scholarships.html">Laboratorium</a></li>
+                                            <li class="menu-item" data-size="60"><a href="scholarships.html">Ruang Belajar Mahasiswa</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item kingster-normal-menu"><a href="university-life.html">Kontak</a></li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Jaminan Mutu</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Unit Jaminan Mutu (UJM)</a></li>
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Sistem Dokumen</a></li>
+                                            <li class="menu-item" data-size="60"><a href="scholarships.html">Audit Internal & Eksternal Mutu</a></li>
+                                            <li class="menu-item" data-size="60"><a href="scholarships.html">Tinjauan Manajemen & hasil</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Tentang Kami</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Alamat & lokasi</a></li>
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Saran & Masukan</a></li>
+                                            <li class="menu-item" data-size="60"><a href="https://e-complaint.ub.ac.id/" target="blank">E-Komplain</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li class="menu-item kingster-normal-menu"><a href="university-life.html">Tentang Kami</a></li> -->
                                 </ul>
                                 <div class="kingster-navigation-slide-bar" id="kingster-navigation-slide-bar"></div>
                             </div>

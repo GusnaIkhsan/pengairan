@@ -24,25 +24,36 @@
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix  gdlr-core-style-blog-full-with-frame" style="padding-bottom: 40px ;">
                                             <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
-                                                <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
-                                                    <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                        <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_106223549-600x333.jpg'); ?>" width="900" height="500"  alt="" />
-                                                            <div class="gdlr-core-sticky-banner gdlr-core-title-font"><i class="fa fa-bolt"></i>Sticky Post</div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="gdlr-core-blog-full-frame gdlr-core-skin-e-background">
-                                                        <div class="gdlr-core-blog-full-head clearfix">
-                                                            <div class="gdlr-core-blog-full-head-right">
-                                                                <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 33px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="#" >The Florida Project: Taking Action to Help Kids Like Moonee</a></h3>
-                                                                <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href="#">June 6, 2016</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><a href="#" title="Posts by John Smith" rel="author">John Smith</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-category"><a href="#" rel="tag">Blog</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-comment-number"><span class="gdlr-core-head" ><i class="fa fa-comments-o" ></i></span><a href="##respond">3 </a></span>
+
+                                                <?php
+                                                    foreach($news as $key => $val){
+                                                ?>                                     
+                                                    <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
+                                                        <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                            <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_106223549-600x333.jpg'); ?>" width="900" height="500"  alt="" /></a>
+                                                        </div>
+                                                        <div class="gdlr-core-blog-full-frame gdlr-core-skin-e-background">
+                                                            <div class="gdlr-core-blog-full-head clearfix">
+                                                                <div class="gdlr-core-blog-full-head-right">
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 33px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="#" ><?php echo $val->judul; ?></a></h3>
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
+                                                                            <?php echo $val->tanggal; ?>
+                                                                        </span>      
+                                                                    </div>                                                                 
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><a href="#" title="Posts by John Smith" rel="author"><?php echo $val->username; ?></a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-comment-number"><span class="gdlr-core-head" ><i class="fa fa-eye" ></i></span><a href="##respond"><?php echo $val->dibaca; ?> </a></span></div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="gdlr-core-blog-content">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be...
+                                                            <br>
+                                                            <div class="gdlr-core-blog-content"><?php echo $val->sub_judul; ?>
                                                             <div class="clear"></div><a class="gdlr-core-excerpt-read-more gdlr-core-button gdlr-core-rectangle" href="<?php echo base_url('news-detail'); ?>">Read More</a></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
+                                                <?php
+                                                    }
+                                                ?>
+
+                                                <!-- <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
                                                     <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
                                                         <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_135948689-600x333.jpg'); ?>" width="900" height="500" alt="" /></a>
                                                     </div>
@@ -58,6 +69,7 @@
                                                             <div class="clear"></div><a class="gdlr-core-excerpt-read-more gdlr-core-button gdlr-core-rectangle" href="#">Read More</a></div>
                                                     </div>
                                                 </div>
+
                                                 <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
                                                     <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
                                                         <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_218235004-600x333.jpg'); ?>" width="900" height="500" alt="" /></a>
@@ -121,7 +133,8 @@
                                                         <div class="gdlr-core-blog-content">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
                                                             <div class="clear"></div><a class="gdlr-core-excerpt-read-more gdlr-core-button gdlr-core-rectangle" href="#">Read More</a></div>
                                                     </div>
-                                                </div>
+                                                </div> -->
+
                                             </div>
                                             <div class="gdlr-core-pagination  gdlr-core-style-round gdlr-core-left-align gdlr-core-item-pdlr"><span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='page/2/index.html'>2</a> <a class='page-numbers' href='page/3/index.html'>3</a>
                                                 <a class="next page-numbers" href="page/2/index.html"></a>
