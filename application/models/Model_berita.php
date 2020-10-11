@@ -143,6 +143,7 @@ class Model_berita extends CI_model{
             }
             if ($hasil['file_name']==''){
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
+                                    'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     // 'username'=>$this->session->username,
                                     'username'=>"admin",
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
@@ -162,6 +163,7 @@ class Model_berita extends CI_model{
                                     'status'=>$status);
             }else{
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
+                                    'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>"admin",
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
@@ -218,6 +220,7 @@ class Model_berita extends CI_model{
             }
             if ($hasil['file_name']==''){
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
+                                    'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
@@ -236,6 +239,7 @@ class Model_berita extends CI_model{
                                     'status'=>$status);
             }else{
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
+                                    'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
@@ -260,5 +264,9 @@ class Model_berita extends CI_model{
 
     function list_berita_delete($id){
         return $this->db->query("DELETE FROM berita where id_berita='$id'");
+    }
+
+    function get_prodi(){
+        return $this->db->query("SELECT * FROM prodi");
     }
 }

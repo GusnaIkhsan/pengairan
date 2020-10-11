@@ -138,7 +138,8 @@ class Administrator extends CI_Controller {
 			redirect('administrator/listberita');
 		}else{
 			$data['tag'] = $this->model_berita->tag_berita();
-			$data['record'] = $this->model_berita->kategori_berita();
+            $data['record'] = $this->model_berita->kategori_berita();
+            $data['prodi'] = $this->model_berita->get_prodi();
 			$this->template->load('administrator/template','administrator/mod_berita/view_berita_tambah',$data);
 		}
 	}
@@ -162,7 +163,8 @@ class Administrator extends CI_Controller {
 		}else{
 			$data['tag'] = $this->model_berita->tag_berita();
 			$data['record'] = $this->model_berita->kategori_berita();
-			$data['rows'] = $this->model_berita->list_berita_edit($id)->row_array();
+            $data['rows'] = $this->model_berita->list_berita_edit($id)->row_array();
+            $data['prodi'] = $this->model_berita->get_prodi();
 			$this->template->load('administrator/template','administrator/mod_berita/view_berita_edit',$data);
 		}
 	}
