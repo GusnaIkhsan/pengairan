@@ -216,7 +216,7 @@ class Model_berita extends CI_model{
             if ($hasil['file_name']==''){
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
-                                    'username'=>$this->session->username,
+                                    // 'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>$this->db->escape_str($this->input->post('d')),
@@ -235,7 +235,7 @@ class Model_berita extends CI_model{
             }else{
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
-                                    'username'=>$this->session->username,
+                                    // 'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>$this->db->escape_str($this->input->post('d')),
@@ -264,7 +264,7 @@ class Model_berita extends CI_model{
     function get_prodi(){
         return $this->db->query("SELECT * FROM prodi");
     }
-    
+
     function allNews(){
         $data = $this->db->query("SELECT berita.* FROM berita                                     
                                     left join kategori 

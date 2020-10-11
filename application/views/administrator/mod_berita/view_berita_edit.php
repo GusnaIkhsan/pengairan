@@ -14,7 +14,7 @@
                     <tr><th width='120px' scope='row'>Judul</th>    <td><input type='text' class='form-control' name='b' value='$rows[judul]' required></td></tr>
                     <tr><th scope='row'>Sub Judul</th>              <td><input type='text' class='form-control' name='c' value='$rows[sub_judul]'></td></tr>
                     <tr><th scope='row'>Video Youtube</th>          <td><input type='text' class='form-control' name='d' value='$rows[youtube]' placeholder='Contoh link: http://www.youtube.com/embed/xbuEmoRWQHU'></td></tr>
-                    <tr><th scope='row'>Kategori Prodi</th>         <td><select name='kategori-berita' class='form-control' required>
+                    <tr><th scope='row'>Kategori Prodi</th>         <td><select name='kategori-prodi' class='form-control' required>
                                                                         <option value='' selected>- Pilih Kategori Prodi -</option>";
                                                                             foreach ($prodi->result_array() as $row){
                                                                                 if ($rows['id_kategori_prodi'] == $row['id_prodi']){
