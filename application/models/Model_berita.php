@@ -68,11 +68,6 @@ class Model_berita extends CI_model{
     }
 
     function kategori_berita_tambah(){
-        // $datadb = array('nama_kategori'=>$this->db->escape_str($this->input->post('a')),
-        //                 'username'=>$this->session->username,
-        //                 'kategori_seo'=>seo_title($this->input->post('a')),
-        //                 'aktif'=>$this->db->escape_str($this->input->post('b')),
-        //                 'sidebar'=>$this->db->escape_str($this->input->post('c')));
         $datadb = array('nama_kategori'=>$this->db->escape_str($this->input->post('a')),
                         'username'=>"admin",
                         'kategori_seo'=>seo_title($this->input->post('a')),
@@ -268,5 +263,42 @@ class Model_berita extends CI_model{
 
     function get_prodi(){
         return $this->db->query("SELECT * FROM prodi");
+    }
+    
+    function allNews(){
+        $data = $this->db->query("SELECT berita.* FROM berita                                     
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY id_berita 
+                                    DESC");
+        return $data->result();
+    }
+
+    function lastNews($limit){
+        $data = $this->db->query("SELECT berita.* FROM berita 
+                                    left join users 
+                                    on berita.username=users.username 
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY id_berita 
+                                    DESC LIMIT 0,$limit");
+        return $data->result();
+    }
+
+    function lastAnnouncement($limit){
+        $data = $this->db->query("SELECT berita.* FROM berita                                 
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori = 61 ORDER BY id_berita 
+                                    DESC LIMIT 0,$limit");;
+        return $data->result();
+    }
+
+    function headLine($limit){
+        $data = $this->db->query("SELECT * FROM berita                                                                     
+                                    where headline = 'Y' 
+                                    ORDER BY id_berita 
+                                    DESC LIMIT 0,$limit");;
+        return $data->result();
     }
 }
