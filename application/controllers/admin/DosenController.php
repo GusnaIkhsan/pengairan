@@ -186,4 +186,124 @@ class DosenController extends CI_Controller {
         $result = $data->result_array();
         echo json_encode($result);
     }
+    
+    function dosen(){
+        // if ($this->session->level=='admin'){
+            // $data['record'] = $this->model_app->view_join_one('dosen','fakultas','id_fakultas','id_dosen','DESC');
+            $data['record'] = $this->model_app->view_ordering('dosen','id_dosen','DESC');
+        // }else{
+        //     $data['record'] = $this->model_app->view_join_where('dosen','fakultas','id_fakultas',array('dosen.username'=>$this->session->username),'id_dosen','DESC');
+        // }
+        $this->template->load('administrator/template','administrator/mod_dosen/view_dosen',$data);
+    }
+
+    function tambah_dosen(){
+        if (isset($_POST['submit'])){
+            $config['upload_path'] = 'asset/img_galeri/';
+            $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+            $config['max_size'] = '3000'; // kb
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('d');
+            $hasil=$this->upload->data();
+            if ($hasil['file_name']==''){
+                $data = array(
+                    'username'=>"admin",
+                    'nm_dosen'=>$this->input->post('name'),
+                    'dosen_seo'=>seo_title($this->input->post('name')),
+                    'golpang'=>$this->input->post('golpang'),
+                    'nipnik'=>$this->input->post('nipnik'),
+                    'nidn'=>$this->input->post('nidn'),
+                    'bidang'=>$this->input->post('bidang'),
+                    'blog'=>$this->input->post('blog'),
+                    'pendidikan'=>$this->input->post('pendidikan'),
+                    'gbr_dosen'=>'default.png',
+                    'penghargaan'=>$this->input->post('penghargaan'),
+                    'penelitian'=>$this->input->post('penelitian'),
+                    'publikasi'=>$this->input->post('publikasi'),
+                    'linkpub'=>$this->input->post('linkpub'),
+                    'buku'=>$this->input->post('buku'),
+                    'pengabdian'=>$this->input->post('pengabdian'));
+                // print_r($data);
+            }else{
+                $data = array(
+                    'username'=>"admin",
+                    'nm_dosen'=>$this->input->post('name'),
+                    'dosen_seo'=>seo_title($this->input->post('name')),
+                    'golpang'=>$this->input->post('golpang'),
+                    'nipnik'=>$this->input->post('nipnik'),
+                    'nidn'=>$this->input->post('nidn'),
+                    'bidang'=>$this->input->post('bidang'),
+                    'blog'=>$this->input->post('blog'),
+                    'pendidikan'=>$this->input->post('pendidikan'),
+                    'gbr_dosen'=>$hasil['file_name'],
+                    'penghargaan'=>$this->input->post('penghargaan'),
+                    'penelitian'=>$this->input->post('penelitian'),
+                    'publikasi'=>$this->input->post('publikasi'),
+                    'linkpub'=>$this->input->post('linkpub'),
+                    'buku'=>$this->input->post('buku'),
+                    'pengabdian'=>$this->input->post('pengabdian'));
+            }
+            $this->model_app->insert('dosen',$data);  
+            redirect('dosen');
+        }else{
+            $this->template->load('administrator/template','administrator/mod_dosen/view_dosen_tambah');
+        }
+    }
+
+    function edit_dosen($id){
+        if (isset($_POST['submit'])){
+            $config['upload_path'] = 'asset/img_galeri/';
+            $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+            $config['max_size'] = '3000'; // kb
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('d');
+            $hasil=$this->upload->data();
+            if ($hasil['file_name']==''){
+                $data = array(
+                            'username'=>"admin",
+                            'nm_dosen'=>$this->input->post('name'),
+                            'dosen_seo'=>seo_title($this->input->post('name')),
+                            'golpang'=>$this->input->post('golpang'),
+                			'nipnik'=>$this->input->post('nipnik'),
+                			'nidn'=>$this->input->post('nidn'),
+                			'bidang'=>$this->input->post('bidang'),
+                			'blog'=>$this->input->post('blog'),
+                            'gbr_dosen'=>'default.png',
+                            'penghargaan'=>$this->input->post('penghargaan'),
+                			'pendidikan'=>$this->input->post('pendidikan'),
+                			'penelitian'=>$this->input->post('penelitian'),
+                			'publikasi'=>$this->input->post('publikasi'),
+                			'linkpub'=>$this->input->post('linkpub'),
+                			'buku'=>$this->input->post('buku'),
+                            'pengabdian'=>$this->input->post('pengabdian'));
+            }else{
+                $data = array('id_fakultas'=>$this->input->post('a'),
+                            'username'=>$this->session->username,
+                            'nm_dosen'=>$this->input->post('b'),
+                            'dosen_seo'=>seo_title($this->input->post('b')),
+                            'keterangan'=>$this->input->post('c'),
+                            'nidn'=>$this->input->post('d'),
+                            'hp'=>$this->input->post('e'),
+                            'gbr_dosen'=>$hasil['file_name']);
+            }
+            $where = array('id_dosen' => $this->input->post('id_dosen'));
+            $this->model_app->update('dosen', $data, $where);
+            redirect('dosen');
+        }else{
+            // $record = $this->model_app->view_ordering('fakultas','id_fakultas','DESC');
+            // if ($this->session->level=='admin'){
+                $proses = $this->model_app->edit('dosen', array('id_dosen' => $id))->row_array();
+            // }else{
+            //     $proses = $this->model_app->edit('dosen', array('id_dosen' => $id, 'username' => $this->session->username))->row_array();
+            // }
+            $data = array('rows' => $proses);
+            $this->template->load('administrator/template','administrator/mod_dosen/view_dosen_edit',$data);
+        }
+    }
+
+    function delete_dosen($id){
+        $this->model_app->delete('dosen',array('id_dosen' => $id));
+        redirect('dosen');
+    }
+    
 }

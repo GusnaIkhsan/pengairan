@@ -18,7 +18,7 @@
                 <div class="kingster-header-background"></div>
                 <div class="kingster-header-container  kingster-container">
                     <div class="kingster-header-container-inner clearfix">
-                        <div class="kingster-logo  kingster-item-pdlr" style="margin: 0 0 0 10%;">
+                        <div class="kingster-logo  kingster-item-pdlr" style="margin: 0 0 0 11.5%;">
                             <div class="kingster-logo-inner">
                                 <a class="" href="index.html"><img src="<?php echo base_url('asset/images/logo.png'); ?>" alt="" /></a>
                             </div>
@@ -26,12 +26,7 @@
                         <div class="kingster-navigation kingster-item-pdlr clearfix" style="margin-top: -20px;">
                             <div class="kingster-main-menu" id="kingster-main-menu" >
                                 <ul id="menu-main-navigation-1" class="sf-menu">
-                                    <li class="menu-item menu-item-home current-menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Beranda</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li class="menu-item menu-item-home" data-size="60"><a href="index.html">Homepage 1</a></li>
-                                            <li class="menu-item" data-size="60"><a href="homepage-2.html">Homepage 2</a></li>
-                                        </ul> -->
-                                    </li>
+                                    <li class="menu-item menu-item-home current-menu-item menu-item-has-children kingster-normal-menu"><a href="<?php echo base_url('beranda'); ?>" class="sf-with-ul-pre">Beranda</a></li>
                                     <!-- <li class="menu-item menu-item-has-children kingster-mega-menu"><a href="bachelor-of-science-in-business-administration.html" class="sf-with-ul-pre">Program Studi</a>
                                         <div class="sf-mega sf-mega-full megaimg">
                                             <ul class="sub-menu">
@@ -69,13 +64,20 @@
                                         </div>
                                     </li> -->
                                 
-                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Profile</a>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Profile</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Visi, Misi dan Tujuan</a></li>
-                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Sejarah</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('vision-mission'); ?>">Visi, Misi dan Tujuan</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('history'); ?>">Sejarah</a></li>                                                                                   
                                             <li class="menu-item" data-size="60"><a href="campus-tour.html">Struktur Organisasi</a></li>                                                                                   
                                             <li class="menu-item" data-size="60"><a href="campus-tour.html">Renstra & Program Kerja</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">SDM</a></li>                                                                                   
+                                            <li class="menu-item menu-item-has-children" data-size="60">
+                                                <a href="campus-tour.html">SDM</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Dosen</a></li>
+                                                    <li class="menu-item" data-size="60"><a href="campus-tour.html">Staff Kependidikan</a></li>                                                                                                                                                                                                                          
+                                                </ul>
+                                            </li>   
+
                                             <li class="menu-item" data-size="60"><a href="campus-tour.html">Kerjasama</a></li>                                                                                   
                                             <li class="menu-item" data-size="60"><a href="campus-tour.html">Akreditasi & Sertifikasi</a></li>                                                                                   
                                             <li class="menu-item" data-size="60"><a href="campus-tour.html">Prestasi & Penghargaan</a></li>                                                                                   
@@ -122,14 +124,12 @@
                                             <li class="menu-item" data-size="60"><a href="scholarships.html">Tinjauan Manajemen & hasil</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Tentang Kami</a>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Tentang Kami</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Alamat & lokasi</a></li>
-                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Saran & Masukan</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('critics-suggest'); ?>">Lokasi, Saran & Masukan</a></li>
                                             <li class="menu-item" data-size="60"><a href="https://e-complaint.ub.ac.id/" target="blank">E-Komplain</a></li>
                                         </ul>
-                                    </li>
-                                    <!-- <li class="menu-item kingster-normal-menu"><a href="university-life.html">Tentang Kami</a></li> -->
+                                    </li>                                    
                                 </ul>
                                 <div class="kingster-navigation-slide-bar" id="kingster-navigation-slide-bar"></div>
                             </div>

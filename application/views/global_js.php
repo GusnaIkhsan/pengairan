@@ -265,3 +265,7 @@
 	        document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
 	    } /*]]>*/
 	</script>
+	
+	<script type='text/javascript' src='<?php echo base_url('asset/js/isotope.js'); ?>'></script>
+    <script type="text/javascript" src="<?php echo base_url('asset/plugins/quform/js/plugins.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('asset/plugins/quform/js/scripts.js'); ?>"></script>  

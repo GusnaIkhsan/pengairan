@@ -1,10 +1,10 @@
             <div class="col-xs-12">  
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Daftar Dosen</h3>
-                  <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" href='<?php echo base_url(); ?>administrator/tambah_dosen'>Tambahkan Data</a>
-                  <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" onclick="showLookup()" >Upload Template</a>
-                  <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" href='<?php echo base_url('form/download'); ?>'>Download Template</a>
+                  <h3 class="box-title">Daftar Staff Pendidik</h3>
+                  <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" href='<?php echo base_url(); ?>tambah-staff'>Tambahkan Data</a>
+                  <!-- <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" onclick="showLookup()" >Upload Template</a>
+                  <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" href='<?php echo base_url('form/download'); ?>'>Download Template</a> -->
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
@@ -13,8 +13,9 @@
                         <th style='width:20px'>No</th>
                         <th width='60px'>Foto</th>
                         <th>Nama</th>
-                        <th>NIS/NIDN</th>
-                        <th>Pendidikan</th>                        
+                        <th>NIP/NIK</th>
+                        <th>Bidang Pelayanan</th>               
+                        <th>Tupoksi</th>               
                         <th style='width:70px'>Action</th>
                       </tr>
                     </thead>
@@ -23,17 +24,19 @@
                     $no = 1;
                     foreach ($record as $row){
                     echo "<tr><td>$no</td>
-                              <td><img src='".base_url()."asset/img_galeri/$row[gbr_dosen]' width='50'></td>
-                              <td width='20%'>$row[nm_dosen]</td>
-                              <td width='10%'>$row[nidn]</td>
-                              <td width='30%'>$row[pendidikan]</td>     
+                              <td><img src='".base_url()."asset/foto_staff/$row[foto]' width='50'></td>
+                              <td width='20%'>$row[name]</td>
+                              <td width='10%'>$row[nipnik]</td>
+                              <td width='20%'>$row[pelayanan]</td>                          
+                              <td width='20%'>$row[tupoksi]</td>                          
                               <td><center>
-                                <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."edit-dosen/$row[id_dosen]'><span class='glyphicon glyphicon-edit'></span></a>
-                                <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."delete-dosen/$row[id_dosen]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                              <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."edit-staff/$row[id]'><span class='glyphicon glyphicon-edit'></span></a>
+                              <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."delete-staff/$row[id]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                               </center></td>
-                          </tr>";
-                      $no++;
-                    }
+                              </tr>";
+                              $no++;
+                            }
+                            // <a class='btn btn-info btn-xs' title='Lihat Data' href='".base_url()."edit-staff/$row[id]'><span class='glyphicon glyphicon-eye-open'></span></a>
                   ?>
                   </tbody>
                 </table>

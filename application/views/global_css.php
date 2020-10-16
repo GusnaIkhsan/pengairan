@@ -1,8 +1,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Pengairan Universitas Brawijaya" />
+    <meta name="description" content="Pengairan Universitas Brawijaya">
+    <meta name="author" content="filkom">
 
     <title>Teknik Pengairan Universitas Brawijaya</title>
+    <link rel="icon" href="<?php echo base_url('assets/logo/ubicon.ico'); ?>">
 
     <link rel='stylesheet' href="<?php echo base_url('asset/plugins/goodlayers-core/plugins/combine/style.css'); ?>" type='text/css' media='all' />
     <link rel='stylesheet' href="<?php echo base_url('asset/plugins/goodlayers-core/include/css/page-builder.css'); ?>" type='text/css' media='all' />

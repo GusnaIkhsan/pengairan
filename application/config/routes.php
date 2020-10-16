@@ -55,16 +55,36 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['admin'] = 'Administrator/index';
-$route['beranda'] = 'BerandaController/index';
-$route['all-news'] = 'BerandaController/allNews';
-$route['news-detail'] = 'BerandaController/pageNews';
+$route['beranda'] = 'general/BerandaController/index';
+$route['all-news'] = 'general/BerandaController/allNews';
+$route['news-detail'] = 'general/BerandaController/pageNews';
 $route['sarjana'] = 'Sarjana/SarjanaController/index';
 $route['magister'] = 'Magister/MagisterController/index';
 $route['doktor'] = 'Doktor/DoktorController/index';
 $route['content'] = 'Sarjana/SarjanaController/profilContent';
 
-// admin - dosen
+// Profile
+$route['history'] = 'general/PresenterController/showHistory';
+$route['vision-mission'] = 'general/PresenterController/showVisiMisi';
+// Akademik
+
+// Tentang Kami
+$route['critics-suggest'] = 'general/PresenterController/showAddressCriticsSuggestion';
+
+
+// Dosen - Staff
 $route['form/download']['GET'] = 'admin/DosenController/generate_template';
 $route['form/upload']['POST'] = 'admin/DosenController/recieve_from_upload_template';
 $route['fakultas']['GET'] = 'admin/DosenController/get_fakultas';
+
+
+$route['dosen'] = 'admin/DosenController/dosen';
+$route['tambah-staff'] = 'admin/DosenController/tambah_dosen';
+$route['edit-dosen/(:any)'] = 'admin/DosenController/edit_dosen/$1';
+$route['delete-dosen/(:any)'] = 'admin/DosenController/delete_dosen/$1';
+
+$route['staff']['GET'] = 'admin/StaffController/staff_pendidik';
+$route['tambah-staff'] = 'admin/StaffController/tambah_staff';
+$route['edit-staff/(:any)'] = 'admin/StaffController/edit_staff/$1';
+$route['delete-staff/(:any)'] = 'admin/StaffController/delete_staff/$1';
 

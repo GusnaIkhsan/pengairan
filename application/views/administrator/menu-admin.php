@@ -44,7 +44,8 @@
               <ul class="treeview-menu">
                 <li><a href='<?php echo base_url(); ?>administrator/fakultas'><i class='fa fa-circle-o'></i> Fakultas</a></li>
                 <li><a href='<?php echo base_url(); ?>administrator/prodi'><i class='fa fa-circle-o'></i> Program Studi</a></li>
-                <li><a href='<?php echo base_url(); ?>administrator/dosen'><i class='fa fa-circle-o'></i> Dosen</a></li>
+                <li><a href='<?php echo base_url(); ?>dosen'><i class='fa fa-circle-o'></i> Dosen</a></li>
+                <li><a href='<?php echo base_url(); ?>staff'><i class='fa fa-circle-o'></i> Staff Kependidikan</a></li>
                 <li><a href='<?php echo base_url(); ?>administrator/mahasiswa'><i class='fa fa-circle-o'></i> Mahasiswa</a></li>
               </ul>
             </li>
