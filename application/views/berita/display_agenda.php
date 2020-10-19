@@ -14,13 +14,13 @@
                         <div class="kingster-blog-title-content kingster-item-pdlr" style="padding-top: 400px ;padding-bottom: 80px ;">
                             <header class="kingster-single-article-head clearfix">
                                 <div class="kingster-single-article-date-wrapper  post-date updated">
-                                    <?php $tanggalBerita = explode("-", $berita['tanggal']); ?>
+                                    <?php $tanggalBerita = explode("-", $berita['tgl_posting']); ?>
                                     <div class="kingster-single-article-date-day"><?php echo $tanggalBerita[2]?></div>
                                     <div class="kingster-single-article-date-month"><?php echo getBulan((int)$tanggalBerita[1])?></div>
                                     <div class="kingster-single-article-date-year"><?php echo $tanggalBerita[0]?></div>
                                 </div>
                                 <div class="kingster-single-article-head-right">
-                                    <h1 class="kingster-single-article-title"><?php echo $berita['judul']; ?></h1>
+                                    <h1 class="kingster-single-article-title"><?php echo $berita['tema']; ?></h1>
                                     <div class="kingster-blog-info-wrapper">
                                         <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-author vcard author post-author "><span class="kingster-head">By</span><span class="fn"><a href="#" title="Posts by John Smith" rel="author"><?php echo $berita['username']; ?></a></span></div>
                                         <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-tag "><a href="#" rel="tag"><?php echo $mode; ?></a></div>
@@ -37,7 +37,7 @@
                             <meta property="position" content="1">
                             </span>&gt;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Blog category archives." href="<?php echo base_url('all-news'); ?>" class="taxonomy category"><span property="name"><?php echo ucwords($mode); ?></span></a>
                             <meta property="position" content="2">
-                            </span>&gt;<span property="itemListElement" typeof="ListItem"><span property="name"><?php echo $berita['judul']; ?></span>
+                            </span>&gt;<span property="itemListElement" typeof="ListItem"><span property="name"><?php echo $berita['tema']; ?></span>
                             <meta property="position" content="3">
                             </span>
                         </div>
@@ -51,7 +51,7 @@
                                     <article id="post-1268" class="post-1268 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-post-format tag-news">
                                         <div class="kingster-single-article clearfix">
                                             <div class="kingster-single-article-content">
-                                                <?php echo $berita['isi_berita']; ?>
+                                                <?php echo $berita['isi_agenda']; ?>
                                             </div>
                                         </div>
                                     </article>

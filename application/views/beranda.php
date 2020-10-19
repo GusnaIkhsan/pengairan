@@ -382,23 +382,41 @@
                                                         </div>
                                                     </div>
                                                     <div class="gdlr-core-event-item-holder clearfix">
-                                                        <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;"><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"><span class="gdlr-core-date" >07</span><span class="gdlr-core-month">Jan</span></span>
+                                                        <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;">
+                                                            <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
+                                                                <?php $tanggalBerita = explode("-", $announc[0]->tanggal); ?>
+                                                                <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
+                                                                <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
+                                                                <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
+                                                            </span>
                                                             <div class="gdlr-core-event-item-content-wrap">
-                                                                <h3 class="gdlr-core-event-item-title"><a href="#" ><?php echo $announc[0]->judul;?></a></h3>
+                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[0]->id_berita); ?>" ><?php echo $announc[0]->judul;?></a></h3>
                                                                 <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">Kingster Grand Hall</span></span>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;"><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"><span class="gdlr-core-date" >01</span><span class="gdlr-core-month">Jan</span></span>
+                                                        <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;">
+                                                            <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
+                                                                <?php $tanggalBerita = explode("-", $announc[1]->tanggal); ?>
+                                                                <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
+                                                                <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
+                                                                <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
+                                                            </span>
                                                             <div class="gdlr-core-event-item-content-wrap">
-                                                                <h3 class="gdlr-core-event-item-title"><a href="#" ><?php echo $announc[1]->judul;?></a></h3>
+                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[1]->id_berita); ?>" ><?php echo $announc[1]->judul;?></a></h3>
                                                                 <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">Kingster Grand Hall</span></span>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;"><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"><span class="gdlr-core-date" >17</span><span class="gdlr-core-month">Dec</span></span>
+                                                        <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;">
+                                                            <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
+                                                                <?php $tanggalBerita = explode("-", $announc[2]->tanggal); ?>
+                                                                <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
+                                                                <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
+                                                                <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
+                                                            </span>
                                                             <div class="gdlr-core-event-item-content-wrap">
-                                                                <h3 class="gdlr-core-event-item-title"><a href="#" ><?php echo $announc[2]->judul;?></a></h3>
+                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[2]->id_berita); ?>" ><?php echo $announc[2]->judul;?></a></h3>
                                                                 <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">Kingster Grand Hall</span></span>
                                                                 </div>
                                                             </div>
@@ -407,7 +425,7 @@
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="#" style="font-size: 14px ;letter-spacing: 1px ;color: #475c87 ;padding: 0px 0px 0px 0px;text-transform: none ;border-radius: 0px;-moz-border-radius: 0px;-webkit-border-radius: 0px;"><span class="gdlr-core-content" >View All Events</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" style="color: #475c87 ;"  ></i></a></div>
+                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="#" style="font-size: 14px ;letter-spacing: 1px ;color: #475c87 ;padding: 0px 0px 0px 0px;text-transform: none ;border-radius: 0px;-moz-border-radius: 0px;-webkit-border-radius: 0px;"><span class="gdlr-core-content" >View All Announcements</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" style="color: #475c87 ;"  ></i></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -424,9 +442,14 @@
                                             <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20 gdlr-core-column-first  clearfix">
                                                 <div class="gdlr-core-event-item-thumbnail">
                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[0]->gambar); ?>" width="900" height="500"  alt="" /></a>
-                                                </div><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"><span class="gdlr-core-date" >07</span><span class="gdlr-core-month">Jan</span></span>
+                                                </div><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
+                                                    <?php $tanggalBerita = explode("-", $agenda[0]->tgl_posting); ?>
+                                                    <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
+                                                    <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
+                                                    <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
+                                                </span>
                                                 <div class="gdlr-core-event-item-content-wrap">
-                                                    <h3 class="gdlr-core-event-item-title"><a href="#" ><?php echo $agenda[0]->tema;?></a></h3>
+                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('agenda/'.$agenda[0]->id_agenda); ?>" ><?php echo $agenda[0]->tema;?></a></h3>
                                                     <div class="gdlr-core-event-item-info-wrap">
                                                         <span class="gdlr-core-event-item-info gdlr-core-type-time">
                                                             <span class="gdlr-core-head" >
@@ -444,9 +467,14 @@
                                             <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
                                                 <div class="gdlr-core-event-item-thumbnail">
                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" width="900" height="500" alt="" /></a>
-                                                </div><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"><span class="gdlr-core-date" >01</span><span class="gdlr-core-month">Jan</span></span>
+                                                    </div><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
+                                                    <?php $tanggalBerita = explode("-", $agenda[1]->tgl_posting); ?>
+                                                    <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
+                                                    <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
+                                                    <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
+                                                </span>
                                                 <div class="gdlr-core-event-item-content-wrap">
-                                                    <h3 class="gdlr-core-event-item-title"><a href="#" ><?php echo $agenda[1]->tema;?></a></h3>
+                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>" ><?php echo $agenda[1]->tema;?></a></h3>
                                                     <div class="gdlr-core-event-item-info-wrap">
                                                         <span class="gdlr-core-event-item-info gdlr-core-type-time">
                                                             <span class="gdlr-core-head" >
@@ -464,9 +492,14 @@
                                             <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
                                                 <div class="gdlr-core-event-item-thumbnail">
                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[2]->gambar); ?>" width="900" height="500" alt="" /></a>
-                                                </div><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"><span class="gdlr-core-date" >17</span><span class="gdlr-core-month">Dec</span></span>
+                                                    </div><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
+                                                    <?php $tanggalBerita = explode("-", $agenda[2]->tgl_posting); ?>
+                                                    <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
+                                                    <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
+                                                    <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
+                                                </span>
                                                 <div class="gdlr-core-event-item-content-wrap">
-                                                    <h3 class="gdlr-core-event-item-title"><a href="#" ><?php echo $agenda[2]->tema;?></a></h3>
+                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>" ><?php echo $agenda[2]->tema;?></a></h3>
                                                     <div class="gdlr-core-event-item-info-wrap">
                                                         <span class="gdlr-core-event-item-info gdlr-core-type-time">
                                                             <span class="gdlr-core-head" >
