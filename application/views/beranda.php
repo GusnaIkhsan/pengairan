@@ -78,7 +78,7 @@
                                                         <div class="gdlr-core-column-service-content-wrapper">
                                                             <div class="gdlr-core-column-service-title-wrap">
                                                                 <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_1">Tracer Study</h3>
-                                                                <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_6">Getting Diploma</div>
+                                                                <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_6">Overall in here</div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="gdlr-core-pbf-wrapper "  id="gdlr-core-wrapper-2">
+                    <!-- <div class="gdlr-core-pbf-wrapper "  id="gdlr-core-wrapper-2">
                         <div class="gdlr-core-pbf-background-wrap">
                             <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_13" data-parallax-speed="0.8"></div>
                         </div>
@@ -164,8 +164,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper " id="div_1dd7_21">
+                    </div> -->
+                    <!-- <div class="gdlr-core-pbf-wrapper " id="div_1dd7_21">
                         <div class="gdlr-core-pbf-background-wrap">
                             <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_22" data-parallax-speed="0.2"></div>
                         </div>
@@ -213,8 +213,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper " id="div_1dd7_30" data-skin="Column Service">
+                    </div> -->
+                    <!-- <div class=" gdlr-core-pbf-wrapper " id="div_1dd7_30" data-skin="Column Service">
                         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_31"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -288,7 +288,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="gdlr-core-pbf-wrapper " id="div_1dd7_44">
                         <div class="gdlr-core-pbf-background-wrap"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
@@ -682,7 +682,7 @@
                                         </div>
                                     </div>
                                 </div> -->
-                                <div class="gdlr-core-pbf-column" data-skin="Blue Title">
+                                <!-- <div class="gdlr-core-pbf-column" data-skin="Blue Title">
                                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js  gdlr-core-column-extend-left gdlr-core-column-extend-right" id="div_1dd7_64" data-sync-height="height-3" data-sync-height-center>
                                         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_65"></div>
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
@@ -743,7 +743,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="White Text">
                                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js  gdlr-core-column-extend-right" id="div_1dd7_68" data-sync-height="height-3">
                                         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_69"></div>
@@ -764,7 +764,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="gdlr-core-pbf-wrapper " id="div_1dd7_72">
+                    <!-- <div class="gdlr-core-pbf-wrapper " id="div_1dd7_72">
                         <div class="gdlr-core-pbf-background-wrap">
                             <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_73" data-parallax-speed="0.2"></div>
                         </div>
@@ -773,7 +773,7 @@
                                 <div class="gdlr-core-pbf-element">
                                     <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align" id="div_1dd7_75">
                                         <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" id="div_1dd7_76">
-                                            <a class="gdlr-core-lightgallery gdlr-core-js " href="https://www.youtube.com/watch?v=C5pKtnmHTxg"><img src="<?php echo base_url('asset/upload/icon-play.png'); ?>" alt="" width="82" height="82" title="icon-play" /></a>
+                                            <a class="gdlr-core-lightgallery gdlr-core-js " href="https://www.youtube.com/watch?v=46UR7KaJYlU"><img src="<?php echo base_url('asset/upload/icon-play.png'); ?>" alt="" width="82" height="82" title="icon-play" /></a>
                                         </div>
                                     </div>
                                 </div>
@@ -792,8 +792,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper "  id="gdlr-core-wrapper-3">
+                    </div> -->
+                    <!-- <div class="gdlr-core-pbf-wrapper "  id="gdlr-core-wrapper-3">
                         <div class="gdlr-core-pbf-background-wrap"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" id="div_1dd7_81">
@@ -854,8 +854,8 @@
                                 </div>
                             </div>
                         </div>                        
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper " id="div_1dd7_91">
+                    </div> -->
+                    <!-- <div class="gdlr-core-pbf-wrapper " id="div_1dd7_91">
                         <div class="gdlr-core-pbf-background-wrap"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -1025,7 +1025,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="gdlr-core-pbf-wrapper " id="div_1dd7_79">
                         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_80"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
@@ -1033,14 +1033,14 @@
                                 <div class="gdlr-core-pbf-element">
                                     <div class="gdlr-core-tab-item gdlr-core-js gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-tab-style1-horizontal gdlr-core-item-pdlr">
                                         
-                                        <div class="gdlr-core-tab-item-content-image-wrap clearfix">
+                                        <div class="gdlr-core-tab-item-content-image-wrap clearfix" style="width: 650px;">
                                             <div class="gdlr-core-tab-item-image  gdlr-core-active" data-tab-id="1">
-                                                <a class="gdlr-core-lightgallery gdlr-core-js " href="https://www.youtube.com/watch?v=C5pKtnmHTxg">
+                                                <a class="gdlr-core-lightgallery gdlr-core-js " href="https://www.youtube.com/watch?v=46UR7KaJYlU">
                                                     <span class="gdlr-core-tab-item-image-background" id="span_1dd7_1"  ></span>
                                                     <i class="fa fa-play" ></i>
                                                 </a>
                                             </div>
-                                            <div class="gdlr-core-tab-item-image " data-tab-id="2">
+                                            <!-- <div class="gdlr-core-tab-item-image " data-tab-id="2">
                                                 <a class="gdlr-core-lightgallery gdlr-core-js " href="https://www.youtube.com/watch?v=C5pKtnmHTxg">
                                                     <span class="gdlr-core-tab-item-image-background" id="span_1dd7_2"  ></span>
                                                     <i class="fa fa-play" ></i>
@@ -1057,26 +1057,178 @@
                                                     <span class="gdlr-core-tab-item-image-background" id="span_1dd7_4"  ></span>
                                                     <i class="fa fa-play" ></i>
                                                 </a>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                         <div class="gdlr-core-tab-item-wrap">
                                             <div class="gdlr-core-tab-item-title-wrap clearfix gdlr-core-title-font">
-                                                <div class="gdlr-core-tab-item-title  gdlr-core-active" data-tab-id="1">Benefits</div>
-                                                <div class="gdlr-core-tab-item-title " data-tab-id="2">Self Development</div>
+                                                <div class="gdlr-core-tab-item-title  gdlr-core-active" data-tab-id="1">
+                                                <p>
+                                                Welcome to,<br>Water Resource Engineering Department </p>    
+                                                </div>
+                                                <!-- <div class="gdlr-core-tab-item-title " data-tab-id="2">Self Development</div>
                                                 <div class="gdlr-core-tab-item-title " data-tab-id="3">Spirituality</div>
-                                                <div class="gdlr-core-tab-item-title " data-tab-id="4">Alumni</div>
+                                                <div class="gdlr-core-tab-item-title " data-tab-id="4">Alumni</div> -->
                                             </div>
                                             <div class="gdlr-core-tab-item-content-wrap clearfix">
                                                 <div class="gdlr-core-tab-item-content  gdlr-core-active" data-tab-id="1" >
-                                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
+                                                    <!-- <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                         <div class="gdlr-core-title-item-title-wrap ">
                                                             <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_24">Why Choose Kingster?<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                                     </div>
                                                     <p>The Kingster University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Kinster’s alumni. It is the only place online where you can find, and connect with, all 90,000 Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                    <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
+                                                    <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p> -->
+                                                    <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                                                        <!-- <div class="gdlr-core-pbf-element">
+                                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 45px ;">
+                                                                <div class="gdlr-core-title-item-title-wrap clearfix">
+                                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 27px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">The Application Process</h3></div>
+                                                            </div>
+                                                        </div> -->
+                                                        <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first" data-skin="Blut Title Column Service">
+                                                            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                                                <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                                    <div class="gdlr-core-pbf-element">
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
+                                                                            <!-- <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;margin-right: 33px;margin-left: 7px;font-size: 45px ;color: #3db166 ;">1</div>
+                                                                            <div class="gdlr-core-column-service-content-wrapper">
+                                                                                <div class="gdlr-core-column-service-title-wrap">
+                                                                                    <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Start Online Submission</h3></div>
+                                                                                <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
+                                                                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence.</p>
+                                                                                </div>
+                                                                            </div> -->
+
+                                                                            <div class="gdlr-core-pbf-element">
+                                                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
+                                                                                    <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/icon-4.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
+                                                                                    <div class="gdlr-core-column-service-content-wrapper">
+                                                                                        <div class="gdlr-core-column-service-title-wrap">
+                                                                                            <!-- <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_3">500</h3> -->
+                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">523</div>
+                                                                                            <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Student</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="gdlr-core-pbf-column gdlr-core-column-30" data-skin="Blut Title Column Service">
+                                                            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                                                <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                                    <div class="gdlr-core-pbf-element">
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
+                                                                            <div class="gdlr-core-pbf-element">
+                                                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
+                                                                                    <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/icon-1.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
+                                                                                    <div class="gdlr-core-column-service-content-wrapper">
+                                                                                        <div class="gdlr-core-column-service-title-wrap">                                                                                            
+                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">3</div>
+                                                                                            <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Study Program</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Blut Title Column Service">
+                                                            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                                                <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                                    <div class="gdlr-core-pbf-element">
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
+                                                                            <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;font-size: 45px ;color: #3db166 ;">3</div>
+                                                                            <div class="gdlr-core-column-service-content-wrapper">
+                                                                                <div class="gdlr-core-column-service-title-wrap">
+                                                                                    <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Review The Submission</h3></div>
+                                                                                <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
+                                                                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
+                                                        <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first" data-skin="Blut Title Column Service">
+                                                            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                                                <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                                    <div class="gdlr-core-pbf-element">
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
+                                                                            <!-- <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;margin-right: 33px;margin-left: 7px;font-size: 45px ;color: #3db166 ;">1</div>
+                                                                            <div class="gdlr-core-column-service-content-wrapper">
+                                                                                <div class="gdlr-core-column-service-title-wrap">
+                                                                                    <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Start Online Submission</h3></div>
+                                                                                <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
+                                                                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence.</p>
+                                                                                </div>
+                                                                            </div> -->
+
+                                                                            <div class="gdlr-core-pbf-element">
+                                                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
+                                                                                    <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/icon-1.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
+                                                                                    <div class="gdlr-core-column-service-content-wrapper">
+                                                                                        <div class="gdlr-core-column-service-title-wrap">
+                                                                                            <!-- <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_3">500</h3> -->
+                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">43</div>
+                                                                                            <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Lecturers & Staffs</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="gdlr-core-pbf-column gdlr-core-column-30" data-skin="Blut Title Column Service">
+                                                            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                                                <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                                    <div class="gdlr-core-pbf-element">
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
+                                                                            <div class="gdlr-core-pbf-element">
+                                                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
+                                                                                    <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/icon-2.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
+                                                                                    <div class="gdlr-core-column-service-content-wrapper">
+                                                                                        <div class="gdlr-core-column-service-title-wrap">
+                                                                                            <!-- <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_3">500</h3> -->
+                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">1143</div>
+                                                                                            <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Graduates</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Blut Title Column Service">
+                                                            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                                                <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                                    <div class="gdlr-core-pbf-element">
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
+                                                                            <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;font-size: 45px ;color: #3db166 ;">6</div>
+                                                                            <div class="gdlr-core-column-service-content-wrapper">
+                                                                                <div class="gdlr-core-column-service-title-wrap">
+                                                                                    <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Last Decision</h3></div>
+                                                                                <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
+                                                                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
+                                                    </div>
                                                 </div>
-                                                <div class="gdlr-core-tab-item-content " data-tab-id="2" >
+                                                <!-- <div class="gdlr-core-tab-item-content " data-tab-id="2" >
                                                     <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                         <div class="gdlr-core-title-item-title-wrap ">
                                                             <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_25">Self Development<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
@@ -1099,7 +1251,7 @@
                                                     </div>
                                                     <p>The Kingster University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Kinster’s alumni. It is the only place online where you can find, and connect with, all 90,000 Kingster’s alumni. All alumni are automatically enrolled!</p>
                                                     <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -1223,7 +1375,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="gdlr-core-pbf-wrapper " id="div_1dd7_107">
+                    <!-- <div class="gdlr-core-pbf-wrapper " id="div_1dd7_107">
                         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_108"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" id="div_1dd7_109">
@@ -1250,7 +1402,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- footer -->
