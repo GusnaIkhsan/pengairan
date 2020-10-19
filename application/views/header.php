@@ -20,7 +20,7 @@
                     <div class="kingster-header-container-inner clearfix">
                         <div class="kingster-logo  kingster-item-pdlr" style="margin: 0 0 0 11.5%;">
                             <div class="kingster-logo-inner">
-                                <a class="" href="index.html"><img src="<?php echo base_url('asset/images/logo.png'); ?>" alt="" /></a>
+                                <a class="" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('asset/images/logo.png'); ?>" alt="" /></a>
                             </div>
                         </div>
                         <div class="kingster-navigation kingster-item-pdlr clearfix" style="margin-top: -20px;">

@@ -314,7 +314,7 @@
                                                                     <div class="gdlr-core-blog-grid-content-wrap">
                                                                         <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                             <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                                <a href="#">June 6, 2016</a>
+                                                                                <a href="#"><?php echo $news[0]->tanggal; ?></a>
                                                                             </span>
                                                                             <!-- <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
                                                                                 <a href="#" rel="tag">Admission</a>
@@ -322,7 +322,7 @@
                                                                                 <a href="#" rel="tag">Student</a>
                                                                             </span> -->
                                                                         </div>
-                                                                        <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 19px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="#" ><?php echo $news[0]->judul;?></a></h3></div>
+                                                                        <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 19px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('berita/'.$news[0]->id_berita); ?>" ><?php echo $news[0]->judul;?></a></h3></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -334,10 +334,10 @@
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#">June 6, 2016</a>
+                                                                            <a href="#"><?php echo $news[1]->tanggal; ?></a>
                                                                         </span>                                                                        
                                                                     </div>
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="#" ><?php echo $news[1]->judul;?></a></h3></div>
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('berita/'.$news[1]->id_berita); ?>" ><?php echo $news[1]->judul;?></a></h3></div>
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
@@ -346,9 +346,9 @@
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#">June 6, 2016</a></span>                                                                            
+                                                                            <a href="#"><?php echo $news[2]->tanggal; ?></a></span>                                                                            
                                                                     </div>
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="#" ><?php echo $news[2]->judul;?></a></h3></div>
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('berita/'.$news[2]->id_berita); ?>" ><?php echo $news[2]->judul;?></a></h3></div>
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
@@ -357,10 +357,10 @@
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#">June 6, 2016</a>
+                                                                            <a href="#"><?php echo $news[3]->tanggal; ?></a>
                                                                         </span>                                                                       
                                                                     </div>
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="#" ><?php echo $news[3]->judul;?></a></h3></div>
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('berita/'.$news[3]->id_berita); ?>" ><?php echo $news[3]->judul;?></a></h3></div>
                                                             </div>
                                                         </div>
                                                     </div>

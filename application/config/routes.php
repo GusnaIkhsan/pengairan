@@ -88,3 +88,5 @@ $route['tambah-staff'] = 'admin/StaffController/tambah_staff';
 $route['edit-staff/(:any)'] = 'admin/StaffController/edit_staff/$1';
 $route['delete-staff/(:any)'] = 'admin/StaffController/delete_staff/$1';
 
+// Berita
+$route['berita/(:any)'] = 'BeritaController/detail/$1';

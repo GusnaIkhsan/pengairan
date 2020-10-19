@@ -301,4 +301,8 @@ class Model_berita extends CI_model{
                                     DESC LIMIT 0,$limit");;
         return $data->result();
     }
+
+    function getBerita($id){
+        return $this->db->query("SELECT * FROM berita where id_berita='$id'")->first_row('array');
+    }
 }
