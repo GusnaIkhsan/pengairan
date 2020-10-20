@@ -30,7 +30,8 @@
                                                 ?>                                     
                                                     <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
                                                         <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                            <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_106223549-600x333.jpg'); ?>" width="900" height="500"  alt="" /></a>
+                                                            <!-- <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_106223549-600x333.jpg'); ?>" width="900" height="500"  alt="" /></a> -->
+                                                            <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$val->gambar); ?>" width="900" height="500"  alt="" /></a>
                                                         </div>
                                                         <div class="gdlr-core-blog-full-frame gdlr-core-skin-e-background">
                                                             <div class="gdlr-core-blog-full-head clearfix">
@@ -146,10 +147,10 @@
                             <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  kingster-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height">
                                 <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
                                 <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
-                                    <div id="text-5" class="widget widget_text kingster-widget">
+                                    <!-- <div id="text-5" class="widget widget_text kingster-widget">
                                         <h3 class="kingster-widget-title">Text Widget</h3><span class="clear"></span>
                                         <div class="textwidget">Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Etiam porta sem malesuada.</div>
-                                    </div>
+                                    </div> -->
                                     <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
                                         <h3 class="kingster-widget-title">Recent News</h3><span class="clear"></span>
                                         <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
@@ -198,7 +199,7 @@
                                         </div>
                                     </div>
 
-                                    <div id="gdlr-core-recent-portfolio-widget-1" class="widget widget_gdlr-core-recent-portfolio-widget kingster-widget">
+                                    <!-- <div id="gdlr-core-recent-portfolio-widget-1" class="widget widget_gdlr-core-recent-portfolio-widget kingster-widget">
                                         <h3 class="kingster-widget-title">Recent Works</h3><span class="clear"></span>
                                         <div class="gdlr-core-recent-portfolio-widget-wrap clearfix">
                                             <div class="gdlr-core-recent-portfolio-widget gdlr-core-media-image">
@@ -220,7 +221,7 @@
                                                 <a href="#"><img src="<?php echo base_url('asset/upload/austin-neill-247047-unsplash-150x150.jpg'); ?>" alt="" width="150" height="150" title="austin-neill-247047-unsplash" /><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-15 icon_link_alt"  ></i></span></a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

@@ -18,15 +18,15 @@
                 <div class="kingster-header-background"></div>
                 <div class="kingster-header-container  kingster-container">
                     <div class="kingster-header-container-inner clearfix">
-                        <div class="kingster-logo  kingster-item-pdlr" style="margin: 0 0 0 11.5%;">
+                        <div class="kingster-logo  kingster-item-pdlr" style="margin: 0 0 0 0;">
                             <div class="kingster-logo-inner">
-                                <a class="" href="index.html"><img src="<?php echo base_url('asset/images/logo.png'); ?>" alt="" /></a>
+                                <a class="" href="<?php echo base_url('beranda'); ?>"><img src="<?php echo base_url('asset/logo/logoPengairan.png'); ?>" alt="" /></a>
                             </div>
                         </div>
                         <div class="kingster-navigation kingster-item-pdlr clearfix" style="margin-top: -20px;">
                             <div class="kingster-main-menu" id="kingster-main-menu" >
                                 <ul id="menu-main-navigation-1" class="sf-menu">
-                                    <li class="menu-item menu-item-home current-menu-item menu-item-has-children kingster-normal-menu"><a href="<?php echo base_url('beranda'); ?>" class="sf-with-ul-pre">Beranda</a></li>
+                                    <!-- <li class="menu-item menu-item-home current-menu-item menu-item-has-children kingster-normal-menu"><a href="<?php echo base_url('beranda'); ?>" class="sf-with-ul-pre"><img src="<?php echo base_url('asset/upload/icon-4.png'); ?>" alt="" width="30" height="30" title="icon-4" /></a></li> -->
                                     <!-- <li class="menu-item menu-item-has-children kingster-mega-menu"><a href="bachelor-of-science-in-business-administration.html" class="sf-with-ul-pre">Program Studi</a>
                                         <div class="sf-mega sf-mega-full megaimg">
                                             <ul class="sub-menu">
@@ -68,8 +68,8 @@
                                         <ul class="sub-menu">
                                             <li class="menu-item" data-size="60"><a href="<?php echo base_url('vision-mission'); ?>">Visi, Misi dan Tujuan</a></li>
                                             <li class="menu-item" data-size="60"><a href="<?php echo base_url('history'); ?>">Sejarah</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Struktur Organisasi</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Renstra & Program Kerja</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('struktur-organisasi'); ?>">Struktur Organisasi</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('renstra-proker'); ?>">Renstra & Program Kerja</a></li>                                                                                   
                                             <li class="menu-item menu-item-has-children" data-size="60">
                                                 <a href="campus-tour.html">SDM</a>
                                                 <ul class="sub-menu">
@@ -89,7 +89,7 @@
                                             <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Informasi Pendaftaran</a></li>
                                             <li class="menu-item" data-size="60"><a href="campus-tour.html">Program Studi</a></li>                                                                                   
                                             <li class="menu-item" data-size="60"><a href="campus-tour.html">SOP & Formulir</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Jurnal</a></li>                                                                                   
+                                            <!-- <li class="menu-item" data-size="60"><a href="campus-tour.html">Jurnal</a></li>                                                                                    -->
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Penelitian & Pengabdian</a>
@@ -133,7 +133,7 @@
                                 </ul>
                                 <div class="kingster-navigation-slide-bar" id="kingster-navigation-slide-bar"></div>
                             </div>
-                            <div class="kingster-main-menu-right-wrap clearfix ">
+                            <!-- <div class="kingster-main-menu-right-wrap clearfix ">
                                 <div class="kingster-main-menu-search" id="kingster-top-search"><i class="icon_search"></i></div>
                                 <div class="kingster-top-search-wrap">
                                     <div class="kingster-top-search-close"></div>
@@ -148,7 +148,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

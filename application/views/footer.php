@@ -14,7 +14,7 @@
                         <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
                             <div id="text-2" class="widget widget_text kingster-widget">
                                 <div class="textwidget">
-                                    <p><img src="<?php echo base_url('asset/upload/footer-logo.png'); ?>" alt="" />
+                                    <p><img style="width: 80%;" src="<?php echo base_url('asset/logo/logoPengairanFooter.png'); ?>" alt="" />
                                         <br /> <span class="gdlr-core-space-shortcode" id="span_1dd7_10"></span>
                                         <br /> 144,
                                         <br /> Jalkheri Street,
@@ -78,7 +78,7 @@
                 
                 <div class="kingster-copyright-wrapper">
                     <div class="kingster-copyright-container kingster-container clearfix">
-                        <div class="kingster-copyright-left kingster-item-pdlr">Copyright All Right Reserved 2019, Max Themes</div>
+                        <div class="kingster-copyright-left kingster-item-pdlr">Copyright &copy; All Right Reserved <?php echo date('Y'); ?> Teknik Pengairan Universitas Brawijaya</div>
                         <div class="kingster-copyright-right kingster-item-pdlr">
                             <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_1dd7_112">
                                 <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="facebook">

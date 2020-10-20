@@ -25,9 +25,8 @@
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
           </a>
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <!-- User Account: style can be found in dropdown.less -->
+          <!-- <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">             
               <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-envelope-o"></i> Pesan Masuk
@@ -65,5 +64,5 @@
               </li>
 
             </ul>
-          </div>
+          </div> -->
         </nav>

@@ -21,6 +21,23 @@ class PresenterController extends CI_Controller {
 		$this->load->view('global_js');
     }
 
+    function showStrukturOrganisasi(){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+		$this->load->view('general/struktur_organisasi');
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
+
+    function showRenstraProgramKerja(){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+		$this->load->view('general/vision_mission_purpose');
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
 
     // Tentang Kami
     function showAddress(){

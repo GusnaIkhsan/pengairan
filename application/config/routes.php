@@ -66,6 +66,8 @@ $route['content'] = 'Sarjana/SarjanaController/profilContent';
 // Profile
 $route['history'] = 'general/PresenterController/showHistory';
 $route['vision-mission'] = 'general/PresenterController/showVisiMisi';
+$route['struktur-organisasi'] = 'general/PresenterController/showStrukturOrganisasi';
+$route['renstra-proker'] = 'general/PresenterController/showRenstraProgramKerja';
 // Akademik
 
 // Tentang Kami

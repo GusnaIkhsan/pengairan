@@ -13,8 +13,10 @@ class Administrator extends CI_Controller {
 				$this->session->set_userdata('upload_image_file_manager',true);
 				$this->session->set_userdata(array('username'=>$row['username'],
 								   'level'=>$row['level']));
-
-                redirect('administrator/home');
+                $data['testing'] = "gusna Ikhsan";
+                redirect('administrator/home', $data);  
+                // $this->template->load('administrator/template','administrator/home', $data);     
+                // exit();
                 // var_dump($this->session->userdata);
                 // var_dump($row);
 			}else{
