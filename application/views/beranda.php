@@ -391,7 +391,7 @@
                                                                 <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
                                                             </span>
                                                             <div class="gdlr-core-event-item-content-wrap">
-                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[0]->id_berita); ?>" ><?php echo $announc[0]->judul;?></a></h3>
+                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[$key]->id_berita); ?>" ><?php echo $announc[$key]->judul;?></a></h3>
                                                                 <!-- <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">Kingster Grand Hall</span></span>
                                                                 </div> -->
                                                             </div>

@@ -3,8 +3,8 @@
                 <div class="box-header">
                   <h3 class="box-title">Daftar Dosen</h3>
                   <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" href='<?php echo base_url(); ?>administrator/tambah_dosen'>Tambahkan Data</a>
-                  <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" onclick="showLookup()" >Upload Template</a>
-                  <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" href='<?php echo base_url('form/download'); ?>'>Download Template</a>
+                  <!-- <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" onclick="showLookup()" >Upload Template</a> -->
+                  <!-- <a class='pull-right btn btn-primary btn-sm' style="margin-left: 0.5%;" href='<?php echo base_url('form/download'); ?>'>Download Template</a> -->
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
