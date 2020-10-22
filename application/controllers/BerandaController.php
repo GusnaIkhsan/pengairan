@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class BerandaController extends CI_Controller {
 	public function index(){
-		$data['news'] = $this->model_berita->lastNews(3);
+		$data['news'] = $this->model_berita->lastNews(1);
 		$data['announc'] = $this->model_berita->lastAnnouncement(3);
 		$data['headline'] = $this->model_berita->headLine(3);
 		$data['agenda'] = $this->model_agenda->lastAgenda(4);

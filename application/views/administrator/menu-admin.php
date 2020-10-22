@@ -2,9 +2,10 @@
           <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image">
-              <img src="<?php echo base_url(); ?>/asset/admin/dist/img/users.gif" class="img-circle" alt="User Image">
+              <img src="<?php echo base_url(); ?>/asset/admin/dist/img/users1.gif" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
+              <p>Admin</p>
               <?php              
                 // var_dump($this->session());    
                 // $usr = $this->db->query("SELECT * FROM users where username='".$this->session->username."'")->row_array(); 
@@ -13,7 +14,7 @@
                 // print_r($this->session);
               ?>
               
-              <!-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> -->
+              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
 
@@ -69,7 +70,7 @@
             </li> -->
             
             <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-object-align-left"></i> <span>Modul Web</span><i class="fa fa-angle-left pull-right"></i></a>
+              <a href="#"><i class="glyphicon glyphicon-object-align-left"></i> <span>Agenda</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/logowebsite"><i class="fa fa-circle-o"></i> Logo Website</a></li> -->
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/lowker"><i class="fa fa-circle-o"></i> Info Lowker</a></li> -->
