@@ -86,7 +86,7 @@
               </ul>
             </li>
             
-            <li><a href="<?php echo base_url(); ?>administrator/edit_manajemenuser/<?php echo $this->session->username; ?>"><i class="fa fa-user"></i> <span>Edit Profile</span></a></li>
+            <!-- <li><a href="<?php echo base_url(); ?>administrator/edit_manajemenuser/<?php echo $this->session->username; ?>"><i class="fa fa-user"></i> <span>Edit Profile</span></a></li> -->
             <li><a href="<?php echo base_url(); ?>"><i class="fa fa-power-off"></i> <span>Logout</span></a></li>
           </ul>
         </section>
