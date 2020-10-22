@@ -17,7 +17,7 @@
                     <tbody>
                       <input type='hidden' name='id' value='$rows[id_agenda]'>
                       <tr><th width='120px' scope='row'>Tema</th>   <td><input type='text' class='form-control' name='a' value='$rows[tema]'></td></tr>
-                      <tr><th scope='row'>Isi Agenda</th>           <td><textarea id='editor1' class='form-control' name='b' style='height:260px'>$rows[isi_agenda]</textarea></td></tr>
+                      <tr><th scope='row'>Isi Agenda</th>           <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px'>$rows[isi_agenda]</textarea></td></tr>
                       <tr><th scope='row'>Gambar</th>               <td><input type='file' class='form-control' name='c'>";
                                                                           if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."asset/foto_agenda/$rows[gambar]'>$rows[gambar]</a>"; } echo "</td></tr>
                       </td></tr>

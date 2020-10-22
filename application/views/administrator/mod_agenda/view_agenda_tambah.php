@@ -12,7 +12,7 @@
                     <tbody>
                       <input type='hidden' name='id' value=''>
                       <tr><th width='120px' scope='row'>Tema</th>   <td><input type='text' class='form-control' name='a'></td></tr>
-                      <tr><th scope='row'>Isi Agenda</th>           <td><textarea id='editor1' class='form-control' name='b' style='height:260px'></textarea></td></tr>
+                      <tr><th scope='row'>Isi Agenda</th>           <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px'></textarea></td></tr>
                       <tr><th scope='row'>Gambar</th>               <td><input type='file' class='form-control' name='c'></td></tr>
                       <tr><th scope='row'>Tempat</th>               <td><input type='text' class='form-control' name='d'></td></tr>
                       <tr><th scope='row'>Jam <small>s/d</small> Selesai</th><td><input type='text' class='form-control' name='e'></td></tr>

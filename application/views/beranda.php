@@ -330,36 +330,36 @@
                                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" alt="" width="150" height="150" title="Student" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
+                                                                            <a href="#"><?php echo $agenda[1]->tgl_posting; ?></a>
+                                                                        </span>                                                                        
+                                                                    </div>
                                                                     <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>" ><?php echo $agenda[1]->tema;?></a></h3></div>
-                                                                        <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                            <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                                <a href="#"><?php echo $agenda[1]->tgl_posting; ?></a>
-                                                                            </span>                                                                        
-                                                                        </div>
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
                                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[2]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_481869205" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>" ><?php echo $agenda[2]->tema;;?></a></h3></div>
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>" ><?php echo $agenda[2]->tema;?></a></h3></div>
                                                                         <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                             <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                                <a href="#"><?php echo $news[2]->tanggal; ?></a></span>                                                                            
+                                                                                <a href="#"><?php echo $agenda[2]->tgl_posting; ?></a></span>                                                                            
                                                                         </div>
                                                             </div>
-                                                            <!-- <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
+                                                            <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
                                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[3]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_361397258" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#"><?php echo $news[3]->tanggal; ?></a>
+                                                                            <a href="#"><?php echo $agenda[3]->tgl_posting; ?></a>
                                                                         </span>                                                                       
                                                                     </div>
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('berita/'.$news[3]->id_berita); ?>" ><?php echo $news[3]->judul;?></a></h3></div>
-                                                            </div> -->
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>" ><?php echo $agenda[2]->tema;?></a></h3></div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

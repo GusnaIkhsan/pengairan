@@ -52,7 +52,7 @@ class Model_agenda extends CI_model{
                                     'tgl_posting'=>date('Y-m-d'),
                                     'jam'=>$this->db->escape_str($this->input->post('e')),
                                     'dibaca'=>'0',
-                                    'username'=>admin);
+                                    'username'=>"admin");
             }
         $this->db->insert('agenda',$datadb);
     }
