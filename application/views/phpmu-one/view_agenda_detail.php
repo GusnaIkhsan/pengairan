@@ -17,7 +17,7 @@
 				$isi_agenda=$record['isi_agenda'];
 				 $baca = $record['dibaca']+1;
 				 if (trim($record['tempat'])==''){
-				 	$tempat = 'Universitas Dharma Andalas Padang';
+				 	$tempat = 'Universitas Brawijaya';
 				 }else{
 				 	$tempat = $record['tempat'];
 				 }

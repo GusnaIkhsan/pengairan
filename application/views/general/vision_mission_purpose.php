@@ -10,8 +10,8 @@
                 <div class="kingster-page-title-overlay"></div>
                 <div class="kingster-page-title-bottom-gradient"></div>
                 <div class="kingster-page-title-container kingster-container">
-                    <div class="kingster-page-title-content kingster-item-pdlr" id="div_983a_1">
-                        <!-- <div class="kingster-page-caption" id="div_983a_2">Know Us Better</div> -->
+                    <!-- <img src="<?php echo base_url('asset/foto_agenda/brawijaya.jpg'); ?>" width="1000" height="430"  alt="" />                   -->
+                    <div class="kingster-page-title-content kingster-item-pdlr" id="div_983a_1">  
                         <h1 class="kingster-page-title" id="h1_983a_0">Visi, Misi, Tujuan</h1></div>
                 </div>
             </div>
@@ -336,7 +336,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="gdlr-core-pbf-wrapper " id="div_983a_45">
+                    <!-- <div class="gdlr-core-pbf-wrapper " id="div_983a_45">
                         <div class="gdlr-core-pbf-background-wrap" id="div_983a_46"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" id="div_983a_47">
@@ -363,7 +363,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
