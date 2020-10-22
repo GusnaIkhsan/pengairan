@@ -17,30 +17,46 @@
                                         <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
                                             <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.8">
                                                 <ul>
-                                                    <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="<?php echo base_url('asset/foto_berita/'.$headline[0]->gambar); ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="<?php echo base_url('asset/foto_berita/'.$headline[0]->gambar); ?>" alt="" title="slider-1-2" width="1800" height="1119" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                                                        <div class="tp-caption   tp-resizeme" id="slide-3-layer-1" data-x="38" data-y="center" data-voffset="-146" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 33px; line-height: 33px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Poppins;"><?php echo $headline[0]->judul; ?></div>
-                                                        <!-- <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-3-layer-4" data-x="33" data-y="center" data-voffset="-44" data-width="['830']" data-height="['118']" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":330,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(24,36,59,0.9);border-radius:3px 3px 3px 3px;"></div> -->
-                                                        <!-- <div class="tp-caption   tp-resizeme" id="slide-3-layer-2" data-x="55" data-y="center" data-voffset="-52" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":360,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 88px; line-height: 88px; font-weight: 700; color: #ffffff; letter-spacing: 0px;font-family:Playfair Display;">Kingster</div>
-                                                        <div class="tp-caption   tp-resizeme" id="slide-3-layer-3" data-x="423" data-y="center" data-voffset="-51" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":360,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; white-space: nowrap; font-size: 88px; line-height: 88px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Playfair Display;">University</div> -->
+                                                    <?php
+                                                        foreach ($headline as $key => $value) {                                                      
+                                                            if(0==$key){
+                                                    ?> 
+                                                    <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="<?php echo base_url('asset/foto_berita/'.$headline[$key]->gambar); ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="<?php echo base_url('asset/foto_berita/'.$headline[$key]->gambar); ?>" alt="" title="slider-1-2" width="1800" height="1119" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                        <div class="tp-caption   tp-resizeme" id="slide-3-layer-1" data-x="38" data-y="center" data-voffset="-146" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 33px; line-height: 33px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Poppins;"><?php echo $headline[$key]->judul; ?></div>                                                        
                                                         <div class="tp-caption   tp-resizeme" id="slide-1-layer-2" data-x="33" data-y="center" data-voffset="-31" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":370,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 83px; line-height: 83px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">Pengairan Brawijaya</div>
-                                                        <a href="<?php echo base_url('berita/'.$headline[0]->id_berita); ?>">
+                                                        <a href="<?php echo base_url('berita/'.$headline[$key]->id_berita); ?>">
                                                             <div class="tp-caption rev-btn rev-hiddenicon" id="slide-3-layer-6" data-x="34" data-y="center" data-voffset="80" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"delay":660,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(1,61,135);bg:rgba(255,255,255,1);bw:0 0 0 5px;"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[19,19,19,19]" data-paddingright="[21,21,21,21]" data-paddingbottom="[19,19,19,19]" data-paddingleft="[21,21,21,21]" style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 16px; font-weight: 600; color: #2d2d2d; letter-spacing: 0px;font-family:Poppins;background-color:rgb(255,255,255);border-color:rgb(61,177,102);border-style:solid;border-width:0px 0px 0px 5px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Selengkapnya</div>
                                                         </a>
                                                     </li>
-                                                    <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="<?php echo base_url('asset/foto_berita/'.$headline[1]->gambar); ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="<?php echo base_url('asset/foto_berita/'.$headline[1]->gambar); ?>" alt="" title="slider-2" width="1800" height="1119" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                                                        <div class="tp-caption   tp-resizeme" id="slide-1-layer-1" data-x="36" data-y="center" data-voffset="-120" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 33px; line-height: 33px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Poppins;"><?php echo $headline[1]->judul; ?></div>
+
+                                                    <?php
+                                                        }elseif(1==$key){
+                                                    ?>
+
+                                                    <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="<?php echo base_url('asset/foto_berita/'.$headline[$key]->gambar); ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="<?php echo base_url('asset/foto_berita/'.$headline[$key]->gambar); ?>" alt="" title="slider-2" width="1800" height="1119" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                        <div class="tp-caption   tp-resizeme" id="slide-1-layer-1" data-x="36" data-y="center" data-voffset="-120" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 33px; line-height: 33px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Poppins;"><?php echo $headline[$key]->judul; ?></div>
                                                         <div class="tp-caption   tp-resizeme" id="slide-1-layer-2" data-x="33" data-y="center" data-voffset="-31" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":370,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 83px; line-height: 83px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">Pengairan Brawijaya</div>
-                                                        <a href="<?php echo base_url('berita/'.$headline[1]->id_berita); ?>">
+                                                        <a href="<?php echo base_url('berita/'.$headline[$key]->id_berita); ?>">
                                                             <div class="tp-caption rev-btn rev-hiddenicon" id="slide-3-layer-6" data-x="34" data-y="center" data-voffset="80" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"delay":660,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(1,61,135);bg:rgba(255,255,255,1);bw:0 0 0 5px;"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[19,19,19,19]" data-paddingright="[21,21,21,21]" data-paddingbottom="[19,19,19,19]" data-paddingleft="[21,21,21,21]" style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 16px; font-weight: 600; color: #2d2d2d; letter-spacing: 0px;font-family:Poppins;background-color:rgb(255,255,255);border-color:rgb(61,177,102);border-style:solid;border-width:0px 0px 0px 5px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Selengkapnya</div>
                                                         </a>
-                                                    </li>                                                   
-                                                    <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="<?php echo base_url('asset/foto_berita/'.$headline[2]->gambar); ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="<?php echo base_url('asset/foto_berita/'.$headline[2]->gambar); ?>" alt="" title="slider-2" width="1800" height="1119" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                                                        <div class="tp-caption   tp-resizeme" id="slide-1-layer-1" data-x="36" data-y="center" data-voffset="-120" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 33px; line-height: 33px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Poppins;"><?php echo $headline[2]->judul; ?></div>
+                                                    </li>   
+
+                                                    <?php
+                                                        }else{
+                                                    ?>
+
+                                                    <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="<?php echo base_url('asset/foto_berita/'.$headline[$key]->gambar); ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="<?php echo base_url('asset/foto_berita/'.$headline[$key]->gambar); ?>" alt="" title="slider-2" width="1800" height="1119" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                        <div class="tp-caption   tp-resizeme" id="slide-1-layer-1" data-x="36" data-y="center" data-voffset="-120" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 33px; line-height: 33px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Poppins;"><?php echo $headline[$key]->judul; ?></div>
                                                         <div class="tp-caption   tp-resizeme" id="slide-1-layer-2" data-x="33" data-y="center" data-voffset="-31" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":370,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 83px; line-height: 83px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">Pengairan Brawijaya</div>
-                                                        <a href="<?php echo base_url('berita/'.$headline[2]->id_berita); ?>">
+                                                        <a href="<?php echo base_url('berita/'.$headline[$key]->id_berita); ?>">
                                                             <div class="tp-caption rev-btn rev-hiddenicon" id="slide-3-layer-6" data-x="34" data-y="center" data-voffset="80" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"delay":660,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(1,61,135);bg:rgba(255,255,255,1);bw:0 0 0 5px;"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[19,19,19,19]" data-paddingright="[21,21,21,21]" data-paddingbottom="[19,19,19,19]" data-paddingleft="[21,21,21,21]" style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 16px; font-weight: 600; color: #2d2d2d; letter-spacing: 0px;font-family:Poppins;background-color:rgb(255,255,255);border-color:rgb(61,177,102);border-style:solid;border-width:0px 0px 0px 5px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Selengkapnya</div>
                                                         </a>
                                                     </li>
+                                                    
+                                                    <?php  
+                                                            }
+                                                        }
+                                                    ?>
                                                 </ul>
                                                 <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
                                             </div>
@@ -145,93 +161,82 @@
                                             <!-- </div><a class="gdlr-core-block-item-read-more" href="<?php echo base_url('all-news'); ?>" target="_self" style="color: #3db166 ;">Selengkapnya</a></div> -->
                                             </div><a class="gdlr-core-block-item-read-more" href="#" target="_self" style="color: #3db166 ;">Selengkapnya</a></div>
                                         <div class="gdlr-core-event-item-holder clearfix">
+                                            <?php
+                                                foreach ($news as $key => $value) {                                                      
+                                                    if(0==$key){
+                                            ?>  
                                             <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20 gdlr-core-column-first  clearfix">
                                                 <div class="gdlr-core-event-item-thumbnail">
-                                                    <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$news[0]->gambar); ?>" width="900" height="500"  alt="" /></a>
-                                                </div>
-                                                    <!-- <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
-                                                    <?php $tanggalBerita = explode("-", $news[0]->tanggal); ?>
-                                                    <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
-                                                    <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
-                                                    <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
-                                                </span> -->
-                                                <div class="gdlr-core-event-item-content-wrap">
-                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[0]->id_berita); ?>" ><?php echo $news[0]->judul;?></a></h3>
-                                                    <div class="gdlr-core-event-item-info-wrap">
-                                                        <p>
-                                                            <?php echo $news[0]->judul;?>
-                                                        </p>
-                                                        <!-- <span class="gdlr-core-event-item-info gdlr-core-type-time">
-                                                            <span class="gdlr-core-head" >
-                                                                <i class="icon_calendar" ></i>
-                                                            </span>
-                                                            <span class="gdlr-core-tail"><?php echo $news[0]->hari;?></span>
-                                                        </span> -->
-                                                        <!-- <span class="gdlr-core-event-item-info gdlr-core-type-location">
-                                                            <span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span>
-                                                            <span class="gdlr-core-tail"><?php echo $agenda[0]->tempat;?></span>
-                                                        </span> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
-                                                <div class="gdlr-core-event-item-thumbnail">
-                                                    <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$news[1]->gambar); ?>" width="900" height="500" alt="" /></a>
-                                                </div>
-                                                    <!-- <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"> -->
-                                                    <!-- <?php $tanggalBerita = explode("-", $news[1]->tanggal); ?>
-                                                    <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
-                                                    <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
-                                                    <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span> -->
+                                                    <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" width="900" height="500"  alt="" /></a>
+                                                </div>                                                    
                                                 </span>
                                                 <div class="gdlr-core-event-item-content-wrap">
-                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[1]->id_berita); ?>" ><?php echo $news[1]->judul;?></a></h3>
+                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>" ><?php echo $news[$key]->judul;?></a></h3>
                                                     <div class="gdlr-core-event-item-info-wrap">
                                                         <p>
-                                                            <?php echo $news[1]->judul;?>
-                                                        </p>
-                                                        <!-- <span class="gdlr-core-event-item-info gdlr-core-type-time">
-                                                            <span class="gdlr-core-head" >
-                                                                <i class="icon_clock_alt" ></i>
-                                                            </span>
-                                                            <span class="gdlr-core-tail"><?php echo $agenda[1]->jam;?></span>
-                                                        </span>
-                                                        <span class="gdlr-core-event-item-info gdlr-core-type-location">
-                                                            <span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span>
-                                                            <span class="gdlr-core-tail"><?php echo $agenda[1]->tempat;?></span>
-                                                        </span> -->
+                                                            <?php
+                                                              $exp = explode("<p>", $news[$key]->isi_berita);
+                                                              $lengthStr = strlen($news[$key]->isi_berita);                                                      
+                                                              $txt = substr($exp[1],0,100);
+                                                              echo $txt.' . . .';
+                                                            ?>
+                                                        </p>                                                        
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <?php
+                                                    }elseif(1==$key){
+                                            ?>
+
                                             <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
                                                 <div class="gdlr-core-event-item-thumbnail">
-                                                    <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$news[2]->gambar); ?>" width="900" height="500" alt="" /></a>
-                                                    </div>
-                                                    <!-- <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
-                                                    <?php $tanggalBerita = explode("-", $news[2]->tanggal); ?>
-                                                    <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
-                                                    <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
-                                                    <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
-                                                    </span> -->
+                                                    <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" width="900" height="500" alt="" /></a>
+                                                </div>                                                   
+                                                </span>
                                                 <div class="gdlr-core-event-item-content-wrap">
-                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[2]->id_berita); ?>" ><?php echo $news[2]->judul;?></a></h3>
+                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>" ><?php echo $news[$key]->judul;?></a></h3>
                                                     <div class="gdlr-core-event-item-info-wrap">
                                                         <p>
-                                                            <?php echo $news[2]->judul;?>
-                                                        </p>
-                                                        <!-- <span class="gdlr-core-event-item-info gdlr-core-type-time">
-                                                            <span class="gdlr-core-head" >
-                                                                <i class="icon_clock_alt" ></i>
-                                                            </span>
-                                                            <span class="gdlr-core-tail"><?php echo $agenda[2]->jam;?></span>
-                                                        </span>
-                                                        <span class="gdlr-core-event-item-info gdlr-core-type-location">
-                                                            <span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span>
-                                                            <span class="gdlr-core-tail"><?php echo $agenda[2]->tempat;?></span>
-                                                        </span> -->
+                                                        <?php
+                                                              $exp = explode("<p>", $news[$key]->isi_berita);
+                                                              $lengthStr = strlen($news[$key]->isi_berita);                                                      
+                                                              $txt = substr($exp[1],0,100);
+                                                              echo $txt.' . . .';
+                                                            ?>
+                                                        </p>                                                        
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <?php
+                                                    }else{
+                                            ?>   
+
+                                            <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
+                                                <div class="gdlr-core-event-item-thumbnail">
+                                                    <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" width="900" height="500" alt="" /></a>
+                                                </div>                                                  
+                                                <div class="gdlr-core-event-item-content-wrap">
+                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>" ><?php echo $news[$key]->judul;?></a></h3>
+                                                    <div class="gdlr-core-event-item-info-wrap">
+                                                        <p>
+                                                            <?php
+                                                              $exp = explode("<p>", $news[$key]->isi_berita);
+                                                              $lengthStr = strlen($news[$key]->isi_berita);                                                      
+                                                              $txt = substr($exp[1],0,100);
+                                                              echo $txt.' . . .';
+                                                            ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php  
+                                                    }
+                                                }
+                                            ?>
+                                                                                                                             
+                                            
                                             <!-- <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
                                                 <div class="gdlr-core-event-item-thumbnail">
                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" width="900" height="500" alt="" /></a>
