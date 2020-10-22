@@ -281,7 +281,7 @@ class Model_berita extends CI_model{
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
                                     where status='Y' and kategori.id_kategori not in (61) ORDER BY id_berita 
-                                    ASC LIMIT 0,$limit");
+                                    DESC LIMIT 0,$limit");
         return $data->result();
     }
 

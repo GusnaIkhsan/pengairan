@@ -309,17 +309,17 @@
                                                                         <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[0]->gambar); ?>" width="700" height="430"  alt="" /></a>
                                                                     </div>
                                                                     <div class="gdlr-core-blog-grid-content-wrap">
-                                                                        <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                            <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                                <a href="#"><?php echo $news[0]->tanggal; ?></a>
-                                                                            </span>
-                                                                            <!-- <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
-                                                                                <a href="#" rel="tag">Admission</a>
-                                                                                <span class="gdlr-core-sep">,</span>
-                                                                                <a href="#" rel="tag">Student</a>
-                                                                            </span> -->
-                                                                        </div>
                                                                         <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 19px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[0]->id_agenda); ?>" ><?php echo $agenda[0]->tema;?></a></h3></div>
+                                                                        <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                                <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
+                                                                                    <a href="#"><?php echo $news[0]->tanggal; ?></a>
+                                                                                </span>
+                                                                                <!-- <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
+                                                                                    <a href="#" rel="tag">Admission</a>
+                                                                                    <span class="gdlr-core-sep">,</span>
+                                                                                    <a href="#" rel="tag">Student</a>
+                                                                                </span> -->
+                                                                        </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -330,23 +330,23 @@
                                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" alt="" width="150" height="150" title="Student" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
-                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#"><?php echo $agenda[1]->tgl_posting; ?></a>
-                                                                        </span>                                                                        
-                                                                    </div>
                                                                     <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>" ><?php echo $agenda[1]->tema;?></a></h3></div>
+                                                                        <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                            <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
+                                                                                <a href="#"><?php echo $agenda[1]->tgl_posting; ?></a>
+                                                                            </span>                                                                        
+                                                                        </div>
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
                                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[2]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_481869205" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
-                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#"><?php echo $news[2]->tanggal; ?></a></span>                                                                            
-                                                                    </div>
                                                                     <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>" ><?php echo $agenda[2]->tema;;?></a></h3></div>
+                                                                        <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                            <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
+                                                                                <a href="#"><?php echo $news[2]->tanggal; ?></a></span>                                                                            
+                                                                        </div>
                                                             </div>
                                                             <!-- <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
@@ -380,9 +380,12 @@
                                                         </div>
                                                     </div>
                                                     <div class="gdlr-core-event-item-holder clearfix">
+                                                        <?php
+                                                            foreach ($announc as $key => $value) {                                                                                                                  
+                                                        ?>  
                                                         <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;">
                                                             <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
-                                                                <?php $tanggalBerita = explode("-", $announc[0]->tanggal); ?>
+                                                                <?php $tanggalBerita = explode("-", $announc[$key]->tanggal); ?>
                                                                 <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
                                                                 <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
                                                                 <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
@@ -393,7 +396,10 @@
                                                                 </div> -->
                                                             </div>
                                                         </div>
-                                                        <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;">
+                                                        <?php
+                                                            }                                                                                                            
+                                                        ?>  
+                                                        <!-- <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;">
                                                             <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
                                                                 <?php $tanggalBerita = explode("-", $announc[1]->tanggal); ?>
                                                                 <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
@@ -401,9 +407,7 @@
                                                                 <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
                                                             </span>
                                                             <div class="gdlr-core-event-item-content-wrap">
-                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[1]->id_berita); ?>" ><?php echo $announc[1]->judul;?></a></h3>
-                                                                <!-- <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">Kingster Grand Hall</span></span>
-                                                                </div> -->
+                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[1]->id_berita); ?>" ><?php echo $announc[1]->judul;?></a></h3>                                                                
                                                             </div>
                                                         </div>
                                                         <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;">
@@ -414,11 +418,9 @@
                                                                 <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
                                                             </span>
                                                             <div class="gdlr-core-event-item-content-wrap">
-                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[2]->id_berita); ?>" ><?php echo $announc[2]->judul;?></a></h3>
-                                                                <!-- <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">Kingster Grand Hall</span></span>
-                                                                </div> -->
+                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[2]->id_berita); ?>" ><?php echo $announc[2]->judul;?></a></h3>                                                                
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 </div>
                                             </div>
