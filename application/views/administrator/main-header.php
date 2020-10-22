@@ -46,7 +46,7 @@
                           echo "<li style='background-color:$color'>
                                   <a href='".base_url()."administrator/detail_pesanmasuk/$row[id_hubungi]'>
                                     <div class='pull-left'>
-                                      <img src='".base_url()."asset/foto_user/users.gif' class='img-circle' alt='User Image'>
+                                      <img src='".base_url()."asset/foto_user/users1.gif' class='img-circle' alt='User Image'>
                                     </div>
                                     <h4>$row[nama]<small><i class='fa fa-clock-o'></i> $waktukirim</small></h4>
                                     <p>$isi_pesan...</p>

@@ -18,7 +18,8 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/admin/plugins/iCheck/square/blue.css">
   </head>
-  <body style="background-image: url(<?php echo base_url(); ?>asset/logo/login-header.png)" class="hold-transition login-page">
+  <!-- <body style="background-image: url(<?php echo base_url(); ?>asset/logo/login-header.png)" class="hold-transition login-page"> -->
+  <body style="" class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
         <a href="#"><b>ADMIN</b> Login</a>
