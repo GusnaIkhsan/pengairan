@@ -7,7 +7,7 @@
                         <li><a href="https://twitter.com/shayari/#">Shayari</a></li>
                     </ul>
             </div>
-
+    
             <footer>            
                 <div class="kingster-footer-wrapper ">
                     <div class="kingster-footer-container kingster-container clearfix">
@@ -16,12 +16,13 @@
                                 <div class="textwidget">
                                     <p><img style="width: 80%;" src="<?php echo base_url('asset/logo/logoPengairanFooter.png'); ?>" alt="" />
                                         <br /> <span class="gdlr-core-space-shortcode" id="span_1dd7_10"></span>
-                                        <br /> 144,
-                                        <br /> Jalkheri Street,
-                                        <br /> Seattle, WA 98104-2648.</p>
-                                    <p><span id="span_1dd7_11">+1-2534-4456-345</span>
+                                        <br /> Jl. MT. Haryono 167,
+                                        <br /> Malang, Jawa Timur
+                                        <br/> Indonesia 
+                                        </p>
+                                    <p><span id="span_1dd7_11">Telp/Fax. 0341-562454</span>
                                         <br /> <span class="gdlr-core-space-shortcode" id="span_1dd7_12"></span>
-                                        <br /> <a id="a_1dd7_8" href="mailto:admin@kingsteruni.edu">admin@kingsteruni.edu</a></p>
+                                        <br /> <a id="a_1dd7_8" href="#">Email: pengairan@ub.ac.id</a></p>
                                     <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-left-align">
                                         <div class="gdlr-core-divider-line gdlr-core-skin-divider" id="div_1dd7_111"></div>
                                     </div>
@@ -30,45 +31,39 @@
                         </div>
                         <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
                             <div id="gdlr-core-custom-menu-widget-2" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                                <h3 class="kingster-widget-title">Our Campus</h3><span class="clear"></span>
+                                <h3 class="kingster-widget-title">Program Studi</h3><span class="clear"></span>
                                 <div class="menu-our-campus-container">
                                     <ul id="menu-our-campus" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item"><a href="#">Acedemic</a></li>
-                                        <li class="menu-item"><a href="#">Planning &#038; Administration</a></li>
-                                        <li class="menu-item"><a href="#">Campus Safety</a></li>
-                                        <li class="menu-item"><a href="#">Office of the Chancellor</a></li>
-                                        <li class="menu-item"><a href="#">Facility Services</a></li>
-                                        <li class="menu-item"><a href="#">Human Resources</a></li>
+                                        <li class="menu-item"><a href="#">Program Sarjana Teknik Pengairan</a></li>
+                                        <li class="menu-item"><a href="#">Program Magister Teknik Pegairan</a></li>
+                                        <li class="menu-item"><a href="#">Program Doktor Teknik Sumber Daya Air</a></li>                                        
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
                             <div id="gdlr-core-custom-menu-widget-3" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                                <h3 class="kingster-widget-title">Campus Life</h3><span class="clear"></span>
+                                <h3 class="kingster-widget-title">Tautan Lain</h3><span class="clear"></span>
                                 <div class="menu-campus-life-container">
                                     <ul id="menu-campus-life" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item"><a href="#">Accessibility</a></li>
-                                        <li class="menu-item"><a href="#">Financial Aid</a></li>
-                                        <li class="menu-item"><a href="#">Food Services</a></li>
-                                        <li class="menu-item"><a href="#">Housing</a></li>
-                                        <li class="menu-item"><a href="#">Information Technologies</a></li>
-                                        <li class="menu-item"><a href="#">Student Life</a></li>
+                                        <li class="menu-item"><a href="#">Fakultas Teknik</a></li>
+                                        <li class="menu-item"><a href="#">Jurnal Teknik Pengairan</a></li>
+                                        <li class="menu-item"><a href="#">Himpunan Mahasiswa Pengairan</a></li>                                        
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
                             <div id="gdlr-core-custom-menu-widget-4" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                                <h3 class="kingster-widget-title">Academics</h3><span class="clear"></span>
+                                <h3 class="kingster-widget-title">Layanan UB</h3><span class="clear"></span>
                                 <div class="menu-academics-container">
                                     <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item"><a href="#">Canvas</a></li>
-                                        <li class="menu-item"><a href="#">Catalyst</a></li>
-                                        <li class="menu-item"><a href="#">Library</a></li>
-                                        <li class="menu-item"><a href="#">Time Schedule</a></li>
-                                        <li class="menu-item"><a href="#">Apply For Admissions</a></li>
-                                        <li class="menu-item"><a href="#">Pay My Tuition</a></li>
+                                        <li class="menu-item"><a href="#">SELMA</a></li>
+                                        <li class="menu-item"><a href="#">BAIS</a></li>
+                                        <li class="menu-item"><a href="#">SIAM</a></li>
+                                        <li class="menu-item"><a href="#">SIUDA</a></li>
+                                        <li class="menu-item"><a href="#">SIADO</a></li>
+                                        <li class="menu-item"><a href="#">SIMPEG</a></li>
                                     </ul>
                                 </div>
                             </div>
