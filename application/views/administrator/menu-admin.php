@@ -73,10 +73,10 @@
               <ul class="treeview-menu">
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/logowebsite"><i class="fa fa-circle-o"></i> Logo Website</a></li> -->
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/lowker"><i class="fa fa-circle-o"></i> Info Lowker</a></li> -->
-                <li><a href="<?php echo base_url(); ?>administrator/download"><i class="fa fa-circle-o"></i> File Download</a></li>
+                <!-- <li><a href="<?php echo base_url(); ?>administrator/download"><i class="fa fa-circle-o"></i> File Download</a></li> -->
                 <li><a href="<?php echo base_url(); ?>administrator/agenda"><i class="fa fa-circle-o"></i> List Agenda</a></li>
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/linkterkait"><i class="fa fa-circle-o"></i> Link Terkait</a></li> -->
-                <li><a href="<?php echo base_url(); ?>administrator/pesanmasuk"><i class="fa fa-circle-o"></i> Pesan Masuk</a></li>
+                <!-- <li><a href="<?php echo base_url(); ?>administrator/pesanmasuk"><i class="fa fa-circle-o"></i> Pesan Masuk</a></li> -->
               </ul>
             </li>
             <!-- <li class="treeview">
