@@ -173,7 +173,7 @@
                                                 <div class="gdlr-core-event-item-content-wrap">
                                                     <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>" ><?php echo $news[$key]->judul;?></a></h3>
                                                     <div class="gdlr-core-event-item-info-wrap">
-                                                        <p>
+                                                        <p style="color: green;">
                                                             <?php
                                                               $exp = explode("<p>", $news[$key]->isi_berita);
                                                               $lengthStr = strlen($news[$key]->isi_berita);                                                      
@@ -197,7 +197,7 @@
                                                 <div class="gdlr-core-event-item-content-wrap">
                                                     <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>" ><?php echo $news[$key]->judul;?></a></h3>
                                                     <div class="gdlr-core-event-item-info-wrap">
-                                                        <p>
+                                                        <p style="color: green;">
                                                         <?php
                                                               $exp = explode("<p>", $news[$key]->isi_berita);
                                                               $lengthStr = strlen($news[$key]->isi_berita);                                                      
@@ -220,7 +220,7 @@
                                                 <div class="gdlr-core-event-item-content-wrap">
                                                     <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>" ><?php echo $news[$key]->judul;?></a></h3>
                                                     <div class="gdlr-core-event-item-info-wrap">
-                                                        <p>
+                                                        <p style="color: green;">
                                                             <?php
                                                               $exp = explode("<p>", $news[$key]->isi_berita);
                                                               $lengthStr = strlen($news[$key]->isi_berita);                                                      
