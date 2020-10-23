@@ -442,7 +442,7 @@
                                 <div class="gdlr-core-pbf-element">
                                     <div class="gdlr-core-tab-item gdlr-core-js gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-tab-style1-horizontal gdlr-core-item-pdlr">
                                         
-                                        <div class="gdlr-core-tab-item-content-image-wrap clearfix" style="width: 660px;">
+                                        <div class="gdlr-core-tab-item-content-image-wrap clearfix" style="width: 620px;">
                                             <div class="gdlr-core-tab-item-image  gdlr-core-active">
                                                 <a class="gdlr-core-lightgallery gdlr-core-js " href="https://www.youtube.com/watch?v=46UR7KaJYlU">
                                                 <!-- <span><img src="<?php echo base_url('asset/img_galeri/back-vid.png'); ?>" width="800" height="800"  alt="" /></span> -->
@@ -450,7 +450,7 @@
                                                     <!-- <iframe width="420" height="420"
                                                     src="hhttps://www.youtube.com/embed/zS1YNfm4M40">
                                                     </iframe> -->
-                                                    <iframe width="560" height="420" src="https://www.youtube.com/embed/bsbMNhYV5_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    <iframe width="560" height="560" src="https://www.youtube.com/embed/bsbMNhYV5_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                     <!-- <i class="fa fa-play" ></i> -->
                                                     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/zS1YNfm4M40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                                 </a>
@@ -483,7 +483,7 @@
                                                                                     <div class="gdlr-core-column-service-content-wrapper">
                                                                                         <div class="gdlr-core-column-service-title-wrap">
                                                                                             <!-- <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_3">500</h3> -->
-                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">523</div>
+                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">700</div>
                                                                                             <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Mahasiswa</div>
                                                                                         </div>
                                                                                     </div>
@@ -526,7 +526,7 @@
                                                                                     <div class="gdlr-core-column-service-content-wrapper">
                                                                                         <div class="gdlr-core-column-service-title-wrap">
                                                                                             <!-- <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_3">500</h3> -->
-                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">43</div>
+                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">38</div>
                                                                                             <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Tenaga Pendidik</div>
                                                                                         </div>
                                                                                     </div>
@@ -548,8 +548,8 @@
                                                                                     <div class="gdlr-core-column-service-content-wrapper">
                                                                                         <div class="gdlr-core-column-service-title-wrap">
                                                                                             <!-- <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_3">500</h3> -->
-                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">1143</div>
-                                                                                            <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Lulusan</div>
+                                                                                            <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3">2600</div>
+                                                                                            <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Alumni</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
