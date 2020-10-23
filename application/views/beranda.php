@@ -358,7 +358,7 @@
                                                                             <a href="#"><?php echo $agenda[3]->tgl_posting; ?></a>
                                                                         </span>                                                                       
                                                                     </div> -->
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>" ><?php echo $agenda[2]->tema;?></a></h3></div>
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[3]->id_agenda); ?>" ><?php echo $agenda[3]->tema;?></a></h3></div>
                                                             </div>
                                                         </div>
                                                     </div>
