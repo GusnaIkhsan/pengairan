@@ -461,7 +461,7 @@
                                             <div class="gdlr-core-tab-item-content-wrap clearfix">
                                                 <div class="gdlr-core-tab-item-content  gdlr-core-active">    
                                                     <div style="margin-top: -20px; text-align: center;">
-                                                        <h4 class="gdlr-core-event-item-title">Departemen Teknik Pengairan</h4>                             
+                                                        <h4 class="gdlr-core-event-item-title">Jurusan Teknik Pengairan</h4>                             
                                                     </div>
                                                     <br>
                                                     <!-- <p> Departemen Teknik Pengairan </p> -->
