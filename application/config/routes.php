@@ -75,6 +75,9 @@ $route['tracer-study'] = 'general/PresenterController/showTracerStudy';
 $route['data-lulusan'] = 'general/PresenterController/showDataLulusan';
 $route['forum-alumni'] = 'general/PresenterController/showForumAlumni';
 
+// Fasilitas
+$route['fasilitas/(:any)'] = 'general/PresenterController/showFasilitas/$1';
+
 // Tentang Kami
 $route['critics-suggest'] = 'general/PresenterController/showAddressCriticsSuggestion';
 

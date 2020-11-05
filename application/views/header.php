@@ -80,10 +80,10 @@
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Fasilitas</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="#">Akses Komputer</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Ruang Baca</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Laboratorium</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Ruang Belajar Mahasiswa</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/akses-komputer'); ?>">Akses Komputer</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/ruang-baca'); ?>">Ruang Baca</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/laboratorium'); ?>">Laboratorium</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/ruang-belajar'); ?>">Ruang Belajar Mahasiswa</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Jaminan Mutu</a>

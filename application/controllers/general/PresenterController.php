@@ -1,6 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class PresenterController extends CI_Controller {
+
+    const FASILITAS_PAGES = array(
+        "akses-komputer"    => 'general/fasilitas/akses_komputer',
+        "ruang-baca"        => 'general/fasilitas/ruang_baca',
+        "laboratorium"      => 'general/fasilitas/laboratorium',
+        "ruang-belajar"     => 'general/fasilitas/ruang_belajar'
+    );
     
     // Profile
     function showVisiMisi(){
@@ -63,6 +70,16 @@ class PresenterController extends CI_Controller {
         $this->load->view('header_mobile');
         $this->load->view('header');
 		$this->load->view('general/alumni/forum_alumni');
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
+
+    // Fasilitas
+    function showFasilitas($page){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+        $this->load->view(PresenterController::FASILITAS_PAGES[$page]);
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }
