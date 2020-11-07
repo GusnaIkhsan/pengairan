@@ -64,11 +64,11 @@
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Penelitian & Pengabdian</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="#">Penelitian Dosen</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Penelitian Mahasiswa</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Publikasi</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Pengabdian Kepada Masyarakat</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Jurnal</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/penelitian-dosen'); ?>">Penelitian Dosen</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/penelitian-mahasiswa'); ?>">Penelitian Mahasiswa</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/publikasi'); ?>">Publikasi</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/pengabdian'); ?>">Pengabdian Kepada Masyarakat</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/jurnal'); ?>">Jurnal</a></li>                                                                                   
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Alumni</a>

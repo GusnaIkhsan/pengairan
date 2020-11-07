@@ -2,6 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class PresenterController extends CI_Controller {
 
+    const PENELITIAN_PENGABDIAN_PAGES = array(
+        "penelitian-dosen"      => 'general/penelitian_pengabdian/penelitian_dosen',
+        "penelitian-mahasiswa"  => 'general/penelitian_pengabdian/penelitian_mahasiswa',
+        "publikasi"             => 'general/penelitian_pengabdian/publikasi',
+        "pengabdian"            => 'general/penelitian_pengabdian/pengabdian',
+        "jurnal"                => 'general/penelitian_pengabdian/jurnal'
+    );
+
     const FASILITAS_PAGES = array(
         "akses-komputer"    => 'general/fasilitas/akses_komputer',
         "ruang-baca"        => 'general/fasilitas/ruang_baca',
@@ -49,6 +57,16 @@ class PresenterController extends CI_Controller {
         $this->load->view('header_mobile');
         $this->load->view('header');
 		$this->load->view('general/vision_mission_purpose');
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
+
+    // Penelitian dan Pengabdian
+    function showPenelitianPengabdian($page){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+        $this->load->view(PresenterController::PENELITIAN_PENGABDIAN_PAGES[$page]);
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }

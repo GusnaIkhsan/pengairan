@@ -70,6 +70,9 @@ $route['struktur-organisasi'] = 'general/PresenterController/showStrukturOrganis
 $route['renstra-proker'] = 'general/PresenterController/showRenstraProgramKerja';
 // Akademik
 
+// Penelitian dan Pengabdian
+$route['penelitian-pengabdian/(:any)'] = 'general/PresenterController/showPenelitianPengabdian/$1';
+
 // Alumni
 $route['tracer-study'] = 'general/PresenterController/showTracerStudy';
 $route['data-lulusan'] = 'general/PresenterController/showDataLulusan';
