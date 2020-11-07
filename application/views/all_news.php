@@ -5,7 +5,7 @@
     <div class="kingster-body-outer-wrapper ">
         <div class="kingster-body-wrapper clearfix  kingster-with-frame">
             <!-- header navigation -->
-            <div class="kingster-page-title-wrap  kingster-style-medium kingster-left-align">
+            <!-- <div class="kingster-page-title-wrap  kingster-style-medium kingster-left-align">
                 <div class="kingster-header-transparent-substitute"></div>
                 <div class="kingster-page-title-overlay"></div>
                 <div class="kingster-page-title-container kingster-container">
@@ -13,7 +13,7 @@
                         <div class="kingster-page-caption">Caption aligned here</div>
                         <h1 class="kingster-page-title">Blog Full Right Sidebar With Frame</h1></div>
                 </div>
-            </div>
+            </div> -->
             <div class="kingster-page-wrapper" id="kingster-page-wrapper">
                 <div class="gdlr-core-page-builder-body">
                     <div class="gdlr-core-pbf-sidebar-wrapper ">
@@ -21,6 +21,13 @@
                             <div class="gdlr-core-pbf-sidebar-content  gdlr-core-column-40 gdlr-core-pbf-sidebar-padding gdlr-core-line-height gdlr-core-column-extend-left" style="padding: 60px 10px 30px 0px;">
                                 <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
                                 <div class="gdlr-core-pbf-sidebar-content-inner">
+                                    <div class="gdlr-core-pbf-element">
+                                        <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                                            <div class="gdlr-core-title-item-title-wrap clearfix">
+                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">BERITA</h3>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix  gdlr-core-style-blog-full-with-frame" style="padding-bottom: 40px ;">
                                             <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
@@ -31,23 +38,23 @@
                                                     <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
                                                         <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
                                                             <!-- <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_106223549-600x333.jpg'); ?>" width="900" height="500"  alt="" /></a> -->
-                                                            <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$val->gambar); ?>" width="900" height="500"  alt="" /></a>
+                                                            <img src="<?php echo base_url('asset/foto_berita/'.$val->gambar); ?>" width="900" height="500"  alt="" />
                                                         </div>
                                                         <div class="gdlr-core-blog-full-frame gdlr-core-skin-e-background">
                                                             <div class="gdlr-core-blog-full-head clearfix">
                                                                 <div class="gdlr-core-blog-full-head-right">
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 33px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="#" ><?php echo $val->judul; ?></a></h3>
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 33px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('berita/'.$val->id_berita); ?>" ><?php echo $val->judul; ?></a></h3>
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
                                                                             <?php echo $val->tanggal; ?>
                                                                         </span>      
                                                                     </div>                                                                 
-                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><a href="#" title="Posts by John Smith" rel="author"><?php echo $val->username; ?></a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-comment-number"><span class="gdlr-core-head" ><i class="fa fa-eye" ></i></span><a href="##respond"><?php echo $val->dibaca; ?> </a></span></div>
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><?php echo $val->username; ?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-comment-number"><span class="gdlr-core-head" ><i class="fa fa-eye" ></i></span><?php echo $val->dibaca; ?> </span></div>
                                                                 </div>
                                                             </div>
                                                             <br>
                                                             <div class="gdlr-core-blog-content"><?php echo $val->sub_judul; ?>
-                                                            <div class="clear"></div><a class="gdlr-core-excerpt-read-more gdlr-core-button gdlr-core-rectangle" href="<?php echo base_url('news-detail'); ?>">Read More</a></div>
+                                                            <div class="clear"></div><a class="gdlr-core-excerpt-read-more gdlr-core-button gdlr-core-rectangle" href="<?php echo base_url('news-detail'); ?>">Selengkapnya</a></div>
                                                         </div>
                                                     </div>
                                                 <?php
@@ -151,7 +158,7 @@
                                         <h3 class="kingster-widget-title">Text Widget</h3><span class="clear"></span>
                                         <div class="textwidget">Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Etiam porta sem malesuada.</div>
                                     </div> -->
-                                    <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
+                                    <!-- <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
                                         <h3 class="kingster-widget-title">Recent News</h3><span class="clear"></span>
                                         <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
                                             <div class="gdlr-core-recent-post-widget clearfix">
@@ -179,23 +186,19 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     
                                     <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">
-                                        <h3 class="kingster-widget-title">Tag Cloud</h3><span class="clear"></span>
+                                        <h3 class="kingster-widget-title">Tag</h3><span class="clear"></span>
                                         
                                         <div class="tagcloud">
-                                            <a href="#" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;" aria-label="Admission (2 items)">Admission</a>
-                                            <a href="#" class="tag-cloud-link tag-link-5 tag-link-position-2" style="font-size: 8pt;" aria-label="Article (1 item)">Article</a>
-                                            <a href="#" class="tag-cloud-link tag-link-14 tag-link-position-3" style="font-size: 12.2pt;" aria-label="Event (2 items)">Event</a>
-                                            <a href="#" class="tag-cloud-link tag-link-103 tag-link-position-4" style="font-size: 8pt;" aria-label="Hot (1 item)">Hot</a>
-                                            <a href="#" class="tag-cloud-link tag-link-10 tag-link-position-5" style="font-size: 12.2pt;" aria-label="News (2 items)">News</a>
-                                            <a href="#" class="tag-cloud-link tag-link-12 tag-link-position-6" style="font-size: 22pt;" aria-label="Post Format (7 items)">Post Format</a>
-                                            <a href="#" class="tag-cloud-link tag-link-6 tag-link-position-7" style="font-size: 15pt;" aria-label="Research (3 items)">Research</a>
-                                            <a href="#" class="tag-cloud-link tag-link-9 tag-link-position-8" style="font-size: 8pt;" aria-label="Social (1 item)">Social</a>
-                                            <a href="#" class="tag-cloud-link tag-link-13 tag-link-position-9" style="font-size: 8pt;" aria-label="Sport (1 item)">Sport</a>
-                                            <a href="#" class="tag-cloud-link tag-link-8 tag-link-position-10" style="font-size: 12.2pt;" aria-label="Student (2 items)">Student</a>
-                                            <a href="#" class="tag-cloud-link tag-link-11 tag-link-position-11" style="font-size: 12.2pt;" aria-label="Updates (2 items)">Updates</a>
+                                            <?php 
+                                            foreach($tags as $key => $val){
+                                            ?>
+                                            <a href="#" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;"><?php echo $val->nama_tag; ?></a>
+                                            <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
 

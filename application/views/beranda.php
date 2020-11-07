@@ -158,8 +158,8 @@
                                             <div class="gdlr-core-block-item-title-inner clearfix">
                                                 <h3 class="gdlr-core-block-item-title" style="font-size: 24px ;font-style: normal ;text-transform: none ;letter-spacing: 0px ;color: #163269 ;">Berita terbaru</h3>
                                                 <div class="gdlr-core-block-item-title-divider" style="font-size: 24px ;border-bottom-color: #dcdcdc ;border-bottom-width: 2px ;"></div>
-                                            <!-- </div><a class="gdlr-core-block-item-read-more" href="<?php echo base_url('all-news'); ?>" target="_self" style="color: #3db166 ;">Selengkapnya</a></div> -->
-                                            </div><a class="gdlr-core-block-item-read-more" href="#" target="_self" style="color: #3db166 ;">Selengkapnya</a></div>
+                                            </div><a class="gdlr-core-block-item-read-more" href="<?php echo base_url('all-news'); ?>" target="_self" style="color: #3db166 ;">Selengkapnya</a></div>
+                                            <!-- </div><a class="gdlr-core-block-item-read-more" href="#" target="_self" style="color: #3db166 ;">Selengkapnya</a></div> -->
                                         <div class="gdlr-core-event-item-holder clearfix">
                                             <?php
                                                 foreach ($news as $key => $value) {                                                      
