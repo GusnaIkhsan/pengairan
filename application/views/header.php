@@ -78,7 +78,7 @@
                                             <li class="menu-item" data-size="60"><a href="<?php echo base_url('forum-alumni'); ?>">Forum Alumni Pengairan</a></li>                                                                                   
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Fasilitas</a>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Fasilitas</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/akses-komputer'); ?>">Akses Komputer</a></li>
                                             <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/ruang-baca'); ?>">Ruang Baca</a></li>
@@ -88,10 +88,10 @@
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Jaminan Mutu</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="#">Unit Jaminan Mutu (UJM)</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Sistem Dokumen</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Audit Internal & Eksternal Mutu</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Tinjauan Manajemen & hasil</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('jaminan-mutu/unit-jaminan-mutu'); ?>">Unit Jaminan Mutu (UJM)</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('jaminan-mutu/sistem-dokumen'); ?>">Sistem Dokumen</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('jaminan-mutu/audit'); ?>">Audit Internal & Eksternal Mutu</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('jaminan-mutu/tinjauan-manajemen'); ?>">Tinjauan Manajemen & hasil</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Tentang Kami</a>

@@ -8,6 +8,13 @@ class PresenterController extends CI_Controller {
         "laboratorium"      => 'general/fasilitas/laboratorium',
         "ruang-belajar"     => 'general/fasilitas/ruang_belajar'
     );
+
+    const JAMINAN_MUTU_PAGES = array(
+        "unit-jaminan-mutu" => 'general/jaminan_mutu/unit_jaminan_mutu',
+        "sistem-dokumen"    => 'general/jaminan_mutu/sistem_dokumen',
+        "audit"             => 'general/jaminan_mutu/audit',
+        "tinjauan-manajemen"=> 'general/jaminan_mutu/tinjauan_manajemen'
+    );
     
     // Profile
     function showVisiMisi(){
@@ -80,6 +87,16 @@ class PresenterController extends CI_Controller {
         $this->load->view('header_mobile');
         $this->load->view('header');
         $this->load->view(PresenterController::FASILITAS_PAGES[$page]);
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
+
+    // Jaminan Mutu
+    function showJaminanMutu($page){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+        $this->load->view(PresenterController::JAMINAN_MUTU_PAGES[$page]);
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }

@@ -78,6 +78,9 @@ $route['forum-alumni'] = 'general/PresenterController/showForumAlumni';
 // Fasilitas
 $route['fasilitas/(:any)'] = 'general/PresenterController/showFasilitas/$1';
 
+// Jaminan Mutu
+$route['jaminan-mutu/(:any)'] = 'general/PresenterController/showJaminanMutu/$1';
+
 // Tentang Kami
 $route['critics-suggest'] = 'general/PresenterController/showAddressCriticsSuggestion';
 
