@@ -49,16 +49,16 @@
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Akademik</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="#">Informasi Pendaftaran</a></li>                                            
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/informasi-pendaftaran'); ?>">Informasi Pendaftaran</a></li>
                                             <li class="menu-item menu-item-has-children" data-size="60">
-                                                <a href="#">Program Studi</a>
+                                                <a href="<?php echo base_url('akademik/prodi'); ?>">Program Studi</a>
                                                 <ul class="sub-menu">
-                                                    <li class="menu-item" data-size="60"><a href="#">Sarjana</a></li>
-                                                    <li class="menu-item" data-size="60"><a href="#">Magister</a></li>
-                                                    <li class="menu-item" data-size="60"><a href="#">Doktoral</a></li>                                                                                                                                                                                                                          
+                                                    <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/prodi-sarjana'); ?>">Sarjana</a></li>
+                                                    <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/prodi-magister'); ?>">Magister</a></li>
+                                                    <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/prodi-doktoral'); ?>">Doktoral</a></li>                                                                                                                                                                                                                          
                                                 </ul>
                                             </li>                                                                                 
-                                            <li class="menu-item" data-size="60"><a href="#">SOP & Formulir</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/sop'); ?>">SOP & Formulir</a></li>                                                                                   
                                             <!-- <li class="menu-item" data-size="60"><a href="campus-tour.html">Jurnal</a></li>                                                                                    -->
                                         </ul>
                                     </li>

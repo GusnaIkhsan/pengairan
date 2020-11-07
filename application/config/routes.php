@@ -68,7 +68,9 @@ $route['history'] = 'general/PresenterController/showHistory';
 $route['vision-mission'] = 'general/PresenterController/showVisiMisi';
 $route['struktur-organisasi'] = 'general/PresenterController/showStrukturOrganisasi';
 $route['renstra-proker'] = 'general/PresenterController/showRenstraProgramKerja';
+
 // Akademik
+$route['akademik/(:any)'] = 'general/PresenterController/showAkademik/$1';
 
 // Penelitian dan Pengabdian
 $route['penelitian-pengabdian/(:any)'] = 'general/PresenterController/showPenelitianPengabdian/$1';

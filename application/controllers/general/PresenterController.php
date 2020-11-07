@@ -2,6 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class PresenterController extends CI_Controller {
 
+    const AKADEMIK_PAGES = array(
+        "informasi-pendaftaran" => 'general/akademik/informasi_pendaftaran',
+        "prodi"                 => 'general/akademik/prodi',
+        "prodi-sarjana"         => 'general/akademik/prodi_sarjana',
+        "prodi-magister"        => 'general/akademik/prodi_magister',
+        "prodi-doktoral"        => 'general/akademik/prodi_doktoral',
+        "sop"                   => 'general/akademik/sop'
+    );
+
     const PENELITIAN_PENGABDIAN_PAGES = array(
         "penelitian-dosen"      => 'general/penelitian_pengabdian/penelitian_dosen',
         "penelitian-mahasiswa"  => 'general/penelitian_pengabdian/penelitian_mahasiswa',
@@ -57,6 +66,16 @@ class PresenterController extends CI_Controller {
         $this->load->view('header_mobile');
         $this->load->view('header');
 		$this->load->view('general/vision_mission_purpose');
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
+
+    // Akademik
+    function showAkademik($page){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+        $this->load->view(PresenterController::AKADEMIK_PAGES[$page]);
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }
