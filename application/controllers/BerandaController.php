@@ -18,6 +18,7 @@ class BerandaController extends CI_Controller {
 
 	public function allNews(){
 		$data['news'] = $this->model_berita->allNews();
+		$data['tags'] = $this->model_berita->tag_berita()->result();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
         $this->load->view('header');

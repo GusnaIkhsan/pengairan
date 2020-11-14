@@ -68,7 +68,23 @@ $route['history'] = 'general/PresenterController/showHistory';
 $route['vision-mission'] = 'general/PresenterController/showVisiMisi';
 $route['struktur-organisasi'] = 'general/PresenterController/showStrukturOrganisasi';
 $route['renstra-proker'] = 'general/PresenterController/showRenstraProgramKerja';
+
 // Akademik
+$route['akademik/(:any)'] = 'general/PresenterController/showAkademik/$1';
+
+// Penelitian dan Pengabdian
+$route['penelitian-pengabdian/(:any)'] = 'general/PresenterController/showPenelitianPengabdian/$1';
+
+// Alumni
+$route['tracer-study'] = 'general/PresenterController/showTracerStudy';
+$route['data-lulusan'] = 'general/PresenterController/showDataLulusan';
+$route['forum-alumni'] = 'general/PresenterController/showForumAlumni';
+
+// Fasilitas
+$route['fasilitas/(:any)'] = 'general/PresenterController/showFasilitas/$1';
+
+// Jaminan Mutu
+$route['jaminan-mutu/(:any)'] = 'general/PresenterController/showJaminanMutu/$1';
 
 // Tentang Kami
 $route['critics-suggest'] = 'general/PresenterController/showAddressCriticsSuggestion';

@@ -49,49 +49,49 @@
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Akademik</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="#">Informasi Pendaftaran</a></li>                                            
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/informasi-pendaftaran'); ?>">Informasi Pendaftaran</a></li>
                                             <li class="menu-item menu-item-has-children" data-size="60">
-                                                <a href="#">Program Studi</a>
+                                                <a href="<?php echo base_url('akademik/prodi'); ?>">Program Studi</a>
                                                 <ul class="sub-menu">
-                                                    <li class="menu-item" data-size="60"><a href="#">Sarjana</a></li>
-                                                    <li class="menu-item" data-size="60"><a href="#">Magister</a></li>
-                                                    <li class="menu-item" data-size="60"><a href="#">Doktoral</a></li>                                                                                                                                                                                                                          
+                                                    <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/prodi-sarjana'); ?>">Sarjana</a></li>
+                                                    <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/prodi-magister'); ?>">Magister</a></li>
+                                                    <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/prodi-doktoral'); ?>">Doktoral</a></li>                                                                                                                                                                                                                          
                                                 </ul>
                                             </li>                                                                                 
-                                            <li class="menu-item" data-size="60"><a href="#">SOP & Formulir</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/sop'); ?>">SOP & Formulir</a></li>                                                                                   
                                             <!-- <li class="menu-item" data-size="60"><a href="campus-tour.html">Jurnal</a></li>                                                                                    -->
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Penelitian & Pengabdian</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="#">Penelitian Dosen</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Penelitian Mahasiswa</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Publikasi</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Pengabdian Kepada Masyarakat</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Jurnal</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/penelitian-dosen'); ?>">Penelitian Dosen</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/penelitian-mahasiswa'); ?>">Penelitian Mahasiswa</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/publikasi'); ?>">Publikasi</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/pengabdian'); ?>">Pengabdian Kepada Masyarakat</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('penelitian-pengabdian/jurnal'); ?>">Jurnal</a></li>                                                                                   
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Alumni</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="#">Tracer Studi</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Data Lulusan</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Forum Alumni Pengairan</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('tracer-study'); ?>">Tracer Studi</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('data-lulusan'); ?>">Data Lulusan</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('forum-alumni'); ?>">Forum Alumni Pengairan</a></li>                                                                                   
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Fasilitas</a>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Fasilitas</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="#">Akses Komputer</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Ruang Baca</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Laboratorium</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Ruang Belajar Mahasiswa</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/akses-komputer'); ?>">Akses Komputer</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/ruang-baca'); ?>">Ruang Baca</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/laboratorium'); ?>">Laboratorium</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('fasilitas/ruang-belajar'); ?>">Ruang Belajar Mahasiswa</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Jaminan Mutu</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="#">Unit Jaminan Mutu (UJM)</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Sistem Dokumen</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Audit Internal & Eksternal Mutu</a></li>
-                                            <li class="menu-item" data-size="60"><a href="#">Tinjauan Manajemen & hasil</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('jaminan-mutu/unit-jaminan-mutu'); ?>">Unit Jaminan Mutu (UJM)</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('jaminan-mutu/sistem-dokumen'); ?>">Sistem Dokumen</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('jaminan-mutu/audit'); ?>">Audit Internal & Eksternal Mutu</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('jaminan-mutu/tinjauan-manajemen'); ?>">Tinjauan Manajemen & hasil</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Tentang Kami</a>
