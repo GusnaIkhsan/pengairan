@@ -274,6 +274,15 @@ class Model_berita extends CI_model{
         return $data->result();
     }
 
+    function allAnnouncement(){
+        $data = $this->db->query("SELECT berita.* FROM berita                                 
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori = 61 ORDER BY id_berita 
+                                    DESC");
+        return $data->result();
+    }
+
     function lastNews($limit){
         $data = $this->db->query("SELECT berita.* FROM berita 
                                     left join users 

@@ -24,7 +24,7 @@
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                             <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">BERITA</h3>
+                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">PENGUMUMAN</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@
                                                         <div class="gdlr-core-blog-full-frame gdlr-core-skin-e-background">
                                                             <div class="gdlr-core-blog-full-head clearfix">
                                                                 <div class="gdlr-core-blog-full-head-right">
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 33px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('berita/'.$val->id_berita); ?>" ><?php echo $val->judul; ?></a></h3>
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 33px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('pengumuman/'.$val->id_berita); ?>" ><?php echo $val->judul; ?></a></h3>
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
                                                                             <?php echo $val->tanggal; ?>
@@ -54,7 +54,7 @@
                                                             </div>
                                                             <br>
                                                             <div class="gdlr-core-blog-content"><?php echo $val->sub_judul; ?>
-                                                            <div class="clear"></div><a class="gdlr-core-excerpt-read-more gdlr-core-button gdlr-core-rectangle" href="<?php echo base_url('berita/'.$val->id_berita); ?>">Selengkapnya</a></div>
+                                                            <div class="clear"></div><a class="gdlr-core-excerpt-read-more gdlr-core-button gdlr-core-rectangle" href="<?php echo base_url('pengumuman/'.$val->id_berita); ?>">Selengkapnya</a></div>
                                                         </div>
                                                     </div>
                                                 <?php
@@ -152,42 +152,8 @@
                                 </div>
                             </div>
                             <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  kingster-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height">
-                                <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
+                                <!-- <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
                                 <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
-                                    <!-- <div id="text-5" class="widget widget_text kingster-widget">
-                                        <h3 class="kingster-widget-title">Text Widget</h3><span class="clear"></span>
-                                        <div class="textwidget">Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Etiam porta sem malesuada.</div>
-                                    </div> -->
-                                    <!-- <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
-                                        <h3 class="kingster-widget-title">Recent News</h3><span class="clear"></span>
-                                        <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
-                                            <div class="gdlr-core-recent-post-widget clearfix">
-                                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/shutterstock_135948689-150x150.jpg'); ?>" alt="" width="150" height="150" title="shutterstock_135948689" /></div>
-                                                <div class="gdlr-core-recent-post-widget-content">
-                                                    <div class="gdlr-core-recent-post-widget-title"><a href="#">Professor Albert joint research on mobile money in Tanzania</a></div>
-                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href="#">June 6, 2016</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><a href="#" title="Posts by John Smith" rel="author">John Smith</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-recent-post-widget clearfix">
-                                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/shutterstock_218235004-150x150.jpg'); ?>" alt="" width="150" height="150" title="Student" /></div>
-                                                <div class="gdlr-core-recent-post-widget-content">
-                                                    <div class="gdlr-core-recent-post-widget-title"><a href="#">A Global MBA for the next generation of business leaders</a></div>
-                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href="#">June 6, 2016</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><a href="#" title="Posts by John Smith" rel="author">John Smith</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-recent-post-widget clearfix">
-                                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/shutterstock_481869205-150x150.jpg'); ?>" alt="" width="150" height="150" title="shutterstock_481869205" /></div>
-                                                <div class="gdlr-core-recent-post-widget-content">
-                                                    <div class="gdlr-core-recent-post-widget-title"><a href="#">Professor Tom comments on voluntary recalls by snack brands</a></div>
-                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href="#">June 6, 2016</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><a href="#" title="Posts by John Smith" rel="author">John Smith</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    
                                     <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">
                                         <h3 class="kingster-widget-title">Tag</h3><span class="clear"></span>
                                         
@@ -201,31 +167,7 @@
                                             ?>
                                         </div>
                                     </div>
-
-                                    <!-- <div id="gdlr-core-recent-portfolio-widget-1" class="widget widget_gdlr-core-recent-portfolio-widget kingster-widget">
-                                        <h3 class="kingster-widget-title">Recent Works</h3><span class="clear"></span>
-                                        <div class="gdlr-core-recent-portfolio-widget-wrap clearfix">
-                                            <div class="gdlr-core-recent-portfolio-widget gdlr-core-media-image">
-                                                <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_53600224-150x150.jpg'); ?>" alt="" width="150" height="150" title="shutterstock_53600224" /><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-15 icon_link_alt"  ></i></span></a>
-                                            </div>
-                                            <div class="gdlr-core-recent-portfolio-widget gdlr-core-media-image">
-                                                <a href="#"><img src="<?php echo base_url('asset/upload/rawpixel-577480-unsplash-1-150x150.jpg'); ?>" alt="" width="150" height="150" title="rawpixel-577480-unsplash" /><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-15 icon_link_alt"  ></i></span></a>
-                                            </div>
-                                            <div class="gdlr-core-recent-portfolio-widget gdlr-core-media-image">
-                                                <a href="#"><img src="<?php echo base_url('asset/upload/pexels-photo-150x150.jpg'); ?>" alt="" width="150" height="150" title="pexels-photo" /><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-15 icon_link_alt"  ></i></span></a>
-                                            </div>
-                                            <div class="gdlr-core-recent-portfolio-widget gdlr-core-media-image">
-                                                <a href="#"><img src="<?php echo base_url('asset/upload/training-train-lime-barbell-39688-150x150.jpg'); ?>" alt="" width="150" height="150" title="training-train-lime-barbell-39688" /><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-15 icon_link_alt"  ></i></span></a>
-                                            </div>
-                                            <div class="gdlr-core-recent-portfolio-widget gdlr-core-media-image">
-                                                <a href="#"><img src="<?php echo base_url('asset/upload/joshua-fuller-368384-unsplash-150x150.jpg'); ?>" alt="" width="150" height="150" title="joshua-fuller-368384-unsplash" /><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-15 icon_link_alt"  ></i></span></a>
-                                            </div>
-                                            <div class="gdlr-core-recent-portfolio-widget gdlr-core-media-image">
-                                                <a href="#"><img src="<?php echo base_url('asset/upload/austin-neill-247047-unsplash-150x150.jpg'); ?>" alt="" width="150" height="150" title="austin-neill-247047-unsplash" /><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-15 icon_link_alt"  ></i></span></a>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

@@ -300,7 +300,7 @@
                                                         <div class="gdlr-core-block-item-title-inner clearfix">
                                                             <h3 class="gdlr-core-block-item-title" style="font-size: 24px ;font-style: normal ;text-transform: none ;letter-spacing: 0px ;color: #163269 ;">Agenda</h3>
                                                             <div class="gdlr-core-block-item-title-divider" style="font-size: 24px ;border-bottom-width: 3px ;"></div>
-                                                        </div><a class="gdlr-core-block-item-read-more" href="#" target="_self" style="color: #3db166 ;">Selengkapnya</a></div>
+                                                        </div><a class="gdlr-core-block-item-read-more" href="<?php echo base_url('all-agenda'); ?>" target="_self" style="color: #3db166 ;">Selengkapnya</a></div>
                                                     <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
                                                         <div class="gdlr-core-item-list-wrap gdlr-core-column-30">
                                                             <div class="gdlr-core-item-list-inner gdlr-core-item-mglr">
@@ -425,7 +425,7 @@
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="#" style="font-size: 14px ;letter-spacing: 1px ;color: #475c87 ;padding: 0px 0px 0px 0px;text-transform: none ;border-radius: 0px;-moz-border-radius: 0px;-webkit-border-radius: 0px;"><span class="gdlr-core-content" >Selengkapnya</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" style="color: #475c87 ;"  ></i></a></div>
+                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="<?php echo base_url('all-announcement'); ?>" style="font-size: 14px ;letter-spacing: 1px ;color: #475c87 ;padding: 0px 0px 0px 0px;text-transform: none ;border-radius: 0px;-moz-border-radius: 0px;-webkit-border-radius: 0px;"><span class="gdlr-core-content" >Selengkapnya</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" style="color: #475c87 ;"  ></i></a></div>
                                             </div>
                                         </div>
                                     </div>

@@ -57,6 +57,9 @@ $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'Administrator/index';
 $route['beranda'] = 'BerandaController/index';
 $route['all-news'] = 'BerandaController/allNews';
+$route['all-agenda'] = 'BerandaController/allAgenda';
+$route['all-announcement'] = 'BerandaController/allAnnouncement';
+
 $route['news-detail'] = 'BerandaController/pageNews';
 $route['sarjana'] = 'Sarjana/SarjanaController/index';
 $route['magister'] = 'Magister/MagisterController/index';
