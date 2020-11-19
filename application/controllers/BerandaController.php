@@ -27,6 +27,26 @@ class BerandaController extends CI_Controller {
 		$this->load->view('global_js');
 	}
 
+	public function allAgenda(){
+		$data['list_agenda'] = $this->model_agenda->agenda()->result();
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+		$this->load->view('all_agenda', $data);
+		$this->load->view('footer');
+		$this->load->view('global_js');
+	}
+
+	public function allAnnouncement(){
+		$data['news'] = $this->model_berita->allAnnouncement();
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+		$this->load->view('all_announcement', $data);
+		$this->load->view('footer');
+		$this->load->view('global_js');
+	}
+
 	public function pageNews(){
         $this->load->view('global_css');
         $this->load->view('header_mobile');
