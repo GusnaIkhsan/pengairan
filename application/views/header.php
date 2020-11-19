@@ -27,24 +27,22 @@
                                 <ul id="menu-main-navigation-1" class="sf-menu">                                                                    
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Profile</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('vision-mission'); ?>">Visi, Misi dan Tujuan</a></li>
-                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('history'); ?>">Sejarah</a></li>                                                                                   
-                                            <!-- <li class="menu-item" data-size="60"><a href="<?php echo base_url('struktur-organisasi'); ?>">Struktur Organisasi</a></li>                                                                                    -->
-                                            <li class="menu-item" data-size="60"><a href="#">Struktur Organisasi</a></li>                                                                                   
-                                            <!-- <li class="menu-item" data-size="60"><a href="<?php echo base_url('renstra-proker'); ?>">Renstra & Program Kerja</a></li>                                                                                    -->
-                                            <li class="menu-item" data-size="60"><a href="#">Renstra & Program Kerja</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/visi-misi'); ?>">Visi, Misi dan Tujuan</a></li>
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/sejarah'); ?>">Sejarah</a></li>                                                                                                                               
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/struktur-organisasi'); ?>">Struktur Organisasi</a></li>                                                                                                                               
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/renstra-proker'); ?>">Renstra & Program Kerja</a></li>                                                                                   
                                             <li class="menu-item menu-item-has-children" data-size="60">
                                                 <a href="campus-tour.html">SDM</a>
                                                 <ul class="sub-menu">
-                                                    <li class="menu-item" data-size="60"><a href="#">Dosen</a></li>
-                                                    <li class="menu-item" data-size="60"><a href="#">Staff Kependidikan</a></li>                                                                                                                                                                                                                          
+                                                    <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/dosen'); ?>">Dosen</a></li>
+                                                    <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/staff-kependidikan'); ?>">Staff Kependidikan</a></li>                                                                                                                                                                                                                          
                                                 </ul>
                                             </li>   
 
-                                            <li class="menu-item" data-size="60"><a href="#">Kerjasama</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Akreditasi & Sertifikasi</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Prestasi & Penghargaan</a></li>                                                                                   
-                                            <li class="menu-item" data-size="60"><a href="#">Brosur</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/kerjasama'); ?>">Kerjasama</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/akreditasi-sertifikasi'); ?>">Akreditasi & Sertifikasi</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/prestasi-penghargaan'); ?>">Prestasi & Penghargaan</a></li>                                                                                   
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/brosur'); ?>">Brosur</a></li>                                                                                   
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Akademik</a>

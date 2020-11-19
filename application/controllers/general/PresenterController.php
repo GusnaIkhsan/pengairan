@@ -32,6 +32,19 @@ class PresenterController extends CI_Controller {
         "audit"             => 'general/jaminan_mutu/audit',
         "tinjauan-manajemen"=> 'general/jaminan_mutu/tinjauan_manajemen'
     );
+
+    const PROFIL_PAGES = array(
+        "visi-misi"                 => 'general/profil/vision_mission_purpose',
+        "sejarah"                   => 'general/profil/history',
+        "struktur-organisasi"       => 'general/profil/struktur_organisasi',
+        "renstra-proker"            => 'general/profil/renstra',
+        "dosen"                     => 'general/profil/dosen',
+        "staff-kependidikan"        => 'general/profil/staff_kependidikan',
+        "kerjasama"                 => 'general/profil/kerjasama',
+        "akreditasi-sertifikasi"    => 'general/profil/akreditasi_sertifikasi',
+        "prestasi-penghargaan"      => 'general/profil/prestasi_penghargaan',
+        "brosur"                    => 'general/profil/brosur'
+    );
     
     // Profile
     function showVisiMisi(){
@@ -66,6 +79,15 @@ class PresenterController extends CI_Controller {
         $this->load->view('header_mobile');
         $this->load->view('header');
 		$this->load->view('general/vision_mission_purpose');
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
+
+    function showProfil($page){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+        $this->load->view(PresenterController::PROFIL_PAGES[$page]);
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }
