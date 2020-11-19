@@ -20,13 +20,8 @@
                     <div class="kingster-breadcrumbs-container kingster-container">
                         <div class="kingster-breadcrumbs-item kingster-item-pdlr">
                             <span property="itemListElement" typeof="ListItem">
-                                <a property="item" typeof="WebPage" title="Go to Kingster." href="<?php echo base_url('beranda'); ?>" class="home"><span property="name">Beranda</span></a>
+                                <a property="item" typeof="WebPage" title="Go to Kingster." class="home"><span property="name">Profil</span></a>
                                 <meta property="position" content="1">
-                            </span>
-                            &gt;
-                            <span property="itemListElement" typeof="ListItem">
-                                <span property="name">Profil</span>
-                                <meta property="position" content="2">
                             </span>
                             &gt;
                             <span property="itemListElement" typeof="ListItem">
@@ -52,7 +47,15 @@
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                             <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
-                                                Akreditasi & Sertifikasi
+                                                <div class="entry">
+                                                    <p style="text-align: center;">Status Akreditasi berlaku sejak tanggal 18 Juni 2004 sampai dengan 18 Juni 2009</p>
+                                                    <p style="text-align: left;"><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/Akreditasi-Pengairan-2004-2009.jpg"><img class="size-medium wp-image-2970 aligncenter" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/Akreditasi-Pengairan-2004-2009-300x204.jpg" alt="Akreditasi-Pengairan-2004-2009" width="300" height="204"></a></p>
+                                                    <p style="text-align: center;">Status Akreditasi berlaku sejak tanggal 20 Februari 2010 sampai dengan 20 Februari 2015</p>
+                                                    <p style="text-align: center;"><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/Watermark-of-Sertifikat-Akreditasi.jpg"><img class="alignnone size-medium wp-image-2969" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/Watermark-of-Sertifikat-Akreditasi-300x217.jpg" alt="Watermark-of-Sertifikat-Akreditasi" width="300" height="217"></a></p>
+                                                    <p style="text-align: center;">Status Akreditasi berlaku sejak tanggal 24 Januari 2015 sampai dengan 24 Januari&nbsp;2020</p>
+                                                    <p style="text-align: center;"><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/02/Sertifikat_akreditasi_jurusan_2015kcl.jpg"><img class="aligncenter wp-image-4749" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/02/Sertifikat_akreditasi_jurusan_2015kcl.jpg" alt="Sertifikat_akreditasi_jurusan_2015kcl" width="296" height="218"></a></p>
+                                                    <p style="text-align: center;"></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

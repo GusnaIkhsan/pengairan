@@ -17,7 +17,7 @@
             </div>
             <div class="kingster-breadcrumbs">
                 <div class="kingster-breadcrumbs-container kingster-container">
-                    <div class="kingster-breadcrumbs-item kingster-item-pdlr"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingster." href="<?php echo base_url('beranda'); ?>" class="home"><span property="name">Beranda</span></a>
+                    <div class="kingster-breadcrumbs-item kingster-item-pdlr"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingster." class="home"><span property="name">Profil</span></a>
                         <meta property="position" content="1">
                         </span>&gt;<span property="itemListElement" typeof="ListItem"><span property="name">Visi, Misi, Tujuan</span>
                         <meta property="position" content="2">
