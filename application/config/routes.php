@@ -72,6 +72,8 @@ $route['content'] = 'Sarjana/SarjanaController/profilContent';
 // $route['struktur-organisasi'] = 'general/PresenterController/showStrukturOrganisasi';
 // $route['renstra-proker'] = 'general/PresenterController/showRenstraProgramKerja';
 $route['profil/(:any)'] = 'general/PresenterController/showProfil/$1';
+$route['dosen/(:any)'] = 'general/PresenterController/showDetailDosen/$1';
+$route['staff/(:any)'] = 'general/PresenterController/showDetailStaff/$1';
 
 
 // Akademik

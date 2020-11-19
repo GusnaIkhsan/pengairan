@@ -20,6 +20,12 @@ class Model_app extends CI_model{
         return $this->db->delete($table, $where);
     }
 
+    public function view_all($table){
+        $this->db->select('*');
+        $this->db->from($table);        
+        return $this->db->get()->result_array();
+    }
+
     public function view_where($table,$data){
         $this->db->where($data);
         return $this->db->get($table);

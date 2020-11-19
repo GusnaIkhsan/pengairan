@@ -84,10 +84,38 @@ class PresenterController extends CI_Controller {
     }
 
     function showProfil($page){
+        if('dosen'==$page){
+            $data['record'] = $this->model_app->view_ordering('dosen','id_dosen','ASC');
+        }else if('staff-kependidikan'==$page){
+            $data['record'] = $this->model_app->view_all('staff_pendidik');
+            // $data['record'] = $this->model_app->view_ordering('staff_pendidik','id','DESC');
+        }else{
+            $data['record'] ="";
+        }
+
+        // print_r($data);
         $this->load->view('global_css');
         $this->load->view('header_mobile');
         $this->load->view('header');
-        $this->load->view(PresenterController::PROFIL_PAGES[$page]);
+        $this->load->view(PresenterController::PROFIL_PAGES[$page], $data);
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
+
+    function showDetailDosen($id){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+		$this->load->view('general/profil/dosen_detail');
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
+
+    function showDetailStaff($id){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+		$this->load->view('general/profil/staff_detail');
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }

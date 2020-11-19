@@ -45,15 +45,40 @@
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                             <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">DOSEN</h3>
+                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">DAFTAR DOSEN</h3>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                            <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
+                                            <!-- <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
                                                 Dosen
-                                            </div>
+                                            </div> -->
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <td>No</td>
+                                                        <td>Nama</td>
+                                                        <td>Bidang Ilmu</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                        $count= 1;
+                                                        foreach($record as $key => $val){                                                                               
+                                                    ?>
+                                                    <tr>
+                                                        <td><?php echo $count?></td>
+                                                        <td><a href="<?php echo base_url('dosen').'/'.$val['id_dosen']; ?>"><?php echo $val['nm_dosen']?></a></td>
+                                                        <td><?php echo $val['bidang']?></td>
+                                                    </tr>
+
+                                                    <?php
+                                                            $count++;
+                                                        }
+                                                    ?>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
