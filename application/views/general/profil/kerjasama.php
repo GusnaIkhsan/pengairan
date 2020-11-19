@@ -20,13 +20,8 @@
                     <div class="kingster-breadcrumbs-container kingster-container">
                         <div class="kingster-breadcrumbs-item kingster-item-pdlr">
                             <span property="itemListElement" typeof="ListItem">
-                                <a property="item" typeof="WebPage" title="Go to Kingster." href="<?php echo base_url('beranda'); ?>" class="home"><span property="name">Beranda</span></a>
+                                <a property="item" typeof="WebPage" title="Go to Kingster." class="home"><span property="name">Profil</span></a>
                                 <meta property="position" content="1">
-                            </span>
-                            &gt;
-                            <span property="itemListElement" typeof="ListItem">
-                                <span property="name">Profil</span>
-                                <meta property="position" content="2">
                             </span>
                             &gt;
                             <span property="itemListElement" typeof="ListItem">
@@ -52,7 +47,12 @@
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                             <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
-                                                Kerja Sama
+                                                <div class="entry">
+                                                    <p style="text-align: center;"><a href="https://www.um.edu.my/" target="_blank"><img class="wp-image-1684 aligncenter" alt="Universiti-Malaya-logo" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/03/Universiti-Malaya-logo-236x300.jpg" width="85" height="108"></a></p>
+                                                    <p style="text-align: center;"><a href="http://www.utm.my/" target="_blank"><img class=" wp-image-1687 aligncenter" alt="UTM" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/03/UTM.jpg" width="135" height="134"></a></p>
+                                                    <p style="text-align: center;"><a href="http://www2.yamanashi.ac.jp/" target="_blank"><img class="wp-image-1688 aligncenter" alt="unervesity of yamanashi" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/03/unervesity-of-yamanashi.jpg" width="64" height="103"></a></p>
+                                                    <h3><a href="http://www.miyazaki-u.ac.jp/english/" target="_blank"><img class=" wp-image-1689 aligncenter" alt="university of miyazaki" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/03/university-of-miyazaki.jpg" width="108" height="109"></a></h3>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

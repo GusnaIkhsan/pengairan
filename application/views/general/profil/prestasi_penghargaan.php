@@ -20,13 +20,8 @@
                     <div class="kingster-breadcrumbs-container kingster-container">
                         <div class="kingster-breadcrumbs-item kingster-item-pdlr">
                             <span property="itemListElement" typeof="ListItem">
-                                <a property="item" typeof="WebPage" title="Go to Kingster." href="<?php echo base_url('beranda'); ?>" class="home"><span property="name">Beranda</span></a>
+                                <a property="item" typeof="WebPage" title="Go to Kingster." class="home"><span property="name">Profil</span></a>
                                 <meta property="position" content="1">
-                            </span>
-                            &gt;
-                            <span property="itemListElement" typeof="ListItem">
-                                <span property="name">Profil</span>
-                                <meta property="position" content="2">
                             </span>
                             &gt;
                             <span property="itemListElement" typeof="ListItem">
@@ -52,7 +47,22 @@
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                             <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
-                                                Prestasi & Penghargaan
+                                                <div class="entry">
+                                                    <div dir="ltr">&nbsp;1. Obtain achievements as the majors with the best performance rating of 3 in University of Brawijaya Annual Quality Award (UBAQA) 2011</div>
+                                                    <p style="text-align: center;"><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/prestasi-1-page-001.jpg"><img class="alignnone size-medium wp-image-2964" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/prestasi-1-page-001-300x218.jpg" alt="prestasi 1-page-001" width="300" height="218"></a></p>
+                                                    <div dir="ltr">&nbsp;2. Obtain achievements as 15 courses / study time with the best academic performance at UB in University of Brawijaya Annual Quality Award (UBAQA) 2010</div>
+                                                    <p style="text-align: center;"><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/prestasi-2-page-001.jpg"><img class="alignnone size-medium wp-image-2965" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/prestasi-2-page-001-212x300.jpg" alt="prestasi 2-page-001" width="212" height="300"></a></p>
+                                                    <p style="text-align: left;">3. Obtain achievements as 10 courses / study time with the best academic performance at UB in University of Brawijaya Annual Quality Award (UBAQA) 2010</p>
+                                                    <p style="text-align: center;"><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/prestasi-3-page-001.jpg"><img class="alignnone size-medium wp-image-2966" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/prestasi-3-page-001-218x300.jpg" alt="prestasi 3-page-001" width="218" height="300"></a></p>
+                                                    <p style="text-align: left;">4. Obtaining ISO 9001: 2008 and ISO 9001: 2008 in the quality management system of the institution of higher education services in force from 2001 to 2004</p>
+                                                    <p style="text-align: center;"><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/prestasi.jpg"><img class="alignnone size-medium wp-image-2968" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/prestasi-213x300.jpg" alt="prestasi" width="213" height="300"></a></p>
+                                                    <p style="text-align: left;">5. Obtain accreditation for the implementation of S1 Studies Program in effect from February 20, 2010 until February 20, 2015.</p>
+                                                    <p style="text-align: center;"><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/Watermark-of-Sertifikat-Akreditasi.jpg"><img class="alignnone size-medium wp-image-2969" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/Watermark-of-Sertifikat-Akreditasi-300x217.jpg" alt="Watermark-of-Sertifikat-Akreditasi" width="300" height="217"></a></p>
+                                                    <p style="text-align: left;">6. Obtain accreditation for the implementation of S1 Studies Program in effect from June 18 2004 until June 18, 2009.</p>
+                                                    <p style="text-align: center;"><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/Akreditasi-Pengairan-2004-2009.jpg"><img class="alignnone size-medium wp-image-2970" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/10/Akreditasi-Pengairan-2004-2009-300x204.jpg" alt="Akreditasi-Pengairan-2004-2009" width="300" height="204"></a></p>
+                                                    <p>7. Obtain accreditation for the implementation of S1 Studies Program in effect from January 14, 2015 until January 14, 2020.</p>
+                                                    <p><a href="http://pengairan.ub.ac.id/s1/wp-content/uploads/sites/2/2014/10/Sert_akre_Photo-Copy.jpg"><img class="alignnone size-full wp-image-9359" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/sites/2/2014/10/Sert_akre_Photo-Copy.jpg" alt="" width="800" height="581" srcset="http://pengairan.ub.ac.id/s1/wp-content/uploads/sites/2/2014/10/Sert_akre_Photo-Copy.jpg 800w, http://pengairan.ub.ac.id/s1/wp-content/uploads/sites/2/2014/10/Sert_akre_Photo-Copy-300x218.jpg 300w, http://pengairan.ub.ac.id/s1/wp-content/uploads/sites/2/2014/10/Sert_akre_Photo-Copy-768x558.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></a></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
