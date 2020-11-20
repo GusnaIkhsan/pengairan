@@ -20,12 +20,6 @@ class Model_app extends CI_model{
         return $this->db->delete($table, $where);
     }
 
-    public function view_all($table){
-        $this->db->select('*');
-        $this->db->from($table);        
-        return $this->db->get()->result_array();
-    }
-
     public function view_where($table,$data){
         $this->db->where($data);
         return $this->db->get($table);
@@ -67,6 +61,16 @@ class Model_app extends CI_model{
         $this->db->where($where);
         $this->db->order_by($order,$ordering);
         return $this->db->get()->result_array();
+    }
+
+    function select_where($table, $atribut, $id){
+        $data  = $this->db->query("SELECT * FROM ".$table." WHERE ".$atribut." = ".$id);
+        return $data->result_array();
+    }
+
+    function select_all($table){
+        $data  = $this->db->query("SELECT * FROM ".$table);
+        return $data->result_array();
     }
 
     function umenu_akses($link,$id){

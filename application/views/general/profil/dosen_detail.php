@@ -99,7 +99,7 @@
                                                             <div class="gdlr-core-pbf-element">
                                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
                                                                     <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 34px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #161616 ;">Prof.Dr.Ir. Suhardjono, MPd.,Dipl.HE</h3></div></div>
+                                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 34px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #161616 ;"><?php echo $record[0]['nm_dosen'];?></h3></div></div>
                                                             </div>
                                                             <!-- <div class="gdlr-core-pbf-element">
                                                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 6px ;">
@@ -128,19 +128,19 @@
                                                                         <table style="text-align: left;">
                                                                             <tr style="background-color:transparent;">
                                                                                 <td>Golongan & Pangkat</td>
-                                                                                <td>IV/e, Pembina Utama</td>
+                                                                                <td><?php echo $record[0]['golpang'];?></td>
                                                                             </tr>
                                                                             <tr style="background-color:transparent;">
                                                                                 <td>NIP/NIK</td>
-                                                                                <td>20161146032311001</td>
+                                                                                <td><?php echo $record[0]['nipnik'];?></td>
                                                                             </tr>
                                                                             <tr style="background-color:transparent;">
                                                                                 <td>NIDN</td>
-                                                                                <td>23034602</td>
+                                                                                <td><?php echo $record[0]['nidn'];?></td>
                                                                             </tr>
                                                                             <tr style="background-color:transparent;">
                                                                                 <td>BIdang Ilmu</td>
-                                                                                <td>Metodologi Penelitian dan Teknologi Pembelajaran</td>
+                                                                                <td><?php echo $record[0]['bidang'];?></td>
                                                                             </tr>
                                                                         </table>
                                                                     </div>
@@ -164,58 +164,51 @@
                                                     <div class="gdlr-core-tab-item-content  gdlr-core-active" data-tab-id="1" >
                                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                             <div class="gdlr-core-title-item-title-wrap ">
-                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_24">Why Choose Kingster?<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_24">Pendidikan<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                                         </div>
-                                                        <p>The Kingster University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Kinster’s alumni. It is the only place online where you can find, and connect with, all 90,000 Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                        <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
+                                                        <?php echo $record[0]['pendidikan'];?>                                                       
                                                     </div>
                                                     <div class="gdlr-core-tab-item-content " data-tab-id="2" >
                                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                             <div class="gdlr-core-title-item-title-wrap ">
-                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_25">Self Development<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_25">Penghargaan<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                                         </div>
-                                                        <p>The Kingster University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Kinster’s alumni. It is the only place online where you can find, and connect with, all 90,000 Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                        <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
+                                                        <?php echo $record[0]['penghargaan'];?>                                                       
                                                     </div>
                                                     <div class="gdlr-core-tab-item-content " data-tab-id="3" >
                                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                             <div class="gdlr-core-title-item-title-wrap ">
-                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_26">Spirituality<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_26">Penelitian<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                                         </div>
-                                                        <p>The Kingster University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Kinster’s alumni. It is the only place online where you can find, and connect with, all 90,000 Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                        <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
+                                                        <?php echo $record[0]['penelitian'];?>
                                                     </div>
                                                     <div class="gdlr-core-tab-item-content " data-tab-id="4" >
                                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                             <div class="gdlr-core-title-item-title-wrap ">
-                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_27">Alumni<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_27">Publikasi<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                                         </div>
-                                                        <p>The Kingster University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Kinster’s alumni. It is the only place online where you can find, and connect with, all 90,000 Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                        <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
+                                                        <?php echo $record[0]['publikasi'];?>
                                                     </div>
                                                     <div class="gdlr-core-tab-item-content " data-tab-id="5" >
                                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                             <div class="gdlr-core-title-item-title-wrap ">
-                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_27">Alumni<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_27">Link Publikasi<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                                         </div>
-                                                        <p>The Kingster University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Kinster’s alumni. It is the only place online where you can find, and connect with, all 90,000 Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                        <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
+                                                        <?php echo $record[0]['linkpub'];?>
                                                     </div>
                                                     <div class="gdlr-core-tab-item-content " data-tab-id="6" >
                                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                             <div class="gdlr-core-title-item-title-wrap ">
-                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_27">Alumni<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_27">Buku<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                                         </div>
-                                                        <p>The Kingster University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Kinster’s alumni. It is the only place online where you can find, and connect with, all 90,000 Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                        <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
+                                                        <?php echo $record[0]['buku'];?>
                                                     </div>
                                                     <div class="gdlr-core-tab-item-content " data-tab-id="7" >
                                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                             <div class="gdlr-core-title-item-title-wrap ">
-                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_27">Alumni<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_27">Pengabdian<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                                         </div>
-                                                        <p>The Kingster University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Kinster’s alumni. It is the only place online where you can find, and connect with, all 90,000 Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                        <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
+                                                        <?php echo $record[0]['pengabdian'];?>
                                                     </div>                                                   
                                                 </div>
                                             </div>
