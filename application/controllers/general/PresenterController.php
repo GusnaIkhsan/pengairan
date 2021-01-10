@@ -202,4 +202,14 @@ class PresenterController extends CI_Controller {
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }
+
+    // Dynamic Page
+    function showDynamicPage($page){
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header');
+        $this->load->view('general/page_general');
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
 }

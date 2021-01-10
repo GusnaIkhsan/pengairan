@@ -75,6 +75,8 @@ $route['profil/(:any)'] = 'general/PresenterController/showProfil/$1';
 $route['dosen/(:any)'] = 'general/PresenterController/showDetailDosen/$1';
 $route['staff/(:any)'] = 'general/PresenterController/showDetailStaff/$1';
 
+// Dynamic Page
+$route['page/detail/(:any)'] = 'general/PresenterController/showDynamicPage/$1';
 
 // Akademik
 $route['akademik/(:any)'] = 'general/PresenterController/showAkademik/$1';
