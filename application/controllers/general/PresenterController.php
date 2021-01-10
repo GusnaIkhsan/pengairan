@@ -92,10 +92,9 @@ class PresenterController extends CI_Controller {
             $data['record'] ="";
         }
 
-        // print_r($data);
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
-        $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
         $this->load->view(PresenterController::PROFIL_PAGES[$page], $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');

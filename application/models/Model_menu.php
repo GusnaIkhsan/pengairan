@@ -94,4 +94,22 @@ class Model_menu extends CI_model{
         return $this->db->query("DELETE FROM menu where id_menu='$id'");
     }
 
+    function getPrimaryMenu(){
+        return $this->getSubmenu(0);
+    }
+
+    function getSubmenu($id_parent){
+        $submenu = $this->db->query("SELECT * FROM menu where id_parent = " . $id_parent . " ORDER BY urutan")->result_array();
+        if(count($submenu)){
+            $newArray = array();
+            foreach ($submenu as $menu){
+                $tempMenu = array('child' => $this->getSubmenu($menu['id_menu']));
+                array_push($newArray, array_merge($menu, $tempMenu));
+            }
+            return $newArray;
+        } else {
+            return array();
+        }
+    }
+
 }
