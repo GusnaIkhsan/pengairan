@@ -24,7 +24,36 @@
                         </div>
                         <div class="kingster-navigation kingster-item-pdlr clearfix">
                             <div class="kingster-main-menu" id="kingster-main-menu" >
-                                <ul id="menu-main-navigation-1" class="sf-menu">                                                                    
+                                <ul id="menu-main-navigation-1" class="sf-menu">
+                                    <?php
+                                        //  Dynamic Menu
+                                        foreach ($menu as $row){
+                                            // First Level
+                                            echo "<li class=\"menu-item menu-item-has-children kingster-normal-menu\"><a href=\"" . $row['link'] . "\" class=\"sf-with-ul-pre\">" . $row['nama_menu'] . "</a>";
+                                            if(count($row["child"]) > 0){
+                                                echo "<ul class=\"sub-menu\">";
+                                                foreach ($row["child"] as $child){
+                                                    // Second Level
+                                                    if(count($child["child"]) > 0){
+                                                        echo "<li class=\"menu-item menu-item-has-children\" data-size=\"60\"><a href=\"" . $child['link'] . "\">" . $child['nama_menu'] . "</a>";
+                                                        echo "<ul class=\"sub-menu\">";
+                                                        foreach ($child["child"] as $grand_child){
+                                                            // Third Level
+                                                            echo "<li class=\"menu-item\" data-size=\"60\"><a href=\"" . $grand_child['link'] . "\">" . $grand_child['nama_menu'] . "</a></li>";
+                                                        }
+                                                        echo "</ul>";
+                                                        echo "</li>";
+                                                    } else {
+                                                        echo "<li class=\"menu-item\" data-size=\"60\"><a href=\"" . $child['link'] . "\">" . $child['nama_menu'] . "</a></li>";
+                                                    }
+                                                }
+                                                echo "</ul>";
+                                            }
+                                            echo "</li>";
+                                        }
+                                    ?>                  
+                                </ul>
+                                <!-- <ul id="menu-main-navigation-1" class="sf-menu">                                                                    
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Profile</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item" data-size="60"><a href="<?php echo base_url('profil/visi-misi'); ?>">Visi, Misi dan Tujuan</a></li>
@@ -56,8 +85,7 @@
                                                     <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/prodi-doktoral'); ?>">Doktoral</a></li>                                                                                                                                                                                                                          
                                                 </ul>
                                             </li>                                                                                 
-                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/sop'); ?>">SOP & Formulir</a></li>                                                                                   
-                                            <!-- <li class="menu-item" data-size="60"><a href="campus-tour.html">Jurnal</a></li>                                                                                    -->
+                                            <li class="menu-item" data-size="60"><a href="<?php echo base_url('akademik/sop'); ?>">SOP & Formulir</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Penelitian & Pengabdian</a>
@@ -94,12 +122,11 @@
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Tentang Kami</a>
                                         <ul class="sub-menu">
-                                            <!-- <li class="menu-item" data-size="60"><a href="<?php echo base_url('critics-suggest'); ?>">Lokasi, Saran & Masukan</a></li> -->
                                             <li class="menu-item" data-size="60"><a href="#">Lokasi, Saran & Masukan</a></li>
                                             <li class="menu-item" data-size="60"><a href="https://e-complaint.ub.ac.id/" target="blank">E-Komplain</a></li>
                                         </ul>
                                     </li>                                    
-                                </ul>
+                                </ul> -->
                                 <!-- <div class="kingster-navigation-slide-bar" id="kingster-navigation-slide-bar"></div> -->
                             </div>
                             <!-- <div class="kingster-main-menu-right-wrap clearfix ">

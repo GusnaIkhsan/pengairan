@@ -14,7 +14,7 @@
                     <tr><th width='120px' scope='row'>Link Menu</th>   <td><input type='text' class='form-control' name='a' value='$rows[link]'></td></tr>
                     <tr><th scope='row'>Level Menu</th>                <td><select name='b' class='form-control'>
                                                                                 <option value='0'>Menu Utama</option>";
-                                                                            foreach ($record->result_array() as $row){
+                                                                            foreach ($record as $row){
                                                                               if ($row['id_menu']==$rows['id_parent']){
                                                                                 echo "<option value='$row[id_menu]' selected>$row[nama_menu] </option>";
                                                                               }else{

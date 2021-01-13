@@ -52,9 +52,9 @@ class Administrator extends CI_Controller {
 	// Controller Modul Menu Website
 
 	function menuwebsite(){
-		// cek_session_admin();
-		$data['record'] = $this->model_menu->menu_website();
-		$this->template->load('administrator/template','administrator/mod_menu/view_menu',$data);
+        // cek_session_admin();
+        $data['record'] = $this->model_menu->getDatatableMenu();
+        $this->template->load('administrator/template','administrator/mod_menu/view_menu',$data);
 	}
 
 	function tambah_menuwebsite(){
@@ -63,7 +63,7 @@ class Administrator extends CI_Controller {
 			$this->model_menu->menu_website_tambah();
 			redirect('administrator/menuwebsite');
 		}else{
-			$data['record'] = $this->model_menu->menu_utama();
+            $data['record'] = $this->model_menu->getLevelMenu();
 			$this->template->load('administrator/template','administrator/mod_menu/view_menu_tambah',$data);
 		}
 	}
@@ -75,7 +75,7 @@ class Administrator extends CI_Controller {
 			$this->model_menu->menu_website_update();
 			redirect('administrator/menuwebsite');
 		}else{
-			$data['record'] = $this->model_menu->menu_utama();
+            $data['record'] = $this->model_menu->getLevelMenu();
 			$data['rows'] = $this->model_menu->menu_edit($id)->row_array();
 			$this->template->load('administrator/template','administrator/mod_menu/view_menu_edit',$data);
 		}

@@ -21,28 +21,24 @@
                     <tbody>
                   <?php 
                     $no = 1;
-                    foreach ($record->result_array() as $row){
-                      $cmenu = $this->model_menu->menu_cek($row['id_parent'])->row_array();
-                      if($cmenu!=null){
-                        if ($cmenu['id_parent']==''){ 
-                          $menu = 'Menu Utama'; 
-                        }else{ 
-                          $menu = $cmenu['nama_menu']; 
-                        }
-                        echo "<tr><td>$no</td>
-                                  <td>$row[nama_menu]</td>
-                                  <td>$menu</td>
-                                  <td><a target='_BLANK' href='".base_url()."$row[link]'>$row[link]</a></td>
-                                  <td>$row[aktif]</td>
-                                  <td>$row[position]</td>
-                                  <td>$row[urutan]</td>
-                                  <td><center>
-                                    <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_menuwebsite/$row[id_menu]'><span class='glyphicon glyphicon-edit'></span></a>
-                                    <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_menuwebsite/$row[id_menu]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
-                                  </center></td>
-                              </tr>";
-                        $no++;
+                    foreach ($record as $row){
+                      $menu = $row['id_parent'];
+                      if($row['id_parent'] == 0){
+                        $menu = 'Menu Utama';
                       }
+                      echo "<tr><td>$no</td>
+                                <td>$row[nama_menu]</td>
+                                <td>$row[shadow_level_name]</td>
+                                <td><a target='_BLANK' href='".base_url()."$row[link]'>$row[link]</a></td>
+                                <td>$row[aktif]</td>
+                                <td>$row[position]</td>
+                                <td>$row[urutan]</td>
+                                <td><center>
+                                  <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_menuwebsite/$row[id_menu]'><span class='glyphicon glyphicon-edit'></span></a>
+                                  <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_menuwebsite/$row[id_menu]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                                </center></td>
+                            </tr>";
+                      $no++;
                     }
                   ?>
                   </tbody>

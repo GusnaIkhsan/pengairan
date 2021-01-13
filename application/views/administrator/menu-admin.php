@@ -80,6 +80,12 @@
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/pesanmasuk"><i class="fa fa-circle-o"></i> Pesan Masuk</a></li> -->
               </ul>
             </li>
+            <li class="treeview">
+              <a href="#"><i class="glyphicon glyphicon-object-align-left"></i> <span>Manajemen Menu</span><i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo base_url(); ?>administrator/menuwebsite"><i class="fa fa-circle-o"></i> List Menu</a></li>
+              </ul>
+            </li>
             <!-- <li class="treeview">
               <a href="#"><i class="fa fa-cog"></i> <span>Modul Users</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
