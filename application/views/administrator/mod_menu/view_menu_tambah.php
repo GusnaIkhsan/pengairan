@@ -14,7 +14,7 @@
                     <tr><th width='120px' scope='row'>Link Menu</th>   <td><input type='text' class='form-control' name='a'></td></tr>
                     <tr><th scope='row'>Level Menu</th>                <td><select name='b' class='form-control'>
                                                                             <option value='0' selected>Menu Utama</option>";
-                                                                            foreach ($record->result_array() as $row){
+                                                                            foreach ($record as $row){
                                                                                 echo "<option value='$row[id_menu]'>$row[nama_menu]</option>";
                                                                             }
                     echo "</td></tr>

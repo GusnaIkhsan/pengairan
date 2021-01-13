@@ -112,4 +112,50 @@ class Model_menu extends CI_model{
         }
     }
 
+    function getLevelMenu(){
+        $resultArray = array();
+        $menu = $this->db->query("SELECT * FROM menu where id_parent = 0 ORDER BY urutan")->result_array();
+        foreach ($menu as $iterMenu){
+            array_push($resultArray, $iterMenu);
+            $subMenu = $this->db->query("SELECT * FROM menu where id_parent = " . $iterMenu["id_menu"] . " ORDER BY urutan")->result_array();
+            foreach ($subMenu as $iterSubMenu){
+                $iterSubMenu["nama_menu"] = $iterMenu["nama_menu"] . "/" . $iterSubMenu["nama_menu"];
+                array_push($resultArray, $iterSubMenu);
+            }
+        }
+        return $resultArray;
+    }
+
+    function getLevelName($id_menu, $depth = 0){
+        $menu = $this->db->query("SELECT * FROM menu where id_menu='$id_menu'")->row_array();
+        if($menu){
+            if($menu["id_parent"] == 0){
+                if($depth == 0){
+                    return "Menu Utama";
+                } else {
+                    return "";
+                }
+            } else {
+                $parentMenu = $this->db->query("SELECT * FROM menu where id_menu=" . $menu['id_parent'])->row_array();
+                if($parentMenu["id_parent"] == 0){
+                    return $parentMenu["nama_menu"];
+                } else {
+                    return $this->getLevelName($parentMenu["id_menu"], $depth + 1) . "/" . $parentMenu["nama_menu"];
+                }
+            }
+        } else {
+            return "";
+        }
+    }
+
+    function getDatatableMenu(){
+        $newArray = array();
+        $resultArray = $this->db->query("SELECT * FROM menu ORDER BY urutan")->result_array();
+        foreach ($resultArray as $menu){
+            $tempMenu = array('shadow_level_name' => $this->getLevelName($menu["id_menu"]));
+            array_push($newArray, array_merge($menu, $tempMenu));
+        }
+        return $newArray;
+    }
+
 }

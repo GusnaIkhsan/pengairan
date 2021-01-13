@@ -7,7 +7,7 @@ class BerandaController extends CI_Controller {
 		$data['announc'] = $this->model_berita->lastAnnouncement(3);
 		$data['headline'] = $this->model_berita->headLine(3);
 		$data['agenda'] = $this->model_agenda->lastAgenda(4);
-		$dataHeader['menu'] = $this->model_menu->menu_utama();
+		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
         $this->load->view('header', $dataHeader);

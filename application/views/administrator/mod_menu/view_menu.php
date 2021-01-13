@@ -21,14 +21,14 @@
                     <tbody>
                   <?php 
                     $no = 1;
-                    foreach ($record->result_array() as $row){
+                    foreach ($record as $row){
                       $menu = $row['id_parent'];
                       if($row['id_parent'] == 0){
                         $menu = 'Menu Utama';
                       }
                       echo "<tr><td>$no</td>
                                 <td>$row[nama_menu]</td>
-                                <td>$menu</td>
+                                <td>$row[shadow_level_name]</td>
                                 <td><a target='_BLANK' href='".base_url()."$row[link]'>$row[link]</a></td>
                                 <td>$row[aktif]</td>
                                 <td>$row[position]</td>

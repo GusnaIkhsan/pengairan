@@ -37,12 +37,9 @@
                                                     if(count($child["child"]) > 0){
                                                         echo "<li class=\"menu-item menu-item-has-children\" data-size=\"60\"><a href=\"" . $child['link'] . "\">" . $child['nama_menu'] . "</a>";
                                                         echo "<ul class=\"sub-menu\">";
-                                                        echo "<li class=\"menu-item\" data-size=\"60\"><a href=\"#\">Dosen</a></li>";
                                                         foreach ($child["child"] as $grand_child){
                                                             // Third Level
-                                                            if(count($grand_child["child"]) > 0){
-                                                                echo "<li class=\"menu-item\" data-size=\"60\"><a href=\"" . $grand_child['link'] . "\">" . $grand_child['nama_menu'] . "</a></li>";
-                                                            }
+                                                            echo "<li class=\"menu-item\" data-size=\"60\"><a href=\"" . $grand_child['link'] . "\">" . $grand_child['nama_menu'] . "</a></li>";
                                                         }
                                                         echo "</ul>";
                                                         echo "</li>";
