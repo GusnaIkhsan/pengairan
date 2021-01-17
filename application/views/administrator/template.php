@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/admin/plugins/datepicker/datepicker3.css">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/admin/plugins/daterangepicker/daterangepicker-bs3.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/admin/dist/css/select2.min.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <style type="text/css"> .files{ position:absolute; z-index:2; top:0; left:0; filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; opacity:0; background-color:transparent; color:transparent; } </style>
@@ -101,6 +103,8 @@
     <script src="<?php echo base_url(); ?>asset/admin/plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
     <script src="<?php echo base_url(); ?>asset/admin/plugins/fastclick/fastclick.min.js"></script>
+    <!-- Select2 -->
+    <script src="<?php echo base_url(); ?>asset/admin/dist/js/select2.full.min.js"></script>
     <!-- AdminLTE App -->
     <script src="<?php echo base_url(); ?>asset/admin/dist/js/app.min.js"></script>
 

@@ -11,7 +11,17 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id_menu]'>
-                    <tr><th width='120px' scope='row'>Link Menu</th>   <td><input type='text' class='form-control' name='a' value='$rows[link]'></td></tr>
+                    <input type='hidden' name='id_halaman' id='id_halaman' value='$rows[link]'>
+                    <tr><th scope='row'>Link Menu</th>                <td><select id='input_menu_edit' name='a' class='form-control'>
+                                                                            <option value='0'>Tidak Ada Halaman</option>";
+                                                                            foreach ($list_halaman as $row){
+                                                                              if ($row['id']==$rows['link']){
+                                                                                echo "<option value='$row[id]'>$row[judul] - [page/detail/$row[judul_seo]]</option>";
+                                                                              } else {
+                                                                                echo "<option value='$row[id]'>$row[judul] - [page/detail/$row[judul_seo]]</option>";
+                                                                              } 
+                                                                            }
+                    echo "</td></tr>
                     <tr><th scope='row'>Level Menu</th>                <td><select name='b' class='form-control'>
                                                                                 <option value='0'>Menu Utama</option>";
                                                                             foreach ($record as $row){
@@ -38,7 +48,7 @@
               </div>
               <div class='box-footer'>
                     <button type='submit' name='submit' class='btn btn-info'>Update</button>
-                    <a href='index.php'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <a href='".base_url()."administrator/menuwebsite'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
                     
                   </div>
             </div>";

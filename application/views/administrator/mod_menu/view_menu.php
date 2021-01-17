@@ -26,10 +26,11 @@
                       if($row['id_parent'] == 0){
                         $menu = 'Menu Utama';
                       }
+                      
                       echo "<tr><td>$no</td>
                                 <td>$row[nama_menu]</td>
                                 <td>$row[shadow_level_name]</td>
-                                <td><a target='_BLANK' href='".base_url()."$row[link]'>$row[link]</a></td>
+                                <td><a target='_BLANK' href='".base_url()."$row[shadow_link_name]'>$row[shadow_link_name]</a></td>
                                 <td>$row[aktif]</td>
                                 <td>$row[position]</td>
                                 <td>$row[urutan]</td>

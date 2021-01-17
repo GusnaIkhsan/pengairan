@@ -151,7 +151,17 @@ class Model_menu extends CI_model{
         $newArray = array();
         $resultArray = $this->db->query("SELECT * FROM menu ORDER BY urutan")->result_array();
         foreach ($resultArray as $menu){
-            $tempMenu = array('shadow_level_name' => $this->getLevelName($menu["id_menu"]));
+            if($menu['link'] == 0){
+                $halamanMenu = "#";
+            } else {
+                $halamanMenu = "page/detail/" . $this->db->query("SELECT * FROM halaman where id=" . $menu['link'])->row_array()["judul_seo"];
+            }
+            
+            $tempMenu = array(
+                'shadow_level_name' => $this->getLevelName($menu["id_menu"]),
+                'shadow_link_name'  => $halamanMenu
+            );
+            
             array_push($newArray, array_merge($menu, $tempMenu));
         }
         return $newArray;
