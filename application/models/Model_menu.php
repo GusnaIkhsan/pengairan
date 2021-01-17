@@ -102,7 +102,16 @@ class Model_menu extends CI_model{
         if(count($submenu)){
             $newArray = array();
             foreach ($submenu as $menu){
-                $tempMenu = array('child' => $this->getSubmenu($menu['id_menu']));
+                if($menu['link'] == 0){
+                    $halamanMenu = "#";
+                } else {
+                    $halamanMenu = "page/detail/" . $this->db->query("SELECT * FROM halaman where id=" . $menu['link'])->row_array()["judul_seo"];
+                }
+
+                $tempMenu = array(
+                    'child' => $this->getSubmenu($menu['id_menu']),
+                    'link'  => base_url().$halamanMenu
+                );
                 array_push($newArray, array_merge($menu, $tempMenu));
             }
             return $newArray;

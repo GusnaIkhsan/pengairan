@@ -79,4 +79,8 @@ class Model_halaman extends CI_model{
     function getHalaman(){
         return $this->db->query("SELECT * FROM halaman ORDER BY id DESC");
     }
+
+    function getHalamanBySlug($slug){
+        return $this->db->query("SELECT * FROM halaman WHERE judul_seo='" . $slug . "'")->row_array();
+    }
 }

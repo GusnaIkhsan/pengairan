@@ -5,14 +5,31 @@
         <div class="kingster-body-outer-wrapper ">
             <div class="kingster-body-wrapper clearfix  kingster-with-frame">
                 <!-- header navigation -->
-                <div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" id="div_983a_0">
+                <div class="kingster-blog-title-wrap  kingster-style-custom kingster-feature-image" style="background-image: url(<?php echo base_url('asset/foto_statis/'. $page['gambar'])?>) ;">
                     <div class="kingster-header-transparent-substitute"></div>
-                    <div class="kingster-page-title-overlay"></div>
-                    <div class="kingster-page-title-bottom-gradient"></div>
-                    <div class="kingster-page-title-container kingster-container">
-                        <div class="kingster-page-title-content kingster-item-pdlr" id="div_983a_1">
-                            <!-- <div class="kingster-page-caption" id="div_983a_2">Know Us Better</div> -->
-                            <h1 class="kingster-page-title" id="h1_983a_0">Page General</h1>
+                    <div class="kingster-blog-title-overlay" style="opacity: 0.01 ;"></div>
+                    <div class="kingster-blog-title-bottom-overlay"></div>
+                    <div class="kingster-blog-title-container kingster-container">
+                        <div class="kingster-blog-title-content kingster-item-pdlr" style="padding-top: 400px ;padding-bottom: 80px ;">
+                            <header class="kingster-single-article-head clearfix">
+                                <div class="kingster-single-article-date-wrapper  post-date updated">
+                                    <?php 
+                                        $tempDate = strtotime($page['created_at']);
+                                        $tanggalBerita = explode("-", $page['created_at']); 
+                                    ?>
+                                    <!-- <div class="kingster-single-article-date-day"><?php echo $tanggalBerita[2]?></div> -->
+                                    <div class="kingster-single-article-date-day"><?php echo date('d',$tempDate)?></div>
+                                    <div class="kingster-single-article-date-month"><?php echo date('M',$tempDate)?></div>
+                                    <div class="kingster-single-article-date-year"><?php echo date('Y',$tempDate)?></div>
+                                </div>
+                                <div class="kingster-single-article-head-right">
+                                    <h1 class="kingster-single-article-title"><?php echo $page['judul']; ?></h1>
+                                    <div class="kingster-blog-info-wrapper">
+                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-author vcard author post-author "><span class="kingster-head">By</span><span class="fn"><a href="#" title="Posts by John Smith" rel="author"><?php echo $page['user_id']; ?></a></span></div>
+                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-comment-number "><span class="kingster-head"><i class="fa fa-eye" ></i></span><?php echo $page['read_count']; ?></div>
+                                    </div>
+                                </div>
+                            </header>
                         </div>
                     </div>
                 </div>
@@ -20,12 +37,12 @@
                     <div class="kingster-breadcrumbs-container kingster-container">
                         <div class="kingster-breadcrumbs-item kingster-item-pdlr">
                             <span property="itemListElement" typeof="ListItem">
-                                <a property="item" typeof="WebPage" title="Go to Kingster." class="home"><span property="name">Profil</span></a>
+                                <a property="item" typeof="WebPage" title="Go to Kingster." class="home"><span property="name">Halaman</span></a>
                                 <meta property="position" content="1">
                             </span>
                             &gt;
                             <span property="itemListElement" typeof="ListItem">
-                                <span property="name">Kerja Sama</span>
+                                <span property="name"><?php echo $page["judul"]; ?></span>
                                 <meta property="position" content="3">
                             </span>
                         </div>
@@ -40,7 +57,7 @@
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                             <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">KERJA SAMA</h3>
+                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;"><?php echo $page["judul"]; ?></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -48,10 +65,7 @@
                                         <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                             <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
                                                 <div class="entry">
-                                                    <p style="text-align: center;"><a href="https://www.um.edu.my/" target="_blank"><img class="wp-image-1684 aligncenter" alt="Universiti-Malaya-logo" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/03/Universiti-Malaya-logo-236x300.jpg" width="85" height="108"></a></p>
-                                                    <p style="text-align: center;"><a href="http://www.utm.my/" target="_blank"><img class=" wp-image-1687 aligncenter" alt="UTM" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/03/UTM.jpg" width="135" height="134"></a></p>
-                                                    <p style="text-align: center;"><a href="http://www2.yamanashi.ac.jp/" target="_blank"><img class="wp-image-1688 aligncenter" alt="unervesity of yamanashi" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/03/unervesity-of-yamanashi.jpg" width="64" height="103"></a></p>
-                                                    <h3><a href="http://www.miyazaki-u.ac.jp/english/" target="_blank"><img class=" wp-image-1689 aligncenter" alt="university of miyazaki" src="http://pengairan.ub.ac.id/s1/wp-content/uploads/2014/03/university-of-miyazaki.jpg" width="108" height="109"></a></h3>
+                                                    <?php echo $page["isi_halaman"]; ?>
                                                 </div>
                                             </div>
                                         </div>
