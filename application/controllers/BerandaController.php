@@ -20,9 +20,10 @@ class BerandaController extends CI_Controller {
 	public function allNews(){
 		$data['news'] = $this->model_berita->allNews();
 		$data['tags'] = $this->model_berita->tag_berita()->result();
+		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
 		$this->load->view('all_news', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
@@ -30,9 +31,10 @@ class BerandaController extends CI_Controller {
 
 	public function allAgenda(){
 		$data['list_agenda'] = $this->model_agenda->agenda()->result();
+		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
 		$this->load->view('all_agenda', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
@@ -40,18 +42,20 @@ class BerandaController extends CI_Controller {
 
 	public function allAnnouncement(){
 		$data['news'] = $this->model_berita->allAnnouncement();
+		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
 		$this->load->view('all_announcement', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
 	}
 
 	public function pageNews(){
+		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
 		$this->load->view('news_page');
 		$this->load->view('footer');
 		$this->load->view('global_js');
