@@ -23,14 +23,6 @@
                                                                             }
                     echo "</select></td></tr>
                     <tr><th scope='row'>Nama Menu</th>                 <td><input type='text' class='form-control' name='c' value='$rows[nama_menu]'></td></tr>
-                    <tr><th scope='row'>Position</th>                  <td>"; if ($rows['position'] == 'Top'){
-                                                                                echo "<input type='radio' name='d' value='Top' checked> Top 
-                                                                                      <input type='radio' name='d' value='Bottom'> Bottom";
-                                                                              }else{
-                                                                                echo "<input type='radio' name='d' value='Top'> Top 
-                                                                                      <input type='radio' name='d' value='Bottom' checked> Bottom";
-                                                                              }
-                    echo "</td></tr>
                     <tr><th scope='row'>Urutan</th>                    <td><input type='number' class='form-control' name='e' style='width:70px' value='$rows[urutan]'></td></tr>
                     <tr><th scope='row'>Aktif</th>                  <td>"; if ($rows['aktif'] == 'Ya'){
                                                                                 echo "<input type='radio' name='f' value='Ya' checked> Ya 

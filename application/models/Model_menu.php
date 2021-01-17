@@ -70,7 +70,7 @@ class Model_menu extends CI_model{
                             'nama_menu'=>$this->db->escape_str($this->input->post('c')),
                             'link'=>$this->db->escape_str($this->input->post('a')),
                             'aktif'=>$this->db->escape_str('Ya'),
-                            'position'=>$this->db->escape_str($this->input->post('d')),
+                            'position'=>"Top",
                             'urutan'=>$this->db->escape_str($this->input->post('e')));
         $this->db->insert('menu',$datadb);
     }
@@ -80,7 +80,6 @@ class Model_menu extends CI_model{
                             'nama_menu'=>$this->db->escape_str($this->input->post('c')),
                             'link'=>$this->db->escape_str($this->input->post('a')),
                             'aktif'=>$this->db->escape_str($this->input->post('f')),
-                            'position'=>$this->db->escape_str($this->input->post('d')),
                             'urutan'=>$this->db->escape_str($this->input->post('e')));
         $this->db->where('id_menu',$this->input->post('id'));
         $this->db->update('menu',$datadb);

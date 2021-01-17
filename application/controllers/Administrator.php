@@ -92,7 +92,7 @@ class Administrator extends CI_Controller {
 
 	function halamanbaru(){
 		cek_session_admin();
-		$data['record'] = $this->model_halaman->halamanstatis();
+        $data['record'] = $this->model_halaman->getHalaman();
 		$this->template->load('administrator/template','administrator/mod_halaman/view_halaman',$data);
 	}
 

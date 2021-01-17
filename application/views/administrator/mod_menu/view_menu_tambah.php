@@ -19,7 +19,6 @@
                                                                             }
                     echo "</td></tr>
                     <tr><th scope='row'>Nama Menu</th>                 <td><input type='text' class='form-control' name='c'></td></tr>
-                    <tr><th scope='row'>Position</th>                  <td><input type='radio' name='d' value='Top'> Top <input type='radio' name='d' value='Bottom'> Bottom</td></tr>
                     <tr><th scope='row'>Urutan</th>                    <td><input type='number' class='form-control' name='e' style='width:70px'></td></tr>
                   </tbody>
                   </table>

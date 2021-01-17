@@ -20,30 +20,28 @@ class Model_halaman extends CI_model{
             $this->upload->do_upload('c');
             $hasil=$this->upload->data();
             if ($hasil['file_name']==''){
-                    $datadb = array('judul'=>$this->db->escape_str($this->input->post('a')),
-                                    'judul_seo'=>seo_title($this->input->post('a')),
-                                    'isi_halaman'=>$this->input->post('b'),
-                                    'tgl_posting'=>date('Y-m-d'),
-                                    'username'=>$this->session->username,
-                                    'dibaca'=>'0',
-                                    'jam'=>date('H:i:s'),
-                                    'hari'=>hari_ini(date('w')));
+                    $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
+                                    'judul_seo'     => seo_title($this->input->post('a')),
+                                    'isi_halaman'   => $this->input->post('b'),
+                                    'created_at'    => date('Y-m-d H:i:s'),
+                                    'updated_at'    => date('Y-m-d H:i:s'),
+                                    'user_id'       => 1 // TODO: Session Id
+                                );
             }else{
-            		$datadb = array('judul'=>$this->db->escape_str($this->input->post('a')),
-                                    'judul_seo'=>seo_title($this->input->post('a')),
-                                    'isi_halaman'=>$this->input->post('b'),
-                                    'tgl_posting'=>date('Y-m-d'),
-                                    'gambar'=>$hasil['file_name'],
-                                    'username'=>$this->session->username,
-                                    'dibaca'=>'0',
-                                    'jam'=>date('H:i:s'),
-                                    'hari'=>hari_ini(date('w')));
+                    $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
+                                    'judul_seo'     => seo_title($this->input->post('a')),
+                                    'isi_halaman'   => $this->input->post('b'),
+                                    'gambar'        => $hasil['file_name'],
+                                    'created_at'    => date('Y-m-d H:i:s'),
+                                    'updated_at'    => date('Y-m-d H:i:s'),
+                                    'user_id'       => 1 // TODO: Session Id
+                                );
             }
-        $this->db->insert('halamanstatis',$datadb);
+        $this->db->insert('halaman',$datadb);
     }
 
     function halamanstatis_edit($id){
-        return $this->db->query("SELECT * FROM halamanstatis where id_halaman='$id'");
+        return $this->db->query("SELECT * FROM halaman where id='$id'");
     }
 
     function halamanstatis_update(){
@@ -53,31 +51,32 @@ class Model_halaman extends CI_model{
         $this->load->library('upload', $config);
         $this->upload->do_upload('c');
         $hasil=$this->upload->data();
+
         if ($hasil['file_name']==''){
-                    $datadb = array('judul'=>$this->db->escape_str($this->input->post('a')),
-                                    'judul_seo'=>seo_title($this->input->post('a')),
-                                    'isi_halaman'=>$this->input->post('b'),
-                                    'tgl_posting'=>date('Y-m-d'),
-                                    'username'=>$this->session->username,
-                                    'dibaca'=>'0',
-                                    'jam'=>date('H:i:s'),
-                                    'hari'=>$this->db->escape_str($this->input->post('j')));
+            $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
+                            'judul_seo'     => seo_title($this->input->post('a')),
+                            'isi_halaman'   => $this->input->post('b'),
+                            'updated_at'    => date('Y-m-d H:i:s'),
+                            'user_id'       => 1 // TODO: Session Id
+                        );
         }else{
-                    $datadb = array('judul'=>$this->db->escape_str($this->input->post('a')),
-                                    'judul_seo'=>seo_title($this->input->post('a')),
-                                    'isi_halaman'=>$this->input->post('b'),
-                                    'tgl_posting'=>date('Y-m-d'),
-                                    'gambar'=>$hasil['file_name'],
-                                    'username'=>$this->session->username,
-                                    'dibaca'=>'0',
-                                    'jam'=>date('H:i:s'),
-                                    'hari'=>$this->db->escape_str($this->input->post('j')));
+            $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
+                            'judul_seo'     => seo_title($this->input->post('a')),
+                            'isi_halaman'   => $this->input->post('b'),
+                            'gambar'        => $hasil['file_name'],
+                            'updated_at'    => date('Y-m-d H:i:s'),
+                            'user_id'       => 1 // TODO: Session Id
+                        );
         }
-        $this->db->where('id_halaman',$this->input->post('id'));
-        $this->db->update('halamanstatis',$datadb);
+        $this->db->where('id',$this->input->post('id'));
+        $this->db->update('halaman',$datadb);
     }
 
     function halamanstatis_delete($id){
-        return $this->db->query("DELETE FROM halamanstatis where id_halaman='$id'");
+        return $this->db->query("DELETE FROM halaman where id='$id'");
+    }
+
+    function getHalaman(){
+        return $this->db->query("SELECT * FROM halaman ORDER BY id DESC");
     }
 }

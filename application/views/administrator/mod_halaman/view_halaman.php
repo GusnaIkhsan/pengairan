@@ -19,14 +19,14 @@
                   <?php 
                     $no = 1;
                     foreach ($record->result_array() as $row){
-                    $tgl_posting = tgl_indo($row['tgl_posting']);
+                    $tgl_posting = $row['created_at'];
                     echo "<tr><td>$no</td>
                               <td>$row[judul]</td>
                               <td><a target='_BLANK' href='".base_url()."page/detail/$row[judul_seo]'>page/detail/$row[judul_seo]</a></td>
                               <td>$tgl_posting</td>
                               <td><center>
-                                <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_halamanbaru/$row[id_halaman]'><span class='glyphicon glyphicon-edit'></span></a>
-                                <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_halamanbaru/$row[id_halaman]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                                <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_halamanbaru/$row[id]'><span class='glyphicon glyphicon-edit'></span></a>
+                                <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_halamanbaru/$row[id]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                               </center></td>
                           </tr>";
                       $no++;
