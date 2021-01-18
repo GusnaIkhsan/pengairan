@@ -36,18 +36,22 @@
                 <li><a href="<?php echo base_url(); ?>administrator/tagberita"><i class="fa fa-circle-o"></i> Tag Berita</a></li>
               </ul>
             </li>
-
-            <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-user"></i> <span>Master Data</span><i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <!-- <li><a href='<?php echo base_url(); ?>administrator/fakultas'><i class='fa fa-circle-o'></i> Fakultas</a></li> -->
-                <!-- <li><a href='<?php echo base_url(); ?>administrator/prodi'><i class='fa fa-circle-o'></i> Program Studi</a></li> -->
-                <li><a href='<?php echo base_url(); ?>dosen'><i class='fa fa-circle-o'></i> Dosen</a></li>
-                <li><a href='<?php echo base_url(); ?>staff'><i class='fa fa-circle-o'></i> Staff Kependidikan</a></li>
-                <!-- <li><a href='<?php echo base_url(); ?>administrator/mahasiswa'><i class='fa fa-circle-o'></i> Mahasiswa</a></li> -->
-              </ul>
-            </li>
-
+            <?php
+              if("superadmin"==$_SESSION["level"]){
+            ?>
+              <li class="treeview">
+                <a href="#"><i class="glyphicon glyphicon-user"></i> <span>Master Data</span><i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                  <!-- <li><a href='<?php echo base_url(); ?>administrator/fakultas'><i class='fa fa-circle-o'></i> Fakultas</a></li> -->
+                  <!-- <li><a href='<?php echo base_url(); ?>administrator/prodi'><i class='fa fa-circle-o'></i> Program Studi</a></li> -->
+                  <li><a href='<?php echo base_url(); ?>dosen'><i class='fa fa-circle-o'></i> Dosen</a></li>
+                  <li><a href='<?php echo base_url(); ?>staff'><i class='fa fa-circle-o'></i> Staff Kependidikan</a></li>
+                  <!-- <li><a href='<?php echo base_url(); ?>administrator/mahasiswa'><i class='fa fa-circle-o'></i> Mahasiswa</a></li> -->
+                </ul>
+              </li>
+            <?php
+              }
+            ?>
             <!-- <li class="treeview">
               <a href="#"><i class="glyphicon glyphicon-picture"></i> <span>Album</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
@@ -83,18 +87,12 @@
                 <li><a href="<?php echo base_url(); ?>administrator/halamanbaru"><i class="fa fa-circle-o"></i> List Halaman</a></li>
               </ul>
             </li>
-            <?php
-              if("superadmin"==$_SESSION["level"]){
-            ?>
-                <li class="treeview">
-                  <a href="#"><i class="fa fa-cog"></i> <span>Modul Users</span><i class="fa fa-angle-left pull-right"></i></a>
-                  <ul class="treeview-menu">
-                    <li><a href="<?php echo base_url(); ?>administrator/manajemenuser"><i class="fa fa-circle-o"></i> Manajemen User</a></li>
-                  </ul>
-                </li>
-            <?php
-              }
-            ?>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-cog"></i> <span>Modul Users</span><i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo base_url(); ?>administrator/manajemenuser"><i class="fa fa-circle-o"></i> Manajemen User</a></li>
+              </ul>
+            </li>
             
             <!-- <li><a href="<?php echo base_url(); ?>administrator/edit_manajemenuser/<?php echo $this->session->username; ?>"><i class="fa fa-user"></i> <span>Edit Profile</span></a></li> -->
             <li><a href="<?php echo base_url('/admin'); ?>"><i class="fa fa-power-off"></i> <span>Logout</span></a></li>
