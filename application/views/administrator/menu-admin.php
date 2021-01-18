@@ -5,15 +5,11 @@
               <img src="<?php echo base_url(); ?>/asset/admin/dist/img/users1.gif" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>Admin</p>
+              <p> 
               <?php              
-                // var_dump($this->session());    
-                // $usr = $this->db->query("SELECT * FROM users where username='".$this->session->username."'")->row_array(); 
-                // echo "<p>$testing</p>";
-                // echo "<p>Gusna Ikhsan</p>";
-                // print_r($this->session);
+                echo $_SESSION["username"];
               ?>
-              
+              </p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -87,14 +83,20 @@
                 <li><a href="<?php echo base_url(); ?>administrator/halamanbaru"><i class="fa fa-circle-o"></i> List Halaman</a></li>
               </ul>
             </li>
-            <!-- <li class="treeview">
-              <a href="#"><i class="fa fa-cog"></i> <span>Modul Users</span><i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <li><a href="<?php echo base_url(); ?>administrator/manajemenuser"><i class="fa fa-circle-o"></i> Manajemen User</a></li>
-              </ul>
-            </li> -->
+            <?php
+              if("superadmin"==$_SESSION["level"]){
+            ?>
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-cog"></i> <span>Modul Users</span><i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="<?php echo base_url(); ?>administrator/manajemenuser"><i class="fa fa-circle-o"></i> Manajemen User</a></li>
+                  </ul>
+                </li>
+            <?php
+              }
+            ?>
             
             <!-- <li><a href="<?php echo base_url(); ?>administrator/edit_manajemenuser/<?php echo $this->session->username; ?>"><i class="fa fa-user"></i> <span>Edit Profile</span></a></li> -->
-            <li><a href="<?php echo base_url(); ?>"><i class="fa fa-power-off"></i> <span>Logout</span></a></li>
+            <li><a href="<?php echo base_url('/admin'); ?>"><i class="fa fa-power-off"></i> <span>Logout</span></a></li>
           </ul>
         </section>

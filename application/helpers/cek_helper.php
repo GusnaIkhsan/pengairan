@@ -1,10 +1,10 @@
 <?php 
     function cek_session_admin(){
-    	// $ci = & get_instance();
-    	// $session = $ci->session->userdata('level');
-    	// if ($session != 'admin'){
-    	// 	redirect(base_url());
-    	// }
+    	$ci = & get_instance();
+        $session = $ci->session->userdata('level');
+    	if (!$session){
+    		redirect(base_url());
+        }
     }
 
     function cetak($str){

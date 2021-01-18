@@ -57,7 +57,7 @@
           <h1> Dashboard <small>Control panel </small> </h1>
         </section>
 
-        <section class="content">
+        <section class="content">        
             <?php echo $contents; ?>
         </section>
         <div style='clear:both'></div>
@@ -129,15 +129,6 @@
     });
   </script> -->
   <script type="text/javascript">
-  // To make Pace works on Ajax calls
-  // $(document).ajaxStart(function() { Pace.restart(); });
-  //   $('.ajax').click(function(){
-  //       $.ajax({url: '#', success: function(result){
-  //           $('.ajax-content').html('<hr>Ajax Request Completed !');
-  //       }});
-  //   });
-
-
     var url = window.location;
     // for sidebar menu entirely but not cover treeview
     $('ul.sidebar-menu a').filter(function() {

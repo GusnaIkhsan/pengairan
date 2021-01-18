@@ -15,7 +15,7 @@
                     <tr><th scope='row'>Nama Lengkap</th>             <td><input type='text' class='form-control' name='c' required></td></tr>
                     <tr><th scope='row'>Email</th>                    <td><input type='email' class='form-control' name='d' required></td></tr>
                     <tr><th scope='row'>No Telp</th>                  <td><input type='number' class='form-control' name='e' required></td></tr>
-                    <tr><th scope='row'>Level</th>                    <td><input type='radio' name='g' value='kontributor' checked> Kontributor &nbsp; <input type='radio' name='g' value='user'> Users Biasa &nbsp; <input type='radio' name='g' value='admin'> Administrator </td></tr>
+                    <tr><th scope='row'>Level</th>                    <td><input type='radio' name='g' value='admin' checked> Admin &nbsp; <input type='radio' name='g' value='superadmin'> Super Admin </td></tr>
                     <tr><th scope='row'>Blokir</th>                   <td><input type='radio' name='h' value='Y'> Ya &nbsp; <input type='radio' name='h' value='N' checked> Tidak</td></tr>
                     <tr><th scope='row'>Foto</th>                     <td><input type='file' class='form-control' name='f'></td></tr>
                   </tbody>

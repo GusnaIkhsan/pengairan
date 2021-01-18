@@ -5,32 +5,24 @@ class Administrator extends CI_Controller {
 	function index(){
 		if (isset($_POST['submit'])){
 			$username = $this->input->post('a');
-			$password = md5($this->input->post('b'));
+            // $password = md5($this->input->post('b'));
+            $password  = hash("sha512", md5($this->input->post('b')));
 			$cek = $this->db->query("SELECT * FROM users where username='".$this->db->escape_str($username)."' AND password='".$this->db->escape_str($password)."' AND blokir='N'");
 		    $row = $cek->row_array();
 		    $total = $cek->num_rows();
 			if ($total > 0){
 				$this->session->set_userdata('upload_image_file_manager',true);
-				$this->session->set_userdata(array('username'=>$row['username'],
-								   'level'=>$row['level']));    
+				$this->session->set_userdata(array('username'=>$row['nama_lengkap'],
+                                   'level'=>$row['level']));    
                 redirect('administrator/home');  
-                // $this->template->load('administrator/template','administrator/home', $data);     
-                // exit();
-                // var_dump($this->session->userdata);
-                // var_dump($row);
 			}else{
 				$data['title'] = 'Administrator &rsaquo; Log In';
                 $this->load->view('administrator/view_login',$data);
-                // echo "ikhsan";
 			}
 		}else{
 			$data['title'] = 'Administrator &rsaquo; Log In';
 			$this->load->view('administrator/view_login',$data);
 		}
-    }
-    
-    function ceksession(){
-        print_r($this->session->userdata);
     }
 
 	function home(){
