@@ -1554,7 +1554,9 @@ class Administrator extends CI_Controller {
     }
 
 	function logout(){
-		$this->session->sess_destroy();
-		redirect('main');
+        // $this->session->sess_destroy();
+        session_destroy();
+        // echo $this->session->userdata('level');
+		redirect(base_url('admin'));
 	}
 }
