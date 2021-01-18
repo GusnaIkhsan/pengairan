@@ -44,7 +44,7 @@ class Administrator extends CI_Controller {
 	// Controller Modul Menu Website
 
 	function menuwebsite(){
-        // cek_session_admin();
+        cek_session_admin();
         $data['record'] = $this->model_menu->getDatatableMenu();
         $this->template->load('administrator/template','administrator/mod_menu/view_menu',$data);
 	}
