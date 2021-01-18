@@ -204,11 +204,16 @@ class PresenterController extends CI_Controller {
 
     // Dynamic Page
     function showDynamicPage($page){
-        $this->load->view('global_css');
-        $this->load->view('header_mobile');
-        $this->load->view('header');
-        $this->load->view('general/page_general');
-		$this->load->view('footer');
-		$this->load->view('global_js');
+        $data['page'] = $this->model_halaman->getHalamanBySlug($page);
+        if($data['page'] == null){
+            show_404();
+        } else {
+            $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
+            $this->load->view('global_css');
+            $this->load->view('header', $dataHeader);
+            $this->load->view('general/page_general', $data);
+            $this->load->view('footer');
+            $this->load->view('global_js');
+        }
     }
 }

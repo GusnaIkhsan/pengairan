@@ -64,7 +64,9 @@ class Administrator extends CI_Controller {
 			redirect('administrator/menuwebsite');
 		}else{
             $data['record'] = $this->model_menu->getLevelMenu();
-			$this->template->load('administrator/template','administrator/mod_menu/view_menu_tambah',$data);
+            $data['list_halaman'] = $this->model_halaman->getHalaman()->result_array();
+            $this->template->load('administrator/template','administrator/mod_menu/view_menu_tambah',$data);
+            $this->load->view('specificJS/manajemen_menu_js');
 		}
 	}
 
@@ -76,8 +78,10 @@ class Administrator extends CI_Controller {
 			redirect('administrator/menuwebsite');
 		}else{
             $data['record'] = $this->model_menu->getLevelMenu();
+            $data['list_halaman'] = $this->model_halaman->getHalaman()->result_array();
 			$data['rows'] = $this->model_menu->menu_edit($id)->row_array();
-			$this->template->load('administrator/template','administrator/mod_menu/view_menu_edit',$data);
+            $this->template->load('administrator/template','administrator/mod_menu/view_menu_edit',$data);
+            $this->load->view('specificJS/manajemen_menu_js');
 		}
 	}
 
@@ -92,7 +96,7 @@ class Administrator extends CI_Controller {
 
 	function halamanbaru(){
 		cek_session_admin();
-		$data['record'] = $this->model_halaman->halamanstatis();
+        $data['record'] = $this->model_halaman->getHalaman();
 		$this->template->load('administrator/template','administrator/mod_halaman/view_halaman',$data);
 	}
 
