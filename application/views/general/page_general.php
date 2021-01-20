@@ -55,13 +55,6 @@
                             <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                                 <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                                     <div class="gdlr-core-pbf-element">
-                                        <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
-                                            <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;"><?php echo $page["judul"]; ?></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                             <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
                                                 <div class="entry">
