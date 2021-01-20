@@ -19,9 +19,16 @@ class Model_halaman extends CI_model{
             $this->load->library('upload', $config);
             $this->upload->do_upload('c');
             $hasil=$this->upload->data();
+
+            if($this->input->post('slug') == ""){
+                $stringSlug = seo_title($this->input->post('a'));
+            } else {
+                $stringSlug = $this->input->post('slug');
+            }
+
             if ($hasil['file_name']==''){
                     $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
-                                    'judul_seo'     => seo_title($this->input->post('a')),
+                                    'judul_seo'     => $stringSlug,
                                     'isi_halaman'   => $this->input->post('b'),
                                     'created_at'    => date('Y-m-d H:i:s'),
                                     'updated_at'    => date('Y-m-d H:i:s'),
@@ -29,7 +36,7 @@ class Model_halaman extends CI_model{
                                 );
             }else{
                     $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
-                                    'judul_seo'     => seo_title($this->input->post('a')),
+                                    'judul_seo'     => $stringSlug,
                                     'isi_halaman'   => $this->input->post('b'),
                                     'gambar'        => $hasil['file_name'],
                                     'created_at'    => date('Y-m-d H:i:s'),
@@ -52,16 +59,22 @@ class Model_halaman extends CI_model{
         $this->upload->do_upload('c');
         $hasil=$this->upload->data();
 
+        if($this->input->post('slug') == ""){
+            $stringSlug = seo_title($this->input->post('a'));
+        } else {
+            $stringSlug = $this->input->post('slug');
+        }
+
         if ($hasil['file_name']==''){
             $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
-                            'judul_seo'     => seo_title($this->input->post('a')),
+                            'judul_seo'     => $stringSlug,
                             'isi_halaman'   => $this->input->post('b'),
                             'updated_at'    => date('Y-m-d H:i:s'),
                             'user_id'       => 1 // TODO: Session Id
                         );
         }else{
             $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
-                            'judul_seo'     => seo_title($this->input->post('a')),
+                            'judul_seo'     => $stringSlug,
                             'isi_halaman'   => $this->input->post('b'),
                             'gambar'        => $hasil['file_name'],
                             'updated_at'    => date('Y-m-d H:i:s'),
