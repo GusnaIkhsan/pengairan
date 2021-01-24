@@ -98,7 +98,8 @@ class Administrator extends CI_Controller {
 			$this->model_halaman->halamanstatis_tambah();
 			redirect('administrator/halamanbaru');
 		}else{
-			$this->template->load('administrator/template','administrator/mod_halaman/view_halaman_tambah');
+            $this->template->load('administrator/template','administrator/mod_halaman/view_halaman_tambah');
+            $this->load->view('specificJS/manajemen_halaman_js');
 		}
 	}
 
@@ -110,7 +111,8 @@ class Administrator extends CI_Controller {
 			redirect('administrator/halamanbaru');
 		}else{
 			$data['rows'] = $this->model_halaman->halamanstatis_edit($id)->row_array();
-			$this->template->load('administrator/template','administrator/mod_halaman/view_halaman_edit',$data);
+            $this->template->load('administrator/template','administrator/mod_halaman/view_halaman_edit',$data);
+            $this->load->view('specificJS/manajemen_halaman_js');
 		}
 	}
 

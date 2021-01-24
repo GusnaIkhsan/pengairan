@@ -122,9 +122,10 @@ class PresenterController extends CI_Controller {
 
     // Akademik
     function showAkademik($page){
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
         $this->load->view(PresenterController::AKADEMIK_PAGES[$page]);
 		$this->load->view('footer');
 		$this->load->view('global_js');
@@ -132,9 +133,10 @@ class PresenterController extends CI_Controller {
 
     // Penelitian dan Pengabdian
     function showPenelitianPengabdian($page){
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
         $this->load->view(PresenterController::PENELITIAN_PENGABDIAN_PAGES[$page]);
 		$this->load->view('footer');
 		$this->load->view('global_js');
@@ -142,27 +144,30 @@ class PresenterController extends CI_Controller {
 
     // Alumni
     function showTracerStudy(){
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
 		$this->load->view('general/alumni/tracer_study');
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }
 
     function showDataLulusan(){
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
 		$this->load->view('general/alumni/data_lulusan');
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }
 
     function showForumAlumni(){
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
 		$this->load->view('general/alumni/forum_alumni');
 		$this->load->view('footer');
 		$this->load->view('global_js');
@@ -170,9 +175,10 @@ class PresenterController extends CI_Controller {
 
     // Fasilitas
     function showFasilitas($page){
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
         $this->load->view(PresenterController::FASILITAS_PAGES[$page]);
 		$this->load->view('footer');
 		$this->load->view('global_js');
@@ -180,9 +186,10 @@ class PresenterController extends CI_Controller {
 
     // Jaminan Mutu
     function showJaminanMutu($page){
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header', $dataHeader);
         $this->load->view(PresenterController::JAMINAN_MUTU_PAGES[$page]);
 		$this->load->view('footer');
 		$this->load->view('global_js');
