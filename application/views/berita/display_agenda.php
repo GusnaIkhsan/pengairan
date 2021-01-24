@@ -6,7 +6,7 @@
         <div class="kingster-body-wrapper clearfix  kingster-with-frame">
             <!-- header navigation -->
             <div class="kingster-page-wrapper" id="kingster-page-wrapper">
-                <div class="kingster-blog-title-wrap  kingster-style-custom kingster-feature-image" style="background-image: url(<?php echo base_url('asset/foto_berita/'. $berita['gambar'])?>) ;">
+                <div class="kingster-blog-title-wrap  kingster-style-custom kingster-feature-image" style="background-image: url(<?php echo base_url('asset/foto_berita/'. $berita['gambar'])?>) ;">                
                     <div class="kingster-header-transparent-substitute"></div>
                     <div class="kingster-blog-title-overlay" style="opacity: 0.01 ;"></div>
                     <div class="kingster-blog-title-bottom-overlay"></div>
@@ -51,7 +51,7 @@
                                     <article id="post-1268" class="post-1268 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-post-format tag-news">
                                         <div class="kingster-single-article clearfix">
                                             <div class="kingster-single-article-content">
-                                                <?php echo $berita['isi_agenda']; ?>
+                                                <?php echo $berita['isi_agenda']; ?>                                               
                                             </div>
                                         </div>
                                     </article>
