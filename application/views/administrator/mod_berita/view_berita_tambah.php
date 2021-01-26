@@ -26,6 +26,7 @@
                                                                                 echo "<option value='$row[id_kategori]'>$row[nama_kategori]</option>";
                                                                             }
                     echo "</td></tr>
+                    <tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date'></td></tr>
                     <tr><th scope='row'>Headline</th>               <td><input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak</td></tr>
                     <tr><th scope='row'>Pilihan </th>        <td><input type='radio' name='f' value='Y'> Ya &nbsp; <input type='radio' name='f' value='N' checked> Tidak</td></tr>
                     <tr><th scope='row'>Berita Utama</th>           <td><input type='radio' name='g' value='Y'> Ya &nbsp; <input type='radio' name='g' value='N' checked> Tidak</td></tr>

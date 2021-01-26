@@ -136,11 +136,17 @@ class Model_berita extends CI_model{
             }else{
                 $tag = '';
             }
+
+            if(empty($this->input->post('date'))){
+                $tanggal = date('Y-m-d');
+            }else{
+                $tanggal = $this->input->post('date');
+            }
+
             if ($hasil['file_name']==''){
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
-                                    // 'username'=>$this->session->username,
-                                    'username'=>"admin",
+                                    'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>$this->db->escape_str($this->input->post('d')),
@@ -150,8 +156,8 @@ class Model_berita extends CI_model{
                                     'utama'=>$this->db->escape_str($this->input->post('g')),
                                     'isi_berita'=>$this->input->post('h'),
                                     'keterangan_gambar'=>$this->db->escape_str($this->input->post('i')),
-                                    'hari'=>hari_ini(date('w')),
-                                    'tanggal'=>date('Y-m-d'),
+                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
+                                    'tanggal'=>$tanggal,
                                     'jam'=>date('H:i:s'),
                                     'dibaca'=>'0',
                                     'tag'=>$tag,
@@ -159,7 +165,7 @@ class Model_berita extends CI_model{
             }else{
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
-                                    'username'=>"admin",
+                                    'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>$this->db->escape_str($this->input->post('d')),
@@ -169,8 +175,8 @@ class Model_berita extends CI_model{
                                     'utama'=>$this->db->escape_str($this->input->post('g')),
                                     'isi_berita'=>$this->input->post('h'),
                                     'keterangan_gambar'=>$this->db->escape_str($this->input->post('i')),
-                                    'hari'=>hari_ini(date('w')),
-                                    'tanggal'=>date('Y-m-d'),
+                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
+                                    'tanggal'=>$tanggal,
                                     'jam'=>date('H:i:s'),
                                     'gambar'=>$hasil['file_name'],
                                     'dibaca'=>'0',
@@ -215,10 +221,17 @@ class Model_berita extends CI_model{
             }else{
                 $tag = '';
             }
+
+            if(empty($this->input->post('date'))){
+                $tanggal = date('Y-m-d');
+            }else{
+                $tanggal = $this->input->post('date');
+            }
+
             if ($hasil['file_name']==''){
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
-                                    // 'username'=>$this->session->username,
+                                    'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>$this->db->escape_str($this->input->post('d')),
@@ -228,8 +241,8 @@ class Model_berita extends CI_model{
                                     'utama'=>$this->db->escape_str($this->input->post('g')),
                                     'isi_berita'=>$this->input->post('h'),
                                     'keterangan_gambar'=>$this->db->escape_str($this->input->post('i')),
-                                    'hari'=>hari_ini(date('w')),
-                                    'tanggal'=>date('Y-m-d'),
+                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
+                                    'tanggal'=>$tanggal,
                                     'jam'=>date('H:i:s'),
                                     'dibaca'=>'0',
                                     'tag'=>$tag,
@@ -237,7 +250,7 @@ class Model_berita extends CI_model{
             }else{
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
-                                    // 'username'=>$this->session->username,
+                                    'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>$this->db->escape_str($this->input->post('d')),
@@ -247,8 +260,8 @@ class Model_berita extends CI_model{
                                     'utama'=>$this->db->escape_str($this->input->post('g')),
                                     'isi_berita'=>$this->input->post('h'),
                                     'keterangan_gambar'=>$this->db->escape_str($this->input->post('i')),
-                                    'hari'=>hari_ini(date('w')),
-                                    'tanggal'=>date('Y-m-d'),
+                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),      
+                                    'tanggal'=>$tanggal,
                                     'jam'=>date('H:i:s'),
                                     'gambar'=>$hasil['file_name'],
                                     'dibaca'=>'0',
@@ -256,6 +269,7 @@ class Model_berita extends CI_model{
                                     'status'=>$status);
             }
         $this->db->where('id_berita',$this->input->post('id'));
+        // var_dump($datadb);
         $this->db->update('berita',$datadb);
     }
 
