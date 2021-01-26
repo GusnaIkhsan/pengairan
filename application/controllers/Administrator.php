@@ -892,11 +892,8 @@ class Administrator extends CI_Controller {
 
     // Controller Program Studi
     function prodi(){
-        if ($this->session->level=='admin'){
-            $data['record'] = $this->model_app->view_ordering('prodi','id_prodi','DESC');
-        }else{
-            $data['record'] = $this->model_app->view_where_ordering('prodi',array('username'=>$this->session->username),'id_prodi','DESC');
-        }
+        cek_session_admin();
+        $data['record'] = $this->model_app->view_ordering('prodi','id_prodi','DESC');
         $this->template->load('administrator/template','administrator/mod_prodi/view_prodi',$data);
     }
 
@@ -985,6 +982,7 @@ class Administrator extends CI_Controller {
 
     // Controller Dosen
     function dosen(){
+        cek_session_admin();
         // if ($this->session->level=='admin'){
             $data['record'] = $this->model_app->view_join_one('dosen','fakultas','id_fakultas','id_dosen','DESC');
         // }else{
@@ -1276,11 +1274,13 @@ class Administrator extends CI_Controller {
     // Controller Modul Video
 
     function video(){
-        if ($this->session->level=='admin'){
-            $data['record'] = $this->model_app->view_join_one('video','playlist','id_playlist','id_video','DESC');
-        }else{
-            $data['record'] = $this->model_app->view_join_where('video','playlist','id_playlist',array('video.username'=>$this->session->username),'id_video','DESC');
-        }
+        cek_session_admin();
+        // if ($this->session->level=='admin'){
+            // $data['record'] = $this->model_app->view_join_one('video','playlist','id_playlist','id_video','DESC');
+        $data['record'] = $this->model_app->view_ordering('video','id_video','DESC');
+        // }else{
+        //     $data['record'] = $this->model_app->view_join_where('video','playlist','id_playlist',array('video.username'=>$this->session->username),'id_video','DESC');
+        // }
         $this->template->load('administrator/template','administrator/mod_video/view_video',$data);
     }
 
@@ -1301,7 +1301,7 @@ class Administrator extends CI_Controller {
             }
             
             if ($hasil['file_name']==''){
-                $data = array('id_playlist'=>$this->input->post('a'),
+                $data = array('id_playlist'=>0,
                             'username'=>$this->session->username,
                             'jdl_video'=>$this->input->post('b'),
                             'video_seo'=>seo_title($this->input->post('b')),
@@ -1312,9 +1312,10 @@ class Administrator extends CI_Controller {
                             'hari'=>hari_ini(date('w')),
                             'tanggal'=>date('Y-m-d'),
                             'jam'=>date('H:i:s'),
-                            'tagvid'=>$tag);
+                            'tagvid'=>$tag,
+                            'aktif'=>'Y');
             }else{
-                $data = array('id_playlist'=>$this->input->post('a'),
+                $data = array('id_playlist'=>0,
                             'username'=>$this->session->username,
                             'jdl_video'=>$this->input->post('b'),
                             'video_seo'=>seo_title($this->input->post('b')),
@@ -1326,7 +1327,8 @@ class Administrator extends CI_Controller {
                             'hari'=>hari_ini(date('w')),
                             'tanggal'=>date('Y-m-d'),
                             'jam'=>date('H:i:s'),
-                            'tagvid'=>$tag);
+                            'tagvid'=>$tag,
+                            'aktif'=>'Y');
             }
             $this->model_app->insert('video',$data);  
             redirect('administrator/video');
@@ -1355,16 +1357,17 @@ class Administrator extends CI_Controller {
             }
 
             if ($hasil['file_name']==''){
-                $data = array('id_playlist'=>$this->input->post('a'),
+                $data = array('id_playlist'=>0,
                             'username'=>$this->session->username,
                             'jdl_video'=>$this->input->post('b'),
                             'video_seo'=>seo_title($this->input->post('b')),
                             'keterangan'=>$this->input->post('c'),
                             'video'=>'',
                             'youtube'=>$this->input->post('e'),
-                            'tagvid'=>$tag);
+                            'tagvid'=>$tag,
+                            'aktif'=>$this->input->post('d'));
             }else{
-                $data = array('id_playlist'=>$this->input->post('a'),
+                $data = array('id_playlist'=>0,
                             'username'=>$this->session->username,
                             'jdl_video'=>$this->input->post('b'),
                             'video_seo'=>seo_title($this->input->post('b')),
@@ -1372,7 +1375,8 @@ class Administrator extends CI_Controller {
                             'gbr_video'=>$hasil['file_name'],
                             'video'=>'',
                             'youtube'=>$this->input->post('e'),
-                            'tagvid'=>$tag);
+                            'tagvid'=>$tag,
+                            'aktif'=>$this->input->post('d'));
             }
 
             $where = array('id_video' => $this->input->post('id'));
@@ -1530,8 +1534,6 @@ class Administrator extends CI_Controller {
         redirect('administrator/tagvideo');
     }
 
-
-
     // Controller Modul Link Terkait
 
     function linkterkait(){
@@ -1555,7 +1557,27 @@ class Administrator extends CI_Controller {
         }
     }
 
+    function edit_info_grafis(){
+        cek_session_admin();
+        if (isset($_POST['submit'])){
+            $data = array('mahasiswa'=>$this->input->post('mahasiswa'),
+                        'program'=>$this->input->post('program'),
+                        'tendik'=>$this->input->post('tendik'),
+                        'alumni'=>$this->input->post('alumni'));
+
+            $where = array('id' => 1);
+            $this->model_app->update('info_grafis', $data, $where);
+            redirect('administrator/edit_info_grafis');
+        }else{
+            $record = $this->model_app->view_ordering('info_grafis','id','ASC');                           
+            $data = array('record' => $record);
+            // var_dump($data['record'][0]['mahasiswa']);
+            $this->template->load('administrator/template','administrator/mod_info_grafis/view_infografis_edit',$data);
+        }
+    }
+
 	function logout(){        
+        cek_session_admin();
         session_destroy();
 		redirect(base_url('admin'));
 	}

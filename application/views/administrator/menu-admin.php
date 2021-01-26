@@ -43,7 +43,7 @@
                 <a href="#"><i class="glyphicon glyphicon-user"></i> <span>Master Data</span><i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                   <!-- <li><a href='<?php echo base_url(); ?>administrator/fakultas'><i class='fa fa-circle-o'></i> Fakultas</a></li> -->
-                  <!-- <li><a href='<?php echo base_url(); ?>administrator/prodi'><i class='fa fa-circle-o'></i> Program Studi</a></li> -->
+                  <li><a href='<?php echo base_url(); ?>administrator/prodi'><i class='fa fa-circle-o'></i> Program Studi</a></li>
                   <li><a href='<?php echo base_url(); ?>dosen'><i class='fa fa-circle-o'></i> Dosen</a></li>
                   <li><a href='<?php echo base_url(); ?>staff'><i class='fa fa-circle-o'></i> Staff Kependidikan</a></li>
                   <!-- <li><a href='<?php echo base_url(); ?>administrator/mahasiswa'><i class='fa fa-circle-o'></i> Mahasiswa</a></li> -->
@@ -60,17 +60,17 @@
               </ul>
             </li> -->
 
-            <!-- <li class="treeview">
+            <li class="treeview">
               <a href="#"><i class="glyphicon glyphicon-play"></i> <span>Modul Video</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href='<?php echo base_url(); ?>administrator/playlist'><i class='fa fa-circle-o'></i> Playlist Video</a></li>
+                <!-- <li><a href='<?php echo base_url(); ?>administrator/playlist'><i class='fa fa-circle-o'></i> Playlist Video</a></li> -->
                 <li><a href='<?php echo base_url(); ?>administrator/video'><i class='fa fa-circle-o'></i> Video</a></li>
-                <li><a href='<?php echo base_url(); ?>administrator/tagvideo'><i class='fa fa-circle-o'></i> Tag Video</a></li>
+                <!-- <li><a href='<?php echo base_url(); ?>administrator/tagvideo'><i class='fa fa-circle-o'></i> Tag Video</a></li> -->
               </ul>
-            </li> -->
+            </li>
             
             <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-object-align-left"></i> <span>Agenda</span><i class="fa fa-angle-left pull-right"></i></a>
+              <a href="#"><i class="glyphicon glyphicon-pushpin"></i> <span>Agenda</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/logowebsite"><i class="fa fa-circle-o"></i> Logo Website</a></li> -->
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/lowker"><i class="fa fa-circle-o"></i> Info Lowker</a></li> -->
@@ -87,6 +87,11 @@
                 <li><a href="<?php echo base_url(); ?>administrator/halamanbaru"><i class="fa fa-circle-o"></i> List Halaman</a></li>
               </ul>
             </li>
+
+            <li class="treeview">
+              <a href="<?php echo base_url(); ?>administrator/edit_info_grafis"><i class="glyphicon glyphicon-stats"></i> <span>Info Grafis</span><i class="pull-right"></i></a>             
+            </li>
+            
             <li class="treeview">
               <a href="#"><i class="fa fa-cog"></i> <span>Modul Users</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">

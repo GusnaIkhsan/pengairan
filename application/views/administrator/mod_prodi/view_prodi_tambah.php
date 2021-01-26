@@ -13,14 +13,14 @@
                     <input type='hidden' name='id' value=''>
                     <tr><th width='120px' scope='row'>Program Studi</th>   <td><input type='text' class='form-control' name='a'></td></tr>
                     <tr><th scope='row'>Keterangan</th>                 <td><textarea id='editor1' class='form-control' name='b'></textarea></td></tr>
-                    <tr><th scope='row'>Cover</th>                    <td><input type='file' class='form-control' name='c'></td></tr>
+                    
                   </tbody>
                   </table>
                 </div>
               
               <div class='box-footer'>
                     <button type='submit' name='submit' class='btn btn-info'>Tambahkan</button>
-                    <a href='index.php'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <a href='".base_url('administrator/prodi')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
                     
                   </div>
             </div></div></div>";

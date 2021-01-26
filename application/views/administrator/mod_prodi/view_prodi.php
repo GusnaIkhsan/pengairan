@@ -9,9 +9,7 @@
                     <thead>
                       <tr>
                         <th style='width:20px'>No</th>
-                        <th width='60px'>Cover</th>
-                        <th>Program Studi</th>
-                        <th>Url</th>
+                        <th>Program Studi</th>  
                         <th>Aktif</th>
                         <th style='width:70px'>Action</th>
                       </tr>
@@ -20,10 +18,8 @@
                   <?php 
                     $no = 1;
                     foreach ($record as $row){
-                    echo "<tr><td>$no</td>
-                              <td><img src='".base_url()."asset/img_album/$row[gbr_prodi]' width='50'></td>
-                              <td>$row[nm_prodi]</td>
-                              <td><a target='_BLANK' href='".base_url()."mahasiswa/detail/$row[prodi_seo]'>mahasiswa/detail/$row[prodi_seo]</a></td>
+                    echo "<tr><td>$no</td>                  
+                              <td>$row[nm_prodi]</td>                              
                               <td>$row[aktif]</td>
                               <td><center>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_prodi/$row[id_prodi]'><span class='glyphicon glyphicon-edit'></span></a>

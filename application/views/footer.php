@@ -46,9 +46,9 @@
                                 <h3 class="kingster-widget-title">Tautan Lain</h3><span class="clear"></span>
                                 <div class="menu-campus-life-container">
                                     <ul id="menu-campus-life" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item"><a href="#">Fakultas Teknik</a></li>
-                                        <li class="menu-item"><a href="#">Jurnal Teknik Pengairan</a></li>
-                                        <li class="menu-item"><a href="#">Himpunan Mahasiswa Pengairan</a></li>                                        
+                                        <li class="menu-item"><a href="https://teknik.ub.ac.id/" target="blank">Fakultas Teknik</a></li>
+                                        <li class="menu-item"><a href="https://jurnalpengairan.ub.ac.id/" target="blank">Jurnal Teknik Pengairan</a></li>
+                                        <li class="menu-item"><a href="http://hmp.ub.ac.id/">Himpunan Mahasiswa Pengairan</a></li>                                        
                                     </ul>
                                 </div>
                             </div>
@@ -58,12 +58,12 @@
                                 <h3 class="kingster-widget-title">Layanan UB</h3><span class="clear"></span>
                                 <div class="menu-academics-container">
                                     <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item"><a href="#">SELMA</a></li>
-                                        <li class="menu-item"><a href="#">BAIS</a></li>
-                                        <li class="menu-item"><a href="#">SIAM</a></li>
-                                        <li class="menu-item"><a href="#">SIUDA</a></li>
-                                        <li class="menu-item"><a href="#">SIADO</a></li>
-                                        <li class="menu-item"><a href="#">SIMPEG</a></li>
+                                        <li class="menu-item"><a href="https://selma.ub.ac.id/" target="blank">SELMA</a></li>
+                                        <li class="menu-item"><a href="https://bais.ub.ac.id/" target="blank">BAIS</a></li>
+                                        <li class="menu-item"><a href="https://siam.ub.ac.id/" target="blank">SIAM</a></li>
+                                        <li class="menu-item"><a href="https://siuda.ub.ac.id/" target="blank">SIUDA</a></li>
+                                        <li class="menu-item"><a href="https://siado.ub.ac.id/" target="blank">SIADO</a></li>
+                                        <li class="menu-item"><a href="https://simpeg.ub.ac.id/" target="blank">SIMPEG</a></li>
                                     </ul>
                                 </div>
                             </div>

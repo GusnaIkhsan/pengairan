@@ -181,8 +181,9 @@ class Model_berita extends CI_model{
     }
 
     function list_berita_cepat(){
-        if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
-        $datadb = array('id_kategori'=>'0',
+        // if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
+        $datadb = array('id_kategori'=>'61',
+                        'id_kategori_prodi'=>'31',
                         'username'=>$this->session->username,
                         'judul'=>$this->db->escape_str($this->input->post('a')),
                         'judul_seo'=>seo_title($this->input->post('a')),
@@ -191,7 +192,8 @@ class Model_berita extends CI_model{
                         'tanggal'=>date('Y-m-d'),
                         'jam'=>date('H:i:s'),
                         'dibaca'=>'0',
-                        'status'=>$status);
+                        'tag'=>'pengumuman',
+                        'status'=>'Y');
         $this->db->insert('berita',$datadb);
     }
 
@@ -262,7 +264,7 @@ class Model_berita extends CI_model{
     }
 
     function get_prodi(){
-        return $this->db->query("SELECT * FROM prodi");
+        return $this->db->query("SELECT * FROM prodi WHERE prodi.aktif = 'Y' ");
     }
 
     function allNews(){

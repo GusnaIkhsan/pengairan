@@ -24,7 +24,7 @@
                                     <div class="kingster-blog-info-wrapper">
                                         <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-author vcard author post-author "><span class="kingster-head">By</span><span class="fn"><a href="#" title="Posts by John Smith" rel="author"><?php echo $berita['username']; ?></a></span></div>
                                         <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-tag "><a href="#" rel="tag"><?php echo $mode; ?></a></div>
-                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-comment-number "><span class="kingster-head"><i class="fa fa-comments-o" ></i></span><?php echo $berita['dibaca']; ?></div>
+                                        <!-- <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-comment-number "><span class="kingster-head"><i class="fa fa-comments-o" ></i></span><?php echo $berita['dibaca']; ?></div> -->
                                     </div>
                                 </div>
                             </header>
