@@ -102,20 +102,22 @@ class PresenterController extends CI_Controller {
 
     function showDetailDosen($id){
         $data['record'] = $this->model_app->select_where('dosen', 'dosen.id_dosen',$id);
-        // var_dump($data);
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
-        $this->load->view('header_mobile');
-        $this->load->view('header');
+        $this->load->view('header_mobile',$dataHeader);
+        $this->load->view('header',$dataHeader);
 		$this->load->view('general/profil/dosen_detail', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }
 
     function showDetailStaff($id){
+        $data['record'] = $this->model_app->select_where('staff_pendidik', 'id',$id);
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
-        $this->load->view('header_mobile');
-        $this->load->view('header');
-		$this->load->view('general/profil/staff_detail');
+        $this->load->view('header_mobile',$dataHeader);
+        $this->load->view('header',$dataHeader);
+		$this->load->view('general/profil/staff_detail',$data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
     }

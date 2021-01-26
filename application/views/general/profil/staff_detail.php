@@ -54,8 +54,9 @@
                                                         <div class="gdlr-core-pbf-element">
                                                             <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align">
                                                                 <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
-                                                                    <a class="gdlr-core-lightgallery gdlr-core-js " href="<?php echo base_url('asset/upload/personnel-1.jpg'); ?>">
-                                                                        <img src="<?php echo base_url('asset/upload/personnel-1-400x257.jpg'); ?>"width="700" height="450" alt="" />
+                                                                    <?php $url = "asset/foto_staff/".$record[0]['foto']; ?>
+                                                                    <a class="gdlr-core-lightgallery gdlr-core-js " href="<?php echo base_url($url); ?>">
+                                                                        <img src="<?php echo base_url($url); ?>"width="250" alt="" />
                                                                         <span class="gdlr-core-image-overlay ">
                                                                             <i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i>
                                                                         </span>
@@ -75,8 +76,7 @@
                                                                 class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
                                                                 <div class="gdlr-core-title-item-title-wrap clearfix">
                                                                     <h3 class="gdlr-core-title-item-title gdlr-core-skin-title "
-                                                                        style="font-size: 34px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #161616 ;">
-                                                                        John Hagensy, PhD </h3>
+                                                                        style="font-size: 34px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #161616 ;"><?php echo $record[0]['name'];?> </h3>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -96,15 +96,15 @@
                                                                     <table style="text-align: left;">                                                                        
                                                                         <tr style="background-color:transparent;">
                                                                             <td>NIP/NIK</td>
-                                                                            <td>20161146032311001</td>
+                                                                            <td><?php echo $record[0]['nipnik'];?></td>
                                                                         </tr>
                                                                         <tr style="background-color:transparent;">
                                                                             <td>Pelayanan</td>
-                                                                            <td>Administrasi</td>
+                                                                            <td><?php echo $record[0]['pelayanan'];?></td>
                                                                         </tr>
                                                                         <tr style="background-color:transparent;">
                                                                             <td>Tupoksi</td>
-                                                                            <td>Ketua</td>
+                                                                            <td><?php echo $record[0]['tupoksi'];?></td>
                                                                         </tr>
                                                                     </table>
                                                                 </div>
@@ -123,67 +123,36 @@
                                             <div class="gdlr-core-tab-item-content-wrap clearfix">
                                                 <div class="gdlr-core-tab-item-content  gdlr-core-active"
                                                     data-tab-id="1">
-                                                    <div
-                                                        class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
+                                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                         <div class="gdlr-core-title-item-title-wrap ">
                                                             <h3 class="gdlr-core-title-item-title gdlr-core-skin-title "
-                                                                id="h3_1dd7_24">Why Choose Kingster?<span
-                                                                    class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                                id="h3_1dd7_24">Pelatihan<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
                                                             </h3>
                                                         </div>
                                                     </div>
-                                                    <p>The Kingster University Alumni Association is excited to announce
-                                                        the arrival of KU Alumni Connect. This is a new community
-                                                        building platform for Kinster’s alumni. It is the only place
-                                                        online where you can find, and connect with, all 90,000
-                                                        Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                    <p>Kingster University was established by John Smith in 1920 for the
-                                                        public benefit and it is recognized globally. Throughout our
-                                                        great history, Kingster has offered access to a wide range of
-                                                        academic opportunities. As a world leader in higher education,
-                                                        the University has pioneered change in the sector.</p>
+                                                    <?php echo $record[0]['pelatihan'];?>                                               
                                                 </div>
                                                 <div class="gdlr-core-tab-item-content " data-tab-id="2">
                                                     <div
                                                         class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                         <div class="gdlr-core-title-item-title-wrap ">
                                                             <h3 class="gdlr-core-title-item-title gdlr-core-skin-title "
-                                                                id="h3_1dd7_25">Self Development<span
-                                                                    class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                                id="h3_1dd7_25">Pengahargan<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
                                                             </h3>
                                                         </div>
                                                     </div>
-                                                    <p>The Kingster University Alumni Association is excited to announce
-                                                        the arrival of KU Alumni Connect. This is a new community
-                                                        building platform for Kinster’s alumni. It is the only place
-                                                        online where you can find, and connect with, all 90,000
-                                                        Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                    <p>Kingster University was established by John Smith in 1920 for the
-                                                        public benefit and it is recognized globally. Throughout our
-                                                        great history, Kingster has offered access to a wide range of
-                                                        academic opportunities. As a world leader in higher education,
-                                                        the University has pioneered change in the sector.</p>
+                                                    <?php echo $record[0]['penghargaan'];?>
                                                 </div>
                                                 <div class="gdlr-core-tab-item-content " data-tab-id="3">
                                                     <div
                                                         class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                         <div class="gdlr-core-title-item-title-wrap ">
                                                             <h3 class="gdlr-core-title-item-title gdlr-core-skin-title "
-                                                                id="h3_1dd7_26">Spirituality<span
-                                                                    class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                                id="h3_1dd7_26">Penunjang<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
                                                             </h3>
                                                         </div>
                                                     </div>
-                                                    <p>The Kingster University Alumni Association is excited to announce
-                                                        the arrival of KU Alumni Connect. This is a new community
-                                                        building platform for Kinster’s alumni. It is the only place
-                                                        online where you can find, and connect with, all 90,000
-                                                        Kingster’s alumni. All alumni are automatically enrolled!</p>
-                                                    <p>Kingster University was established by John Smith in 1920 for the
-                                                        public benefit and it is recognized globally. Throughout our
-                                                        great history, Kingster has offered access to a wide range of
-                                                        academic opportunities. As a world leader in higher education,
-                                                        the University has pioneered change in the sector.</p>
+                                                    <?php echo $record[0]['penunjang'];?>
                                                 </div>                                                
                                             </div>
                                         </div>
