@@ -25,8 +25,8 @@
                                 <div class="kingster-single-article-head-right">
                                     <h1 class="kingster-single-article-title"><?php echo $page['judul']; ?></h1>
                                     <div class="kingster-blog-info-wrapper">
-                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-author vcard author post-author "><span class="kingster-head">By</span><span class="fn"><a href="#" title="Posts by John Smith" rel="author"><?php echo $page['user_id']; ?></a></span></div>
-                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-comment-number "><span class="kingster-head"><i class="fa fa-eye" ></i></span><?php echo $page['read_count']; ?></div>
+                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-author vcard author post-author "><span class="kingster-head">By</span><span class="fn"><a href="#" title="Posts by John Smith" rel="author"><?php echo $level; ?></a></span></div>
+                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-comment-number "><span class="kingster-head"></span>HALAMAN</div>
                                     </div>
                                 </div>
                             </header>

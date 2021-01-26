@@ -211,6 +211,9 @@ class PresenterController extends CI_Controller {
 
     // Dynamic Page
     function showDynamicPage($page){
+        $temp = $this->model_halaman->getHalamanBySlug($page);
+        $akun = $this->model_app->select_where('users','id',$temp['user_id']);
+        $data['level'] = $akun[0]["level"];
         $data['page'] = $this->model_halaman->getHalamanBySlug($page);
         if($data['page'] == null){
             show_404();
