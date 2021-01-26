@@ -11,7 +11,7 @@ class BerandaController extends CI_Controller {
 		$data['infografis'] = $this->model_app->select_all('info_grafis');                           
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
-        $this->load->view('header_mobile');
+        $this->load->view('header_mobile', $dataHeader);
         $this->load->view('header', $dataHeader);
 		$this->load->view('beranda', $data);
 		$this->load->view('footer');
