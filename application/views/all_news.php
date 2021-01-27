@@ -49,7 +49,7 @@
                                                                             <?php echo $val->tanggal; ?>
                                                                         </span>      
                                                                     </div>                                                                 
-                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><?php echo $val->username; ?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-comment-number"><span class="gdlr-core-head" ><i class="fa fa-eye" ></i></span><?php echo $val->dibaca; ?> </span></div>
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><?php echo $val->username; ?></span></div>
                                                                 </div>
                                                             </div>
                                                             <br>
@@ -192,11 +192,14 @@
                                         <h3 class="kingster-widget-title">Tag</h3><span class="clear"></span>
                                         
                                         <div class="tagcloud">
+                                        <a href="<?php echo base_url('all-news'); ?>" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;">ALL</a>
                                             <?php 
                                             foreach($tags as $key => $val){
+                                                if("Pengumuman"!=$val->nama_tag){
                                             ?>
-                                            <a href="#" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;"><?php echo $val->nama_tag; ?></a>
+                                                    <a href="<?php echo base_url('tag/'.strtolower($val->nama_tag)); ?>" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;"><?php echo $val->nama_tag; ?></a>
                                             <?php
+                                                }
                                             }
                                             ?>
                                         </div>

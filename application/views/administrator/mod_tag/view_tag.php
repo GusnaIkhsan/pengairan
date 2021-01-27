@@ -10,7 +10,7 @@
                       <tr>
                         <th style='width:20px'>No</th>
                         <th>Nama Tag</th>
-                        <th>Link</th>
+                        <!-- <th>Link</th> -->
                         <th style='width:70px'>Action</th>
                       </tr>
                     </thead>
@@ -19,8 +19,7 @@
                     $no = 1;
                     foreach ($record->result_array() as $row){
                     echo "<tr><td>$no</td>
-                              <td>$row[nama_tag]</td>
-                              <td><a target='_BLANK' href='".base_url()."berita/tag/$row[tag_seo]'>berita/tag/$row[tag_seo]</a></td>
+                              <td>$row[nama_tag]</td>                              
                               <td><center>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_tagberita/$row[id_tag]'><span class='glyphicon glyphicon-edit'></span></a>
                                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_tagberita/$row[id_tag]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
@@ -29,6 +28,7 @@
                       $no++;
                     }
                   ?>
+                  <!-- <td><a target='_BLANK' href='".base_url()."berita/tag/$row[tag_seo]'>berita/tag/$row[tag_seo]</a></td> -->
                   </tbody>
                 </table>
               </div>

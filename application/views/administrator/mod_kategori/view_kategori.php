@@ -10,7 +10,7 @@
                       <tr>
                         <th style='width:20px'>No</th>
                         <th>Nama Kategori</th>
-                        <th>Link</th>
+                        <!-- <th>Link</th> -->
                         <th>Posisi</th>
                         <th>Aktif</th>
                         <th style='width:70px'>Action</th>
@@ -21,8 +21,7 @@
                     $no = 1;
                     foreach ($record->result_array() as $row){
                     echo "<tr><td>$no</td>
-                              <td>$row[nama_kategori]</td>
-                              <td><a target='_BLANK' href='".base_url()."berita/kategori/$row[kategori_seo]'>berita/kategori/$row[kategori_seo]</a></td>
+                              <td>$row[nama_kategori]</td>                              
                               <td>$row[sidebar]</td>
                               <td>$row[aktif]</td>
                               <td><center>
@@ -33,6 +32,7 @@
                       $no++;
                     }
                   ?>
+                  <!-- <td><a target='_BLANK' href='".base_url()."berita/kategori/$row[kategori_seo]'>berita/kategori/$row[kategori_seo]</a></td> -->
                   </tbody>
                 </table>
               </div>

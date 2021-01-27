@@ -330,4 +330,13 @@ class Model_berita extends CI_model{
     function getBerita($id){
         return $this->db->query("SELECT * FROM berita where id_berita='$id'")->first_row('array');
     }
+
+    function getNewsByTag($tag){
+        $data = $this->db->query("SELECT berita.* FROM berita                                     
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori not in (61) and berita.tag LIKE '%$tag%'  
+                                    ORDER BY id_berita DESC");
+        return $data->result();
+    }
 }

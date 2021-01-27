@@ -211,6 +211,18 @@ class PresenterController extends CI_Controller {
 		$this->load->view('global_js');
     }
 
+    function showNewsByTag($tag){
+        $data['news'] = $this->model_berita->getNewsByTag($tag);
+		$data['tags'] = $this->model_berita->tag_berita()->result();
+		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header', $dataHeader);
+		$this->load->view('all_news', $data);
+		$this->load->view('footer');
+		$this->load->view('global_js');
+    }
+
     // Dynamic Page
     function showDynamicPage($page){
         $temp = $this->model_halaman->getHalamanBySlug($page);
