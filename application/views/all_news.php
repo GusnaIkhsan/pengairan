@@ -187,6 +187,14 @@
                                             </div>
                                         </div>
                                     </div> -->
+                                    <div class="form-inline" style="margin-bottom: 10px">
+                                        <div class="input-group rounded">
+                                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" id="input-search-news" />
+                                        </div>
+                                        <button type="button" class="btn btn-primary" id="btn-search-news">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
                                     
                                     <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">
                                         <h3 class="kingster-widget-title">Tag</h3><span class="clear"></span>
