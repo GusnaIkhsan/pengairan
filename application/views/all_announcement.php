@@ -36,10 +36,10 @@
                                                     foreach($news as $key => $val){
                                                 ?>                                     
                                                     <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
-                                                        <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                            <!-- <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_106223549-600x333.jpg'); ?>" width="900" height="500"  alt="" /></a> -->
+                                                        <!-- <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                            <a href="#"><img src="<?php echo base_url('asset/upload/shutterstock_106223549-600x333.jpg'); ?>" width="900" height="500"  alt="" /></a>
                                                             <img src="<?php echo base_url('asset/foto_berita/'.$val->gambar); ?>" width="900" height="500"  alt="" />
-                                                        </div>
+                                                        </div> -->
                                                         <div class="gdlr-core-blog-full-frame gdlr-core-skin-e-background">
                                                             <div class="gdlr-core-blog-full-head clearfix">
                                                                 <div class="gdlr-core-blog-full-head-right">
@@ -49,7 +49,7 @@
                                                                             <?php echo $val->tanggal; ?>
                                                                         </span>      
                                                                     </div>                                                                 
-                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><?php echo $val->username; ?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-comment-number"><span class="gdlr-core-head" ><i class="fa fa-eye" ></i></span><?php echo $val->dibaca; ?> </span></div>
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><?php echo $val->username; ?></span></div>
                                                                 </div>
                                                             </div>
                                                             <br>
