@@ -21,9 +21,11 @@ class BerandaController extends CI_Controller {
 
 	public function allNews(){
 		if($this->input->get('search')){
-			$data['news'] = $this->model_berita->allNews(strtolower($this->input->get('search')));
+			$data['news']	= $this->model_berita->allNews(strtolower($this->input->get('search')));
+			$data['search']	= $this->input->get('search');
 		} else {
-			$data['news'] = $this->model_berita->allNews();
+			$data['news'] 	= $this->model_berita->allNews();
+			$data['search']	= "";
 		}
 		
 		$data['tags'] = $this->model_berita->tag_berita()->result();

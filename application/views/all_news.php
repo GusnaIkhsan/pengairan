@@ -33,7 +33,10 @@
                                             <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
 
                                                 <?php
-                                                    foreach($news as $key => $val){
+                                                    if(count($news) == 0){
+                                                        echo "<div class=\"bg-danger\" style=\"padding: 10px; text-align: center;\">Tidak ada berita dengan kata kunci <strong>". $search ."</strong></div>";
+                                                    } else {
+                                                        foreach($news as $key => $val){
                                                 ?>                                     
                                                     <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
                                                         <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
@@ -58,6 +61,7 @@
                                                         </div>
                                                     </div>
                                                 <?php
+                                                        }
                                                     }
                                                 ?>
 
@@ -144,9 +148,9 @@
                                                 </div> -->
 
                                             </div>
-                                            <div class="gdlr-core-pagination  gdlr-core-style-round gdlr-core-left-align gdlr-core-item-pdlr"><span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='page/2/index.html'>2</a> <a class='page-numbers' href='page/3/index.html'>3</a>
+                                            <!-- <div class="gdlr-core-pagination  gdlr-core-style-round gdlr-core-left-align gdlr-core-item-pdlr"><span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='page/2/index.html'>2</a> <a class='page-numbers' href='page/3/index.html'>3</a>
                                                 <a class="next page-numbers" href="page/2/index.html"></a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
