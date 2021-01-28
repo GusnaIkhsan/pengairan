@@ -144,17 +144,25 @@
                                                 </div> -->
 
                                             </div>
-                                            <div class="gdlr-core-pagination  gdlr-core-style-round gdlr-core-left-align gdlr-core-item-pdlr"><span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='page/2/index.html'>2</a> <a class='page-numbers' href='page/3/index.html'>3</a>
+                                            <!-- <div class="gdlr-core-pagination  gdlr-core-style-round gdlr-core-left-align gdlr-core-item-pdlr"><span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='page/2/index.html'>2</a> <a class='page-numbers' href='page/3/index.html'>3</a>
                                                 <a class="next page-numbers" href="page/2/index.html"></a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  kingster-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height">
-                                <!-- <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
+                                <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
                                 <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
-                                    <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">
+                                    <div class="form-inline" style="margin-bottom: 10px">
+                                        <div class="input-group rounded">
+                                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" id="input-search-announcement" />
+                                        </div>
+                                        <button type="button" class="btn btn-primary" id="btn-search-announcement">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                    <!-- <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">
                                         <h3 class="kingster-widget-title">Tag</h3><span class="clear"></span>
                                         
                                         <div class="tagcloud">
@@ -166,8 +174,8 @@
                                             }
                                             ?>
                                         </div>
-                                    </div>
-                                </div> -->
+                                    </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>

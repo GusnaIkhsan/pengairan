@@ -40,7 +40,14 @@ class BerandaController extends CI_Controller {
 	}
 
 	public function allAgenda(){
-		$data['list_agenda'] = $this->model_agenda->agenda()->result();
+		if($this->input->get('search')){
+			$data['list_agenda']	= $this->model_agenda->agenda(strtolower($this->input->get('search')))->result();
+			$data['search']			= $this->input->get('search');
+		} else {
+			$data['list_agenda'] 	= $this->model_agenda->agenda()->result();
+			$data['search']			= "";
+		}
+		
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
@@ -48,10 +55,18 @@ class BerandaController extends CI_Controller {
 		$this->load->view('all_agenda', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
+		$this->load->view('specificJs/all_agenda_js');
 	}
 
 	public function allAnnouncement(){
-		$data['news'] = $this->model_berita->allAnnouncement();
+		if($this->input->get('search')){
+			$data['news']	= $this->model_berita->allAnnouncement(strtolower($this->input->get('search')));
+			$data['search']	= $this->input->get('search');
+		} else {
+			$data['news'] 	= $this->model_berita->allAnnouncement();
+			$data['search']	= "";
+		}
+		
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
@@ -59,6 +74,7 @@ class BerandaController extends CI_Controller {
 		$this->load->view('all_announcement', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
+		$this->load->view('specificJs/all_announcement_js');
 	}
 
 	public function pageNews(){
