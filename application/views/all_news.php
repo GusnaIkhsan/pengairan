@@ -33,7 +33,10 @@
                                             <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
 
                                                 <?php
-                                                    foreach($news as $key => $val){
+                                                    if(count($news) == 0){
+                                                        echo "<div class=\"bg-danger\" style=\"padding: 10px; text-align: center;\">Tidak ada berita dengan kata kunci <strong>". $search ."</strong></div>";
+                                                    } else {
+                                                        foreach($news as $key => $val){
                                                 ?>                                     
                                                     <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
                                                         <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
@@ -58,6 +61,7 @@
                                                         </div>
                                                     </div>
                                                 <?php
+                                                        }
                                                     }
                                                 ?>
 
@@ -144,9 +148,9 @@
                                                 </div> -->
 
                                             </div>
-                                            <div class="gdlr-core-pagination  gdlr-core-style-round gdlr-core-left-align gdlr-core-item-pdlr"><span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='page/2/index.html'>2</a> <a class='page-numbers' href='page/3/index.html'>3</a>
+                                            <!-- <div class="gdlr-core-pagination  gdlr-core-style-round gdlr-core-left-align gdlr-core-item-pdlr"><span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='page/2/index.html'>2</a> <a class='page-numbers' href='page/3/index.html'>3</a>
                                                 <a class="next page-numbers" href="page/2/index.html"></a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -187,6 +191,16 @@
                                             </div>
                                         </div>
                                     </div> -->
+                                    <div class="row" style="margin-bottom: 10px">
+                                        <div class="col-md-10">
+                                            <input type="search" class="form-control rounded" placeholder="Cari Berita ..." aria-label="Search" aria-describedby="search-addon" id="input-search-news" />
+                                        </div>
+                                        <div class="col-md-2" style="text-align: center; margin-top: 3px">
+                                            <button type="button" class="btn btn-primary" id="btn-search-news">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                     
                                     <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">
                                         <h3 class="kingster-widget-title">Tag</h3><span class="clear"></span>

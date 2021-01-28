@@ -12,8 +12,12 @@ class Model_agenda extends CI_model{
         return $this->db->query("UPDATE agenda SET dibaca=dibaca+1 where id_agenda='".$this->db->escape_str($id)."' OR tema_seo='".$this->db->escape_str($id)."'");
     }
 
-    function agenda(){
-        return $this->db->query("SELECT * FROM agenda ORDER BY id_agenda DESC");
+    function agenda($query = ""){
+        if($query == ""){
+            return $this->db->query("SELECT * FROM agenda ORDER BY id_agenda DESC");
+        } else {
+            return $this->db->query("SELECT * FROM agenda WHERE tema like '%" . $query . "%' ORDER BY id_agenda DESC");
+        }
     }
 
     function agenda_tambah(){

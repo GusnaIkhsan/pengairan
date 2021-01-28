@@ -281,21 +281,38 @@ class Model_berita extends CI_model{
         return $this->db->query("SELECT * FROM prodi WHERE prodi.aktif = 'Y' ");
     }
 
-    function allNews(){
-        $data = $this->db->query("SELECT berita.* FROM berita                                     
+    function allNews($query = ""){
+        if($query == ""){
+            $data = $this->db->query("SELECT berita.* FROM berita                                     
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
                                     where status='Y' and kategori.id_kategori not in (61) ORDER BY id_berita 
                                     DESC");
+        } else {
+            $data = $this->db->query("SELECT berita.* FROM berita                                     
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori not in (61) and judul like '%" . $query . "%' ORDER BY id_berita 
+                                    DESC");
+        }
         return $data->result();
     }
 
-    function allAnnouncement(){
-        $data = $this->db->query("SELECT berita.* FROM berita                                 
+    function allAnnouncement($query = ""){
+        if($query == ""){
+            $data = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
                                     where status='Y' and kategori.id_kategori = 61 ORDER BY id_berita 
                                     DESC");
+        } else {
+            $data = $this->db->query("SELECT berita.* FROM berita                                 
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori = 61 and judul like '%" . $query . "%' ORDER BY id_berita 
+                                    DESC");
+        }
+        
         return $data->result();
     }
 
