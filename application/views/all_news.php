@@ -191,13 +191,15 @@
                                             </div>
                                         </div>
                                     </div> -->
-                                    <div class="form-inline" style="margin-bottom: 10px">
-                                        <div class="input-group rounded">
-                                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" id="input-search-news" />
+                                    <div class="row" style="margin-bottom: 10px">
+                                        <div class="col-md-10">
+                                            <input type="search" class="form-control rounded" placeholder="Cari Berita ..." aria-label="Search" aria-describedby="search-addon" id="input-search-news" />
                                         </div>
-                                        <button type="button" class="btn btn-primary" id="btn-search-news">
-                                            <i class="fa fa-search"></i>
-                                        </button>
+                                        <div class="col-md-2" style="text-align: center; margin-top: 3px">
+                                            <button type="button" class="btn btn-primary" id="btn-search-news">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                     
                                     <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">

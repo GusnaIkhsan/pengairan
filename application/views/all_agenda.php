@@ -154,13 +154,15 @@
                             <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  kingster-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height">
                                 <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
                                 <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
-                                    <div class="form-inline" style="margin-bottom: 10px">
-                                        <div class="input-group rounded">
-                                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" id="input-search-agenda" />
+                                    <div class="row" style="margin-bottom: 10px">
+                                        <div class="col-md-10">
+                                            <input type="search" class="form-control rounded" placeholder="Cari Agenda ..." aria-label="Search" aria-describedby="search-addon" id="input-search-agenda" />
                                         </div>
-                                        <button type="button" class="btn btn-primary" id="btn-search-agenda">
-                                            <i class="fa fa-search"></i>
-                                        </button>
+                                        <div class="col-md-2" style="text-align: center; margin-top: 3px">
+                                            <button type="button" class="btn btn-primary" id="btn-search-agenda">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                     <!-- <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">
                                         <h3 class="kingster-widget-title">Tag</h3><span class="clear"></span>
