@@ -49,7 +49,10 @@
                                                                     <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 33px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('berita/'.$val->id_berita); ?>" ><?php echo $val->judul; ?></a></h3>
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <?php echo $val->tanggal; ?>
+                                                                            <?php 
+                                                                                $tgl = explode("-", $val->tanggal);
+                                                                                echo hari_ini(date('w',strtotime($val->tanggal))).", $tgl[2] ".getBulan((int)$tgl[1])." ".$tgl[0];
+                                                                            ?>
                                                                         </span>      
                                                                     </div>                                                                 
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><?php echo $val->username; ?></span></div>
@@ -191,12 +194,12 @@
                                             </div>
                                         </div>
                                     </div> -->
-                                    <div class="row" style="margin-bottom: 10px">
+                                    <div class="row" style="margin-bottom: 30px">
                                         <div class="col-md-10">
                                             <input type="search" class="form-control rounded" placeholder="Cari Berita ..." aria-label="Search" aria-describedby="search-addon" id="input-search-news" />
                                         </div>
-                                        <div class="col-md-2" style="text-align: center; margin-top: 3px">
-                                            <button type="button" class="btn btn-primary" id="btn-search-news">
+                                        <div class="col-md-2" style="text-align: center; margin-left: -9px">
+                                            <button type="button" style="width: 50px; height: 34px;" class="btn btn-primary" id="btn-search-news">
                                                 <i class="fa fa-search"></i>
                                             </button>
                                         </div>
@@ -206,7 +209,7 @@
                                         <h3 class="kingster-widget-title">Tag</h3><span class="clear"></span>
                                         
                                         <div class="tagcloud">
-                                        <a href="<?php echo base_url('all-news'); ?>" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;">ALL</a>
+                                            <a href="<?php echo base_url('all-news'); ?>" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;">ALL</a>
                                             <?php 
                                             foreach($tags as $key => $val){
                                                 if("Pengumuman"!=$val->nama_tag){
@@ -218,7 +221,43 @@
                                             ?>
                                         </div>
                                     </div>
-
+                                    
+                                    <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
+                                        <h3 class="kingster-widget-title">Berita Terbaru</h3><span class="clear"></span>
+                                        <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
+                                        <?php
+                                            foreach ($news as $key => $value) {     
+                                                $tanggalBerita = explode("-", $news[$key]->tanggal);                                            
+                                        ?>  
+                                            <div class="gdlr-core-recent-post-widget clearfix">
+                                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_135948689" /></div>
+                                                <div class="gdlr-core-recent-post-widget-content">
+                                                    <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>"><?php echo $news[$key]->judul;?></a></div>
+                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><?php echo hari_ini(date('w',strtotime($news[$key]->tanggal))).", ".$tanggalBerita[2]." ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By <?php echo $val->username; ?></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php
+                                                }
+                                        ?>
+                                            <!-- <div class="gdlr-core-recent-post-widget clearfix">
+                                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/shutterstock_135948689-150x150.jpg');?>" alt="" width="150" height="150" title="Student" /></div>
+                                                <div class="gdlr-core-recent-post-widget-content">
+                                                    <div class="gdlr-core-recent-post-widget-title"><a href="#">A Global MBA for the next generation of business leaders</a></div>
+                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href="#">June 6, 2016</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><a href="#" title="Posts by John Smith" rel="author">John Smith</a></span>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="gdlr-core-recent-post-widget clearfix">
+                                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/shutterstock_135948689-150x150.jpg');?>" alt="" width="150" height="150" title="shutterstock_481869205" /></div>
+                                                <div class="gdlr-core-recent-post-widget-content">
+                                                    <div class="gdlr-core-recent-post-widget-title"><a href="#">Professor Tom comments on voluntary recalls by snack brands</a></div>
+                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href="#">June 6, 2016</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><a href="#" title="Posts by John Smith" rel="author">John Smith</a></span>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
                                     <!-- <div id="gdlr-core-recent-portfolio-widget-1" class="widget widget_gdlr-core-recent-portfolio-widget kingster-widget">
                                         <h3 class="kingster-widget-title">Recent Works</h3><span class="clear"></span>
                                         <div class="gdlr-core-recent-portfolio-widget-wrap clearfix">

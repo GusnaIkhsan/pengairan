@@ -72,7 +72,7 @@
                         <div class="gdlr-core-pbf-background-wrap"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
-                                <div class=" gdlr-core-pbf-wrapper-container-inner gdlr-core-item-mglr clearfix" id="div_1dd7_0">
+                                <div class=" gdlr-core-pbf-wrapper-container-inner gdlr-core-item-mglr clearfix" id="div_1dd7_0" style="margin-top:-10px;">
                                     <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first">
                                         <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_1">
                                             <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
@@ -177,7 +177,7 @@
                                                             <?php
                                                               $exp = explode("<p>", $news[$key]->isi_berita);
                                                               $lengthStr = strlen($news[$key]->isi_berita);                                                      
-                                                              $txt = substr($exp[1],0,100);
+                                                              $txt = substr($exp[1],0,130);
                                                               echo $txt.' . . .';
                                                             ?>
                                                         </p>                                                        
@@ -201,7 +201,7 @@
                                                         <?php
                                                               $exp = explode("<p>", $news[$key]->isi_berita);
                                                               $lengthStr = strlen($news[$key]->isi_berita);                                                      
-                                                              $txt = substr($exp[1],0,100);
+                                                              $txt = substr($exp[1],0,130);
                                                               echo $txt.' . . .';
                                                             ?>
                                                         </p>                                                        
@@ -224,7 +224,7 @@
                                                             <?php
                                                               $exp = explode("<p>", $news[$key]->isi_berita);
                                                               $lengthStr = strlen($news[$key]->isi_berita);                                                      
-                                                              $txt = substr($exp[1],0,100);
+                                                              $txt = substr($exp[1],0,130);
                                                               echo $txt.' . . .';
                                                             ?>
                                                         </p>
@@ -300,7 +300,9 @@
                                                         <div class="gdlr-core-block-item-title-inner clearfix">
                                                             <h3 class="gdlr-core-block-item-title" style="font-size: 24px ;font-style: normal ;text-transform: none ;letter-spacing: 0px ;color: #163269 ;">Agenda</h3>
                                                             <div class="gdlr-core-block-item-title-divider" style="font-size: 24px ;border-bottom-width: 3px ;"></div>
-                                                        </div><a class="gdlr-core-block-item-read-more" href="<?php echo base_url('all-agenda'); ?>" target="_self" style="color: #3db166 ;">Selengkapnya</a></div>
+                                                        </div>
+                                                        <a class="gdlr-core-block-item-read-more" href="<?php echo base_url('all-agenda'); ?>" target="_self" style="color: #3db166 ;">Selengkapnya</a>
+                                                    </div>                                                    
                                                     <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
                                                         <div class="gdlr-core-item-list-wrap gdlr-core-column-30">
                                                             <div class="gdlr-core-item-list-inner gdlr-core-item-mglr">
@@ -309,17 +311,19 @@
                                                                         <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[0]->gambar); ?>" width="700" height="430"  alt="" /></a>
                                                                     </div>
                                                                     <div class="gdlr-core-blog-grid-content-wrap">
-                                                                        <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 19px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[0]->id_agenda); ?>" ><?php echo $agenda[0]->tema;?></a></h3></div>
                                                                         <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                                <!-- <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                                    <a href="#"><?php echo $news[0]->tanggal; ?></a>
-                                                                                </span> -->
+                                                                                <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">                                                                                    
+                                                                                    <?php 
+                                                                                        $tglAgenda0 = explode("-", $agenda[0]->tgl_posting);
+                                                                                        echo hari_ini(date('w',strtotime($agenda[0]->tgl_posting))).", $tglAgenda0[2] ".getBulan((int)$tglAgenda0[1])." ".$tglAgenda0[0]; ?>                                                                                 
+                                                                                </span>
                                                                                 <!-- <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
                                                                                     <a href="#" rel="tag">Admission</a>
                                                                                     <span class="gdlr-core-sep">,</span>
                                                                                     <a href="#" rel="tag">Student</a>
                                                                                 </span> -->
                                                                         </div>
+                                                                        <h4 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[0]->id_agenda); ?>" ><?php echo $agenda[0]->tema;?></a></h4></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -330,35 +334,44 @@
                                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" alt="" width="150" height="150" title="Student" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
-                                                                    <!-- <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#"><?php echo $agenda[1]->tgl_posting; ?></a>
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">
+                                                                            <?php 
+                                                                                $tglAgenda1 = explode("-", $agenda[1]->tgl_posting);
+                                                                                echo hari_ini(date('w',strtotime($agenda[1]->tgl_posting))).", $tglAgenda1[2] ".getBulan((int)$tglAgenda1[1])." ".$tglAgenda1[0]; ?>
                                                                         </span>                                                                        
-                                                                    </div> -->
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>" ><?php echo $agenda[1]->tema;?></a></h3></div>
+                                                                    </div>
+                                                                    <h4 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 14px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>" ><?php echo $agenda[1]->tema;?></a></h4></div>
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
                                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[2]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_481869205" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>" ><?php echo $agenda[2]->tema;?></a></h3></div>
-                                                                        <!-- <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                            <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                                <a href="#"><?php echo $agenda[2]->tgl_posting; ?></a></span>                                                                            
-                                                                        </div> -->
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">
+                                                                            <?php
+                                                                                $tglAgenda2 = explode("-", $agenda[2]->tgl_posting);
+                                                                                echo hari_ini(date('w',strtotime($agenda[0]->tgl_posting))).", $tglAgenda2[2] ".getBulan((int)$tglAgenda2[1])." ".$tglAgenda2[0]; 
+                                                                             ?>
+                                                                        </span>                                                                            
+                                                                    </div>
+                                                                    <h4 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 14px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>" ><?php echo $agenda[2]->tema;?></a></h4></div>
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
                                                                     <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[3]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_361397258" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
-                                                                    <!-- <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#"><?php echo $agenda[3]->tgl_posting; ?></a>
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">
+                                                                            <?php 
+                                                                                 $tglAgenda3 = explode("-", $agenda[3]->tgl_posting);
+                                                                                 echo hari_ini(date('w',strtotime($agenda[0]->tgl_posting))).", $tglAgenda3[2] ".getBulan((int)$tglAgenda3[1])." ".$tglAgenda3[0];
+                                                                            ?>
                                                                         </span>                                                                       
-                                                                    </div> -->
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[3]->id_agenda); ?>" ><?php echo $agenda[3]->tema;?></a></h3></div>
+                                                                    </div>
+                                                                    <h4 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 14px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[3]->id_agenda); ?>" ><?php echo $agenda[3]->tema;?></a></h4></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -388,10 +401,15 @@
                                                                 <?php $tanggalBerita = explode("-", $announc[$key]->tanggal); ?>
                                                                 <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
                                                                 <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
-                                                                <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
+                                                                <!-- <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span> -->
                                                             </span>
                                                             <div class="gdlr-core-event-item-content-wrap">
                                                                 <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[$key]->id_berita); ?>" ><?php echo $announc[$key]->judul;?></a></h3>
+                                                                <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                    <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">
+                                                                        <?php echo $announc[$key]->hari.", ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?>
+                                                                    </span>                                                                       
+                                                                </div>                                                        
                                                                 <!-- <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">Kingster Grand Hall</span></span>
                                                                 </div> -->
                                                             </div>
@@ -433,7 +451,7 @@
                             </div>
                         </div>
                     </div>
-                    <br><br>
+                    <br>
                     
                     <div class="gdlr-core-pbf-wrapper " id="div_1dd7_79">
                         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_80"></div>
@@ -477,7 +495,7 @@
                                                             <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
                                                                 <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                                     <div class="gdlr-core-pbf-element">
-                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">                                                                            
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr">                                                                            
                                                                             <div class="gdlr-core-pbf-element">
                                                                                 <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
                                                                                     <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/reading-book.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
@@ -499,7 +517,7 @@
                                                             <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
                                                                 <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                                     <div class="gdlr-core-pbf-element">
-                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr">
                                                                             <div class="gdlr-core-pbf-element">
                                                                                 <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
                                                                                     <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/icon-1.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
@@ -520,7 +538,7 @@
                                                             <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
                                                                 <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                                     <div class="gdlr-core-pbf-element">
-                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">                                                                            
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr">                                                                            
                                                                             <div class="gdlr-core-pbf-element">
                                                                                 <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
                                                                                     <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/press-conference.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
@@ -542,7 +560,7 @@
                                                             <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
                                                                 <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                                     <div class="gdlr-core-pbf-element">
-                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
+                                                                        <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr">
                                                                             <div class="gdlr-core-pbf-element">
                                                                                 <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
                                                                                     <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/icon-2.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>

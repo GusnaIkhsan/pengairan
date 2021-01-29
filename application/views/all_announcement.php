@@ -46,7 +46,10 @@
                                                                     <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 33px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('pengumuman/'.$val->id_berita); ?>" ><?php echo $val->judul; ?></a></h3>
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <?php echo $val->tanggal; ?>
+                                                                            <?php 
+                                                                                $tgl = explode("-", $val->tanggal);
+                                                                                echo hari_ini(date('w',strtotime($val->tanggal))).", $tgl[2] ".getBulan((int)$tgl[1])." ".$tgl[0];
+                                                                            ?>
                                                                         </span>      
                                                                     </div>                                                                 
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By</span><?php echo $val->username; ?></span></div>
@@ -154,14 +157,34 @@
                             <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  kingster-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height">
                                 <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
                                 <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
-                                    <div class="row" style="margin-bottom: 10px">
+                                    <div class="row" style="margin-bottom: 30px">
                                         <div class="col-md-10">
                                             <input type="search" class="form-control rounded" placeholder="Cari Pengumuman ..." aria-label="Search" aria-describedby="search-addon" id="input-search-announcement" />
                                         </div>
-                                        <div class="col-md-2" style="text-align: center; margin-top: 3px">
-                                            <button type="button" class="btn btn-primary" id="btn-search-announcement">
+                                        <div class="col-md-2" style="text-align: center; margin-left: -9px">
+                                            <button type="button" style="width: 50px; height: 34px;" class="btn btn-primary" id="btn-search-announcement">
                                                 <i class="fa fa-search"></i>
                                             </button>
+                                        </div>
+                                    </div>
+                                    <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
+                                        <h3 class="kingster-widget-title">Pengumuman Terbaru</h3><span class="clear"></span>
+                                        <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
+                                        <?php
+                                            foreach ($news as $key => $value) {     
+                                                $tanggalBerita = explode("-", $news[$key]->tanggal);                                            
+                                        ?>  
+                                            <div class="gdlr-core-recent-post-widget clearfix">
+                                                <!-- <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_135948689" /></div> -->
+                                                <div class="gdlr-core-recent-post-widget-content">
+                                                    <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>"><?php echo $news[$key]->judul;?></a></div>
+                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><?php echo hari_ini(date('w',strtotime($news[$key]->tanggal))).", ".$tanggalBerita[2]." ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By <?php echo $val->username; ?></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php
+                                                }
+                                        ?>
                                         </div>
                                     </div>
                                     <!-- <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">
