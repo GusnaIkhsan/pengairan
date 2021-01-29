@@ -226,14 +226,14 @@
                                         <h3 class="kingster-widget-title">Berita Terbaru</h3><span class="clear"></span>
                                         <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
                                         <?php
-                                            foreach ($news as $key => $value) {     
-                                                $tanggalBerita = explode("-", $news[$key]->tanggal);                                            
+                                            foreach ($last_news as $key => $value) {     
+                                                $tanggalBerita = explode("-", $last_news[$key]->tanggal);                                            
                                         ?>  
                                             <div class="gdlr-core-recent-post-widget clearfix">
-                                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_135948689" /></div>
+                                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/foto_berita/'.$last_news[$key]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_135948689" /></div>
                                                 <div class="gdlr-core-recent-post-widget-content">
-                                                    <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>"><?php echo $news[$key]->judul;?></a></div>
-                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><?php echo hari_ini(date('w',strtotime($news[$key]->tanggal))).", ".$tanggalBerita[2]." ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By <?php echo $val->username; ?></span></span>
+                                                    <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('berita/'.$last_news[$key]->id_berita); ?>"><?php echo $last_news[$key]->judul;?></a></div>
+                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><?php echo hari_ini(date('w',strtotime($last_news[$key]->tanggal))).", ".$tanggalBerita[2]." ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By <?php echo $val->username; ?></span></span>
                                                     </div>
                                                 </div>
                                             </div>

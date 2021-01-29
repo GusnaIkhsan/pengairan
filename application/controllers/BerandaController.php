@@ -27,7 +27,7 @@ class BerandaController extends CI_Controller {
 			$data['news'] 	= $this->model_berita->allNews();
 			$data['search']	= "";
 		}
-		$data['news'] = $this->model_berita->lastNews(3);
+		$data['last_news'] = $this->model_berita->lastNews(3);
 		$data['tags'] = $this->model_berita->tag_berita()->result();
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
@@ -67,6 +67,7 @@ class BerandaController extends CI_Controller {
 			$data['search']	= "";
 		}
 		
+		$data['last_news'] = $this->model_berita->lastNews(3);
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
