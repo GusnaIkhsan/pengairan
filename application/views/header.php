@@ -8,6 +8,7 @@
                                 <li class="menu-item kingster-normal-menu"><a href="https://bits.ub.ac.id/">BITS</a></li>
                                 <li class="menu-item kingster-normal-menu"><a href="http://mail.ub.ac.id">Webmail</a></li>
                                 <li class="menu-item kingster-normal-menu"><a href="https://prasetya.ub.ac.id/">UB News</a></li>
+                                <li class="menu-item kingster-normal-menu" id="btn-search-global"><a href="#"><i class="fa fa-search"></i></a></li>
                             </ul>
                             <div class="kingster-top-bar-right-social"></div><a class="kingster-top-bar-right-button" href="#" target="_blank">Apps</a></div>
                     </div>
@@ -129,14 +130,14 @@
                                 </ul> -->
                                 <!-- <div class="kingster-navigation-slide-bar" id="kingster-navigation-slide-bar"></div> -->
                             </div>
-                            <!-- <div class="kingster-main-menu-right-wrap clearfix ">
+                            <div class="kingster-main-menu-right-wrap clearfix" style="display: none;">
                                 <div class="kingster-main-menu-search" id="kingster-top-search"><i class="icon_search"></i></div>
-                                <div class="kingster-top-search-wrap">
+                                <div class="kingster-top-search-wrap kingster" id="modal-search">
                                     <div class="kingster-top-search-close"></div>
                                     <div class="kingster-top-search-row">
                                         <div class="kingster-top-search-cell">
-                                            <form role="search" method="get" class="search-form" action="#">
-                                                <input type="text" class="search-field kingster-title-font" placeholder="Search..." value="" name="s">
+                                            <form role="search" method="get" class="search-form" action="<?php echo base_url('search'); ?>">
+                                                <input type="text" class="search-field kingster-title-font" placeholder="Search..." value="" name="search">
                                                 <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
                                                 <input type="submit" class="search-submit" value="Search">
                                                 <div class="kingster-top-search-close"><i class="icon_close"></i></div>
@@ -144,7 +145,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>

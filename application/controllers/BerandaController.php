@@ -87,4 +87,24 @@ class BerandaController extends CI_Controller {
 		$this->load->view('footer');
 		$this->load->view('global_js');
 	}
+
+	public function allContents(){
+		$data['last_news'] = $this->model_berita->lastNews(3);
+		if($this->input->get('search')){
+			$data['news']	= $this->model_berita->allContents(strtolower($this->input->get('search')));
+			$data['search']	= $this->input->get('search');
+		} else {
+			$data['news'] 	= $this->model_berita->allContents();
+			$data['search']	= "";
+		}
+		$data['tags'] = $this->model_berita->tag_berita()->result();
+		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
+        $this->load->view('global_css');
+        $this->load->view('header_mobile');
+        $this->load->view('header', $dataHeader);
+		$this->load->view('all_contents', $data);
+		$this->load->view('footer');
+		$this->load->view('global_js');
+		$this->load->view('specificJs/all_contents_js');
+	}
 }
