@@ -268,4 +268,9 @@
 	
 	<script type='text/javascript' src='<?php echo base_url('asset/js/isotope.js'); ?>'></script>
     <script type="text/javascript" src="<?php echo base_url('asset/plugins/quform/js/plugins.js'); ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('asset/plugins/quform/js/scripts.js'); ?>"></script>  
+	<script type="text/javascript" src="<?php echo base_url('asset/plugins/quform/js/scripts.js'); ?>"></script>
+	<script type="text/javascript">
+		$("#btn-search-global").click(function() {
+			$('#modal-search').css("display", "block");
+		});
+	</script>
