@@ -356,4 +356,77 @@ class Model_berita extends CI_model{
                                     ORDER BY id_berita DESC");
         return $data->result();
     }
+
+    function allContents($query = ""){
+        $data               = array();
+        
+        if($query == ""){
+            // Berita
+            $dataNews           = $this->db->query("SELECT berita.* FROM berita                                     
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY id_berita 
+                                    DESC")->result();
+
+            foreach($dataNews as $news){
+                $news->type = "Berita";
+                array_push($data, $news);
+            }
+
+            // Pengumuman
+            $dataAnnouncement   = $this->db->query("SELECT berita.* FROM berita                                 
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori = 61 ORDER BY id_berita 
+                                    DESC")->result();
+
+            foreach($dataAnnouncement as $announcement){
+                $announcement->type = "Pengumuman";
+                array_push($data, $announcement);
+            }
+
+            // Agenda
+            $dataAgenda         = $this->db->query("SELECT * FROM agenda ORDER BY id_agenda DESC")->result();
+
+            foreach($dataAgenda as $agenda){
+                $agenda->type = "Agenda";
+                array_push($data, $agenda);
+            }
+
+        } else {
+            // Berita
+            $dataNews           = $this->db->query("SELECT berita.* FROM berita                                     
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori not in (61) and judul like '%" . $query . "%' ORDER BY id_berita 
+                                    DESC")->result();
+
+            foreach($dataNews as $news){
+                $news->type = "Berita";
+                array_push($data, $news);
+            }
+
+            // Pengumuman
+            $dataAnnouncement   = $this->db->query("SELECT berita.* FROM berita                                 
+                                    left join kategori 
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    where status='Y' and kategori.id_kategori = 61 and judul like '%" . $query . "%' ORDER BY id_berita 
+                                    DESC")->result();
+
+            foreach($dataAnnouncement as $announcement){
+                $announcement->type = "Pengumuman";
+                array_push($data, $announcement);
+            }
+
+            // Agenda
+            $dataAgenda         = $this->db->query("SELECT * FROM agenda WHERE tema like '%" . $query . "%' ORDER BY id_agenda DESC")->result();
+
+            foreach($dataAgenda as $agenda){
+                $agenda->type = "Agenda";
+                array_push($data, $agenda);
+            }
+
+        }
+        return $data;
+    }
 }

@@ -136,7 +136,7 @@
                                     <div class="kingster-top-search-close"></div>
                                     <div class="kingster-top-search-row">
                                         <div class="kingster-top-search-cell">
-                                            <form role="search" method="get" class="search-form" action="<?php echo base_url('all-news'); ?>">
+                                            <form role="search" method="get" class="search-form" action="<?php echo base_url('search'); ?>">
                                                 <input type="text" class="search-field kingster-title-font" placeholder="Search..." value="" name="search">
                                                 <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
                                                 <input type="submit" class="search-submit" value="Search">

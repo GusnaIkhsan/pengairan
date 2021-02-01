@@ -59,6 +59,7 @@ $route['beranda'] = 'BerandaController/index';
 $route['all-news'] = 'BerandaController/allNews';
 $route['all-agenda'] = 'BerandaController/allAgenda';
 $route['all-announcement'] = 'BerandaController/allAnnouncement';
+$route['search'] = 'BerandaController/allContents';
 
 $route['news-detail'] = 'BerandaController/pageNews';
 $route['sarjana'] = 'Sarjana/SarjanaController/index';
