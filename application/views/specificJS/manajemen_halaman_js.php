@@ -1,1 +1,2 @@
+<script>var tipeHalaman = "<?php if (isset($rows['type'])){ echo $rows['type'];} else { echo 0;} ?>"</script>
 <script type='text/javascript' src="<?php echo base_url('asset/admin/dist/js/pages/manajemenHalaman.js'); ?>"></script>

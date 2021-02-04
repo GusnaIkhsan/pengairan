@@ -12,11 +12,12 @@
                   <tbody>
                     <input type='hidden' name='id' value=''>
                     <tr><th width='120px' scope='row'>Judul</th>   <td><input type='text' class='form-control' name='a' id='input-name'></td></tr>
+                    <tr><th width='120px' scope='row'>Tipe Halaman</th>   <td><input type='radio' name='tipe' value='0' id='radio-dinamis' checked> Dinamis (Dapat diubah melalui Menu Halaman oleh Administrator) &nbsp; <input type='radio' name='tipe' id='radio-statis' value='1'> Statis (HANYA dapat diubah oleh programmer)</td></tr>
                     <tr>
                       <th width='120px' scope='row'>Nama Link</th>
                       <td>
                         <div class='row'>
-                          <div class='col-md-1'>
+                          <div class='col-md-1' id='prefix-link'>
                             page/detail/
                           </div>
                           <div class='col-md-9'>
@@ -28,7 +29,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr><th scope='row'>Isi Halaman</th>             <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px' required></textarea></td></tr>
+                    <tr id='content-halaman'><th scope='row'>Isi Halaman</th>             <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px' required></textarea></td></tr>
                     <tr><th scope='row'>Gambar</th>                    <td><input type='file' class='form-control' name='c'></td></tr>
                   </tbody>
                   </table>
