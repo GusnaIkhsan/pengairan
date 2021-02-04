@@ -30,6 +30,7 @@ class Model_halaman extends CI_model{
                     $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
                                     'judul_seo'     => $stringSlug,
                                     'isi_halaman'   => $this->input->post('b'),
+                                    'type'          => $this->input->post('tipe'),
                                     'created_at'    => date('Y-m-d H:i:s'),
                                     'updated_at'    => date('Y-m-d H:i:s'),
                                     'user_id'       => 1 // TODO: Session Id
@@ -38,6 +39,7 @@ class Model_halaman extends CI_model{
                     $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
                                     'judul_seo'     => $stringSlug,
                                     'isi_halaman'   => $this->input->post('b'),
+                                    'type'          => $this->input->post('tipe'),
                                     'gambar'        => $hasil['file_name'],
                                     'created_at'    => date('Y-m-d H:i:s'),
                                     'updated_at'    => date('Y-m-d H:i:s'),
@@ -69,6 +71,7 @@ class Model_halaman extends CI_model{
             $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
                             'judul_seo'     => $stringSlug,
                             'isi_halaman'   => $this->input->post('b'),
+                            'type'          => $this->input->post('tipe'),
                             'updated_at'    => date('Y-m-d H:i:s'),
                             'user_id'       => 1 // TODO: Session Id
                         );
@@ -76,6 +79,7 @@ class Model_halaman extends CI_model{
             $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
                             'judul_seo'     => $stringSlug,
                             'isi_halaman'   => $this->input->post('b'),
+                            'type'          => $this->input->post('tipe'),
                             'gambar'        => $hasil['file_name'],
                             'updated_at'    => date('Y-m-d H:i:s'),
                             'user_id'       => 1 // TODO: Session Id

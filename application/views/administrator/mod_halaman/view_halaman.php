@@ -22,7 +22,13 @@
                     $tgl_posting = $row['created_at'];
                     echo "<tr><td>$no</td>
                               <td>$row[judul]</td>
-                              <td><a target='_BLANK' href='".base_url()."page/detail/$row[judul_seo]'>page/detail/$row[judul_seo]</a></td>
+                              <td><a target='_BLANK' href='"; 
+                              echo base_url(); 
+                              if($row['type'] == 0){ 
+                                echo "page/detail/$row[judul_seo]'>page/detail/$row[judul_seo]"; 
+                              } else { 
+                                echo "$row[judul_seo]'>$row[judul_seo]"; 
+                              } echo "</a></td>
                               <td>$tgl_posting</td>
                               <td><center>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_halamanbaru/$row[id]'><span class='glyphicon glyphicon-edit'></span></a>
