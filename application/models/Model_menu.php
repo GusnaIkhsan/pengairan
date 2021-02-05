@@ -109,11 +109,12 @@ class Model_menu extends CI_model{
                         'link'  => $halamanMenu
                     );
                 } else {
-                    $halamanMenu = "page/detail/" . $this->db->query("SELECT * FROM halaman where id=" . $menu['link'])->row_array()["judul_seo"];
-                    $tempMenu = array(
-                        'child' => $this->getSubmenu($menu['id_menu']),
-                        'link'  => base_url().$halamanMenu
-                    );
+                    $tempHalaman = $this->db->query("SELECT * FROM halaman where id=" . $menu['link'])->row_array();
+                    if($tempHalaman['type'] == 0){
+                        $halamanMenu = "page/detail/" . $tempHalaman["judul_seo"];
+                    } else {
+                        $halamanMenu = $tempHalaman["judul_seo"];
+                    }
                 }
 
                 array_push($newArray, array_merge($menu, $tempMenu));
@@ -167,7 +168,12 @@ class Model_menu extends CI_model{
             if($menu['link'] == 0){
                 $halamanMenu = "#";
             } else {
-                $halamanMenu = "page/detail/" . $this->db->query("SELECT * FROM halaman where id=" . $menu['link'])->row_array()["judul_seo"];
+                $tempHalaman = $this->db->query("SELECT * FROM halaman where id=" . $menu['link'])->row_array();
+                if($tempHalaman['type'] == 0){
+                    $halamanMenu = "page/detail/" . $tempHalaman["judul_seo"];
+                } else {
+                    $halamanMenu = $tempHalaman["judul_seo"];
+                }
             }
             
             $tempMenu = array(

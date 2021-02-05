@@ -14,7 +14,11 @@
                     <tr><th scope='row'>Link Menu</th>                <td><select id='input_menu' name='a' class='form-control'>
                                                                             <option value='0' selected>Tidak Ada Halaman</option>";
                                                                             foreach ($list_halaman as $row){
-                                                                                echo "<option value='$row[id]'>$row[judul] - [page/detail/$row[judul_seo]]</option>";
+                                                                              if($row['type'] == 0){
+                                                                                echo "<option value='$row[id]'>$row[judul] - Dinamis - [page/detail/$row[judul_seo]]</option>";
+                                                                              } else {
+                                                                                echo "<option value='$row[id]'>$row[judul] - Statis - [$row[judul_seo]]</option>";
+                                                                              }
                                                                             }
                     echo "</td></tr>
                     <tr><th scope='row'>Level Menu</th>                <td><select name='b' class='form-control'>
