@@ -48,14 +48,7 @@
                           <span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title">Upload Data Dosen</h4>
                       </div>
-                      <div  class="modal-body">
-                        <div class="form-group">
-                        <label class="control-label">Fakultas</label>
-                          <select name="select_fakultas" id="select_fakultas" class="form-control chosen-select" required>
-                            <!-- <option value="Aktif">Aktif</option>
-                            <option value="Tidak Aktif">Tidak Aktif</option> -->
-                          </select>
-                        </div>
+                      <div  class="modal-body">                        
                         <div class="form-group">
                           <label class="control-label">Berkas Template Excel</label>
                           <div style="margin-bottom: 1%">
@@ -89,8 +82,7 @@
 
                 $('#lookupUpload').on('submit', function(e) {
                     if (!e.isDefaultPrevented()) {
-                      var formData = new FormData();
-                      formData.append('select_fakultas', $('#select_fakultas').val());
+                      var formData = new FormData();                      
                       formData.append('fileExcel', $('#fileExcel').prop('files')[0]);
 
                       var url = '<?php echo base_url("form/upload"); ?>'
@@ -109,7 +101,8 @@
                         success: function(data) {
                           // $('#spinner').modal('hide');
                           // pdpTable.ajax.reload();
-                          // alert(data);
+                          location.reload();
+                          // alert("benar");
                         },
                         error: function(data) {
                           alert("salah");
@@ -119,21 +112,6 @@
                     }
                 });
 
-                $(document).ready(function() {
-                  $.ajax({
-                      url: '<?php echo base_url("fakultas"); ?>',
-                      type: "GET",
-                      success: function(data) {
-                        result = JSON.parse(data)
-                          $("#select_fakultas").append('<option class="dropdown-header" value="' + null + '">Pilih Blok</option>');
-                          $.each(result, function(key, value) {
-                              $("#select_fakultas").append('<option value="' + value['id_fakultas'] + '">' + value['nm_fakultas'] + '</option>');
-                          });
-                      },
-                      error: function(data) {
-                          $("#select_fakultas").append('<option value="' + null + '">Pilih Fakultas</option>');
-                      }
-                  });
-                });
+               
 
               </script>

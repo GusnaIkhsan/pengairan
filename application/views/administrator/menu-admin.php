@@ -28,14 +28,6 @@
                 <li><a href="<?php echo base_url(); ?>administrator/halamanbaru"><i class="fa fa-circle-o"></i> Halaman Baru</a></li>
               </ul>
             </li> -->
-            <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-pencil"></i> <span>Modul Berita</span><i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <li><a href="<?php echo base_url(); ?>administrator/listberita"><i class="fa fa-circle-o"></i> List Berita</a></li>
-                <li><a href="<?php echo base_url(); ?>administrator/kategoriberita"><i class="fa fa-circle-o"></i> Kategori Berita</a></li>
-                <li><a href="<?php echo base_url(); ?>administrator/tagberita"><i class="fa fa-circle-o"></i> Tag Berita</a></li>
-              </ul>
-            </li>
             <?php
               if("superadmin"==$_SESSION["level"]){
             ?>
@@ -52,6 +44,15 @@
             <?php
               }
             ?>
+            <li class="treeview">
+              <a href="#"><i class="glyphicon glyphicon-pencil"></i> <span>Modul Berita</span><i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo base_url(); ?>administrator/listberita"><i class="fa fa-circle-o"></i> List Berita</a></li>
+                <li><a href="<?php echo base_url(); ?>administrator/kategoriberita"><i class="fa fa-circle-o"></i> Kategori Berita</a></li>
+                <li><a href="<?php echo base_url(); ?>administrator/tagberita"><i class="fa fa-circle-o"></i> Tag Berita</a></li>
+              </ul>
+            </li>
+            
             <!-- <li class="treeview">
               <a href="#"><i class="glyphicon glyphicon-picture"></i> <span>Album</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
@@ -59,16 +60,6 @@
                 <li><a href='<?php echo base_url(); ?>administrator/gallery'><i class='fa fa-circle-o'></i> Galeri</a></li>
               </ul>
             </li> -->
-
-            <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-play"></i> <span>Modul Video</span><i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <!-- <li><a href='<?php echo base_url(); ?>administrator/playlist'><i class='fa fa-circle-o'></i> Playlist Video</a></li> -->
-                <li><a href='<?php echo base_url(); ?>administrator/video'><i class='fa fa-circle-o'></i> Video</a></li>
-                <!-- <li><a href='<?php echo base_url(); ?>administrator/tagvideo'><i class='fa fa-circle-o'></i> Tag Video</a></li> -->
-              </ul>
-            </li>
-            
             <li class="treeview">
               <a href="#"><i class="glyphicon glyphicon-pushpin"></i> <span>Agenda</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
@@ -80,11 +71,21 @@
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/pesanmasuk"><i class="fa fa-circle-o"></i> Pesan Masuk</a></li> -->
               </ul>
             </li>
+
             <li class="treeview">
               <a href="#"><i class="glyphicon glyphicon-object-align-left"></i> <span>Manajemen Menu</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <li><a href="<?php echo base_url(); ?>administrator/menuwebsite"><i class="fa fa-circle-o"></i> List Menu</a></li>
                 <li><a href="<?php echo base_url(); ?>administrator/halamanbaru"><i class="fa fa-circle-o"></i> List Halaman</a></li>
+              </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#"><i class="glyphicon glyphicon-play"></i> <span>Modul Video</span><i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <!-- <li><a href='<?php echo base_url(); ?>administrator/playlist'><i class='fa fa-circle-o'></i> Playlist Video</a></li> -->
+                <li><a href='<?php echo base_url(); ?>administrator/video'><i class='fa fa-circle-o'></i> Video</a></li>
+                <!-- <li><a href='<?php echo base_url(); ?>administrator/tagvideo'><i class='fa fa-circle-o'></i> Tag Video</a></li> -->
               </ul>
             </li>
 

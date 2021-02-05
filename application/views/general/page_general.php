@@ -37,7 +37,7 @@
                     <div class="kingster-breadcrumbs-container kingster-container">
                         <div class="kingster-breadcrumbs-item kingster-item-pdlr">
                             <span property="itemListElement" typeof="ListItem">
-                                <a property="item" typeof="WebPage" title="Go to Kingster." class="home"><span property="name">Halaman</span></a>
+                                <a property="item" typeof="WebPage" class="home"><span property="name">Halaman</span></a>
                                 <meta property="position" content="1">
                             </span>
                             &gt;

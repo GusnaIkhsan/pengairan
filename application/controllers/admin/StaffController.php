@@ -99,11 +99,7 @@ class StaffController extends CI_Controller {
         }else{
             // $record = $this->model_app->view_ordering('fakultas','id_fakultas','DESC');
             // if ($this->session->level=='admin'){
-                $proses = $this->model_app->edit('staff_pendidik', array('id' => $id))->row_array();
-            // }else{
-            //     $proses = $this->model_app->edit('dosen', array('id_dosen' => $id, 'username' => $this->session->username))->row_array();
-            // }
-            // $data = array('rows' => $proses);
+            $proses = $this->model_app->edit('staff_pendidik', array('id' => $id))->row_array();       
             $data['rows'] = $proses;
             $this->template->load('administrator/template','administrator/mod_staff/view_staff_edit',$data);
         }
