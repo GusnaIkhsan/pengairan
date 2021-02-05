@@ -115,8 +115,12 @@ class Model_menu extends CI_model{
                     } else {
                         $halamanMenu = $tempHalaman["judul_seo"];
                     }
+                    $tempMenu = array(
+                        'child' => $this->getSubmenu($menu['id_menu']),
+                        'link'  => base_url().$halamanMenu
+                    );
                 }
-
+                
                 array_push($newArray, array_merge($menu, $tempMenu));
             }
             return $newArray;
