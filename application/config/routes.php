@@ -105,7 +105,6 @@ $route['form/download']['GET'] = 'admin/DosenController/generate_template';
 $route['form/upload']['POST'] = 'admin/DosenController/recieve_from_upload_template';
 $route['fakultas']['GET'] = 'admin/DosenController/get_fakultas';
 
-
 $route['dosen'] = 'admin/DosenController/dosen';
 $route['tambah-staff'] = 'admin/DosenController/tambah_dosen';
 $route['edit-dosen/(:any)'] = 'admin/DosenController/edit_dosen/$1';
@@ -125,3 +124,6 @@ $route['pengumuman/(:any)'] = 'BeritaController/detail/$1/pengumuman';
 
 // Agenda
 $route['agenda/(:any)'] = 'BeritaController/detail/$1/agenda';
+
+// Prodi
+$route['prodi/(:any)'] = 'general/PresenterController/showProdi/$1';

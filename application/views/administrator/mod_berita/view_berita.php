@@ -11,19 +11,22 @@
                         <th style='width:20px'>No</th>
                         <th>Judul Berita</th>
                         <th>Tanggal</th>
+                        <th>Log</th>
                         <th>Status</th>
                         <th style='width:70px'>Action</th>
                       </tr>
-                    </thead>
+                    </thead>              
                     <tbody>
                   <?php 
                     $no = 1;
                     foreach ($record->result_array() as $row){
                     $tgl_posting = tgl_indo($row['tanggal']);
+                    $id = $row['id_berita'];
                     if ($row['status']=='Y'){ $status = '<span style="color:green">Published</span>'; }else{ $status = '<span style="color:red">Unpublished</span>'; }
                     echo "<tr><td>$no</td>
-                              <td>$row[judul]</td>
+                              <td><a href=".base_url('berita/'.$id).">$row[judul]</a></td>
                               <td>$tgl_posting</td>
+                              <td>$row[username]</td>
                               <td>$status</td>
                               <td><center>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_listberita/$row[id_berita]'><span class='glyphicon glyphicon-edit'></span></a>

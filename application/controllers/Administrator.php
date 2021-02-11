@@ -628,7 +628,14 @@ class Administrator extends CI_Controller {
 
 	function manajemenuser(){
 		cek_session_admin();
-		$data['record'] = $this->model_users->users();
+        $level = $this->session->userdata('level');
+        if("admin"==$level){
+            $data['record'] = $this->model_users->users_edit($this->session->username);
+            $data['level'] = $level;
+        }else{
+            $data['record'] = $this->model_users->users();
+            $data['level'] = $level;
+        }
 		$this->template->load('administrator/template','administrator/mod_users/view_users',$data);
 	}
 

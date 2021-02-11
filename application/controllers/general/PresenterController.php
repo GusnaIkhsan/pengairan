@@ -3,12 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class PresenterController extends CI_Controller {
 
     const AKADEMIK_PAGES = array(
-        "informasi-pendaftaran" => 'general/akademik/informasi_pendaftaran',
-        "prodi"                 => 'general/akademik/prodi',
-        "prodi-sarjana"         => 'general/akademik/prodi_sarjana',
-        "prodi-magister"        => 'general/akademik/prodi_magister',
-        "prodi-doktoral"        => 'general/akademik/prodi_doktoral',
-        "sop"                   => 'general/akademik/sop'
+        // "informasi-pendaftaran" => 'general/akademik/informasi_pendaftaran',
+        // "prodi"                 => 'general/akademik/prodi',
+        "sarjana"               => 'general/akademik/prodi_sarjana',
+        "magister"              => 'general/akademik/prodi_magister',
+        "doktoral"              => 'general/akademik/prodi_doktoral'
+        // "sop"                   => 'general/akademik/sop'
     );
 
     const PENELITIAN_PENGABDIAN_PAGES = array(
@@ -94,6 +94,7 @@ class PresenterController extends CI_Controller {
 
         $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
+        $this->load->view('header_mobile', $dataHeader);
         $this->load->view('header', $dataHeader);
         $this->load->view(PresenterController::PROFIL_PAGES[$page], $data);
 		$this->load->view('footer');
@@ -120,6 +121,17 @@ class PresenterController extends CI_Controller {
 		$this->load->view('general/profil/staff_detail',$data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
+    }
+
+    // Prodi
+    function showProdi($page){
+        $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
+        $this->load->view('global_css');
+        $this->load->view('header_mobile', $dataHeader);
+        $this->load->view('header', $dataHeader);
+        $this->load->view(PresenterController::AKADEMIK_PAGES[$page]);
+		$this->load->view('footer');
+        $this->load->view('global_js');
     }
 
     // Akademik
@@ -235,6 +247,7 @@ class PresenterController extends CI_Controller {
         } else {
             $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
             $this->load->view('global_css');
+            $this->load->view('header_mobile', $dataHeader);
             $this->load->view('header', $dataHeader);
             $this->load->view('general/page_general', $data);
             $this->load->view('footer');
