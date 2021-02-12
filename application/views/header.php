@@ -4,10 +4,11 @@
                     <div class="kingster-top-bar-container-inner clearfix">                        
                         <div class="kingster-top-bar-right kingster-item-pdlr">
                             <ul id="kingster-top-bar-menu" class="sf-menu kingster-top-bar-menu kingster-top-bar-right-menu">
-                                <li class="menu-item kingster-normal-menu"><a href="https://ub.ac.id/">UB Official</a></li>
-                                <li class="menu-item kingster-normal-menu"><a href="https://bits.ub.ac.id/">BITS</a></li>
-                                <li class="menu-item kingster-normal-menu"><a href="http://mail.ub.ac.id">Webmail</a></li>
-                                <li class="menu-item kingster-normal-menu"><a href="https://prasetya.ub.ac.id/">UB News</a></li>
+                                <li class="menu-item kingster-normal-menu"><a target="blank" href="https://ub.ac.id/">UB Official</a></li>
+                                <li class="menu-item kingster-normal-menu"><a target="blank" href="https://bits.ub.ac.id/">BITS</a></li>
+                                <li class="menu-item kingster-normal-menu"><a target="blank" href="http://mail.ub.ac.id">Webmail</a></li>
+                                <li class="menu-item kingster-normal-menu"><a target="blank" href="https://prasetya.ub.ac.id/">UB News</a></li>
+                                <li class="menu-item kingster-normal-menu"><a target="blank" href="http://old.pengairan.ub.ac.id/">Old Website</a></li>
                                 <li class="menu-item kingster-normal-menu" id="btn-search-global"><a href="#"><i class="fa fa-search"></i></a></li>
                             </ul>
                             <div class="kingster-top-bar-right-social"></div><a class="kingster-top-bar-right-button" href="#" target="_blank">Apps</a></div>

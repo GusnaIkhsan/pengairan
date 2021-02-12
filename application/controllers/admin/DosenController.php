@@ -553,7 +553,7 @@ class DosenController extends CI_Controller {
                     'pengabdian'=>$this->input->post('pengabdian'));
             }else{
                 $data = array(
-                    'username'=>"admin",
+                    'username'=>$this->session->username,
                     'nm_dosen'=>$this->input->post('name'),
                     'dosen_seo'=>seo_title($this->input->post('name')),
                     'golpang'=>$this->input->post('golpang'),
@@ -595,7 +595,6 @@ class DosenController extends CI_Controller {
                 			'nidn'=>$this->input->post('nidn'),
                 			'bidang'=>$this->input->post('bidang'),
                 			'blog'=>$this->input->post('blog'),
-                            'gbr_dosen'=>'default.png',
                             'penghargaan'=>$this->input->post('penghargaan'),
                 			'pendidikan'=>$this->input->post('pendidikan'),
                 			'penelitian'=>$this->input->post('penelitian'),
@@ -604,14 +603,23 @@ class DosenController extends CI_Controller {
                 			'buku'=>$this->input->post('buku'),
                             'pengabdian'=>$this->input->post('pengabdian'));
             }else{
-                $data = array('id_fakultas'=>$this->input->post('a'),
-                            'username'=>$this->session->username,
-                            'nm_dosen'=>$this->input->post('b'),
-                            'dosen_seo'=>seo_title($this->input->post('b')),
-                            'keterangan'=>$this->input->post('c'),
-                            'nidn'=>$this->input->post('d'),
-                            'hp'=>$this->input->post('e'),
-                            'gbr_dosen'=>$hasil['file_name']);
+                $data = array(
+                    'username'=>$this->session->username,
+                    'nm_dosen'=>$this->input->post('name'),
+                    'dosen_seo'=>seo_title($this->input->post('name')),
+                    'golpang'=>$this->input->post('golpang'),
+                    'nipnik'=>$this->input->post('nipnik'),
+                    'nidn'=>$this->input->post('nidn'),
+                    'bidang'=>$this->input->post('bidang'),
+                    'blog'=>$this->input->post('blog'),
+                    'gbr_dosen'=>$hasil['file_name'],
+                    'penghargaan'=>$this->input->post('penghargaan'),
+                    'pendidikan'=>$this->input->post('pendidikan'),
+                    'penelitian'=>$this->input->post('penelitian'),
+                    'publikasi'=>$this->input->post('publikasi'),
+                    'linkpub'=>$this->input->post('linkpub'),
+                    'buku'=>$this->input->post('buku'),
+                    'pengabdian'=>$this->input->post('pengabdian'));
             }
             $where = array('id_dosen' => $this->input->post('id_dosen'));
             $this->model_app->update('dosen', $data, $where);

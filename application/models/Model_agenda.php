@@ -43,7 +43,7 @@ class Model_agenda extends CI_model{
                                     'tgl_posting'=>date('Y-m-d'),
                                     'jam'=>$this->db->escape_str($this->input->post('e')),
                                     'dibaca'=>'0',
-                                    'username'=>"admin");
+                                    'username'=>$this->session->username);
             }else{
                     $datadb = array('tema'=>$this->db->escape_str($this->input->post('a')),
                                     'tema_seo'=>seo_title($this->input->post('a')),
@@ -56,7 +56,7 @@ class Model_agenda extends CI_model{
                                     'tgl_posting'=>date('Y-m-d'),
                                     'jam'=>$this->db->escape_str($this->input->post('e')),
                                     'dibaca'=>'0',
-                                    'username'=>"admin");
+                                    'username'=>$this->session->username);
             }
         $this->db->insert('agenda',$datadb);
     }

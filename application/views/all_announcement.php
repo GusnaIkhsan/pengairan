@@ -4,16 +4,6 @@
     <!-- header mobile navigation -->
     <div class="kingster-body-outer-wrapper ">
         <div class="kingster-body-wrapper clearfix  kingster-with-frame">
-            <!-- header navigation -->
-            <!-- <div class="kingster-page-title-wrap  kingster-style-medium kingster-left-align">
-                <div class="kingster-header-transparent-substitute"></div>
-                <div class="kingster-page-title-overlay"></div>
-                <div class="kingster-page-title-container kingster-container">
-                    <div class="kingster-page-title-content kingster-item-pdlr">
-                        <div class="kingster-page-caption">Caption aligned here</div>
-                        <h1 class="kingster-page-title">Blog Full Right Sidebar With Frame</h1></div>
-                </div>
-            </div> -->
             <div class="kingster-page-wrapper" id="kingster-page-wrapper">
                 <div class="gdlr-core-page-builder-body">
                     <div class="gdlr-core-pbf-sidebar-wrapper ">
@@ -63,10 +53,7 @@
                                                 <?php
                                                     }
                                                 ?>                                                
-                                            </div>
-                                            <!-- <div class="gdlr-core-pagination  gdlr-core-style-round gdlr-core-left-align gdlr-core-item-pdlr"><span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='page/2/index.html'>2</a> <a class='page-numbers' href='page/3/index.html'>3</a>
-                                                <a class="next page-numbers" href="page/2/index.html"></a>
-                                            </div> -->
+                                            </div>                                  
                                         </div>
                                     </div>
                                 </div>
@@ -103,20 +90,7 @@
                                                 }
                                         ?>
                                         </div>
-                                    </div>
-                                    <!-- <div id="tag_cloud-1" class="widget widget_tag_cloud kingster-widget">
-                                        <h3 class="kingster-widget-title">Tag</h3><span class="clear"></span>
-                                        
-                                        <div class="tagcloud">
-                                            <?php 
-                                            foreach($tags as $key => $val){
-                                            ?>
-                                            <a href="#" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;"><?php echo $val->nama_tag; ?></a>
-                                            <?php
-                                            }
-                                            ?>
-                                        </div>
-                                    </div> -->
+                                    </div>                             
                                 </div>
                             </div>
                         </div>

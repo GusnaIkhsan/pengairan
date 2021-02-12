@@ -127,3 +127,6 @@ $route['agenda/(:any)'] = 'BeritaController/detail/$1/agenda';
 
 // Prodi
 $route['prodi/(:any)'] = 'general/PresenterController/showProdi/$1';
+
+// Upload Foto
+$route['upload/foto']['POST'] = 'Administrator/tambah_foto';

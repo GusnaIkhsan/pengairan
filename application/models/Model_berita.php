@@ -69,7 +69,7 @@ class Model_berita extends CI_model{
 
     function kategori_berita_tambah(){
         $datadb = array('nama_kategori'=>$this->db->escape_str($this->input->post('a')),
-                        'username'=>"admin",
+                        'username'=>$this->session->username,
                         'kategori_seo'=>seo_title($this->input->post('a')),
                         'aktif'=>$this->db->escape_str($this->input->post('b')),
                         'sidebar'=>$this->db->escape_str($this->input->post('c')));

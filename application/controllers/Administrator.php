@@ -1583,6 +1583,51 @@ class Administrator extends CI_Controller {
         }
     }
 
+    function foto(){
+        cek_session_admin();
+        $data['record'] = $this->model_app->view_ordering('foto','id','DESC');
+        $this->template->load('administrator/template','administrator/mod_foto/view_foto',$data);
+    }
+
+    function tambah_foto(){
+        $config['upload_path'] = 'asset/foto/';
+        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+        $config['max_size'] = '3000'; // kb
+        $this->load->library('upload', $config);
+        // $this->upload->do_upload('fileImg');
+        // $hasil=$this->upload->data();
+
+        // if($hasil['file_name']==''){
+        //     echo "gagal".$this->session->level.$hasil;
+        // }else{
+        //     echo "berhasil".$this->session->level.$hasil;
+        // }
+
+        if (!$this->upload->do_upload('fileImg')){
+            echo "error";          
+        }
+        else{
+            echo "success";        
+        }
+
+        // var_dump($hasil);
+    }
+
+    function edit_foto(){
+
+    }
+
+    function delete_foto(){
+        cek_session_admin();
+        if ($this->session->level=='admin'){
+            $id = array('id' => $this->uri->segment(3));
+        }else{
+            $id = array('id' => $this->uri->segment(3), 'username'=>$this->session->username);
+        }
+        $this->model_app->delete('foto',$id);
+        redirect('administrator/foto');
+    }
+
 	function logout(){        
         cek_session_admin();
         session_destroy();

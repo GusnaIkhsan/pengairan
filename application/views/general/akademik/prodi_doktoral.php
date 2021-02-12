@@ -4,14 +4,12 @@
         <!-- header mobile navigation -->
         <div class="kingster-body-outer-wrapper ">
             <div class="kingster-body-wrapper clearfix  kingster-with-frame">
-                <!-- header navigation -->
-                <div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" id="div_983a_0">
+                <div class="kingster-blog-title-wrap  kingster-style-custom kingster-feature-image" style="background-image: url() ;">
                     <div class="kingster-header-transparent-substitute"></div>
-                    <div class="kingster-page-title-overlay"></div>
-                    <div class="kingster-page-title-bottom-gradient"></div>
-                    <div class="kingster-page-title-container kingster-container">
-                        <div class="kingster-page-title-content kingster-item-pdlr" id="div_983a_1">
-                            <!-- <div class="kingster-page-caption" id="div_983a_2">Know Us Better</div> -->
+                    <div class="kingster-blog-title-overlay" style="opacity: 0.01 ;"></div>
+                    <div class="kingster-blog-title-bottom-overlay"></div>
+                    <div class="kingster-blog-title-container kingster-container">
+                        <div class="kingster-page-title-content kingster-item-pdlr" id="div_983a_1">      
                             <h1 class="kingster-page-title" id="h1_983a_0">Program Studi Doktoral</h1>
                         </div>
                     </div>
@@ -35,24 +33,96 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="kingster-page-wrapper" id="kingster-page-wrapper">
-                    <div class="gdlr-core-page-builder-body">
-                        <div class="gdlr-core-pbf-wrapper " id="div_983a_3">
-                            <div class="gdlr-core-pbf-background-wrap"></div>
-                            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                                    <div class="gdlr-core-pbf-element">
-                                        <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
-                                            <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">PROGRAM STUDI DOKTORAL</h3>
+                </div>               
+                <div class="kingster-body-outer-wrapper ">
+                    <div class="kingster-body-wrapper clearfix  kingster-with-frame">
+                        <div class="kingster-page-wrapper" id="kingster-page-wrapper">
+                            <div class="gdlr-core-page-builder-body">
+                                <div class="gdlr-core-pbf-sidebar-wrapper ">
+                                    <div class="gdlr-core-pbf-sidebar-container gdlr-core-line-height-0 clearfix gdlr-core-js gdlr-core-container">
+                                        <div class="gdlr-core-pbf-sidebar-content  gdlr-core-column-40 gdlr-core-pbf-sidebar-padding gdlr-core-line-height gdlr-core-column-extend-left" style="padding: 60px 10px 30px 0px;">
+                                            <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
+                                            <div class="gdlr-core-pbf-sidebar-content-inner">
+                                                <div class="gdlr-core-pbf-element">
+                                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                                                        <div class="gdlr-core-title-item-title-wrap clearfix">
+                                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">Doktoral Teknik Pengairan</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="gdlr-core-pbf-element">
+                                                    <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix  gdlr-core-style-blog-full-with-frame" style="padding-bottom: 40px ;">
+                                                        <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
+                                                            <h5><b>Visi</b></h5>
+                                                            <p>Menjadi program studi unggulan yang terkemuka di tingkat ASEAN pada tahun 2020 dan di tingkat ASIA pada tahun 2025 melalui bidang pendidikan, penelitian dan pengabdian kepada masyarakat di bidang teknik sumber daya air, untuk memperkuat kepentingan masyarakat, bangsa dan negara.</p>
+                                                            <br>
+                                                            <h5><b>Misi</b></h5>
+                                                            <ul>
+                                                                <li>
+                                                                <p>Menyelenggarakan proses pendidikan Program Doktor Teknik Sumber Daya Air (PDTSDA) melalui proses pembelajaran yang berkualitas dan efisien.</p>
+                                                                </li>
+                                                                <li>
+                                                                <p>Melakukan pengembangan bidang Teknik Sumber Daya Air (TSDA) melalui penelitian yang berwawasan lingkungan, berkualitas dan bermanfaat bagi pengembangan ilmu pengetahuan dan peningkatan kesejahteraan masyarakat.</p>
+                                                                </li>
+                                                                <li>
+                                                                <p>Melakukan penyebarluasan dan publikasi ilmiah terhadap hasil penelitian bidang TSDA secara berkala.</p>
+                                                                </li>
+                                                            </ul>
+                                                            <br>
+                                                            <h5><b>Tujuan</b></h5>
+                                                            <p>Tujuan diadakannya pendidikan Program Doktor Teknik Sumber Daya Air Fakultas Teknik Universitas Brawijaya adalah</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>Mampu mengembangkan pengetahuan dan teknologi baru di bidang teknik sumber daya air atau praktek profesionalnya melalui riset, hingga menghasilkan karya kreatif, original, dan teruji.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Mampu memecahkan permasalahan sains dan teknologi bidang teknik sumber daya air melalui pendekatan inter, multi atau transdisipliner.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Mampu mengelola, memimpin, dan mengembangkan riset dan pengembangan yang bermanfaat bagi ilmu pengetahuan bidang teknik sumber daya air dan kemaslahatan umat manusia, serta mampu mendapat pengakuan nasional maupun internasional.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Mampu menemukan kebaruan (novelty) dalam teori dan berkarya dalam bidang teknk sumber daya air.</p>
+                                                                </li>
+                                                            </ul>                                                                                          
+                                                        </div>                                  
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="gdlr-core-pbf-element">
-                                        <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                            <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
-                                                Program Studi Doktoral
+                                        <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  kingster-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height">
+                                            <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
+                                            <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
+                                                <!-- <div class="row" style="margin-bottom: 30px">
+                                                    <div class="col-md-10">
+                                                        <input type="search" class="form-control rounded" placeholder="Cari Pengumuman ..." aria-label="Search" aria-describedby="search-addon" id="input-search-announcement" />
+                                                    </div>
+                                                    <div class="col-md-2" style="text-align: center; margin-left: -9px">
+                                                        <button type="button" style="width: 50px; height: 34px;" class="btn btn-primary" id="btn-search-announcement">
+                                                            <i class="fa fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div> -->
+                                                <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
+                                                    <h3 class="kingster-widget-title">Berita Terbaru</h3><span class="clear"></span>
+                                                    <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
+                                                    <?php
+                                                        foreach ($last_news as $key => $value) {     
+                                                            $tanggalBerita = explode("-", $last_news[$key]->tanggal);                                            
+                                                    ?>  
+                                                        <div class="gdlr-core-recent-post-widget clearfix">
+                                                            <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/foto_berita/'.$last_news[$key]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_135948689" /></div>
+                                                            <div class="gdlr-core-recent-post-widget-content">
+                                                                <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('berita/'.$last_news[$key]->id_berita); ?>"><?php echo $last_news[$key]->judul;?></a></div>
+                                                                <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><?php echo hari_ini(date('w',strtotime($last_news[$key]->tanggal))).", ".$tanggalBerita[2]." ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By <?php echo $value->username; ?></span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <?php
+                                                            }
+                                                    ?>
+                                                    </div>
+                                                </div>                             
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +130,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>          
             </div>
         </div>
     </body>

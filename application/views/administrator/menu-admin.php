@@ -81,10 +81,11 @@
             </li>
 
             <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-play"></i> <span>Modul Video</span><i class="fa fa-angle-left pull-right"></i></a>
+              <a href="#"><i class="glyphicon glyphicon-play"></i> <span>Modul Media</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <!-- <li><a href='<?php echo base_url(); ?>administrator/playlist'><i class='fa fa-circle-o'></i> Playlist Video</a></li> -->
                 <li><a href='<?php echo base_url(); ?>administrator/video'><i class='fa fa-circle-o'></i> Video</a></li>
+                <li><a href='<?php echo base_url(); ?>administrator/foto'><i class='fa fa-circle-o'></i> Foto</a></li>
                 <!-- <li><a href='<?php echo base_url(); ?>administrator/tagvideo'><i class='fa fa-circle-o'></i> Tag Video</a></li> -->
               </ul>
             </li>

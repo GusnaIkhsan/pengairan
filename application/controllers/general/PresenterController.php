@@ -126,10 +126,11 @@ class PresenterController extends CI_Controller {
     // Prodi
     function showProdi($page){
         $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
+        $data['last_news'] = $this->model_berita->lastNews(3);
         $this->load->view('global_css');
         $this->load->view('header_mobile', $dataHeader);
         $this->load->view('header', $dataHeader);
-        $this->load->view(PresenterController::AKADEMIK_PAGES[$page]);
+        $this->load->view(PresenterController::AKADEMIK_PAGES[$page],$data);
 		$this->load->view('footer');
         $this->load->view('global_js');
     }
