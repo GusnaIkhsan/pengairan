@@ -9,7 +9,6 @@
 <script type="text/javascript" src="<?php echo base_url('asset/plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js'); ?>"></script>  
 <script type="text/javascript" src="<?php echo base_url('asset/plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js'); ?>"></script> 
 <script type="text/javascript" src="<?php echo base_url('asset/plugins/revslider/public/assets/js/extensions/revolution.extension.video.min.js'); ?>"></script>
-
     <script type="text/javascript">
         /*<![CDATA[*/
         function setREVStartSize(e) {

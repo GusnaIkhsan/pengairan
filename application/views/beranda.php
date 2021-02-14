@@ -150,8 +150,8 @@
                                                     if(0==$key){
                                             ?>  
                                             <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20 gdlr-core-column-first  clearfix">
-                                                <div class="gdlr-core-event-item-thumbnail">
-                                                    <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" width="900" height="500"  alt="" /></a>
+                                                <div class="gdlr-core-event-item-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                    <a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" width="900" height="500"  alt="" /></a>
                                                 </div>                                                    
                                                 </span>
                                                 <div class="gdlr-core-event-item-content-wrap">
@@ -174,8 +174,8 @@
                                             ?>
 
                                             <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
-                                                <div class="gdlr-core-event-item-thumbnail">
-                                                    <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" width="900" height="500" alt="" /></a>
+                                                <div class="gdlr-core-event-item-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                    <a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" width="900" height="500" alt="" /></a>
                                                 </div>                                                   
                                                 </span>
                                                 <div class="gdlr-core-event-item-content-wrap">
@@ -198,8 +198,8 @@
                                             ?>   
 
                                             <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
-                                                <div class="gdlr-core-event-item-thumbnail">
-                                                    <a href="#"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" width="900" height="500" alt="" /></a>
+                                                <div class="gdlr-core-event-item-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                    <a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>"><img src="<?php echo base_url('asset/foto_berita/'.$news[$key]->gambar); ?>" width="900" height="500" alt="" /></a>
                                                 </div>                                                  
                                                 <div class="gdlr-core-event-item-content-wrap">
                                                     <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('berita/'.$news[$key]->id_berita); ?>" ><?php echo $news[$key]->judul;?></a></h3>
@@ -218,59 +218,7 @@
                                             <?php  
                                                     }
                                                 }
-                                            ?>
-                                                                                                                             
-                                            
-                                            <!-- <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
-                                                <div class="gdlr-core-event-item-thumbnail">
-                                                    <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" width="900" height="500" alt="" /></a>
-                                                    </div><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
-                                                    <?php $tanggalBerita = explode("-", $agenda[1]->tgl_posting); ?>
-                                                    <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
-                                                    <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
-                                                    <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
-                                                </span>
-                                                <div class="gdlr-core-event-item-content-wrap">
-                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>" ><?php echo $agenda[1]->tema;?></a></h3>
-                                                    <div class="gdlr-core-event-item-info-wrap">
-                                                        <span class="gdlr-core-event-item-info gdlr-core-type-time">
-                                                            <span class="gdlr-core-head" >
-                                                                <i class="icon_clock_alt" ></i>
-                                                            </span>
-                                                            <span class="gdlr-core-tail"><?php echo $agenda[1]->jam;?></span>
-                                                        </span>
-                                                        <span class="gdlr-core-event-item-info gdlr-core-type-location">
-                                                            <span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span>
-                                                            <span class="gdlr-core-tail"><?php echo $agenda[1]->tempat;?></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
-                                                <div class="gdlr-core-event-item-thumbnail">
-                                                    <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[2]->gambar); ?>" width="900" height="500" alt="" /></a>
-                                                    </div><span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
-                                                    <?php $tanggalBerita = explode("-", $agenda[2]->tgl_posting); ?>
-                                                    <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
-                                                    <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
-                                                    <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
-                                                </span>
-                                                <div class="gdlr-core-event-item-content-wrap">
-                                                    <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>" ><?php echo $agenda[2]->tema;?></a></h3>
-                                                    <div class="gdlr-core-event-item-info-wrap">
-                                                        <span class="gdlr-core-event-item-info gdlr-core-type-time">
-                                                            <span class="gdlr-core-head" >
-                                                                <i class="icon_clock_alt" ></i>
-                                                            </span>
-                                                            <span class="gdlr-core-tail"><?php echo $agenda[2]->jam;?></span>
-                                                        </span>
-                                                        <span class="gdlr-core-event-item-info gdlr-core-type-location">
-                                                            <span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span>
-                                                            <span class="gdlr-core-tail"><?php echo $agenda[2]->tempat;?></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div> -->
+                                            ?>                                             
                                         </div>
                                     </div>
                                 </div>
@@ -292,7 +240,7 @@
                                                             <div class="gdlr-core-item-list-inner gdlr-core-item-mglr">
                                                                 <div class="gdlr-core-blog-grid ">
                                                                     <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">                                                                        
-                                                                        <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[0]->gambar); ?>" width="700" height="430"  alt="" /></a>
+                                                                        <a href="<?php echo base_url('agenda/'.$agenda[0]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[0]->gambar); ?>" width="700" height="430"  alt="" /></a>
                                                                     </div>
                                                                     <div class="gdlr-core-blog-grid-content-wrap">
                                                                         <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
@@ -315,7 +263,7 @@
                                                         <div class="gdlr-core-item-list-wrap gdlr-core-column-30">
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                    <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" alt="" width="150" height="150" title="Student" /></a>
+                                                                    <a href=" <?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" alt="" width="150" height="150" title="Student" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
@@ -329,7 +277,7 @@
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                    <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[2]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_481869205" /></a>
+                                                                    <a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[2]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_481869205" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
@@ -344,7 +292,7 @@
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                    <a href="#"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[3]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_361397258" /></a>
+                                                                    <a href="<?php echo base_url('agenda/'.$agenda[3]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[3]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_361397258" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
