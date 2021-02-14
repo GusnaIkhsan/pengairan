@@ -37,7 +37,8 @@ class BerandaController extends CI_Controller {
 		$this->load->view('all_news', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
-		$this->load->view('specificJs/all_news_js');
+		// $this->load->view('specificJs/all_news_js');
+		$this->load->view('all_news_js');
 	}
 
 	public function allAgenda(){
