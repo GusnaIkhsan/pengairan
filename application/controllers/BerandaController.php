@@ -57,7 +57,8 @@ class BerandaController extends CI_Controller {
 		$this->load->view('all_agenda', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
-		$this->load->view('specificJs/all_agenda_js');
+		// $this->load->view('specificJs/all_agenda_js');
+		$this->load->view('all_agenda_js');
 	}
 
 	public function allAnnouncement(){
@@ -77,7 +78,8 @@ class BerandaController extends CI_Controller {
 		$this->load->view('all_announcement', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
-		$this->load->view('specificJs/all_announcement_js');
+		// $this->load->view('specificJs/all_announcement_js');
+		$this->load->view('all_announcement_js');
 	}
 
 	public function pageNews(){
@@ -107,6 +109,7 @@ class BerandaController extends CI_Controller {
 		$this->load->view('all_contents', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
-		$this->load->view('specificJs/all_contents_js');
+		// $this->load->view('specificJs/all_contents_js');
+		$this->load->view('all_contents_js');
 	}
 }
