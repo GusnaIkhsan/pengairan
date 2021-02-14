@@ -223,7 +223,7 @@
                                     </div>
                                 </div>
 
-                                <div class="gdlr-core-pbf-column gdlr-core-column-40 gdlr-core-column-first" style="margin-top: -50px;">
+                                <div class="gdlr-core-pbf-column gdlr-core-column-40 gdlr-core-column-first" style="margin-top: -80px;">
                                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_45" data-sync-height="height-2">
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                             <div class="gdlr-core-pbf-element">
@@ -313,7 +313,7 @@
                                     </div>
                                 </div>
 
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20" style="margin-top: -50px;">
+                                <div class="gdlr-core-pbf-column gdlr-core-column-20" style="margin-top: -80px;">
                                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" id="div_1dd7_45" data-sync-height="height-2">
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                             <div class="gdlr-core-pbf-element">
@@ -382,8 +382,7 @@
                                 </div>                                                                                            
                             </div>
                         </div>
-                    </div>
-                    <br>
+                    </div>                    
                     
                     <div class="gdlr-core-pbf-wrapper " id="div_1dd7_79">
                         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_80"></div>
