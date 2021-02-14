@@ -28,9 +28,18 @@
                           </div>
                         </div>
                       </td>
+                    </tr>";
+                    echo "
+                    <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
+                                                                            <option value='' selected>- Pilih Foto -</option>";
+                                                                            foreach ($foto as $row){
+                                                                              echo "<option value='$row[name_gmbr]'>$row[name]</option>";
+                                                                            }
+                    echo "</td>
                     </tr>
+                    <tr><th scope='row'>URL Foto</th>               <td><input type='text' id='urlfoto' class='form-control' readonly></td></tr>   
                     <tr id='content-halaman'><th scope='row'>Isi Halaman</th>             <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px' required></textarea></td></tr>
-                    <tr><th scope='row'>Gambar</th>                    <td><input type='file' class='form-control' name='c'></td></tr>
+                    <tr><th scope='row'>Banner</th>                    <td><input type='file' class='form-control' name='c' accept=\"image/*\"></td></tr>
                   </tbody>
                   </table>
                 </div>
@@ -41,3 +50,10 @@
                     
                   </div>
             </div>";
+            ?>
+            <script type="text/javascript"> 
+              $('#foto').on('change', function() {
+                var nameImg = document.getElementById("foto").value;
+                document.getElementById("urlfoto").value = '<?php echo base_url('asset/foto/'); ?>'+'/'+nameImg;
+              });
+            </script>

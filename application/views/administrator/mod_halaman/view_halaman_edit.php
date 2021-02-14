@@ -11,6 +11,7 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id]'>
+                    <input type='hidden' name='oldFile' value='$rows[gambar]'>
                     <tr><th width='120px' scope='row'>Judul</th>   <td><input type='text' class='form-control' name='a' id='input-name' value='$rows[judul]'></td></tr>
                     <tr><th width='120px' scope='row'>Tipe Halaman</th>   <td><input type='radio' name='tipe' value='0' id='radio-dinamis' checked> <strong>Dinamis</strong> <i>(Konten dapat diubah melalui Menu Halaman oleh Administrator)</i> &nbsp; <input type='radio' name='tipe' id='radio-statis' value='1'> <strong>Statis</strong> <i>(Konten HANYA dapat diubah oleh programmer)</i></td></tr>
                     <tr>
@@ -28,9 +29,18 @@
                           </div>
                         </div>
                       </td>
+                    </tr>";
+                    echo "
+                    <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
+                                                                            <option value='' selected>- Pilih Foto -</option>";
+                                                                            foreach ($foto as $row){
+                                                                              echo "<option value='$row[name_gmbr]'>$row[name]</option>";
+                                                                            }
+                    echo "</td>
                     </tr>
+                    <tr><th scope='row'>URL Foto</th>               <td><input type='text' id='urlfoto' class='form-control' readonly></td></tr>
                     <tr id='content-halaman'><th scope='row'>Isi Halaman</th>             <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px' required>$rows[isi_halaman]</textarea></td></tr>
-                    <tr><th scope='row'>Ganti Gambar</th>                    <td><input type='file' class='form-control' name='c'><hr style='margin:5px'>
+                    <tr><th scope='row'>Ganti Banner</th>                    <td><input type='file' class='form-control' name='c' accept=\"image/*\"><hr style='margin:5px'>
                                                                                  <img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto_statis/$rows[gambar]'></td></tr>
                   </tbody>
                   </table>
@@ -42,3 +52,10 @@
                     
                   </div>
             </div>";
+            ?>
+            <script type="text/javascript"> 
+              $('#foto').on('change', function() {
+                var nameImg = document.getElementById("foto").value;
+                document.getElementById("urlfoto").value = '<?php echo base_url('asset/foto/'); ?>'+'/'+nameImg;
+              });
+            </script>

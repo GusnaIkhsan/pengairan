@@ -11,9 +11,18 @@
                   <table class='table table-condensed table-bordered'>
                     <tbody>
                       <input type='hidden' name='id' value=''>
-                      <tr><th width='120px' scope='row'>Tema</th>   <td><input type='text' class='form-control' name='a'></td></tr>
+                      <tr><th width='120px' scope='row'>Tema</th>   <td><input type='text' class='form-control' name='a'></td></tr>";
+                      echo "
+                      <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
+                                                                              <option value='' selected>- Pilih Foto -</option>";
+                                                                              foreach ($foto as $row){
+                                                                                echo "<option value='$row[name_gmbr]'>$row[name]</option>";
+                                                                              }
+                      echo "</td>
+                      </tr>
+                      <tr><th scope='row'>URL Foto</th>               <td><input type='text' id='urlfoto' class='form-control' readonly></td></tr>    
                       <tr><th scope='row'>Isi Agenda</th>           <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px'></textarea></td></tr>
-                      <tr><th scope='row'>Gambar</th>               <td><input type='file' class='form-control' name='c'></td></tr>
+                      <tr><th scope='row'>Thumbnail</th>               <td><input type='file' class='form-control' name='c' accept=\"image/*\"></td></tr>
                       <tr><th scope='row'>Tempat</th>               <td><input type='text' class='form-control' name='d'></td></tr>
                       <tr><th scope='row'>Jam <small>s/d</small> Selesai</th><td><input type='text' class='form-control' name='e'></td></tr>
                       <tr><th scope='row'>Tgl <small>s/d</small> Selesai</th><td><input type='text' class='form-control' id='rangepicker' name='f'></td></tr>
@@ -28,3 +37,10 @@
                     
                   </div>
             </div>";
+            ?>
+            <script type="text/javascript"> 
+              $('#foto').on('change', function() {
+                var nameImg = document.getElementById("foto").value;
+                document.getElementById("urlfoto").value = '<?php echo base_url('asset/foto/'); ?>'+'/'+nameImg;
+              });
+            </script>

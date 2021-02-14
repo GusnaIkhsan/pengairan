@@ -521,19 +521,38 @@ class DosenController extends CI_Controller {
     }
     
     function dosen(){
+        cek_session_admin();
         $data['record'] = $this->model_app->view_ordering('dosen','id_dosen','DESC');        
         $this->template->load('administrator/template','administrator/mod_dosen/view_dosen',$data);
     }
 
     function tambah_dosen(){
+        cek_session_admin();
         if (isset($_POST['submit'])){
             $config['upload_path'] = 'asset/img_galeri/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
             $config['max_size'] = '3000'; // kb
             $this->load->library('upload', $config);
-            $this->upload->do_upload('d');
-            $hasil=$this->upload->data();
-            if ($hasil['file_name']==''){
+            if ($this->upload->do_upload('d')){
+                $hasil=$this->upload->data();
+                $data = array(
+                    'username'=>$this->session->username,
+                    'nm_dosen'=>$this->input->post('name'),
+                    'dosen_seo'=>seo_title($this->input->post('name')),
+                    'golpang'=>$this->input->post('golpang'),
+                    'nipnik'=>$this->input->post('nipnik'),
+                    'nidn'=>$this->input->post('nidn'),
+                    'bidang'=>$this->input->post('bidang'),
+                    'blog'=>$this->input->post('blog'),
+                    'pendidikan'=>$this->input->post('pendidikan'),
+                    'gbr_dosen'=>$hasil['file_name'],
+                    'penghargaan'=>$this->input->post('penghargaan'),
+                    'penelitian'=>$this->input->post('penelitian'),
+                    'publikasi'=>$this->input->post('publikasi'),
+                    'linkpub'=>$this->input->post('linkpub'),
+                    'buku'=>$this->input->post('buku'),
+                    'pengabdian'=>$this->input->post('pengabdian'));
+            }else{
                 $data = array(
                     'username'=>$this->session->username,
                     'nm_dosen'=>$this->input->post('name'),
@@ -551,24 +570,6 @@ class DosenController extends CI_Controller {
                     'linkpub'=>$this->input->post('linkpub'),
                     'buku'=>$this->input->post('buku'),
                     'pengabdian'=>$this->input->post('pengabdian'));
-            }else{
-                $data = array(
-                    'username'=>$this->session->username,
-                    'nm_dosen'=>$this->input->post('name'),
-                    'dosen_seo'=>seo_title($this->input->post('name')),
-                    'golpang'=>$this->input->post('golpang'),
-                    'nipnik'=>$this->input->post('nipnik'),
-                    'nidn'=>$this->input->post('nidn'),
-                    'bidang'=>$this->input->post('bidang'),
-                    'blog'=>$this->input->post('blog'),
-                    'pendidikan'=>$this->input->post('pendidikan'),
-                    'gbr_dosen'=>$hasil['file_name'],
-                    'penghargaan'=>$this->input->post('penghargaan'),
-                    'penelitian'=>$this->input->post('penelitian'),
-                    'publikasi'=>$this->input->post('publikasi'),
-                    'linkpub'=>$this->input->post('linkpub'),
-                    'buku'=>$this->input->post('buku'),
-                    'pengabdian'=>$this->input->post('pengabdian'));
             }
             $this->model_app->insert('dosen',$data);  
             redirect('dosen');
@@ -578,14 +579,15 @@ class DosenController extends CI_Controller {
     }
 
     function edit_dosen($id){
+        cek_session_admin();
         if (isset($_POST['submit'])){
             $config['upload_path'] = 'asset/img_galeri/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
             $config['max_size'] = '3000'; // kb
             $this->load->library('upload', $config);
-            $this->upload->do_upload('d');
-            $hasil=$this->upload->data();
-            if ($hasil['file_name']==''){
+           
+            if ($this->upload->do_upload('d')){
+                $hasil=$this->upload->data();
                 $data = array(
                             'username'=>$this->session->username,
                             'nm_dosen'=>$this->input->post('name'),
@@ -595,6 +597,7 @@ class DosenController extends CI_Controller {
                 			'nidn'=>$this->input->post('nidn'),
                 			'bidang'=>$this->input->post('bidang'),
                 			'blog'=>$this->input->post('blog'),
+                            'gbr_dosen'=>$hasil['file_name'],
                             'penghargaan'=>$this->input->post('penghargaan'),
                 			'pendidikan'=>$this->input->post('pendidikan'),
                 			'penelitian'=>$this->input->post('penelitian'),
@@ -602,6 +605,9 @@ class DosenController extends CI_Controller {
                 			'linkpub'=>$this->input->post('linkpub'),
                 			'buku'=>$this->input->post('buku'),
                             'pengabdian'=>$this->input->post('pengabdian'));
+                if("default.png"!=$this->input->post('oldFile')){
+                    unlink('asset/img_galeri/'.$this->input->post('oldFile'));
+                }
             }else{
                 $data = array(
                     'username'=>$this->session->username,
@@ -612,7 +618,6 @@ class DosenController extends CI_Controller {
                     'nidn'=>$this->input->post('nidn'),
                     'bidang'=>$this->input->post('bidang'),
                     'blog'=>$this->input->post('blog'),
-                    'gbr_dosen'=>$hasil['file_name'],
                     'penghargaan'=>$this->input->post('penghargaan'),
                     'pendidikan'=>$this->input->post('pendidikan'),
                     'penelitian'=>$this->input->post('penelitian'),
@@ -632,6 +637,11 @@ class DosenController extends CI_Controller {
     }
 
     function delete_dosen($id){
+        cek_session_admin();
+        $data = $this->model_app->select_where("dosen","id_dosen",$id);
+        if("default.png"!=$data[0]['gmbr_dosen']){
+            unlink('asset/foto_statis/'.$data[0]['gmbr_dosen']);
+        }
         $this->model_app->delete('dosen',array('id_dosen' => $id));
         redirect('dosen');
     }

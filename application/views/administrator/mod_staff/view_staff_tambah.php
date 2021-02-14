@@ -19,14 +19,14 @@
                     <tr><th scope='row'>Workshop/Pelatihan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pelatihan'></textarea></td></tr>
                     <tr><th scope='row'>Penghargaan & Paten</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'></textarea></td></tr>                    
                     <tr><th scope='row'>Aktivitas Penunjang</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penunjang'></textarea></td></tr>                    
-                    <tr><th scope='row'>Foto</th>                    <td><input type='file' class='form-control' name='foto'></td></tr>
+                    <tr><th scope='row'>Foto</th>                    <td><input type='file' class='form-control' name='foto' accept=\"image/*\"></td></tr>
                   </tbody>
                   </table>
                 </div>
               
               <div class='box-footer'>
                     <button type='submit' name='submit' class='btn btn-info'>Tambahkan</button>
-                    <a href='index.php'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <a href='".base_url('staff')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
                     
                   </div>
             </div></div></div>";

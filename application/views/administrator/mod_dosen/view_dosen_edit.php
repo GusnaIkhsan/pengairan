@@ -11,6 +11,7 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id_dosen' value='$rows[id_dosen]'>
+                    <input type='hidden' name='oldFile' value='$rows[gbr_dosen]'>
                     <tr><th width='120px' scope='row'>Nama Dosen</th>   <td><input type='text' class='form-control' name='name' value='$rows[nm_dosen]'></td></tr>
                     <tr><th scope='row'>Golongan & Pangkat</th>   <td><input type='text' class='form-control' name='golpang' value='$rows[golpang]'></td></tr>";
                     echo "</td></tr>
@@ -18,7 +19,7 @@
                     <tr><th scope='row'>NIDN</th>   <td><input type='text' class='form-control' name='nidn' value='$rows[nidn]'></td></tr>
                     <tr><th scope='row'>Bidang Ilmu</th>   <td><input type='text' class='form-control' name='bidang' value='$rows[bidang]'></td></tr>
                     <tr><th scope='row'>Blog Dosen</th>   <td><input type='text' class='form-control' name='blog' value='$rows[blog]'></td></tr>
-                    <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='d'>";
+                    <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='d' accept=\"image/*\">";
                                                                    if ($rows['gbr_dosen']!=''){ echo " Gambar Saat ini : <a target='_BLANK' href='".base_url()."asset/img_galeri/$rows[gbr_dosen]'>$rows[gbr_dosen]</a>"; } echo "</td></tr>
                     <tr><th scope='row'>Background Pendidikan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pendidikan'>$rows[pendidikan]</textarea></td></tr>
                     <tr><th scope='row'>Penghargaan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'>$rows[penghargaan]</textarea></td></tr>

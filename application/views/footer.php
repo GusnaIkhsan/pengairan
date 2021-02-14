@@ -34,9 +34,9 @@
                                 <h3 class="kingster-widget-title">Program Studi</h3><span class="clear"></span>
                                 <div class="menu-our-campus-container">
                                     <ul id="menu-our-campus" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item"><a href="#">Program Sarjana Teknik Pengairan</a></li>
-                                        <li class="menu-item"><a href="#">Program Magister Teknik Pegairan</a></li>
-                                        <li class="menu-item"><a href="#">Program Doktor Teknik Sumber Daya Air</a></li>                                        
+                                        <li class="menu-item"><a href="<?php echo base_url('prodi/sarjana'); ?>">Program Sarjana Teknik Pengairan</a></li>
+                                        <li class="menu-item"><a href="<?php echo base_url('prodi/magister'); ?>">Program Magister Teknik Pegairan</a></li>
+                                        <li class="menu-item"><a href="<?php echo base_url('prodi/doktoral'); ?>">Program Doktor Teknik Sumber Daya Air</a></li>                                        
                                     </ul>
                                 </div>
                             </div>

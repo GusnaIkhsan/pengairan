@@ -16,9 +16,19 @@
                   <table class='table table-condensed table-bordered'>
                     <tbody>
                       <input type='hidden' name='id' value='$rows[id_agenda]'>
-                      <tr><th width='120px' scope='row'>Tema</th>   <td><input type='text' class='form-control' name='a' value='$rows[tema]'></td></tr>
+                      <input type='hidden' name='oldFile' value='$rows[gambar]'>
+                      <tr><th width='120px' scope='row'>Tema</th>   <td><input type='text' class='form-control' name='a' value='$rows[tema]'></td></tr>";
+                      echo "
+                      <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
+                                                                              <option value='' selected>- Pilih Foto -</option>";
+                                                                              foreach ($foto as $row){
+                                                                                echo "<option value='$row[name_gmbr]'>$row[name]</option>";
+                                                                              }
+                       echo "</td>
+                      </tr>  
+                      <tr><th scope='row'>URL Foto</th>               <td><input type='text' id='urlfoto' class='form-control' readonly></td></tr>                                                       
                       <tr><th scope='row'>Isi Agenda</th>           <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px'>$rows[isi_agenda]</textarea></td></tr>
-                      <tr><th scope='row'>Gambar</th>               <td><input type='file' class='form-control' name='c'>";
+                      <tr><th scope='row'>Thumbnail</th>               <td><input type='file' class='form-control' name='c' accept=\"image/*\">";
                                                                           if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."asset/foto_agenda/$rows[gambar]'>$rows[gambar]</a>"; } echo "</td></tr>
                       </td></tr>
                       <tr><th scope='row'>Tempat</th>               <td><input type='text' class='form-control' name='d' value='$rows[tempat]'></td></tr>
@@ -35,3 +45,10 @@
                     
                   </div>
             </div>";
+            ?>
+            <script type="text/javascript"> 
+              $('#foto').on('change', function() {
+                var nameImg = document.getElementById("foto").value;
+                document.getElementById("urlfoto").value = '<?php echo base_url('asset/foto/'); ?>'+'/'+nameImg;
+              });
+            </script>

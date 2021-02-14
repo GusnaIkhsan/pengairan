@@ -11,13 +11,13 @@
                     <div class="kingster-blog-title-bottom-overlay"></div>
                     <div class="kingster-blog-title-container kingster-container">
                         <div class="kingster-blog-title-content kingster-item-pdlr" style="padding-top: 400px ;padding-bottom: 80px ;">
-                            <header class="kingster-single-article-head clearfix">
+                            <h1 class="kingster-page-title" id="h1_983a_0"><?php echo $page['judul']; ?></h1>
+                            <!-- <header class="kingster-single-article-head clearfix">
                                 <div class="kingster-single-article-date-wrapper  post-date updated">
                                     <?php 
                                         $tempDate = strtotime($page['created_at']);
                                         $tanggalBerita = explode("-", $page['created_at']); 
-                                    ?>
-                                    <!-- <div class="kingster-single-article-date-day"><?php echo $tanggalBerita[2]?></div> -->
+                                    ?>           
                                     <div class="kingster-single-article-date-day"><?php echo date('d',$tempDate)?></div>
                                     <div class="kingster-single-article-date-month"><?php echo date('M',$tempDate)?></div>
                                     <div class="kingster-single-article-date-year"><?php echo date('Y',$tempDate)?></div>
@@ -29,7 +29,7 @@
                                         <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-comment-number "><span class="kingster-head"></span>HALAMAN</div>
                                     </div>
                                 </div>
-                            </header>
+                            </header> -->
                         </div>
                     </div>
                 </div>

@@ -11,6 +11,7 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id]'>
+                    <input type='hidden' name='oldFile' value='$rows[foto]'>
                     <tr><th width='120px' scope='row'>Nama Staff</th>   <td><input type='text' class='form-control' name='name' value='$rows[name]'></td></tr>";                                                                       
                     echo "</td></tr>
                     <tr><th width='120px' scope='row'>NIP / NIK</th>   <td><input type='text' class='form-control' name='nipnik' value='$rows[nipnik]'></td></tr>
@@ -19,7 +20,7 @@
                     <tr><th scope='row'>Workshop/Pelatihan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pelatihan'>$rows[pelatihan]</textarea></td></tr>
                     <tr><th scope='row'>Penghargaan & Paten</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'>$rows[penghargaan]</textarea></td></tr>                    
                     <tr><th scope='row'>Aktivitas Penunjang</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penunjang'>$rows[penunjang]</textarea></td></tr>                    
-                    <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='foto'>";
+                    <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='foto' accept=\"image/*\">";
                                                                    if ($rows['foto']!=''){ 
                                                                       echo " Gambar Saat ini : <a target='_BLANK' href='".base_url()."asset/foto_staff/$rows[foto]'>$rows[foto]</a>"; 
                                                                     } echo "</td></tr>

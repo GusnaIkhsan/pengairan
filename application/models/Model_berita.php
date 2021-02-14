@@ -124,26 +124,25 @@ class Model_berita extends CI_model{
 
     function list_berita_tambah(){
         $config['upload_path'] = 'asset/foto_berita/';
-        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-        $config['max_size'] = '3000'; // kb
+        $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+        $config['max_size'] = '4000'; // kb
         $this->load->library('upload', $config);
-        $this->upload->do_upload('k');
-        $hasil=$this->upload->data();
-            if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
-            if ($this->input->post('j') != ''){
-                $tag_seo = $this->input->post('j');
-                $tag=implode(',',$tag_seo);
-            }else{
-                $tag = '';
-            }
-
-            if(empty($this->input->post('date'))){
-                $tanggal = date('Y-m-d');
-            }else{
-                $tanggal = $this->input->post('date');
-            }
-
-            if ($hasil['file_name']==''){
+        if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
+        if ($this->input->post('j') != ''){
+            $tag_seo = $this->input->post('j');
+            $tag=implode(',',$tag_seo);
+        }else{
+            $tag = '';
+        }
+        
+        if(empty($this->input->post('date'))){
+            $tanggal = date('Y-m-d');
+        }else{
+            $tanggal = $this->input->post('date');
+        }
+        
+        if ($this->upload->do_upload('k')){
+                $hasil=$this->upload->data();
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,
@@ -159,6 +158,7 @@ class Model_berita extends CI_model{
                                     'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
                                     'tanggal'=>$tanggal,
                                     'jam'=>date('H:i:s'),
+                                    'gambar'=>$hasil['file_name'],
                                     'dibaca'=>'0',
                                     'tag'=>$tag,
                                     'status'=>$status);
@@ -178,7 +178,7 @@ class Model_berita extends CI_model{
                                     'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
                                     'tanggal'=>$tanggal,
                                     'jam'=>date('H:i:s'),
-                                    'gambar'=>$hasil['file_name'],
+                                    'gambar'=>'default_berita.jpg',               
                                     'dibaca'=>'0',
                                     'tag'=>$tag,
                                     'status'=>$status);
@@ -197,6 +197,7 @@ class Model_berita extends CI_model{
                         'hari'=>hari_ini(date('w')),
                         'tanggal'=>date('Y-m-d'),
                         'jam'=>date('H:i:s'),
+                        'gambar'=>'default_berita.jpg',
                         'dibaca'=>'0',
                         'tag'=>'pengumuman',
                         'status'=>'Y');
@@ -210,10 +211,8 @@ class Model_berita extends CI_model{
     function list_berita_update(){
         $config['upload_path'] = 'asset/foto_berita/';
         $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-        $config['max_size'] = '3000'; // kb
+        $config['max_size'] = '4000'; // kb
         $this->load->library('upload', $config);
-        $this->upload->do_upload('k');
-        $hasil=$this->upload->data();
             if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
             if ($this->input->post('j') != ''){
                 $tag_seo = $this->input->post('j');
@@ -228,7 +227,8 @@ class Model_berita extends CI_model{
                 $tanggal = $this->input->post('date');
             }
 
-            if ($hasil['file_name']==''){
+            if ($this->upload->do_upload('k')){
+                $hasil=$this->upload->data();
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,
@@ -244,9 +244,13 @@ class Model_berita extends CI_model{
                                     'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
                                     'tanggal'=>$tanggal,
                                     'jam'=>date('H:i:s'),
+                                    'gambar'=>$hasil['file_name'],
                                     'dibaca'=>'0',
                                     'tag'=>$tag,
                                     'status'=>$status);
+                if("default_berita.jpg"!=$this->input->post('oldFile')){
+                    unlink('asset/foto_berita/'.$this->input->post('oldFile'));
+                }
             }else{
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
@@ -262,14 +266,13 @@ class Model_berita extends CI_model{
                                     'keterangan_gambar'=>$this->db->escape_str($this->input->post('i')),
                                     'hari'=>hari_ini(date('w',strtotime($tanggal))),      
                                     'tanggal'=>$tanggal,
-                                    'jam'=>date('H:i:s'),
-                                    'gambar'=>$hasil['file_name'],
+                                    'jam'=>date('H:i:s'),                           
                                     'dibaca'=>'0',
                                     'tag'=>$tag,
                                     'status'=>$status);
             }
+        
         $this->db->where('id_berita',$this->input->post('id'));
-        // var_dump($datadb);
         $this->db->update('berita',$datadb);
     }
 
@@ -286,13 +289,13 @@ class Model_berita extends CI_model{
             $data = $this->db->query("SELECT berita.* FROM berita                                     
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY tanggal 
                                     DESC");
         } else {
             $data = $this->db->query("SELECT berita.* FROM berita                                     
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori not in (61) and judul like '%" . $query . "%' ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori not in (61) and judul like '%" . $query . "%' ORDER BY tanggal 
                                     DESC");
         }
         return $data->result();
@@ -303,13 +306,13 @@ class Model_berita extends CI_model{
             $data = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori = 61 ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori = 61 ORDER BY tanggal 
                                     DESC");
         } else {
             $data = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori = 61 and judul like '%" . $query . "%' ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori = 61 and judul like '%" . $query . "%' ORDER BY tanggal 
                                     DESC");
         }
         
@@ -322,7 +325,7 @@ class Model_berita extends CI_model{
                                     on berita.username=users.username 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY tanggal 
                                     DESC LIMIT 0,$limit");
         return $data->result();
     }
@@ -331,7 +334,7 @@ class Model_berita extends CI_model{
         $data = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori = 61 ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori = 61 ORDER BY tanggal 
                                     DESC LIMIT 0,$limit");;
         return $data->result();
     }
@@ -353,7 +356,7 @@ class Model_berita extends CI_model{
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
                                     where status='Y' and kategori.id_kategori not in (61) and berita.tag LIKE '%$tag%'  
-                                    ORDER BY id_berita DESC");
+                                    ORDER BY tanggal DESC");
         return $data->result();
     }
 
@@ -365,7 +368,7 @@ class Model_berita extends CI_model{
             $dataNews           = $this->db->query("SELECT berita.* FROM berita                                     
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY tanggal 
                                     DESC")->result();
 
             foreach($dataNews as $news){
@@ -377,7 +380,7 @@ class Model_berita extends CI_model{
             $dataAnnouncement   = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori = 61 ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori = 61 ORDER BY tanggal 
                                     DESC")->result();
 
             foreach($dataAnnouncement as $announcement){
@@ -386,7 +389,7 @@ class Model_berita extends CI_model{
             }
 
             // Agenda
-            $dataAgenda         = $this->db->query("SELECT * FROM agenda ORDER BY id_agenda DESC")->result();
+            $dataAgenda         = $this->db->query("SELECT * FROM agenda ORDER BY tgl_posting DESC")->result();
 
             foreach($dataAgenda as $agenda){
                 $agenda->type = "Agenda";
@@ -398,7 +401,7 @@ class Model_berita extends CI_model{
             $dataNews           = $this->db->query("SELECT berita.* FROM berita                                     
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori not in (61) and judul like '%" . $query . "%' ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori not in (61) and judul like '%" . $query . "%' ORDER BY tanggal 
                                     DESC")->result();
 
             foreach($dataNews as $news){
@@ -410,7 +413,7 @@ class Model_berita extends CI_model{
             $dataAnnouncement   = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori = 61 and judul like '%" . $query . "%' ORDER BY id_berita 
+                                    where status='Y' and kategori.id_kategori = 61 and judul like '%" . $query . "%' ORDER BY tanggal 
                                     DESC")->result();
 
             foreach($dataAnnouncement as $announcement){
@@ -419,7 +422,7 @@ class Model_berita extends CI_model{
             }
 
             // Agenda
-            $dataAgenda         = $this->db->query("SELECT * FROM agenda WHERE tema like '%" . $query . "%' ORDER BY id_agenda DESC")->result();
+            $dataAgenda         = $this->db->query("SELECT * FROM agenda WHERE tema like '%" . $query . "%' ORDER BY tgl_posting DESC")->result();
 
             foreach($dataAgenda as $agenda){
                 $agenda->type = "Agenda";

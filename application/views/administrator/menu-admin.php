@@ -2,7 +2,7 @@
           <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image">
-              <img src="<?php echo base_url(); ?>/asset/admin/dist/img/users1.gif" class="img-circle" alt="User Image">
+              <img src="<?php echo base_url('asset/foto_user/').'/'.$_SESSION["foto"]; ?>" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
               <p> 

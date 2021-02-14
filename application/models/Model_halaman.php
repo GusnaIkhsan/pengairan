@@ -15,22 +15,22 @@ class Model_halaman extends CI_model{
     function halamanstatis_tambah(){
             $config['upload_path'] = 'asset/foto_statis/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-            $config['max_size'] = '3000'; // kb
+            $config['max_size'] = '4000'; // kb
             $this->load->library('upload', $config);
-            $this->upload->do_upload('c');
-            $hasil=$this->upload->data();
-
+        
             if($this->input->post('slug') == ""){
                 $stringSlug = seo_title($this->input->post('a'));
             } else {
                 $stringSlug = $this->input->post('slug');
             }
 
-            if ($hasil['file_name']==''){
+            if ($this->upload->do_upload('c')){
+                $hasil=$this->upload->data();
                     $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
                                     'judul_seo'     => $stringSlug,
                                     'isi_halaman'   => $this->input->post('b'),
                                     'type'          => $this->input->post('tipe'),
+                                    'gambar'        => $hasil['file_name'],
                                     'created_at'    => date('Y-m-d H:i:s'),
                                     'updated_at'    => date('Y-m-d H:i:s'),
                                     'user_id'       => 1 // TODO: Session Id
@@ -40,7 +40,7 @@ class Model_halaman extends CI_model{
                                     'judul_seo'     => $stringSlug,
                                     'isi_halaman'   => $this->input->post('b'),
                                     'type'          => $this->input->post('tipe'),
-                                    'gambar'        => $hasil['file_name'],
+                                    'gambar'        => "default_halaman.jpg",
                                     'created_at'    => date('Y-m-d H:i:s'),
                                     'updated_at'    => date('Y-m-d H:i:s'),
                                     'user_id'       => 1 // TODO: Session Id
@@ -56,10 +56,8 @@ class Model_halaman extends CI_model{
     function halamanstatis_update(){
         $config['upload_path'] = 'asset/foto_statis/';
         $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-        $config['max_size'] = '3000'; // kb
+        $config['max_size'] = '4000'; // kb
         $this->load->library('upload', $config);
-        $this->upload->do_upload('c');
-        $hasil=$this->upload->data();
 
         if($this->input->post('slug') == ""){
             $stringSlug = seo_title($this->input->post('a'));
@@ -67,15 +65,8 @@ class Model_halaman extends CI_model{
             $stringSlug = $this->input->post('slug');
         }
 
-        if ($hasil['file_name']==''){
-            $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
-                            'judul_seo'     => $stringSlug,
-                            'isi_halaman'   => $this->input->post('b'),
-                            'type'          => $this->input->post('tipe'),
-                            'updated_at'    => date('Y-m-d H:i:s'),
-                            'user_id'       => 1 // TODO: Session Id
-                        );
-        }else{
+        if ($this->upload->do_upload('c')){
+            $hasil=$this->upload->data();
             $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
                             'judul_seo'     => $stringSlug,
                             'isi_halaman'   => $this->input->post('b'),
@@ -84,7 +75,19 @@ class Model_halaman extends CI_model{
                             'updated_at'    => date('Y-m-d H:i:s'),
                             'user_id'       => 1 // TODO: Session Id
                         );
+            if("default_halaman.jpg"!=$this->input->post('oldFile')){
+                unlink('asset/foto_statis/'.$this->input->post('oldFile'));
+            }
+        }else{
+            $datadb = array('judul'         => $this->db->escape_str($this->input->post('a')),
+                            'judul_seo'     => $stringSlug,
+                            'isi_halaman'   => $this->input->post('b'),
+                            'type'          => $this->input->post('tipe'),                            
+                            'updated_at'    => date('Y-m-d H:i:s'),
+                            'user_id'       => 1 // TODO: Session Id
+                        );
         }
+        
         $this->db->where('id',$this->input->post('id'));
         $this->db->update('halaman',$datadb);
     }

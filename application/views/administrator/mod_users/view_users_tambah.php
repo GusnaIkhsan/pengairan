@@ -17,7 +17,7 @@
                     <tr><th scope='row'>No Telp</th>                  <td><input type='number' class='form-control' name='e' required></td></tr>
                     <tr><th scope='row'>Level</th>                    <td><input type='radio' name='g' value='admin' checked> Admin &nbsp; <input type='radio' name='g' value='superadmin'> Super Admin </td></tr>
                     <tr><th scope='row'>Blokir</th>                   <td><input type='radio' name='h' value='Y'> Ya &nbsp; <input type='radio' name='h' value='N' checked> Tidak</td></tr>
-                    <tr><th scope='row'>Foto</th>                     <td><input type='file' class='form-control' name='f'></td></tr>
+                    <tr><th scope='row'>Foto</th>                     <td><input type='file' class='form-control' name='f' accept=\"image/*\"></td></tr>
                   </tbody>
                   </table></div>
               </div>

@@ -11,6 +11,9 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value=''>
+                    <input type='hidden' name='f' value='N'>
+                    <input type='hidden' name='g' value='N'>
+
                     <tr><th width='120px' scope='row'>Judul</th>    <td><input type='text' class='form-control' name='b' required></td></tr>
                     <tr><th scope='row'>Sub Judul</th>              <td><input type='text' class='form-control' name='c'></td></tr>
                     <tr><th scope='row'>Video Youtube</th>          <td><input type='text' class='form-control' name='d' placeholder='Contoh link: http://www.youtube.com/embed/xbuEmoRWQHU'></td></tr>
@@ -27,11 +30,18 @@
                                                                             }
                     echo "</td></tr>
                     <tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date'></td></tr>
-                    <tr><th scope='row'>Headline</th>               <td><input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak</td></tr>
-                    <tr><th scope='row'>Pilihan </th>        <td><input type='radio' name='f' value='Y'> Ya &nbsp; <input type='radio' name='f' value='N' checked> Tidak</td></tr>
-                    <tr><th scope='row'>Berita Utama</th>           <td><input type='radio' name='g' value='Y'> Ya &nbsp; <input type='radio' name='g' value='N' checked> Tidak</td></tr>
+                    <tr><th scope='row'>Headline</th>               <td><input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak</td></tr>";
+                    echo "
+                    <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
+                                                                            <option value='' selected>- Pilih Foto -</option>";
+                                                                            foreach ($foto as $row){
+                                                                              echo "<option value='$row[name_gmbr]'>$row[name]</option>";
+                                                                            }
+                    echo " </td>
+                    </tr>
+                    <tr><th scope='row'>URL Foto</th>               <td><input type='text' id='urlfoto' class='form-control' readonly></td></tr>                                                  
                     <tr><th scope='row'>Isi Berita</th>             <td><textarea id='editor1' class='ckeditor form-control' name='h' style='height:260px' required></textarea></td></tr>
-                    <tr><th scope='row'>Gambar</th>                 <td><input type='file' class='form-control' name='k'></td></tr>
+                    <tr><th scope='row'>Thumbnail</th>                 <td><input type='file' class='form-control' name='k' accept=\"image/*\"></td></tr>
                     <tr><th scope='row'>Ket. Gambar</th>            <td><input type='text' class='form-control' name='i'></td></tr>
                     <tr><th scope='row'>Tag</th>                    <td>";
                                                                             foreach ($tag->result_array() as $tag){
@@ -48,3 +58,10 @@
                     
                   </div>
             </div>";
+?>
+      <script type="text/javascript"> 
+        $('#foto').on('change', function() {
+          var nameImg = document.getElementById("foto").value;
+          document.getElementById("urlfoto").value = '<?php echo base_url('asset/foto/'); ?>'+'/'+nameImg;
+        });
+      </script>

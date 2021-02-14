@@ -5,7 +5,7 @@
         <div class="kingster-body-outer-wrapper ">
             <div class="kingster-body-wrapper clearfix  kingster-with-frame">
                 <!-- header navigation -->
-                <div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" id="div_983a_0">
+                <div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" style="background-image: url(<?php echo base_url('asset/foto_statis/default_halaman.jpg');?>) ;">
                     <div class="kingster-header-transparent-substitute"></div>
                     <div class="kingster-page-title-overlay"></div>
                     <div class="kingster-page-title-bottom-gradient"></div>
@@ -74,7 +74,13 @@
                                                             <div class="gdlr-core-pbf-element">
                                                                 <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align">
                                                                     <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
-                                                                        <a class="gdlr-core-lightgallery gdlr-core-js " href="<?php echo base_url('asset/upload/personnel-1.jpg'); ?>"><img src="<?php echo base_url('asset/upload/personnel-1-400x257.jpg'); ?>" width="700" height="450"  alt="" /><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"  ></i></span></a>
+                                                                        <?php $url = "asset/img_galeri/".$record[0]['gbr_dosen']; ?>
+                                                                        <a class="gdlr-core-lightgallery gdlr-core-js " href="<?php echo base_url($url); ?>">
+                                                                            <img src="<?php echo base_url($url); ?>" width="700" height="250"  alt="" />
+                                                                            <span class="gdlr-core-image-overlay ">
+                                                                                <i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"  ></i>
+                                                                            </span>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>

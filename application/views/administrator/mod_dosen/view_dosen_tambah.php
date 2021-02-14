@@ -18,7 +18,7 @@
                     <tr><th scope='row'>NIDN</th>   <td><input type='text' class='form-control' name='nidn'></td></tr>
                     <tr><th scope='row'>Bidang Ilmu</th>   <td><input type='text' class='form-control' name='bidang'></td></tr>
                     <tr><th scope='row'>Blog Dosen</th>   <td><input type='text' class='form-control' name='blog'></td></tr>
-                    <tr><th scope='row'>Foto</th>                    <td><input type='file' class='form-control' name='d'></td></tr>
+                    <tr><th scope='row'>Foto</th>                    <td><input type='file' class='form-control' name='d' accept=\"image/*\"></td></tr>
                     <tr><th scope='row'>Background Pendidikan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pendidikan'></textarea></td></tr>
                     <tr><th scope='row'>Penghargaan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'></textarea></td></tr>
                     <tr><th scope='row'>Penelitian</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penelitian'></textarea></td></tr>

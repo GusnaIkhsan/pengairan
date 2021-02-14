@@ -29,33 +29,33 @@
                     $no = 1;
                     if("admin"==$level){
                       foreach ($record->result_array() as $row){
-                        if ($row['foto'] == ''){ $foto ='users.gif'; }else{ $foto = $row['foto']; }           
+                        // if ($row['foto'] == ''){ $foto ='users.gif'; }else{ $foto = $row['foto']; }           
                         echo "<tr><td>$no</td>
                                   <td>$row[username]</td>
                                   <td>$row[nama_lengkap]</td>
                                   <td>$row[email]</td>
-                                  <td><img style='border:1px solid #cecece' width='40px' class='img-circle' src='".base_url()."asset/foto_user/$foto'></td>
+                                  <td><img style='border:1px solid #cecece' width='40px' class='img-circle' src='".base_url()."asset/foto_user/$row[foto]'></td>
                                   <td>$row[blokir]</td>
                                   <td>$row[level]</td>
                                   <td><center>
-                                    <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_manajemenuser/$row[username]'><span class='glyphicon glyphicon-edit'></span></a>                                  
+                                    <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_manajemenuser/$row[id]'><span class='glyphicon glyphicon-edit'></span></a>                                  
                                   </center></td>
                               </tr>";                
                         $no++;
                       }
                     }else{
                       foreach ($record->result_array() as $row){
-                        if ($row['foto'] == ''){ $foto ='users.gif'; }else{ $foto = $row['foto']; }                    
+                        // if ($row['foto'] == ''){ $foto ='users.gif'; }else{ $foto = $row['foto']; }                    
                         echo "<tr><td>$no</td>
                                   <td>$row[username]</td>
                                   <td>$row[nama_lengkap]</td>
                                   <td>$row[email]</td>
-                                  <td><img style='border:1px solid #cecece' width='40px' class='img-circle' src='".base_url()."asset/foto_user/$foto'></td>
+                                  <td><img style='border:1px solid #cecece' width='40px' class='img-circle' src='".base_url()."asset/foto_user/$row[foto]'></td>
                                   <td>$row[blokir]</td>
                                   <td>$row[level]</td>
                                   <td><center>
-                                    <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_manajemenuser/$row[username]'><span class='glyphicon glyphicon-edit'></span></a>
-                                    <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_manajemenuser/$row[username]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                                    <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_manajemenuser/$row[id]'><span class='glyphicon glyphicon-edit'></span></a>
+                                    <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_manajemenuser/$row[id]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                                   </center></td>
                               </tr>";                    
                         $no++;

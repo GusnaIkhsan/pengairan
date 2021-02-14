@@ -6,7 +6,7 @@
     <div class="kingster-body-outer-wrapper ">
         <div class="kingster-body-wrapper clearfix  kingster-with-frame">
             <!-- header navigation -->
-            <div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" id="div_983a_0">
+            <div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" style="background-image: url(<?php echo base_url('asset/foto_statis/default_halaman.jpg');?>) ;">
                 <div class="kingster-header-transparent-substitute"></div>
                 <div class="kingster-page-title-overlay"></div>
                 <div class="kingster-page-title-bottom-gradient"></div>

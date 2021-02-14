@@ -58,4 +58,13 @@
                 <?php include "home_berita.php"; ?>
 
             </section><!-- right col -->
+
+            <section class="col-lg-7 connectedSortable">
+                <?php include "home_foto.php"; ?>
+
+            </section><!-- right col -->
+            <section class="col-lg-5 connectedSortable">
+                <?php include "home_limit.php"; ?>
+
+            </section><!-- right col -->
             

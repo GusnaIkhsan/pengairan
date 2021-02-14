@@ -4,7 +4,7 @@
         <!-- header mobile navigation -->
         <div class="kingster-body-outer-wrapper ">
             <div class="kingster-body-wrapper clearfix  kingster-with-frame">
-                <div class="kingster-blog-title-wrap  kingster-style-custom kingster-feature-image" style="background-image: url() ;">
+                <div class="kingster-blog-title-wrap  kingster-style-custom kingster-feature-image" style="background-image: url(<?php echo base_url('asset/foto_statis/default_halaman.jpg');?>) ;">
                     <div class="kingster-header-transparent-substitute"></div>
                     <div class="kingster-blog-title-overlay" style="opacity: 0.01 ;"></div>
                     <div class="kingster-blog-title-bottom-overlay"></div>
