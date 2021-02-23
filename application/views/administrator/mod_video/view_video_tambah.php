@@ -11,10 +11,10 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value=''>
-                    <tr><th width='120px' scope='row'>Judul Video</th>   <td><input type='text' class='form-control' name='b'></td></tr>";                                                                            
+                    <tr><th width='120px' scope='row'>Judul Video <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='b' required></td></tr>";                                                                            
                     echo "
                     <tr><th scope='row'>Keterangan</th>                 <td><textarea id='editor1' class='form-control' name='c'></textarea></td></tr>                    
-                    <tr><th scope='row'>Link Youtube</th>               <td><input type='text' class='form-control' name='e' placeholder='Contoh link: http://www.youtube.com/embed/xbuEmoRWQHU'></td></tr>                    
+                    <tr><th scope='row'>Link Youtube <span style=\"color: red;\">*</span></th>               <td><input type='text' class='form-control' name='e' placeholder='Contoh link: http://www.youtube.com/embed/xbuEmoRWQHU' required></td></tr>                    
                     ";                                                                          
                     echo "</div></td></tr>
                   </tbody>
@@ -22,8 +22,8 @@
                 </div>
               
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Tambahkan</button>
-                    <a href='".base_url('administrator/video')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
+                    <a href='".base_url('administrator/video')."'><button type='button' class='btn btn-default'>Cancel</button></a>
                     
                   </div>
             </div></div></div>";

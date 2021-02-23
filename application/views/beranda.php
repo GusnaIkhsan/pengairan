@@ -53,7 +53,7 @@
                                         <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_1">
                                             <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                 <div class="gdlr-core-pbf-element">
-                                                    <a href="<?php echo base_url()."/page/detail/prestasi--penghargaan"; ?>">
+                                                    <a href="<?php echo base_url()."page/detail/prestasi--penghargaan"; ?>">
                                                         <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
                                                             <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/trophy.png'); ?>" alt="" width="41" height="41" title="icon-4" /></div>
                                                             <div class="gdlr-core-column-service-content-wrapper">
@@ -73,7 +73,7 @@
                                         <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_4">
                                             <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                 <div class="gdlr-core-pbf-element">
-                                                    <a href="<?php echo base_url()."/page/detail/tracer-study"; ?>">
+                                                    <a href="<?php echo base_url()."page/detail/tracer-study"; ?>">
                                                         <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_5">
                                                             <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/icon-2.png'); ?>" alt="" width="44" height="40" title="icon-2" /></div>
                                                             <div class="gdlr-core-column-service-content-wrapper">
@@ -92,7 +92,7 @@
                                         <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_7">
                                             <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                 <div class="gdlr-core-pbf-element">
-                                                    <a href="<?php echo base_url()."/page/detail/renstra--program-kerja"; ?>">
+                                                    <a href="<?php echo base_url()."page/detail/renstra--program-kerja"; ?>">
                                                         <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_8">
                                                             <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/clipboard.png'); ?>" alt="" width="44" height="39" title="icon-3" /></div>
                                                             <div class="gdlr-core-column-service-content-wrapper">
@@ -111,7 +111,7 @@
                                         <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_10">
                                             <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                 <div class="gdlr-core-pbf-element">
-                                                    <a href="<?php echo base_url()."/page/detail/prestasi--penghargaan"; ?>">
+                                                    <a href="<?php echo base_url()."page/detail/sop"; ?>">
                                                         <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_2">
                                                             <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/icon-1.png'); ?>" alt="" width="40" height="40" title="icon-1" /></div>
                                                             <div class="gdlr-core-column-service-content-wrapper">
@@ -339,7 +339,7 @@
                                                                 <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[$key]->id_berita); ?>" ><?php echo $announc[$key]->judul;?></a></h3>
                                                                 <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                     <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">
-                                                                        <?php echo $announc[$key]->hari.", ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?>
+                                                                        <?php echo $announc[$key]->hari.", ".$tanggalBerita[2]." ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?>
                                                                     </span>                                                                       
                                                                 </div>                                                        
                                                                 <!-- <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">Kingster Grand Hall</span></span>

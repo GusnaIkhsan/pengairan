@@ -48,14 +48,14 @@
                       </div>
                       <div  class="modal-body">        
                         <div class="form-group">
-                          <label class="control-label">Nama foto</label>
+                          <label class="control-label">Nama foto <span style="color: red;">*</span></label>
                           <div style="margin-bottom: 10%">                          
                             <input type="text" class="form-control pull-left" name="nameFile" id="nameFile" placeholder="Nama Foto" required>                            
                             <span class="help-block with-errors"></span>
                           </div> 
                         </div>                
                         <div class="form-group">
-                          <label class="control-label">Berkas Foto</label>
+                          <label class="control-label">Berkas Foto <span style="color: red;">*</span></label>
                           <div style="margin-bottom: 1%">
                             <input type="file" id="fileImg" name="fileImg" style="display:none" onchange="document.getElementById('fileName').value=this.value" accept="image/*" required>
                             <input type="text" class="form-control pull-left" id="fileName" name="fileName" style="width: 72%;height: 35px;" readonly placeholder=" MAX 5 MB">

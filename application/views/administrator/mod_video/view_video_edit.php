@@ -11,10 +11,10 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id_video]'>
-                    <tr><th width='120px' scope='row'>Judul Video</th>  <td><input type='text' class='form-control' name='b' value='$rows[jdl_video]'></td></tr>";                                                                            
+                    <tr><th width='120px' scope='row'>Judul Video</th>  <td><input type='text' class='form-control' name='b' value='$rows[jdl_video]' required></td></tr>";                                                                            
                     echo "</td></tr>
                     <tr><th scope='row'>Keterangan</th>                 <td><textarea id='editor1' class='form-control' name='c'>$rows[keterangan]</textarea></td></tr>                    
-                    <tr><th scope='row'>Link Youtube</th>               <td><input type='text' class='form-control' name='e' placeholder='Contoh link: http://www.youtube.com/embed/xbuEmoRWQHU' value='$rows[youtube]'></td></tr>
+                    <tr><th scope='row'>Link Youtube</th>               <td><input type='text' class='form-control' name='e' placeholder='Contoh link: http://www.youtube.com/embed/xbuEmoRWQHU' value='$rows[youtube]' required></td></tr>
                     <tr><th scope='row'>Aktif </th>        <td>"; if ($rows['aktif']=='Y'){ echo "<input type='radio' name='d' value='Y' checked> Ya &nbsp; <input type='radio' name='d' value='N'> Tidak"; }else{ echo "<input type='radio' name='d' value='Y'> Ya &nbsp; <input type='radio' name='d' value='N' checked> Tidak"; } echo "</td></tr>";                                                                           
                       
                     echo "</div></td></tr>
@@ -23,8 +23,8 @@
                 </div>
               
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Update</button>
-                    <a href='".base_url('administrator/video')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Update</button>
+                    <a href='".base_url('administrator/video')."'><button type='button' class='btn btn-default'>Cancel</button></a>
                     
                   </div>
             </div></div></div>";

@@ -1377,21 +1377,6 @@ class Administrator extends CI_Controller {
     function edit_video(){
         $id = $this->uri->segment(3);
         if (isset($_POST['submit'])){
-            $config['upload_path'] = 'asset/img_video/';
-            $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-            $config['max_size'] = '3000'; // kb
-            $this->load->library('upload', $config);
-            $this->upload->do_upload('d');
-            $hasil=$this->upload->data();
-
-            if ($this->input->post('f')!=''){
-                $tag_seo = $this->input->post('f');
-                $tag=implode(',',$tag_seo);
-            }else{
-                $tag = '';
-            }
-
-            if ($hasil['file_name']==''){
                 $data = array('id_playlist'=>0,
                             'username'=>$this->session->username,
                             'jdl_video'=>$this->input->post('b'),
@@ -1399,34 +1384,18 @@ class Administrator extends CI_Controller {
                             'keterangan'=>$this->input->post('c'),
                             'video'=>'',
                             'youtube'=>$this->input->post('e'),
-                            'tagvid'=>$tag,
+                            'tagvid'=>"",
                             'aktif'=>$this->input->post('d'));
-            }else{
-                $data = array('id_playlist'=>0,
-                            'username'=>$this->session->username,
-                            'jdl_video'=>$this->input->post('b'),
-                            'video_seo'=>seo_title($this->input->post('b')),
-                            'keterangan'=>$this->input->post('c'),
-                            'gbr_video'=>$hasil['file_name'],
-                            'video'=>'',
-                            'youtube'=>$this->input->post('e'),
-                            'tagvid'=>$tag,
-                            'aktif'=>$this->input->post('d'));
-            }
-
+            
             $where = array('id_video' => $this->input->post('id'));
             $this->model_app->update('video', $data, $where);
             redirect('administrator/video');
         }else{
-            $record = $this->model_app->view_ordering('playlist','id_playlist','DESC');
-            $tag = $this->model_app->view_ordering('tagvid','id_tag','DESC');
-            if ($this->session->level=='admin'){
-                $proses = $this->model_app->edit('video', array('id_video' => $id))->row_array();
-            }else{
-                $proses = $this->model_app->edit('video', array('id_video' => $id, 'username' => $this->session->username))->row_array();
-            }
+           
+            $proses = $this->model_app->edit('video', array('id_video' => $id))->row_array();           
             
-            $data = array('rows' => $proses,'record' => $record, 'tag' => $tag);
+            $data = array('rows' => $proses);
+            // var_dump($data);
             $this->template->load('administrator/template','administrator/mod_video/view_video_edit',$data);
         }
     }

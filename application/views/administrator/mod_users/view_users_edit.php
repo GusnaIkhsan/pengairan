@@ -15,9 +15,9 @@
                     <input type='hidden' name='oldFile' value='$rows[foto]'>
                     <tr><th width='120px' scope='row'>Username</th>   <td><input type='text' class='form-control' name='a' value='$rows[username]' readonly='on'></td></tr>
                     <tr><th scope='row'>Password</th>                 <td><input type='password' class='form-control' name='b'></td></tr>
-                    <tr><th scope='row'>Nama Lengkap</th>             <td><input type='text' class='form-control' name='c' value='$rows[nama_lengkap]'></td></tr>
-                    <tr><th scope='row'>Email</th>                    <td><input type='email' class='form-control' name='d' value='$rows[email]'></td></tr>
-                    <tr><th scope='row'>No Telp</th>                  <td><input type='number' class='form-control' name='e' value='$rows[no_telp]'></td></tr>
+                    <tr><th scope='row'>Nama Lengkap</th>             <td><input type='text' class='form-control' name='c' value='$rows[nama_lengkap]' required></td></tr>
+                    <tr><th scope='row'>Email</th>                    <td><input type='email' class='form-control' name='d' value='$rows[email]' required></td></tr>
+                    <tr><th scope='row'>No Telp</th>                  <td><input type='number' class='form-control' name='e' value='$rows[no_telp]' required></td></tr>
                     <tr><th scope='row'>Level</th>                    <td>"; 
                     if ($rows['level']=='admin'){ 
                       echo "<input type='radio' name='g' value='admin' checked> Admin &nbsp; <input type='radio' name='g' value='superadmin'> Super Admin &nbsp;"; 
@@ -38,8 +38,8 @@
                   </table></div>
               </div>
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Update</button>
-                    <a href='".base_url('administrator/manajemenuser')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Update</button>
+                    <a href='".base_url('administrator/manajemenuser')."'><button type='button' class='btn btn-default'>Cancel</button></a>
                     
                   </div>
             </div>";

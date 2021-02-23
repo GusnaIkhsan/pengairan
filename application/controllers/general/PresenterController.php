@@ -220,6 +220,7 @@ class PresenterController extends CI_Controller {
         $data['news'] = $this->model_berita->getNewsByTag($tag);
         $data['tags'] = $this->model_berita->tag_berita()->result();
         $data['last_news'] = $this->model_berita->lastNews(3);
+        $data['search'] = $tag;
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
         $this->load->view('header_mobile');
