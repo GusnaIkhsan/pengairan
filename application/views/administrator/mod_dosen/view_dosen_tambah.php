@@ -10,16 +10,16 @@
           echo "<div class='col-md-12'>
                   <table class='table table-condensed table-bordered'>
                   <tbody>                  
-                    <tr><th width='120px' scope='row'>Nama Dosen</th>   <td><input type='text' class='form-control' name='name'></td></tr>
-                    <tr><th scope='row'>Golongan & Pangkat</th>   <td><input type='text' class='form-control' name='golpang'></td></tr>";
+                    <tr><th width='120px' scope='row'>Nama Dosen <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='name' required></td></tr>
+                    <tr><th scope='row'>Golongan & Pangkat <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='golpang' required></td></tr>";
                     
                     echo "</td></tr>
-                    <tr><th width='120px' scope='row'>NIP/NIK</th>   <td><input type='text' class='form-control' name='nipnik'></td></tr>
-                    <tr><th scope='row'>NIDN</th>   <td><input type='text' class='form-control' name='nidn'></td></tr>
-                    <tr><th scope='row'>Bidang Ilmu</th>   <td><input type='text' class='form-control' name='bidang'></td></tr>
+                    <tr><th width='120px' scope='row'>NIP/NIK <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='nipnik' required></td></tr>
+                    <tr><th scope='row'>NIDN <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='nidn' required></td></tr>
+                    <tr><th scope='row'>Bidang Ilmu <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='bidang' required></td></tr>
                     <tr><th scope='row'>Blog Dosen</th>   <td><input type='text' class='form-control' name='blog'></td></tr>
                     <tr><th scope='row'>Foto</th>                    <td><input type='file' class='form-control' name='d' accept=\"image/*\"></td></tr>
-                    <tr><th scope='row'>Background Pendidikan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pendidikan'></textarea></td></tr>
+                    <tr><th scope='row'>Background Pendidikan <span style=\"color: red;\">*</span></th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pendidikan' required></textarea></td></tr>
                     <tr><th scope='row'>Penghargaan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'></textarea></td></tr>
                     <tr><th scope='row'>Penelitian</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penelitian'></textarea></td></tr>
                     <tr><th scope='row'>Publikasi</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='publikasi'></textarea></td></tr>
@@ -31,8 +31,8 @@
                 </div>
               
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Tambahkan</button>
-                    <a href='".base_url('dosen')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
+                    <a href='".base_url('dosen')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div></div></div>";

@@ -12,7 +12,7 @@
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id]'>
                     <input type='hidden' name='oldFile' value='$rows[gambar]'>
-                    <tr><th width='120px' scope='row'>Judul</th>   <td><input type='text' class='form-control' name='a' id='input-name' value='$rows[judul]'></td></tr>
+                    <tr><th width='120px' scope='row'>Judul</th>   <td><input type='text' class='form-control' name='a' id='input-name' value='$rows[judul]' required></td></tr>
                     <tr><th width='120px' scope='row'>Tipe Halaman</th>   <td><input type='radio' name='tipe' value='0' id='radio-dinamis' checked> <strong>Dinamis</strong> <i>(Konten dapat diubah melalui Menu Halaman oleh Administrator)</i> &nbsp; <input type='radio' name='tipe' id='radio-statis' value='1'> <strong>Statis</strong> <i>(Konten HANYA dapat diubah oleh programmer)</i></td></tr>
                     <tr>
                       <th width='120px' scope='row'>Nama Link</th>
@@ -22,7 +22,7 @@
                             page/detail/
                           </div>
                           <div class='col-md-9'>
-                            <input type='text' class='form-control' name='slug' id='input-slug' value='$rows[judul_seo]'>
+                            <input type='text' class='form-control' name='slug' id='input-slug' value='$rows[judul_seo]' required>
                           </div>
                           <div class='col-md-2'>
                             <button type='button' id='btn-slug' class='btn btn-success'>Generate Link</button>
@@ -47,8 +47,8 @@
                 </div>
               </div>
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Update</button>
-                    <a href='".base_url()."administrator/halamanbaru'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Simpan</button>
+                    <a href='".base_url()."administrator/halamanbaru'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div>";

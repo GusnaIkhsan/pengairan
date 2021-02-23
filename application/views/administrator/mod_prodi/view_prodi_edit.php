@@ -11,7 +11,7 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id_prodi]'>
-                    <tr><th width='120px' scope='row'>Nama Program Studi</th>   <td><input type='text' class='form-control' name='a' value='$rows[nm_prodi]'></td></tr>
+                    <tr><th width='120px' scope='row'>Nama Program Studi</th>   <td><input type='text' class='form-control' name='a' value='$rows[nm_prodi]' required></td></tr>
                     <tr><th scope='row'>Keterangan</th>           <td><textarea class='ckeditor form-control' name='b' style='height:260px'>$rows[keterangans]</textarea></td></tr>
                     
                     <tr><th scope='row'>Aktif </th>        <td>"; if ($rows['aktif']=='Y'){ echo "<input type='radio' name='d' value='Y' checked> Ya &nbsp; <input type='radio' name='d' value='N'> Tidak"; }else{ echo "<input type='radio' name='d' value='Y'> Ya &nbsp; <input type='radio' name='d' value='N' checked> Tidak"; } echo "</td></tr>
@@ -20,8 +20,8 @@
                 </div>
               
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Update</button>
-                    <a href='".base_url('administrator/prodi')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Simpan</button>
+                    <a href='".base_url('administrator/prodi')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div></div></div>";

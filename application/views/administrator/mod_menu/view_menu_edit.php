@@ -12,7 +12,7 @@
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id_menu]'>
                     <input type='hidden' name='id_halaman' id='id_halaman' value='$rows[link]'>
-                    <tr><th scope='row'>Link Menu</th>                <td><select id='input_menu_edit' name='a' class='form-control'>
+                    <tr><th scope='row'>Link Menu</th>                <td><select name='a' class='form-control'>
                                                                             <option value='0'>Tidak Ada Halaman</option>";
                                                                             foreach ($list_halaman as $row){
                                                                               if($row['type'] == 0){
@@ -32,8 +32,8 @@
                                                                               }
                                                                             }
                     echo "</select></td></tr>
-                    <tr><th scope='row'>Nama Menu</th>                 <td><input type='text' class='form-control' name='c' value='$rows[nama_menu]'></td></tr>
-                    <tr><th scope='row'>Urutan</th>                    <td><input type='number' class='form-control' name='e' style='width:70px' value='$rows[urutan]'></td></tr>
+                    <tr><th scope='row'>Nama Menu</th>                 <td><input type='text' class='form-control' name='c' value='$rows[nama_menu]' required></td></tr>
+                    <tr><th scope='row'>Urutan</th>                    <td><input type='number' class='form-control' name='e' style='width:70px' value='$rows[urutan]' required></td></tr>
                     <tr><th scope='row'>Aktif</th>                  <td>"; if ($rows['aktif'] == 'Ya'){
                                                                                 echo "<input type='radio' name='f' value='Ya' checked> Ya 
                                                                                       <input type='radio' name='f' value='Tidak'> Tidak";
@@ -47,8 +47,8 @@
                 </div>
               </div>
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Update</button>
-                    <a href='".base_url()."administrator/menuwebsite'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Simpan</button>
+                    <a href='".base_url()."administrator/menuwebsite'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div>";

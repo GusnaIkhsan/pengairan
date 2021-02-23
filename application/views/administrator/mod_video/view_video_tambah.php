@@ -23,7 +23,7 @@
               
               <div class='box-footer'>
                     <button type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
-                    <a href='".base_url('administrator/video')."'><button type='button' class='btn btn-default'>Cancel</button></a>
+                    <a href='".base_url('administrator/video')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div></div></div>";

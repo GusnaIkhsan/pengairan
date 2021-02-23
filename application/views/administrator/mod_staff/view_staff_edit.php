@@ -12,11 +12,11 @@
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id]'>
                     <input type='hidden' name='oldFile' value='$rows[foto]'>
-                    <tr><th width='120px' scope='row'>Nama Staff</th>   <td><input type='text' class='form-control' name='name' value='$rows[name]'></td></tr>";                                                                       
+                    <tr><th width='120px' scope='row'>Nama Staff</th>   <td><input type='text' class='form-control' name='name' value='$rows[name]' required></td></tr>";                                                                       
                     echo "</td></tr>
-                    <tr><th width='120px' scope='row'>NIP / NIK</th>   <td><input type='text' class='form-control' name='nipnik' value='$rows[nipnik]'></td></tr>
-                    <tr><th width='120px' scope='row'>Bidang Pelayanan</th>   <td><input type='text' class='form-control' name='pelayanan' value='$rows[pelayanan]'></td></tr>
-                    <tr><th width='120px' scope='row'>Tupoksi</th>   <td><input type='text' class='form-control' name='tupoksi' value='$rows[tupoksi]'></td></tr>
+                    <tr><th width='120px' scope='row'>NIP / NIK</th>   <td><input type='text' class='form-control' name='nipnik' value='$rows[nipnik]' required></td></tr>
+                    <tr><th width='120px' scope='row'>Bidang Pelayanan</th>   <td><input type='text' class='form-control' name='pelayanan' value='$rows[pelayanan]' required></td></tr>
+                    <tr><th width='120px' scope='row'>Tupoksi</th>   <td><input type='text' class='form-control' name='tupoksi' value='$rows[tupoksi]' required></td></tr>
                     <tr><th scope='row'>Workshop/Pelatihan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pelatihan'>$rows[pelatihan]</textarea></td></tr>
                     <tr><th scope='row'>Penghargaan & Paten</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'>$rows[penghargaan]</textarea></td></tr>                    
                     <tr><th scope='row'>Aktivitas Penunjang</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penunjang'>$rows[penunjang]</textarea></td></tr>                    
@@ -29,8 +29,8 @@
                 </div>
               
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Update</button>
-                    <a href='".base_url('staff')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Simpan</button>
+                    <a href='".base_url('staff')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div></div></div>";

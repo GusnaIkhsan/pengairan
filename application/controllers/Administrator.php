@@ -972,45 +972,25 @@ class Administrator extends CI_Controller {
 
     function edit_prodi(){
         $id = $this->uri->segment(3);
-        if (isset($_POST['submit'])){
-            $config['upload_path'] = 'asset/img_album/';
-            $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-            $config['max_size'] = '3000'; // kb
-            $this->load->library('upload', $config);
-            $this->upload->do_upload('c');
-            $hasil=$this->upload->data();
-            if ($hasil['file_name']==''){
+        if (isset($_POST['submit'])){            
                 $data = array('nm_prodi'=>$this->input->post('a'),
                             'prodi_seo'=>seo_title($this->input->post('a')),
                             'keterangans'=>$this->input->post('b'),
                             'aktif'=>$this->input->post('d'));
-            }else{
-                $data = array('nm_prodi'=>$this->input->post('a'),
-                            'prodi_seo'=>seo_title($this->input->post('a')),
-                            'keterangans'=>$this->input->post('b'),
-                            'gbr_prodi'=>$hasil['file_name'],
-                            'aktif'=>$this->input->post('d'));
-            }
+            
             $where = array('id_prodi' => $this->input->post('id'));
             $this->model_app->update('prodi', $data, $where);
             redirect('administrator/prodi');
         }else{
-            if ($this->session->level=='admin'){
-                $proses = $this->model_app->edit('prodi', array('id_prodi' => $id))->row_array();
-            }else{
-                $proses = $this->model_app->edit('prodi', array('id_prodi' => $id, 'username' => $this->session->username))->row_array();
-            }
+            $proses = $this->model_app->edit('prodi', array('id_prodi' => $id))->row_array();
             $data = array('rows' => $proses);
             $this->template->load('administrator/template','administrator/mod_prodi/view_prodi_edit',$data);
         }
     }
 
-    function delete_prodi(){
-        if ($this->session->level=='admin'){
-            $id = array('id_prodi' => $this->uri->segment(3));
-        }else{
-            $id = array('id_prodi' => $this->uri->segment(3), 'username'=>$this->session->username);
-        }
+    function delete_prodi(){  
+        $id = array('id_prodi' => $this->uri->segment(3));
+       
         $this->model_app->delete('prodi',$id);
         redirect('administrator/prodi');
     }
@@ -1018,11 +998,7 @@ class Administrator extends CI_Controller {
     // Controller Dosen
     function dosen(){
         cek_session_admin();
-        // if ($this->session->level=='admin'){
-            $data['record'] = $this->model_app->view_join_one('dosen','fakultas','id_fakultas','id_dosen','DESC');
-        // }else{
-        //     $data['record'] = $this->model_app->view_join_where('dosen','fakultas','id_fakultas',array('dosen.username'=>$this->session->username),'id_dosen','DESC');
-        // }
+        $data['record'] = $this->model_app->view_join_one('dosen','fakultas','id_fakultas','id_dosen','DESC');
         $this->template->load('administrator/template','administrator/mod_dosen/view_dosen',$data);
     }
 
@@ -1094,22 +1070,14 @@ class Administrator extends CI_Controller {
             redirect('administrator/dosen');
         }else{
             $record = $this->model_app->view_ordering('fakultas','id_fakultas','DESC');
-            // if ($this->session->level=='admin'){
-                $proses = $this->model_app->edit('dosen', array('id_dosen' => $id))->row_array();
-            // }else{
-            //     $proses = $this->model_app->edit('dosen', array('id_dosen' => $id, 'username' => $this->session->username))->row_array();
-            // }
+            $proses = $this->model_app->edit('dosen', array('id_dosen' => $id))->row_array();
             $data = array('rows' => $proses,'record' => $record);
             $this->template->load('administrator/template','administrator/mod_dosen/view_dosen_edit',$data);
         }
     }
 
     function delete_dosen(){
-        if ($this->session->level=='admin'){
-            $id = array('id_dosen' => $this->uri->segment(3));
-        }else{
-            $id = array('id_dosen' => $this->uri->segment(3), 'username'=>$this->session->username);
-        }
+        $id = array('id_dosen' => $this->uri->segment(3));
         $this->model_app->delete('dosen',$id);
         redirect('administrator/dosen');
     }
@@ -1310,12 +1278,7 @@ class Administrator extends CI_Controller {
 
     function video(){
         cek_session_admin();
-        // if ($this->session->level=='admin'){
-            // $data['record'] = $this->model_app->view_join_one('video','playlist','id_playlist','id_video','DESC');
         $data['record'] = $this->model_app->view_ordering('video','id_video','DESC');
-        // }else{
-        //     $data['record'] = $this->model_app->view_join_where('video','playlist','id_playlist',array('video.username'=>$this->session->username),'id_video','DESC');
-        // }
         $this->template->load('administrator/template','administrator/mod_video/view_video',$data);
     }
 
@@ -1395,17 +1358,12 @@ class Administrator extends CI_Controller {
             $proses = $this->model_app->edit('video', array('id_video' => $id))->row_array();           
             
             $data = array('rows' => $proses);
-            // var_dump($data);
             $this->template->load('administrator/template','administrator/mod_video/view_video_edit',$data);
         }
     }
 
-    function delete_video(){
-        if ($this->session->level=='admin'){
-            $id = array('id_video' => $this->uri->segment(3));
-        }else{
-            $id = array('id_video' => $this->uri->segment(3), 'username'=>$this->session->username);
-        }
+    function delete_video(){        
+        $id = array('id_video' => $this->uri->segment(3));      
         $this->model_app->delete('video',$id);
         redirect('administrator/video');
     }
@@ -1655,12 +1613,8 @@ class Administrator extends CI_Controller {
     }
 
     function delete_foto(){
-        cek_session_admin();
-        if ($this->session->level=='admin'){
-            $id = array('id' => $this->uri->segment(3));
-        }else{
-            $id = array('id' => $this->uri->segment(3));
-        }
+        cek_session_admin();  
+        $id = array('id' => $this->uri->segment(3));      
         $data = $this->model_app->select_where("foto","id",$id["id"]);
         unlink('asset/foto/'.$data[0]['name_gmbr']);
         $this->model_app->delete('foto',$id);

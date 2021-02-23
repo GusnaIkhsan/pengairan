@@ -11,16 +11,16 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value=''>
-                    <tr><th width='120px' scope='row'>Nama Kategori</th>    <td><input type='text' class='form-control' name='a' required></td></tr>
+                    <tr><th width='120px' scope='row'>Nama Kategori <span style=\"color: red;\">*</span></th>    <td><input type='text' class='form-control' name='a' required></td></tr>
                     <tr><th scope='row'>Aktif</th>                          <td><input type='radio' name='b' value='Y' checked> Ya &nbsp; <input type='radio' name='b' value='N'> Tidak</td></tr>
-                    <tr><th scope='row'>Posisi</th>                         <td><input type='text' class='form-control' name='c'></td></tr>
+                    <tr><th scope='row'>Posisi <span style=\"color: red;\">*</span></th>                         <td><input type='text' class='form-control' name='c' required></td></tr>
                   </tbody>
                   </table>
                 </div>
               </div>
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Tambahkan</button>
-                    <a href='index.php'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
+                    <a href='".base_url('administrator/kategoriberita')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div>";

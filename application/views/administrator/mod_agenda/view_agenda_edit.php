@@ -17,7 +17,7 @@
                     <tbody>
                       <input type='hidden' name='id' value='$rows[id_agenda]'>
                       <input type='hidden' name='oldFile' value='$rows[gambar]'>
-                      <tr><th width='120px' scope='row'>Tema</th>   <td><input type='text' class='form-control' name='a' value='$rows[tema]'></td></tr>";
+                      <tr><th width='120px' scope='row'>Tema</th>   <td><input type='text' class='form-control' name='a' value='$rows[tema]' required></td></tr>";
                       echo "
                       <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
                                                                               <option value='' selected>- Pilih Foto -</option>";
@@ -27,7 +27,7 @@
                        echo "</td>
                       </tr>  
                       <tr><th scope='row'>URL Foto</th>               <td><input type='text' id='urlfoto' class='form-control' readonly></td></tr>                                                       
-                      <tr><th scope='row'>Isi Agenda</th>           <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px'>$rows[isi_agenda]</textarea></td></tr>
+                      <tr><th scope='row'>Isi Agenda</th>           <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px' required>$rows[isi_agenda]</textarea></td></tr>
                       <tr><th scope='row'>Thumbnail</th>               <td><input type='file' class='form-control' name='c' accept=\"image/*\">";
                                                                           if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."asset/foto_agenda/$rows[gambar]'>$rows[gambar]</a>"; } echo "</td></tr>
                       </td></tr>
@@ -40,8 +40,8 @@
                 </div>
               </div>
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Update</button>
-                    <a href='".base_url('administrator/agenda')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info' pull-right>Simpan</button>
+                    <a href='".base_url('administrator/agenda')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div>";

@@ -11,7 +11,7 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value=''>
-                    <tr><th scope='row'>Link Menu</th>                <td><select id='input_menu' name='a' class='form-control'>
+                    <tr><th scope='row'>Link Menu <span style=\"color: red;\">*</span></th>                <td><select name='a' class='form-control' required>
                                                                             <option value='0' selected>Tidak Ada Halaman</option>";
                                                                             foreach ($list_halaman as $row){
                                                                               if($row['type'] == 0){
@@ -21,21 +21,21 @@
                                                                               }
                                                                             }
                     echo "</td></tr>
-                    <tr><th scope='row'>Level Menu</th>                <td><select name='b' class='form-control'>
+                    <tr><th scope='row'>Level Menu <span style=\"color: red;\">*</span></th>                <td><select name='b' class='form-control' required>
                                                                             <option value='0' selected>Menu Utama</option>";
                                                                             foreach ($record as $row){
                                                                                 echo "<option value='$row[id_menu]'>$row[nama_menu]</option>";
                                                                             }
                     echo "</td></tr>
-                    <tr><th scope='row'>Nama Menu</th>                 <td><input type='text' class='form-control' name='c'></td></tr>
-                    <tr><th scope='row'>Urutan</th>                    <td><input type='number' class='form-control' name='e' style='width:70px'></td></tr>
+                    <tr><th scope='row'>Nama Menu <span style=\"color: red;\">*</span></th>                 <td><input type='text' class='form-control' name='c' required></td></tr>
+                    <tr><th scope='row'>Urutan <span style=\"color: red;\">*</span></th>                    <td><input type='number' class='form-control' name='e' style='width:70px' required></td></tr>
                   </tbody>
                   </table>
                 </div>
               </div>
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Tambahkan</button>
-                    <a href='".base_url()."administrator/menuwebsite'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
+                    <a href='".base_url()."administrator/menuwebsite'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div>";

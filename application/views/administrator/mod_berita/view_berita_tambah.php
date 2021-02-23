@@ -14,16 +14,16 @@
                     <input type='hidden' name='f' value='N'>
                     <input type='hidden' name='g' value='N'>
 
-                    <tr><th width='120px' scope='row'>Judul</th>    <td><input type='text' class='form-control' name='b' required></td></tr>
+                    <tr><th width='120px' scope='row'>Judul <span style=\"color: red;\">*</span></th>    <td><input type='text' class='form-control' name='b' required></td></tr>
                     <tr><th scope='row'>Sub Judul</th>              <td><input type='text' class='form-control' name='c'></td></tr>
                     <tr><th scope='row'>Video Youtube</th>          <td><input type='text' class='form-control' name='d' placeholder='Contoh link: http://www.youtube.com/embed/xbuEmoRWQHU'></td></tr>
-                    <tr><th scope='row'>Kategori Prodi</th>         <td><select name='kategori-prodi' class='form-control' required>
+                    <tr><th scope='row'>Kategori Prodi <span style=\"color: red;\">*</span></th>         <td><select name='kategori-prodi' class='form-control' required>
                                                                             <option value='' selected>- Pilih Kategori Prodi -</option>";
                                                                             foreach ($prodi->result_array() as $row){
                                                                                 echo "<option value='$row[id_prodi]'>$row[nm_prodi]</option>";
                                                                             }
                     echo "</td></tr>
-                    <tr><th scope='row'>Kategori Berita</th>               <td><select name='a' class='form-control' required>
+                    <tr><th scope='row'>Kategori Berita <span style=\"color: red;\">*</span></th>               <td><select name='a' class='form-control' required>
                                                                             <option value='' selected>- Pilih Kategori Berita -</option>";
                                                                             foreach ($record->result_array() as $row){
                                                                                 echo "<option value='$row[id_kategori]'>$row[nama_kategori]</option>";
@@ -40,7 +40,7 @@
                     echo " </td>
                     </tr>
                     <tr><th scope='row'>URL Foto</th>               <td><input type='text' id='urlfoto' class='form-control' readonly></td></tr>                                                  
-                    <tr><th scope='row'>Isi Berita</th>             <td><textarea id='editor1' class='ckeditor form-control' name='h' style='height:260px' required></textarea></td></tr>
+                    <tr><th scope='row'>Isi Berita <span style=\"color: red;\">*</span></th>             <td><textarea id='editor1' class='ckeditor form-control' name='h' style='height:260px' required></textarea></td></tr>
                     <tr><th scope='row'>Thumbnail</th>                 <td><input type='file' class='form-control' name='k' accept=\"image/*\"></td></tr>
                     <tr><th scope='row'>Ket. Gambar</th>            <td><input type='text' class='form-control' name='i'></td></tr>
                     <tr><th scope='row'>Tag</th>                    <td>";
@@ -53,8 +53,8 @@
                 </div>
               </div>
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Tambahkan</button>
-                    <a href='".base_url('administrator/listberita')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
+                    <a href='".base_url('administrator/listberita')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div>";

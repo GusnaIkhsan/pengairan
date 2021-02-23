@@ -11,7 +11,7 @@
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value=''>
-                    <tr><th width='120px' scope='row'>Program Studi</th>   <td><input type='text' class='form-control' name='a'></td></tr>
+                    <tr><th width='120px' scope='row'>Program Studi <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='a' required></td></tr>
                     <tr><th scope='row'>Keterangan</th>                 <td><textarea id='editor1' class='form-control' name='b'></textarea></td></tr>
                     
                   </tbody>
@@ -19,8 +19,8 @@
                 </div>
               
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info'>Tambahkan</button>
-                    <a href='".base_url('administrator/prodi')."'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
+                    <a href='".base_url('administrator/prodi')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div></div></div>";
