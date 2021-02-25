@@ -2,11 +2,11 @@
     echo "<div class='col-md-12'>
               <div class='box box-info'>
                 <div class='box-header with-border'>
-                  <h3 class='box-title'>Edit Berita Terpilih</h3>
+                  <h3 class='box-title'>Edit Pengumuman Terpilih</h3>
                 </div>
               <div class='box-body'>";
               $attributes = array('class'=>'form-horizontal','role'=>'form');
-              echo form_open_multipart('administrator/edit_listberita',$attributes); 
+              echo form_open_multipart('administrator/edit_pengumuman',$attributes); 
           echo "<div class='col-md-12'>
                   <table class='table table-condensed table-bordered'>
                   <tbody>
@@ -25,19 +25,9 @@
                                                                                   echo "<option value='$row[id_prodi]'>$row[nm_prodi]</option>";
                                                                                 }
                                                                             }
+                    echo "</td></tr>";
                     echo "</td></tr>
-                    <tr><th scope='row'>Kategori Berita</th>        <td><select name='a' class='form-control' required>
-                                                                        <option value='' selected>- Pilih Kategori Prodi -</option>";
-                                                                            foreach ($record->result_array() as $row){
-                                                                                if ($rows['id_kategori'] == $row['id_kategori']){
-                                                                                  echo "<option value='$row[id_kategori]' selected>$row[nama_kategori]</option>";
-                                                                                }else{
-                                                                                  echo "<option value='$row[id_kategori]'>$row[nama_kategori]</option>";
-                                                                                }
-                                                                            }
-                    echo "</td></tr>
-                    <tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date' value='$rows[tanggal]'></td></tr>
-                    <tr><th scope='row'>Headline</th>               <td>"; if ($rows['headline']=='Y'){ echo "<input type='radio' name='e' value='Y' checked> Ya &nbsp; <input type='radio' name='e' value='N'> Tidak"; }else{ echo "<input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak"; }
+                    <tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date' value='$rows[tanggal]'></td></tr>";
                     echo "
                     <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
                                                                             <option value='' selected>- Pilih Foto -</option>";
@@ -55,15 +45,15 @@
                     echo "</td>
                       </tr>
                     <tr><th scope='row'>URL File</th>               <td><input type='text' id='urlfile' class='form-control' readonly></td></tr>
-                    <tr><th scope='row'>Isi Berita</th>             <td><textarea id='editor1' class='ckeditor form-control' name='h' style='height:260px' required>$rows[isi_berita]</textarea></td></tr>
+                    <tr><th scope='row'>Isi Pengumuman</th>             <td><textarea id='editor1' class='ckeditor form-control' name='h' style='height:260px' required>$rows[isi_berita]</textarea></td></tr>
                     <tr><th scope='row'>Thumbnail</th>                 <td><input type='file' class='form-control' name='k' accept=\"image/*\">";
-                                                                               if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."asset/foto_berita/$rows[gambar]'>$rows[gambar]</a>"; } echo "</td></tr>                    
-                    <tr><th scope='row'>Tag</th>                    <td>";
-                                                                            $_arrNilai = explode(',', $rows['tag']);
-                                                                            foreach ($tag->result_array() as $tag){
-                                                                                $_ck = (array_search($tag['tag_seo'], $_arrNilai) === false)? '' : 'checked';
-                                                                                echo "<span style='display:inline-block;'><input type=checkbox value='$tag[tag_seo]' name=j[] $_ck>$tag[nama_tag] &nbsp; &nbsp; &nbsp; </span>";
-                                                                            }
+                                                                               if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."asset/foto_berita/$rows[gambar]'>$rows[gambar]</a>"; } echo "</td></tr>";                    
+                    // <tr><th scope='row'>Tag</th>                    <td>";
+                    //                                                         $_arrNilai = explode(',', $rows['tag']);
+                    //                                                         foreach ($tag->result_array() as $tag){
+                    //                                                             $_ck = (array_search($tag['tag_seo'], $_arrNilai) === false)? '' : 'checked';
+                    //                                                             echo "<span style='display:inline-block;'><input type=checkbox value='$tag[tag_seo]' name=j[] $_ck>$tag[nama_tag] &nbsp; &nbsp; &nbsp; </span>";
+                    //                                                         }
                     echo "</td></tr>
                   </tbody>
                   </table>
@@ -71,7 +61,7 @@
               </div>
               <div class='box-footer'>
                     <button type='submit' name='submit' class='btn btn-info pull-right'>Simpan</button>
-                    <a href='".base_url('administrator/listberita')."'><button type='button' class='btn btn-default'>Batal</button></a>
+                    <a href='".base_url('administrator/pengumuman')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>
             </div>";

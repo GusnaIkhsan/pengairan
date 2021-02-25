@@ -37,7 +37,16 @@
                                                                             }
                     echo "</td>
                     </tr>
-                    <tr><th scope='row'>URL Foto</th>               <td><input type='text' id='urlfoto' class='form-control' readonly></td></tr>   
+                    <tr><th scope='row'>URL Foto</th>               <td><input type='text' id='urlfoto' class='form-control' readonly></td></tr>";
+                    echo "
+                    <tr><th scope='row'>Daftar File</th>               <td><select name='file' id='file' class='form-control'>
+                                                                            <option value='' selected>- Pilih File -</option>";
+                                                                            foreach ($file as $row){
+                                                                              echo "<option value='$row[file_name]'>$row[name]</option>";
+                                                                            }
+                    echo "</td>
+                    </tr>
+                    <tr><th scope='row'>URL File</th>               <td><input type='text' id='urlfile' class='form-control' readonly></td></tr> 
                     <tr id='content-halaman'><th scope='row'>Isi Halaman <span style=\"color: red;\">*</span></th>             <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px' required></textarea></td></tr>
                     <tr><th scope='row'>Banner</th>                    <td><input type='file' class='form-control' name='c' accept=\"image/*\"></td></tr>
                   </tbody>
@@ -55,5 +64,9 @@
               $('#foto').on('change', function() {
                 var nameImg = document.getElementById("foto").value;
                 document.getElementById("urlfoto").value = '<?php echo base_url('asset/foto/'); ?>'+'/'+nameImg;
+              });
+              $('#file').on('change', function() {
+                var nameFile = document.getElementById("file").value;
+                document.getElementById("urlfile").value = '<?php echo base_url('asset/files/'); ?>'+'/'+nameFile;
               });
             </script>

@@ -8,11 +8,13 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th style='width:20px'>No</th>
-                        <th>Tema</th>
-                        <th>Tgl Mulai</th>
-                        <th>Tgl Selesai</th>
+                        <th>No</th>
+                        <th style='width:350px'>Tema</th>
+                        <th>Tanggal Posting</th>
+                        <th>Tanggal Mulai</th>
+                        <th>Tanggal Selesai</th>
                         <th>Jam</th>
+                        <th>Uploader</th>
                         <th style='width:70px'>Action</th>
                       </tr>
                     </thead>
@@ -22,11 +24,14 @@
                     foreach ($record->result_array() as $row){
                     $tgl_mulai = tgl_indo($row['tgl_mulai']);
                     $tgl_selesai = tgl_indo($row['tgl_selesai']);
+                    $tgl_posting = tgl_indo($row['tgl_posting']);
                     echo "<tr><td>$no</td>
                               <td>$row[tema]</td>
+                              <td>$tgl_posting</td>
                               <td>$tgl_mulai</td>
                               <td>$tgl_selesai</td>
                               <td>$row[jam]</td>
+                              <td>$row[username]</td>
                               <td><center>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_agenda/$row[id_agenda]'><span class='glyphicon glyphicon-edit'></span></a>
                                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_agenda/$row[id_agenda]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>

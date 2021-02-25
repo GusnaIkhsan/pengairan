@@ -130,3 +130,5 @@ $route['prodi/(:any)'] = 'general/PresenterController/showProdi/$1';
 
 // Upload Foto
 $route['upload/foto']['POST'] = 'Administrator/tambah_foto';
+// Upload Berkas
+$route['upload/berkas']['POST'] = 'Administrator/tambah_file';

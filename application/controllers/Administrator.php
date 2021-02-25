@@ -108,6 +108,7 @@ class Administrator extends CI_Controller {
 			redirect('administrator/halamanbaru');
 		}else{
             $data['foto'] = $this->model_app->select_all('foto');
+            $data['file'] = $this->model_app->select_all('file');
             $this->template->load('administrator/template','administrator/mod_halaman/view_halaman_tambah',$data);
             $this->load->view('specificJS/manajemen_halaman_js');
 		}
@@ -122,6 +123,7 @@ class Administrator extends CI_Controller {
 		}else{
 			$data['rows'] = $this->model_halaman->halamanstatis_edit($id)->row_array();
             $data['foto'] = $this->model_app->select_all('foto');
+            $data['file'] = $this->model_app->select_all('file');
             $this->template->load('administrator/template','administrator/mod_halaman/view_halaman_edit',$data);
             $this->load->view('specificJS/manajemen_halaman_js');
 		}
@@ -155,6 +157,7 @@ class Administrator extends CI_Controller {
             $data['record'] = $this->model_berita->kategori_berita();
             $data['prodi'] = $this->model_berita->get_prodi();
             $data['foto'] = $this->model_app->select_all('foto');
+            $data['file'] = $this->model_app->select_all('file');
 			$this->template->load('administrator/template','administrator/mod_berita/view_berita_tambah',$data);
 		}
 	}
@@ -181,6 +184,7 @@ class Administrator extends CI_Controller {
             $data['rows'] = $this->model_berita->list_berita_edit($id)->row_array();
             $data['prodi'] = $this->model_berita->get_prodi();
             $data['foto'] = $this->model_app->select_all('foto');
+            $data['file'] = $this->model_app->select_all('file');
 			$this->template->load('administrator/template','administrator/mod_berita/view_berita_edit',$data);
 		}
 	}
@@ -193,6 +197,53 @@ class Administrator extends CI_Controller {
         }
         $this->model_berita->list_berita_delete($id);
 		redirect('administrator/listberita');
+	}
+
+    // Pengumuman
+    function pengumuman(){
+        cek_session_admin();
+		$data['record'] = $this->model_berita->list_pengumuman();
+		$this->template->load('administrator/template','administrator/mod_pengumuman/view_pengumuman',$data);
+    }
+
+    function tambah_pengumuman(){
+        cek_session_admin();
+		if (isset($_POST['submit'])){
+			$this->model_berita->pengumuman_tambah();
+			redirect('administrator/pengumuman');
+		}else{
+			$data['tag'] = $this->model_berita->tag_berita();
+            $data['prodi'] = $this->model_berita->get_prodi();
+            $data['foto'] = $this->model_app->select_all('foto');
+            $data['file'] = $this->model_app->select_all('file');
+			$this->template->load('administrator/template','administrator/mod_pengumuman/view_pengumuman_tambah',$data);
+		}
+    }
+
+    function edit_pengumuman(){
+		cek_session_admin();
+		$id = $this->uri->segment(3);
+		if (isset($_POST['submit'])){
+			$this->model_berita->pengumuman_update();
+			redirect('administrator/pengumuman');
+		}else{
+			$data['tag'] = $this->model_berita->tag_berita();			
+            $data['rows'] = $this->model_berita->list_berita_edit($id)->row_array();
+            $data['prodi'] = $this->model_berita->get_prodi();
+            $data['foto'] = $this->model_app->select_all('foto');
+            $data['file'] = $this->model_app->select_all('file');
+			$this->template->load('administrator/template','administrator/mod_pengumuman/view_pengumuman_edit',$data);
+		}
+	}
+
+    function delete_pengumuman(){
+		$id = $this->uri->segment(3);
+        $data = $this->model_app->select_where("berita","id_berita",$id["id_berita"]);
+        if("default_berita.jpg"!=$data[0]['gambar']){
+            unlink('asset/foto_berita/'.$data[0]['gambar']);
+        }
+        $this->model_berita->list_berita_delete($id);
+		redirect('administrator/pengumuman');
 	}
 
 
@@ -554,6 +605,7 @@ class Administrator extends CI_Controller {
 			redirect('administrator/agenda');
 		}else{
             $data['foto'] = $this->model_app->select_all('foto');
+            $data['file'] = $this->model_app->select_all('file');
 			$this->template->load('administrator/template','administrator/mod_agenda/view_agenda_tambah',$data);
 		}
 	}
@@ -567,6 +619,7 @@ class Administrator extends CI_Controller {
 		}else{
 			$data['rows'] = $this->model_agenda->agenda_edit($id)->row_array();
             $data['foto'] = $this->model_app->select_all('foto');
+            $data['file'] = $this->model_app->select_all('file');
 			$this->template->load('administrator/template','administrator/mod_agenda/view_agenda_edit',$data);
 		}
 	}
@@ -1571,7 +1624,6 @@ class Administrator extends CI_Controller {
         $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
         $config['max_size'] = '5000'; // kb
         $this->load->library('upload', $config);
-        $this->upload->do_upload('fileImg');
         
         if($this->upload->do_upload('fileImg')){            
             $hasil=$this->upload->data();
@@ -1592,7 +1644,6 @@ class Administrator extends CI_Controller {
             $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
             $config['max_size'] = '5000'; // kb
             $this->load->library('upload', $config);
-            $this->upload->do_upload('fileImg');
             if($this->upload->do_upload('fileImg')){                            
                 $hasil=$this->upload->data();
                 $datadb= array('name'=>$this->input->post('nameFile'),
@@ -1604,6 +1655,10 @@ class Administrator extends CI_Controller {
                 $this->model_app->update('foto', $datadb, $where);
                 redirect('administrator/foto');
             }else{
+                $datadb= array('name'=>$this->input->post('nameFile'),                                
+                                'uploader'=>$this->session->username);                      
+                $where = array('id' => $this->input->post('id'));
+                $this->model_app->update('foto', $datadb, $where);
                 redirect('administrator/foto');
             }
         }else{
@@ -1629,6 +1684,71 @@ class Administrator extends CI_Controller {
             $this->model_app->update('general_setting', $datadb, $where);     
         }
         redirect('administrator/home');           
+    }
+
+    function file(){
+        cek_session_admin();
+        $data['record'] = $this->model_app->view_ordering('file','id','DESC');
+        $this->template->load('administrator/template','administrator/mod_file/view_file',$data);
+    }
+
+    function tambah_file(){
+        $config['upload_path'] = 'asset/files/';
+        $config['allowed_types'] =  'gif|jpg|png|zip|rar|pdf|doc|docx|ppt|pptx|xls|xlsx|txt';
+        $config['max_size'] = '15000'; // kb
+        $this->load->library('upload', $config);        
+        
+        if($this->upload->do_upload('fileBerkas')){            
+            $hasil=$this->upload->data();
+            $datadb= array('name'=>$this->input->post('nameFile'),
+                            'file_name'=>$hasil['file_name'],
+                            'uploader'=>$this->session->username,
+                            'created_at'=>date('Y-m-d h:i:s'));
+            $this->db->insert('file',$datadb);
+        }else{
+            echo "Tidak berhasil disimpan";
+        }
+    }
+
+    function edit_file(){
+        cek_session_admin();
+        $id = $this->uri->segment(3);
+        if (isset($_POST['submit'])){
+            $config['upload_path'] = 'asset/files/';
+            $config['allowed_types'] =  'gif|jpg|png|zip|rar|pdf|doc|docx|ppt|pptx|xls|xlsx|txt';
+            $config['max_size'] = '15000'; // kb
+            $this->load->library('upload', $config);
+
+            if($this->upload->do_upload('fileBerkas')){                            
+                $hasil=$this->upload->data();
+                $datadb= array('name'=>$this->input->post('nameFile'),
+                                'file_name'=>$hasil['file_name'],
+                                'uploader'=>$this->session->username,
+                                'updated_at'=>date('Y-m-d h:i:s'));
+    
+                unlink('asset/files/'.$this->input->post('oldFile'));                
+                $where = array('id' => $this->input->post('id'));        
+            }else{
+                $datadb= array('name'=>$this->input->post('nameFile'),                                
+                                'uploader'=>$this->session->username,
+                                'updated_at'=>date('Y-m-d h:i:s'));                      
+                $where = array('id' => $this->input->post('id'));
+            }
+            $this->model_app->update('file', $datadb, $where);
+            redirect('administrator/file');
+        }else{
+            $data['record'] = $this->model_app->edit('file', array('id' => $id))->row_array();
+            $this->template->load('administrator/template','administrator/mod_file/view_file_edit',$data);
+        }
+    }
+
+    function delete_file(){
+        cek_session_admin();  
+        $id = array('id' => $this->uri->segment(3));      
+        $data = $this->model_app->select_where("file","id",$id["id"]);
+        unlink('asset/files/'.$data[0]['file_name']);
+        $this->model_app->delete('file',$id);
+        redirect('administrator/file');
     }
 
 	function logout(){        

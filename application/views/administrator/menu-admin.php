@@ -61,15 +61,18 @@
               </ul>
             </li> -->
             <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-pushpin"></i> <span>Agenda</span><i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
+              <a href="<?php echo base_url(); ?>administrator/pengumuman"><i class="fa fa-bullhorn"></i> <span>Pengumuman</span><i class="pull-right"></i></a>             
+            </li>
+            <li class="treeview">
+              <a href="<?php echo base_url(); ?>administrator/agenda"><i class="glyphicon glyphicon-pushpin"></i> <span>Agenda</span><i class="pull-right"></i></a>
+              <!-- <ul class="treeview-menu"> -->
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/logowebsite"><i class="fa fa-circle-o"></i> Logo Website</a></li> -->
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/lowker"><i class="fa fa-circle-o"></i> Info Lowker</a></li> -->
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/download"><i class="fa fa-circle-o"></i> File Download</a></li> -->
-                <li><a href="<?php echo base_url(); ?>administrator/agenda"><i class="fa fa-circle-o"></i> List Agenda</a></li>
+                <!-- <li><a href="<?php echo base_url(); ?>administrator/agenda"><i class="fa fa-circle-o"></i> List Agenda</a></li> -->
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/linkterkait"><i class="fa fa-circle-o"></i> Link Terkait</a></li> -->
                 <!-- <li><a href="<?php echo base_url(); ?>administrator/pesanmasuk"><i class="fa fa-circle-o"></i> Pesan Masuk</a></li> -->
-              </ul>
+              <!-- </ul> -->
             </li>
 
             <li class="treeview">
@@ -86,7 +89,7 @@
                 <!-- <li><a href='<?php echo base_url(); ?>administrator/playlist'><i class='fa fa-circle-o'></i> Playlist Video</a></li> -->
                 <li><a href='<?php echo base_url(); ?>administrator/video'><i class='fa fa-circle-o'></i> Video</a></li>
                 <li><a href='<?php echo base_url(); ?>administrator/foto'><i class='fa fa-circle-o'></i> Foto</a></li>
-                <!-- <li><a href='<?php echo base_url(); ?>administrator/tagvideo'><i class='fa fa-circle-o'></i> Tag Video</a></li> -->
+                <li><a href='<?php echo base_url(); ?>administrator/file'><i class='fa fa-circle-o'></i> File</a></li>
               </ul>
             </li>
 

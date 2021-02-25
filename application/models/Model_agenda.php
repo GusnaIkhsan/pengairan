@@ -23,24 +23,31 @@ class Model_agenda extends CI_model{
     function agenda_tambah(){
             $config['upload_path'] = 'asset/foto_agenda/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-            $config['max_size'] = '4000'; // kb
+            $config['max_size'] = '5000'; // kb
             $this->load->library('upload', $config);
             $ex = explode(' - ',$this->input->post('f'));
             $exx = explode('/',$ex[0]);
             $exy = explode('/',$ex[1]);
             $mulai = $exx[2].'-'.$exx[0].'-'.$exx[1];
             $selesai = $exy[2].'-'.$exy[0].'-'.$exy[1];
+
+            if(empty($this->input->post('date'))){
+                $tanggal = date('Y-m-d');
+            }else{
+                $tanggal = $this->input->post('date');
+            }
+
             if ($this->upload->do_upload('c')){
                 $hasil=$this->upload->data();
                     $datadb = array('tema'=>$this->db->escape_str($this->input->post('a')),
                                     'tema_seo'=>seo_title($this->input->post('a')),
                                     'isi_agenda'=>$this->input->post('b'),
                                     'tempat'=>$this->db->escape_str($this->input->post('d')),
-                                    'pengirim'=>$this->db->escape_str($this->input->post('g')),
+                                    'pengirim'=>"",
                                     'gambar'=>$hasil['file_name'],
                                     'tgl_mulai'=>$mulai,
                                     'tgl_selesai'=>$selesai,
-                                    'tgl_posting'=>date('Y-m-d'),
+                                    'tgl_posting'=>$tanggal,
                                     'jam'=>$this->db->escape_str($this->input->post('e')),
                                     'dibaca'=>'0',
                                     'username'=>$this->session->username);
@@ -49,11 +56,11 @@ class Model_agenda extends CI_model{
                                     'tema_seo'=>seo_title($this->input->post('a')),
                                     'isi_agenda'=>$this->input->post('b'),
                                     'tempat'=>$this->db->escape_str($this->input->post('d')),
-                                    'pengirim'=>$this->db->escape_str($this->input->post('g')),
+                                    'pengirim'=>"",
                                     'gambar'=>"default_agenda.jpg",
                                     'tgl_mulai'=>$mulai,
                                     'tgl_selesai'=>$selesai,
-                                    'tgl_posting'=>date('Y-m-d'),
+                                    'tgl_posting'=>$tanggal,
                                     'jam'=>$this->db->escape_str($this->input->post('e')),
                                     'dibaca'=>'0',
                                     'username'=>$this->session->username);
@@ -68,23 +75,31 @@ class Model_agenda extends CI_model{
     function agenda_update(){
             $config['upload_path'] = 'asset/foto_agenda/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-            $config['max_size'] = '4000'; // kb
+            $config['max_size'] = '5000'; // kb
             $this->load->library('upload', $config);
             $ex = explode(' - ',$this->input->post('f'));
             $exx = explode('/',$ex[0]);
             $exy = explode('/',$ex[1]);
             $mulai = $exx[2].'-'.$exx[0].'-'.$exx[1];
             $selesai = $exy[2].'-'.$exy[0].'-'.$exy[1];
+
+            if(empty($this->input->post('date'))){
+                $tanggal = date('Y-m-d');
+            }else{
+                $tanggal = $this->input->post('date');
+            }
+
             if ($this->upload->do_upload('c')){
                 $hasil=$this->upload->data();
                     $datadb = array('tema'=>$this->db->escape_str($this->input->post('a')),
                                     'tema_seo'=>seo_title($this->input->post('a')),
                                     'isi_agenda'=>$this->input->post('b'),
                                     'tempat'=>$this->db->escape_str($this->input->post('d')),
-                                    'pengirim'=>$this->db->escape_str($this->input->post('g')),
+                                    'pengirim'=>"",
                                     'gambar'=>$hasil['file_name'],
                                     'tgl_mulai'=>$mulai,
                                     'tgl_selesai'=>$selesai,
+                                    'tgl_posting'=>$tanggal,
                                     'jam'=>$this->db->escape_str($this->input->post('e')),
                                     'dibaca'=>'0',
                                     'username'=>$this->session->username);
@@ -96,9 +111,10 @@ class Model_agenda extends CI_model{
                                     'tema_seo'=>seo_title($this->input->post('a')),
                                     'isi_agenda'=>$this->input->post('b'),
                                     'tempat'=>$this->db->escape_str($this->input->post('d')),
-                                    'pengirim'=>$this->db->escape_str($this->input->post('g')),                                  
+                                    'pengirim'=>"",                                  
                                     'tgl_mulai'=>$mulai,
                                     'tgl_selesai'=>$selesai,
+                                    'tgl_posting'=>$tanggal,
                                     'jam'=>$this->db->escape_str($this->input->post('e')),
                                     'dibaca'=>'0',
                                     'username'=>$this->session->username);

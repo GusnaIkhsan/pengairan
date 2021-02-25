@@ -60,11 +60,15 @@ class Model_berita extends CI_model{
     }
 
     function list_berita(){
-        return $this->db->query("SELECT * FROM berita ORDER BY id_berita DESC");
+        return $this->db->query("SELECT * FROM berita WHERE id_kategori NOT IN (61) ORDER BY id_berita DESC");
+    }
+
+    function list_pengumuman(){
+        return $this->db->query("SELECT * FROM berita WHERE id_kategori=61 ORDER BY id_berita DESC");
     }
 
     function kategori_berita(){
-        return $this->db->query("SELECT * FROM kategori ORDER BY id_kategori DESC");
+        return $this->db->query("SELECT * FROM kategori WHERE id_kategori NOT IN (61) ORDER BY id_kategori DESC");
     }
 
     function kategori_berita_tambah(){
@@ -125,9 +129,8 @@ class Model_berita extends CI_model{
     function list_berita_tambah(){
         $config['upload_path'] = 'asset/foto_berita/';
         $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
-        $config['max_size'] = '4000'; // kb
-        $this->load->library('upload', $config);
-        if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
+        $config['max_size'] = '5000'; // kb
+        $this->load->library('upload', $config);        
         if ($this->input->post('j') != ''){
             $tag_seo = $this->input->post('j');
             $tag=implode(',',$tag_seo);
@@ -147,41 +150,41 @@ class Model_berita extends CI_model{
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
-                                    'sub_judul'=>$this->db->escape_str($this->input->post('c')),
-                                    'youtube'=>$this->db->escape_str($this->input->post('d')),
+                                    'sub_judul'=>$this->db->escape_str($this->input->post('c')),                                   
+                                    'youtube'=>"",
                                     'judul_seo'=>seo_title($this->input->post('b')),
                                     'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'aktif'=>$this->db->escape_str($this->input->post('f')),
                                     'utama'=>$this->db->escape_str($this->input->post('g')),
                                     'isi_berita'=>$this->input->post('h'),
-                                    'keterangan_gambar'=>$this->db->escape_str($this->input->post('i')),
+                                    'keterangan_gambar'=>"",
                                     'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
                                     'tanggal'=>$tanggal,
                                     'jam'=>date('H:i:s'),
                                     'gambar'=>$hasil['file_name'],
                                     'dibaca'=>'0',
                                     'tag'=>$tag,
-                                    'status'=>$status);
+                                    'status'=>'Y');
             }else{
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
-                                    'youtube'=>$this->db->escape_str($this->input->post('d')),
+                                    'youtube'=>"",
                                     'judul_seo'=>seo_title($this->input->post('b')),
                                     'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'aktif'=>$this->db->escape_str($this->input->post('f')),
                                     'utama'=>$this->db->escape_str($this->input->post('g')),
                                     'isi_berita'=>$this->input->post('h'),
-                                    'keterangan_gambar'=>$this->db->escape_str($this->input->post('i')),
+                                    'keterangan_gambar'=>"",
                                     'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
                                     'tanggal'=>$tanggal,
                                     'jam'=>date('H:i:s'),
                                     'gambar'=>'default_berita.jpg',               
                                     'dibaca'=>'0',
                                     'tag'=>$tag,
-                                    'status'=>$status);
+                                    'status'=>'Y');
             }
         $this->db->insert('berita',$datadb);
     }
@@ -211,9 +214,9 @@ class Model_berita extends CI_model{
     function list_berita_update(){
         $config['upload_path'] = 'asset/foto_berita/';
         $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-        $config['max_size'] = '4000'; // kb
+        $config['max_size'] = '5000'; // kb
         $this->load->library('upload', $config);
-            if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
+            // if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
             if ($this->input->post('j') != ''){
                 $tag_seo = $this->input->post('j');
                 $tag=implode(',',$tag_seo);
@@ -234,20 +237,18 @@ class Model_berita extends CI_model{
                                     'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
-                                    'youtube'=>$this->db->escape_str($this->input->post('d')),
+                                    'youtube'=>"",
                                     'judul_seo'=>seo_title($this->input->post('b')),
                                     'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'aktif'=>$this->db->escape_str($this->input->post('f')),
                                     'utama'=>$this->db->escape_str($this->input->post('g')),
                                     'isi_berita'=>$this->input->post('h'),
-                                    'keterangan_gambar'=>$this->db->escape_str($this->input->post('i')),
+                                    'keterangan_gambar'=>"",
                                     'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
-                                    'tanggal'=>$tanggal,
-                                    'jam'=>date('H:i:s'),
-                                    'gambar'=>$hasil['file_name'],
-                                    'dibaca'=>'0',
+                                    'tanggal'=>$tanggal,    
+                                    'gambar'=>$hasil['file_name'],                             
                                     'tag'=>$tag,
-                                    'status'=>$status);
+                                    'status'=>'Y');
                 if("default_berita.jpg"!=$this->input->post('oldFile')){
                     unlink('asset/foto_berita/'.$this->input->post('oldFile'));
                 }
@@ -257,19 +258,17 @@ class Model_berita extends CI_model{
                                     'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
-                                    'youtube'=>$this->db->escape_str($this->input->post('d')),
+                                    'youtube'=>"",
                                     'judul_seo'=>seo_title($this->input->post('b')),
                                     'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'aktif'=>$this->db->escape_str($this->input->post('f')),
                                     'utama'=>$this->db->escape_str($this->input->post('g')),
                                     'isi_berita'=>$this->input->post('h'),
-                                    'keterangan_gambar'=>$this->db->escape_str($this->input->post('i')),
-                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),      
-                                    'tanggal'=>$tanggal,
-                                    'jam'=>date('H:i:s'),                           
-                                    'dibaca'=>'0',
+                                    'keterangan_gambar'=>"",
+                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
+                                    'tanggal'=>$tanggal,                                                    
                                     'tag'=>$tag,
-                                    'status'=>$status);
+                                    'status'=>'Y');
             }
         
         $this->db->where('id_berita',$this->input->post('id'));
@@ -278,6 +277,125 @@ class Model_berita extends CI_model{
 
     function list_berita_delete($id){
         return $this->db->query("DELETE FROM berita where id_berita='$id'");
+    }
+
+    function pengumuman_tambah(){
+        $config['upload_path'] = 'asset/foto_berita/';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+        $config['max_size'] = '5000'; // kb
+        $this->load->library('upload', $config);        
+        if ($this->input->post('j') != ''){
+            $tag_seo = $this->input->post('j');
+            $tag=implode(',',$tag_seo);
+        }else{
+            $tag = '';
+        }
+        
+        if(empty($this->input->post('date'))){
+            $tanggal = date('Y-m-d');
+        }else{
+            $tanggal = $this->input->post('date');
+        }
+        
+        if ($this->upload->do_upload('k')){
+                $hasil=$this->upload->data();
+                    $datadb = array('id_kategori'=>'61',
+                                    'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
+                                    'username'=>$this->session->username,
+                                    'judul'=>$this->db->escape_str($this->input->post('b')),
+                                    'sub_judul'=>$this->db->escape_str($this->input->post('c')),
+                                    'youtube'=>"",
+                                    'judul_seo'=>seo_title($this->input->post('b')),
+                                    'headline'=>"N",
+                                    'aktif'=>"N",
+                                    'utama'=>"N",
+                                    'isi_berita'=>$this->input->post('h'),
+                                    'keterangan_gambar'=>"",
+                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
+                                    'tanggal'=>$tanggal,
+                                    'jam'=>date('H:i:s'),
+                                    'gambar'=>$hasil['file_name'],
+                                    'dibaca'=>'0',
+                                    'tag'=>"",
+                                    'status'=>'Y');
+            }else{
+                    $datadb = array('id_kategori'=>'61',
+                                    'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
+                                    'username'=>$this->session->username,
+                                    'judul'=>$this->db->escape_str($this->input->post('b')),
+                                    'sub_judul'=>$this->db->escape_str($this->input->post('c')),
+                                    'youtube'=>"",
+                                    'judul_seo'=>seo_title($this->input->post('b')),
+                                    'headline'=>"N",
+                                    'aktif'=>"N",
+                                    'utama'=>"N",
+                                    'isi_berita'=>$this->input->post('h'),
+                                    'keterangan_gambar'=>"",
+                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
+                                    'tanggal'=>$tanggal,
+                                    'jam'=>date('H:i:s'),
+                                    'gambar'=>'default_berita.jpg',               
+                                    'dibaca'=>'0',
+                                    'tag'=>"",
+                                    'status'=>'Y');
+            }
+        $this->db->insert('berita',$datadb);
+    }
+
+    function pengumuman_update(){
+        $config['upload_path'] = 'asset/foto_berita/';
+        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+        $config['max_size'] = '5000'; // kb
+        $this->load->library('upload', $config);                 
+
+            if(empty($this->input->post('date'))){
+                $tanggal = date('Y-m-d');
+            }else{
+                $tanggal = $this->input->post('date');
+            }
+
+            if ($this->upload->do_upload('k')){
+                $hasil=$this->upload->data();
+                    $datadb = array('id_kategori'=>'61',
+                                    'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
+                                    'username'=>$this->session->username,
+                                    'judul'=>$this->db->escape_str($this->input->post('b')),
+                                    'sub_judul'=>$this->db->escape_str($this->input->post('c')),
+                                    'youtube'=>"",
+                                    'judul_seo'=>seo_title($this->input->post('b')),
+                                    'headline'=>"N",
+                                    'aktif'=>"N",
+                                    'utama'=>"N",
+                                    'isi_berita'=>$this->input->post('h'),
+                                    'keterangan_gambar'=>"",
+                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
+                                    'tanggal'=>$tanggal,                                    
+                                    'gambar'=>$hasil['file_name'],                                                                       
+                                    'status'=>'Y');
+
+                if("default_berita.jpg"!=$this->input->post('oldFile')){
+                    unlink('asset/foto_berita/'.$this->input->post('oldFile'));
+                }
+            }else{
+                    $datadb = array('id_kategori'=>'61',
+                                    'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
+                                    'username'=>$this->session->username,
+                                    'judul'=>$this->db->escape_str($this->input->post('b')),
+                                    'sub_judul'=>$this->db->escape_str($this->input->post('c')),
+                                    'youtube'=>"",
+                                    'judul_seo'=>seo_title($this->input->post('b')),
+                                    'headline'=>"N",
+                                    'aktif'=>"N",
+                                    'utama'=>"N",
+                                    'isi_berita'=>$this->input->post('h'),
+                                    'keterangan_gambar'=>"",
+                                    'hari'=>hari_ini(date('w',strtotime($tanggal))),                              
+                                    'tanggal'=>$tanggal,                                                                                                                                               
+                                    'status'=>'Y');
+            }
+        
+        $this->db->where('id_berita',$this->input->post('id'));
+        $this->db->update('berita',$datadb);
     }
 
     function get_prodi(){

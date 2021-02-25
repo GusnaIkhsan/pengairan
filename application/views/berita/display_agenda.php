@@ -6,7 +6,7 @@
         <div class="kingster-body-wrapper clearfix  kingster-with-frame">
             <!-- header navigation -->
             <div class="kingster-page-wrapper" id="kingster-page-wrapper">
-                <div class="kingster-blog-title-wrap  kingster-style-custom kingster-feature-image" style="background-image: url(<?php echo base_url('asset/foto_agenda/'. $berita['gambar'])?>) ;">                
+                <div class="kingster-blog-title-wrap  kingster-style-custom kingster-feature-image" style="background-image: url(<?php echo base_url('asset/foto_agenda/'. $agenda['gambar'])?>) ;">                
                     <div class="kingster-header-transparent-substitute"></div>
                     <div class="kingster-blog-title-overlay" style="opacity: 0.01 ;"></div>
                     <div class="kingster-blog-title-bottom-overlay"></div>
@@ -14,17 +14,16 @@
                         <div class="kingster-blog-title-content kingster-item-pdlr" style="padding-top: 400px ;padding-bottom: 80px ;">
                             <header class="kingster-single-article-head clearfix">
                                 <div class="kingster-single-article-date-wrapper  post-date updated">
-                                    <?php $tanggalBerita = explode("-", $berita['tgl_posting']); ?>
+                                    <?php $tanggalBerita = explode("-", $agenda['tgl_posting']); ?>
                                     <div class="kingster-single-article-date-day"><?php echo $tanggalBerita[2]?></div>
                                     <div class="kingster-single-article-date-month"><?php echo getBulan((int)$tanggalBerita[1])?></div>
                                     <div class="kingster-single-article-date-year"><?php echo $tanggalBerita[0]?></div>
                                 </div>
                                 <div class="kingster-single-article-head-right">
-                                    <h1 class="kingster-single-article-title"><?php echo $berita['tema']; ?></h1>
+                                    <h1 class="kingster-single-article-title"><?php echo $agenda['tema']; ?></h1>
                                     <div class="kingster-blog-info-wrapper">
-                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-author vcard author post-author "><span class="kingster-head">By</span><span class="fn"><a href="#" title="Posts by John Smith" rel="author"><?php echo $berita['pengirim']; ?></a></span></div>
-                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-tag "><a href="#" rel="tag"><?php echo $mode; ?></a></div>
-                                        <!-- <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-comment-number "><span class="kingster-head"><i class="fa fa-comments-o" ></i></span><?php echo $berita['dibaca']; ?></div> -->
+                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-author vcard author post-author "><span class="kingster-head">By</span><span class="fn"><a href="#" title="Posts by John Smith" rel="author"><?php echo $agenda['username']; ?></a></span></div>
+                                        <div class="kingster-blog-info kingster-blog-info-font kingster-blog-info-tag "><a href="#" rel="tag"><?php echo $mode; ?></a></div>                                        
                                     </div>
                                 </div>
                             </header>
@@ -34,10 +33,8 @@
                 <div class="kingster-breadcrumbs">
                     <div class="kingster-breadcrumbs-container kingster-container">
                         <div class="kingster-breadcrumbs-item kingster-item-pdlr"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingster." href="<?php echo base_url(); ?>" class="home"><span property="name">Beranda</span></a>
-                            <meta property="position" content="1">
-                            <!-- </span>&gt;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Blog category archives." href="<?php echo base_url('all-news'); ?>" class="taxonomy category"><span property="name"><?php echo ucwords($mode); ?></span></a>
-                            <meta property="position" content="2"> -->
-                            </span>&gt;<span property="itemListElement" typeof="ListItem"><span property="name"><?php echo $berita['tema']; ?></span>
+                            <meta property="position" content="1">                            
+                            </span>&gt;<span property="itemListElement" typeof="ListItem"><span property="name"><?php echo $agenda['tema']; ?></span>
                             <meta property="position" content="3">
                             </span>
                         </div>
@@ -51,7 +48,27 @@
                                     <article id="post-1268" class="post-1268 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-post-format tag-news">
                                         <div class="kingster-single-article clearfix">
                                             <div class="kingster-single-article-content">
-                                                <?php echo $berita['isi_agenda']; ?>                                               
+                                                <?php echo $agenda['isi_agenda']; ?>  
+                                                <table style="width: 400px; margin-top: 20px;">
+                                                    <tr>
+                                                        <th style="text-align: center;" colspan="2">Keterangan Tempat & Waktu</th>
+                                                        <!-- <th>asdas</th> -->
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tempat</td>
+                                                        <td><?php echo $agenda['tempat']; ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <?php $tgl_mulai = explode("-", $agenda['tgl_mulai']); ?> 
+                                                        <?php $tgl_selesai = explode("-", $agenda['tgl_selesai']); ?> 
+                                                        <td>Tanggal</td>
+                                                        <td><?php echo "$tgl_mulai[2]-$tgl_mulai[1]-$tgl_mulai[0]"." s/d "."$tgl_selesai[2]-$tgl_selesai[1]-$tgl_selesai[0]"; ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jam</td>
+                                                        <td><?php echo $agenda['jam']; ?></td>
+                                                    </tr>
+                                                </table>                                                                                                                                         
                                             </div>
                                         </div>
                                     </article>

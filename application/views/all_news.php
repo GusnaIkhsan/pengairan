@@ -24,7 +24,9 @@
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                             <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">BERITA</h3>
+                                                <a href="<?php echo base_url('all-news'); ?>">
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">BERITA</h3>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -211,12 +213,10 @@
                                         <div class="tagcloud">
                                             <a href="<?php echo base_url('all-news'); ?>" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;">ALL</a>
                                             <?php 
-                                            foreach($tags as $key => $val){
-                                                if("Pengumuman"!=$val->nama_tag){
+                                            foreach($tags as $key => $val){                                            
                                             ?>
                                                     <a href="<?php echo base_url('tag/'.strtolower($val->nama_tag)); ?>" class="tag-cloud-link tag-link-7 tag-link-position-1" style="font-size: 12.2pt;"><?php echo $val->nama_tag; ?></a>
-                                            <?php
-                                                }
+                                            <?php                                                
                                             }
                                             ?>
                                         </div>
@@ -233,7 +233,7 @@
                                                 <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="<?php echo base_url('asset/foto_berita/'.$last_news[$key]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_135948689" /></div>
                                                 <div class="gdlr-core-recent-post-widget-content">
                                                     <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('berita/'.$last_news[$key]->id_berita); ?>"><?php echo $last_news[$key]->judul;?></a></div>
-                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><?php echo hari_ini(date('w',strtotime($last_news[$key]->tanggal))).", ".$tanggalBerita[2]." ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By <?php echo $val->username; ?></span></span>
+                                                    <div class="gdlr-core-recent-post-widget-info"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><?php echo hari_ini(date('w',strtotime($last_news[$key]->tanggal))).", ".$tanggalBerita[2]." ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class="gdlr-core-head" >By <?php echo $last_news[$key]->username; ?></span></span>
                                                     </div>
                                                 </div>
                                             </div>
