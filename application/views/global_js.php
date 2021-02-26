@@ -272,4 +272,7 @@
 		$("#btn-search-global").click(function() {
 			$('#modal-search').css("display", "block");
 		});
+		$("#btn-search-global-mobile").click(function() {
+			$('#modal-search-mobile').css("display", "block");
+		});
 	</script>

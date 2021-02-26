@@ -9,7 +9,7 @@
                 </div>
                 
                 <div class="kingster-mobile-menu-right">
-                    <div class="kingster-mobile-menu" style="margin-top: 0px; margin-right: -15px;"><a href="#" class="kingster-mm-menu-button kingster-mobile-menu-button" id="btn-search-global"><i class="fa fa-search"></i><span></span></a></div>
+                    <div class="kingster-mobile-menu" style="margin-top: 0px; margin-right: -15px;"><a href="#" class="kingster-mm-menu-button kingster-mobile-menu-button" id="btn-search-global-mobile"><i class="fa fa-search"></i><span></span></a></div>
                     <div class="kingster-mobile-menu">
                         <a class="kingster-mm-menu-button kingster-mobile-menu-button kingster-mobile-button-hamburger" href="#kingster-mobile-menu"><span></span></a>
                         <div class="kingster-mm-menu-wrap kingster-navigation-font" id="kingster-mobile-menu" data-slide="right">
@@ -50,7 +50,7 @@
 </div>
                             <div class="kingster-main-menu-right-wrap clearfix" style="display: none;">
                                 <div class="kingster-main-menu-search" id="kingster-top-search"><i class="icon_search"></i></div>
-                                <div class="kingster-top-search-wrap kingster" id="modal-search">
+                                <div class="kingster-top-search-wrap kingster" id="modal-search-mobile">
                                     <div class="kingster-top-search-close"></div>
                                     <div class="kingster-top-search-row">
                                         <div class="kingster-top-search-cell">

@@ -60,11 +60,11 @@ class Model_berita extends CI_model{
     }
 
     function list_berita(){
-        return $this->db->query("SELECT * FROM berita WHERE id_kategori NOT IN (61) ORDER BY id_berita DESC");
+        return $this->db->query("SELECT * FROM berita WHERE id_kategori NOT IN (61) ORDER BY tanggal DESC, jam DESC");
     }
 
     function list_pengumuman(){
-        return $this->db->query("SELECT * FROM berita WHERE id_kategori=61 ORDER BY id_berita DESC");
+        return $this->db->query("SELECT * FROM berita WHERE id_kategori=61 ORDER BY tanggal DESC, jam DESC");
     }
 
     function kategori_berita(){
@@ -407,13 +407,13 @@ class Model_berita extends CI_model{
             $data = $this->db->query("SELECT berita.* FROM berita                                     
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY tanggal 
+                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY tanggal DESC, jam 
                                     DESC");
         } else {
             $data = $this->db->query("SELECT berita.* FROM berita                                     
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori not in (61) and judul like '%" . $query . "%' ORDER BY tanggal 
+                                    where status='Y' and kategori.id_kategori not in (61) and judul like '%" . $query . "%' ORDER BY tanggal DESC, jam 
                                     DESC");
         }
         return $data->result();
@@ -424,13 +424,13 @@ class Model_berita extends CI_model{
             $data = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori = 61 ORDER BY tanggal 
+                                    where status='Y' and kategori.id_kategori = 61 ORDER BY tanggal DESC, jam 
                                     DESC");
         } else {
             $data = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori = 61 and judul like '%" . $query . "%' ORDER BY tanggal 
+                                    where status='Y' and kategori.id_kategori = 61 and judul like '%" . $query . "%' ORDER BY tanggal DESC, jam 
                                     DESC");
         }
         
@@ -443,7 +443,7 @@ class Model_berita extends CI_model{
                                     on berita.username=users.username 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY tanggal 
+                                    where status='Y' and kategori.id_kategori not in (61) ORDER BY tanggal DESC, jam 
                                     DESC LIMIT 0,$limit");
         return $data->result();
     }
@@ -452,7 +452,7 @@ class Model_berita extends CI_model{
         $data = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 
                                     on berita.id_kategori=kategori.id_kategori 
-                                    where status='Y' and kategori.id_kategori = 61 ORDER BY tanggal 
+                                    where status='Y' and kategori.id_kategori = 61 ORDER BY tanggal DESC, jam 
                                     DESC LIMIT 0,$limit");;
         return $data->result();
     }
