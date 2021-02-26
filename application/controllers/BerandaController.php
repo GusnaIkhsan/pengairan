@@ -32,7 +32,7 @@ class BerandaController extends CI_Controller {
 		$data['tags'] = $this->model_berita->tag_berita()->result();
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
-        $this->load->view('header_mobile');
+        $this->load->view('header_mobile', $dataHeader);
         $this->load->view('header', $dataHeader);
 		$this->load->view('all_news', $data);
 		$this->load->view('footer');
@@ -52,7 +52,7 @@ class BerandaController extends CI_Controller {
 		$data['last_agenda']= $this->model_agenda->lastAgenda(3);
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
-        $this->load->view('header_mobile');
+        $this->load->view('header_mobile', $dataHeader);
         $this->load->view('header', $dataHeader);
 		$this->load->view('all_agenda', $data);
 		$this->load->view('footer');
@@ -73,7 +73,7 @@ class BerandaController extends CI_Controller {
 		$data['last_news'] = $this->model_berita->lastAnnouncement(3);
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
-        $this->load->view('header_mobile');
+        $this->load->view('header_mobile', $dataHeader);
         $this->load->view('header', $dataHeader);
 		$this->load->view('all_announcement', $data);
 		$this->load->view('footer');
@@ -85,7 +85,7 @@ class BerandaController extends CI_Controller {
 	public function pageNews(){
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
-        $this->load->view('header_mobile');
+        $this->load->view('header_mobile', $dataHeader);
         $this->load->view('header', $dataHeader);
 		$this->load->view('news_page');
 		$this->load->view('footer');
@@ -104,7 +104,7 @@ class BerandaController extends CI_Controller {
 		$data['tags'] = $this->model_berita->tag_berita()->result();
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
         $this->load->view('global_css');
-        $this->load->view('header_mobile');
+        $this->load->view('header_mobile', $dataHeader);
         $this->load->view('header', $dataHeader);
 		$this->load->view('all_contents', $data);
 		$this->load->view('footer');

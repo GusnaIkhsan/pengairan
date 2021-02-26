@@ -49,8 +49,8 @@
                     </tr>
                     <tr><th scope='row'>URL File</th>               <td><input type='text' id='urlfile' class='form-control' readonly></td></tr>
                     <tr id='content-halaman'><th scope='row'>Isi Halaman</th>             <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px' required>$rows[isi_halaman]</textarea></td></tr>
-                    <tr><th scope='row'>Ganti Banner</th>                    <td><input type='file' class='form-control' name='c' accept=\"image/*\"><hr style='margin:5px'>
-                                                                                 <img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto_statis/$rows[gambar]'></td></tr>
+                    <tr><th scope='row'>Ganti Banner</th>                    <td><input type='file' class='form-control' name='c' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
+                      <a target='_BLANK' href='".base_url()."asset/foto_statis/$rows[gambar]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto_statis/$rows[gambar]'></a></td></tr>
                   </tbody>
                   </table>
                 </div>

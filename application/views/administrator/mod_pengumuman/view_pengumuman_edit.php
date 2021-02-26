@@ -46,14 +46,10 @@
                       </tr>
                     <tr><th scope='row'>URL File</th>               <td><input type='text' id='urlfile' class='form-control' readonly></td></tr>
                     <tr><th scope='row'>Isi Pengumuman</th>             <td><textarea id='editor1' class='ckeditor form-control' name='h' style='height:260px' required>$rows[isi_berita]</textarea></td></tr>
-                    <tr><th scope='row'>Thumbnail</th>                 <td><input type='file' class='form-control' name='k' accept=\"image/*\">";
-                                                                               if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."asset/foto_berita/$rows[gambar]'>$rows[gambar]</a>"; } echo "</td></tr>";                    
-                    // <tr><th scope='row'>Tag</th>                    <td>";
-                    //                                                         $_arrNilai = explode(',', $rows['tag']);
-                    //                                                         foreach ($tag->result_array() as $tag){
-                    //                                                             $_ck = (array_search($tag['tag_seo'], $_arrNilai) === false)? '' : 'checked';
-                    //                                                             echo "<span style='display:inline-block;'><input type=checkbox value='$tag[tag_seo]' name=j[] $_ck>$tag[nama_tag] &nbsp; &nbsp; &nbsp; </span>";
-                    //                                                         }
+                    <tr><th scope='row'>Thumbnail</th>                 <td><input type='file' class='form-control' name='k' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
+                      <a target='_BLANK' href='".base_url()."asset/foto_berita/$rows[gambar]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto_berita/$rows[gambar]'></a></td></tr>";
+                                                                              //  if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."asset/foto_berita/$rows[gambar]'>$rows[gambar]</a>"; } 
+                    echo "</td></tr>";                   
                     echo "</td></tr>
                   </tbody>
                   </table>

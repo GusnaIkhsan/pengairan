@@ -20,10 +20,9 @@
                     <tr><th scope='row'>Workshop/Pelatihan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pelatihan'>$rows[pelatihan]</textarea></td></tr>
                     <tr><th scope='row'>Penghargaan & Paten</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'>$rows[penghargaan]</textarea></td></tr>                    
                     <tr><th scope='row'>Aktivitas Penunjang</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penunjang'>$rows[penunjang]</textarea></td></tr>                    
-                    <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='foto' accept=\"image/*\">";
-                                                                   if ($rows['foto']!=''){ 
-                                                                      echo " Gambar Saat ini : <a target='_BLANK' href='".base_url()."asset/foto_staff/$rows[foto]'>$rows[foto]</a>"; 
-                                                                    } echo "</td></tr>
+                    <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='foto' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
+                      <a target='_BLANK' href='".base_url()."asset/foto_staff/$rows[foto]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto_staff/$rows[foto]'></a></td></tr>";
+                    echo "</td></tr>
                   </tbody>
                   </table>
                 </div>

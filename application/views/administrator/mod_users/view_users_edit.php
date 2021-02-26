@@ -32,8 +32,8 @@
                       echo "<input type='radio' name='h' value='Y'> Ya &nbsp; <input type='radio' name='h' value='N' checked> Tidak"; 
                     } 
                     echo "</td></tr>
-                    <tr><th scope='row'>Ganti Foto</th>                     <td><input type='file' class='form-control' name='f' accept=\"image/*\"><hr style='margin:5px'>
-                                                                                 <img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto_user/$rows[foto]'></td></tr>
+                    <tr><th scope='row'>Ganti Foto</th>                     <td><input type='file' class='form-control' name='f' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
+                      <a target='_BLANK' href='".base_url()."asset/foto_user/$rows[foto]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto_user/$rows[foto]'></a></td></tr>
                   </tbody>
                   </table></div>
               </div>

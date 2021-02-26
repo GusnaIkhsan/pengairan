@@ -19,8 +19,10 @@
                     <tr><th scope='row'>NIDN</th>   <td><input type='text' class='form-control' name='nidn' value='$rows[nidn]' required></td></tr>
                     <tr><th scope='row'>Bidang Ilmu</th>   <td><input type='text' class='form-control' name='bidang' value='$rows[bidang]' required></td></tr>
                     <tr><th scope='row'>Blog Dosen</th>   <td><input type='text' class='form-control' name='blog' value='$rows[blog]'></td></tr>
-                    <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='d' accept=\"image/*\">";
-                                                                   if ($rows['gbr_dosen']!=''){ echo " Gambar Saat ini : <a target='_BLANK' href='".base_url()."asset/img_galeri/$rows[gbr_dosen]'>$rows[gbr_dosen]</a>"; } echo "</td></tr>
+                    <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='d' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
+                      <a target='_BLANK' href='".base_url()."asset/img_galeri/$rows[gbr_dosen]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/img_galeri/$rows[gbr_dosen]'></a></td></tr>";
+                                                                  //  if ($rows['gbr_dosen']!=''){ echo " Gambar Saat ini : <a target='_BLANK' href='".base_url()."asset/img_galeri/$rows[gbr_dosen]'>$rows[gbr_dosen]</a>"; } 
+                    echo "</td></tr>
                     <tr><th scope='row'>Background Pendidikan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pendidikan' required>$rows[pendidikan]</textarea></td></tr>
                     <tr><th scope='row'>Penghargaan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'>$rows[penghargaan]</textarea></td></tr>
                     <tr><th scope='row'>Penelitian</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penelitian'>$rows[penelitian]</textarea></td></tr>

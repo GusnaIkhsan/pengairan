@@ -13,7 +13,7 @@ class BeritaController extends CI_Controller {
 		$data['mode'] = $mode;
 		$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
 		$this->load->view('global_css');
-		$this->load->view('header_mobile');
+		$this->load->view('header_mobile', $dataHeader);
 		$this->load->view('header', $dataHeader);
 		if($mode == BeritaController::MODE_BERITA["AGENDA"]){
 			$data['agenda'] = $this->model_agenda->agenda_edit($id)->first_row('array');

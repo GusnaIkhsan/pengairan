@@ -14,8 +14,9 @@
                     <input type='hidden' name='oldFile' value='$record[name_gmbr]'>
                     <tr><th width='120px' scope='row'>Nama</th>   <td><input type='text' class='form-control' name='nameFile' value='$record[name]' required></td></tr>";
                     echo "</td></tr>                   
-                    <tr><th width='120px' scope='row'>Foto (MAX 5 MB)</th>          <td><input type='file' class='form-control' name='fileImg' accept=\"image/*\">";
-                                                                   if ($record['name_gmbr']!=''){ echo " Gambar Saat ini : <a target='_BLANK' href='".base_url()."asset/foto/$record[name_gmbr]'>$record[name_gmbr]</a>"; } echo "</td></tr>                     
+                    <tr><th width='120px' scope='row'>Foto (MAX 5 MB)</th>          <td><input type='file' class='form-control' name='fileImg' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
+                      <a target='_BLANK' href='".base_url()."asset/foto/$record[name_gmbr]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto/$record[name_gmbr]'></a></td></tr>";                                                                  
+                    echo "</td></tr>                     
                   </tbody>
                   </table>
                 </div>
