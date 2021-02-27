@@ -190,4 +190,44 @@ class Model_menu extends CI_model{
         return $newArray;
     }
 
+    function getLinkHalaman($id_halaman){
+        if($id_halaman == 0){
+            return "javascript:void(0)";
+        } else {
+            $tempHalaman = $this->db->query("SELECT * FROM halaman where id=" . $id_halaman)->row_array();
+            if($tempHalaman['type'] == 0){
+                $halamanMenu = base_url("page/detail/" . $tempHalaman["judul_seo"]);
+            } else {
+                $halamanMenu = base_url($tempHalaman["judul_seo"]);
+            }
+            return $halamanMenu;
+        }
+    }
+
+    function getBreadcrump($slug){
+        $halaman = $this->db->query("SELECT * FROM halaman WHERE judul_seo='" . $slug . "'")->row_array();
+        $menu = $this->db->query("SELECT * FROM menu WHERE link='" . $halaman['id'] . "'")->row_array();
+        $breadcrump = $this->getBreadcrumpList($menu['id_menu']);
+        return $breadcrump;
+    }
+
+    function getBreadcrumpList($id_menu){
+        $menu = $this->db->query("SELECT * FROM menu where id_menu='$id_menu'")->row_array();
+        $menu['link_halaman'] = $this->getLinkHalaman($menu['link']);
+        if($menu){
+            if($menu["id_parent"] == 0){
+                $newArray = array();
+                array_push($newArray, $menu);
+                return $newArray;
+            } else {
+                $parentMenu = $this->db->query("SELECT * FROM menu where id_menu=" . $menu['id_parent'])->row_array();
+                $parentArray = $this->getBreadcrumpList($parentMenu['id_menu']);
+                array_push($parentArray, $menu);
+                return $parentArray;
+            }
+        } else {
+            return "";
+        }
+    }
+
 }
