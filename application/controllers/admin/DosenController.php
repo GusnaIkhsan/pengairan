@@ -533,7 +533,7 @@ class DosenController extends CI_Controller {
     
     function dosen(){
         cek_session_admin();
-        $data['record'] = $this->model_app->view_ordering('dosen','id_dosen','DESC');        
+        $data['record'] = $this->model_app->view_ordering('dosen','id_dosen','ASC');        
         $this->template->load('administrator/template','administrator/mod_dosen/view_dosen',$data);
     }
 

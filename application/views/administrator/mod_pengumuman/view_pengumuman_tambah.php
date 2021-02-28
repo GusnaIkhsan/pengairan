@@ -23,7 +23,8 @@
                                                                             }
                     echo "</td></tr>";
                     echo "</td></tr>
-                    <tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date'></td></tr>";
+                    <tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date'></td></tr>
+                    <tr><th scope='row'>Headline</th>               <td><input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak</td></tr>";
                     echo "
                     <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
                                                                             <option value='' selected>- Pilih Foto -</option>";

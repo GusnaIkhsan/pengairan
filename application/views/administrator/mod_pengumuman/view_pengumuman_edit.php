@@ -27,7 +27,8 @@
                                                                             }
                     echo "</td></tr>";
                     echo "</td></tr>
-                    <tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date' value='$rows[tanggal]'></td></tr>";
+                    <tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date' value='$rows[tanggal]'></td></tr>
+                    <tr><th scope='row'>Headline</th>               <td>"; if ($rows['headline']=='Y'){ echo "<input type='radio' name='e' value='Y' checked> Ya &nbsp; <input type='radio' name='e' value='N'> Tidak"; }else{ echo "<input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak"; }
                     echo "
                     <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
                                                                             <option value='' selected>- Pilih Foto -</option>";

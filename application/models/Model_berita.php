@@ -306,7 +306,7 @@ class Model_berita extends CI_model{
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>"",
                                     'judul_seo'=>seo_title($this->input->post('b')),
-                                    'headline'=>"N",
+                                    'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'aktif'=>"N",
                                     'utama'=>"N",
                                     'isi_berita'=>$this->input->post('h'),
@@ -326,7 +326,7 @@ class Model_berita extends CI_model{
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>"",
                                     'judul_seo'=>seo_title($this->input->post('b')),
-                                    'headline'=>"N",
+                                    'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'aktif'=>"N",
                                     'utama'=>"N",
                                     'isi_berita'=>$this->input->post('h'),
@@ -363,7 +363,7 @@ class Model_berita extends CI_model{
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>"",
                                     'judul_seo'=>seo_title($this->input->post('b')),
-                                    'headline'=>"N",
+                                    'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'aktif'=>"N",
                                     'utama'=>"N",
                                     'isi_berita'=>$this->input->post('h'),
@@ -384,7 +384,7 @@ class Model_berita extends CI_model{
                                     'sub_judul'=>$this->db->escape_str($this->input->post('c')),
                                     'youtube'=>"",
                                     'judul_seo'=>seo_title($this->input->post('b')),
-                                    'headline'=>"N",
+                                    'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'aktif'=>"N",
                                     'utama'=>"N",
                                     'isi_berita'=>$this->input->post('h'),
@@ -459,8 +459,8 @@ class Model_berita extends CI_model{
 
     function headLine($limit){
         $data = $this->db->query("SELECT * FROM berita                                                                     
-                                    where headline = 'Y' and id_kategori not in (61) 
-                                    ORDER BY tanggal DESC, jam DESC LIMIT 0,$limit");;
+                                    where headline = 'Y'
+                                    ORDER BY tanggal DESC, jam DESC LIMIT 0,$limit");
         return $data->result();
     }
 

@@ -1,3 +1,6 @@
+<!-- <div style="text-align: center;" class="modal" id="loading" tabindex="1" role="dialog" aria-hidden="true" data-backdrop="static">
+	<img tabindex="1" style="margin: 25%;" src="<?php echo base_url('asset/images/ajax-loader.gif'); ?>" alt="spinner">
+</div> -->
 <script type='text/javascript' src="<?php echo base_url('asset/js/jquery/jquery.js'); ?>"></script>
 <script type='text/javascript' src="<?php echo base_url('asset/js/jquery/jquery-migrate.min.js'); ?>"></script>
 <script type='text/javascript' src="<?php echo base_url('asset/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js'); ?>"></script>
@@ -275,4 +278,13 @@
 		$("#btn-search-global-mobile").click(function() {
 			$('#modal-search-mobile').css("display", "block");
 		});
+
+		// $(window).on('load', function () {  
+		// 	$("#loading").fadeOut("slow");  
+		// });  
+		function hideLoader() {
+			$('#loadingku').hide();
+		}
+		$(window).ready(hideLoader);
+		setTimeout(hideLoader, 20 * 1000);
 	</script>
