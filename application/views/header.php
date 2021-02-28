@@ -139,7 +139,7 @@
                                         <div class="kingster-top-search-cell">
                                             <form role="search" method="get" class="search-form" action="<?php echo base_url('search'); ?>">
                                                 <input type="text" class="search-field kingster-title-font" placeholder="Search..." value="" name="search">
-                                                <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
+                                                <div style="margin-top: 8px;" class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
                                                 <input type="submit" class="search-submit" value="Search">
                                                 <div class="kingster-top-search-close"><i class="icon_close"></i></div>
                                             </form>
