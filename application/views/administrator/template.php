@@ -62,6 +62,9 @@
         </section>
         <div style='clear:both'></div>
       </div><!-- /.content-wrapper -->
+      <div style="text-align: center;" class="modal" id="spinner" tabindex="1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <img tabindex="1" style="margin: 25%;" src="<?php echo base_url('asset/images/ajax-loader.gif'); ?>" alt="spinner">
+      </div>
       <footer class="main-footer">
           <?php include "footer.php"; ?>
       </footer>
@@ -139,6 +142,10 @@
     $('ul.treeview-menu a').filter(function() {
       return this.href == url;
     }).closest('.treeview').addClass('active');
+
+    function spinnerClick(){
+      $('#spinner').modal('show');
+    }
   </script>
   </body>
 </html>

@@ -9,8 +9,8 @@
                     <thead>
                       <tr>
                         <th style='width:20px'>No</th>           
+                        <th>Nama</th>                
                         <th>Nama File</th>                
-                        <th>Url File</th>                
                         <th>Uploader</th>    
                         <th>Tanggal</th>                                        
                         <th style='width:70px'>Action</th>
@@ -22,7 +22,7 @@
                     foreach ($record as $row){
                     echo "<tr><td>$no</td>                              
                               <td width='20%'><a target='_BLANK' href='".base_url()."asset/files/$row[file_name]'>$row[name]</a></td>                              
-                              <td width='20%'>".base_url()."asset/files/".$row["file_name"]."</td>                              
+                              <td width='20%'>".$row["file_name"]."</td>                              
                               <td width='20%'>$row[uploader]</td>                              
                               <td width='20%'>$row[created_at]</td>                              
                               <td><center>
@@ -93,6 +93,7 @@
 
                       var url = '<?php echo base_url("upload/berkas"); ?>'
                       $('#lookupUpload').modal('hide');
+                      $('#spinner').modal('show');
 
                       $.ajax({
                         url: url,
@@ -103,10 +104,8 @@
                         cache: false,
                         processData: false,
                         success: function(data) {
-                          // $('#spinner').modal('hide');
-                          // pdpTable.ajax.reload();
+                          $('#spinner').modal('hide');
                           location.reload();
-                          // alert("benar");
                         },
                         error: function(data) {
                           alert("Internal System Error");

@@ -93,6 +93,7 @@
 
                       var url = '<?php echo base_url("upload/foto"); ?>'
                       $('#lookupUpload').modal('hide');
+                      $('#spinner').modal('show');
 
                       $.ajax({
                         url: url,
@@ -103,10 +104,8 @@
                         cache: false,
                         processData: false,
                         success: function(data) {
-                          // $('#spinner').modal('hide');
-                          // pdpTable.ajax.reload();
-                          location.reload();
-                          // alert("benar");
+                          $('#spinner').modal('hide');                        
+                          location.reload();                   
                         },
                         error: function(data) {
                           alert("Internal System Error");

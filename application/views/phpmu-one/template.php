@@ -68,12 +68,6 @@ s0.parentNode.insertBefore(s1,s0);
     <!-- DataTables -->
     <script src="<?php echo base_url(); ?>asset/admin/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="<?php echo base_url(); ?>asset/admin/plugins/datatables/dataTables.bootstrap.min.js"></script>
-<script type="text/javascript">
-$(window).load(function() {
-    $(".loader").fadeOut("slow");
-});
-</script>
-
 
 
 </body>

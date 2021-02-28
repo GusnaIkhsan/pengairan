@@ -21,7 +21,7 @@
                 </div>
               
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info pull-right'>Simpan</button>
+                    <button type='submit' name='submit' onclick=\"spinnerClick()\" class='btn btn-info pull-right'>Simpan</button>
                     <a href='".base_url('Administrator/file')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>

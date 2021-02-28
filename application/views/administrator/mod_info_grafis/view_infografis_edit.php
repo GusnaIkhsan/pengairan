@@ -24,7 +24,7 @@
                 </div>
               
               <div class='box-footer'>
-                    <button type='submit' name='submit' class='btn btn-info pull-right'>Update</button>                    
+                    <button onclick=\"spinnerClick()\" type='submit' name='submit' class='btn btn-info pull-right'>Simpan</button>                    
                   </div>
             </div></div></div>";
             echo form_close();

@@ -459,9 +459,8 @@ class Model_berita extends CI_model{
 
     function headLine($limit){
         $data = $this->db->query("SELECT * FROM berita                                                                     
-                                    where headline = 'Y' 
-                                    ORDER BY id_berita 
-                                    DESC LIMIT 0,$limit");;
+                                    where headline = 'Y' and id_kategori not in (61) 
+                                    ORDER BY tanggal DESC, jam DESC LIMIT 0,$limit");;
         return $data->result();
     }
 

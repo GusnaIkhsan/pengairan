@@ -52,7 +52,7 @@
                         <div class="form-group">
                           <label class="control-label">Berkas Template Excel</label>
                           <div style="margin-bottom: 1%">
-                            <input type="file" id="fileExcel" name="fileExcel" style="display:none" onchange="document.getElementById('fileName').value=this.value" accept="application/vnd.ms-excel" required>
+                            <input type="file" id="fileExcel" name="fileExcel" style="display:none" onchange="document.getElementById('fileName').value=this.value" accept=".xls,.xlsx" required>
                             <input type="text" class="form-control pull-left" id="fileName" name="fileName" style="width: 72%;height: 35px;" readonly placeholder=" MAX 4 MB">
                             <input type="button" class="btn btn-primary form-control pull-right" value="Pilih File" onclick="document.getElementById('fileExcel').click()" style="width: 25%; height: 35px; margin-left: 5px;">
                             <span class="help-block with-errors"></span>
@@ -61,8 +61,8 @@
                         <br><br>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                       </div>
                     </form>
                     </div>
@@ -87,8 +87,7 @@
 
                       var url = '<?php echo base_url("form/upload"); ?>'
                       $('#lookupUpload').modal('hide');
-                      // messageNotif = "Data Berhasil Disimpan";
-                      // $('#spinner').modal('show');
+                      $('#spinner').modal('show');
 
                       $.ajax({
                         url: url,
@@ -99,10 +98,8 @@
                         cache: false,
                         processData: false,
                         success: function(data) {
-                          // $('#spinner').modal('hide');
-                          // pdpTable.ajax.reload();
+                          $('#spinner').modal('hide');
                           location.reload();
-                          // alert("benar");
                         },
                         error: function(data) {
                           alert("salah");

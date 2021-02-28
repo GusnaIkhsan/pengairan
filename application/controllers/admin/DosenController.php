@@ -288,6 +288,14 @@ class DosenController extends CI_Controller {
         $writer->save('php://output');
     }
 
+    function nullCheck($param){
+        if(!is_null($param)){
+            return $param; 
+        }else{
+           return "-";
+        }
+    }
+
     function recieve_from_upload_template(){
         $fileExcel = null;
         if (isset($_FILES['fileExcel']['tmp_name'])) {
@@ -300,12 +308,15 @@ class DosenController extends CI_Controller {
             $sheetData = $spreadsheet->getActiveSheet()->toArray();
 
             // biodata
-            $nama_dosen = $sheetData[2][1];
-            $nipnik = $sheetData[3][1];
-            $nidn = $sheetData[4][1];
-            $golpang = $sheetData[5][1];
-            $bidang = $sheetData[6][1];
-            $blog = $sheetData[7][1];           
+            $nama_dosen = $this->nullCheck($sheetData[2][1]);
+            $nipnik = $this->nullCheck($sheetData[3][1]);
+            $nidn = $this->nullCheck($sheetData[4][1]);
+            $golpang = $this->nullCheck($sheetData[5][1]);
+            $bidang = $this->nullCheck($sheetData[6][1]);
+            $blog = $this->nullCheck($sheetData[7][1]);              
+            
+            
+            
             
             // pendidikann
             $headerPendididkan = "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\">
