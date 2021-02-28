@@ -36,15 +36,24 @@
                 <div class="kingster-breadcrumbs">
                     <div class="kingster-breadcrumbs-container kingster-container">
                         <div class="kingster-breadcrumbs-item kingster-item-pdlr">
-                            <span property="itemListElement" typeof="ListItem">
-                                <a property="item" typeof="WebPage" class="home"><span property="name">Halaman</span></a>
-                                <meta property="position" content="1">
-                            </span>
-                            &gt;
-                            <span property="itemListElement" typeof="ListItem">
-                                <span property="name"><?php echo $page["judul"]; ?></span>
-                                <meta property="position" content="3">
-                            </span>
+                            <?php 
+                                foreach($breadcrump as $idx => $val){
+                                    if($idx != count($breadcrump)-1){
+                            ?>
+                                        <span property="itemListElement" typeof="ListItem">
+                                            <a property="item" typeof="WebPage" class="home" href="<?php echo $val['link_halaman']; ?>"><span property="name"><?php echo $val['nama_menu'] ?></span></a>
+                                            <meta property="position" content="1">
+                                        </span>
+                                        &gt;
+                            <?php   } else { ?>
+                                        <span property="itemListElement" typeof="ListItem">
+                                            <span property="name"><?php echo $page["judul"]; ?></span>
+                                            <meta property="position" content="3">
+                                        </span>
+                            <?php   
+                                    }
+                                }   
+                            ?>
                         </div>
                     </div>
                 </div>
