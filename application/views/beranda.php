@@ -246,14 +246,9 @@
                                                                         <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                                 <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">                                                                                    
                                                                                     <?php 
-                                                                                        $tglAgenda0 = explode("-", $agenda[0]->tgl_posting);
-                                                                                        echo hari_ini(date('w',strtotime($agenda[0]->tgl_posting))).", $tglAgenda0[2] ".getBulan((int)$tglAgenda0[1])." ".$tglAgenda0[0]; ?>                                                                                 
-                                                                                </span>
-                                                                                <!-- <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
-                                                                                    <a href="#" rel="tag">Admission</a>
-                                                                                    <span class="gdlr-core-sep">,</span>
-                                                                                    <a href="#" rel="tag">Student</a>
-                                                                                </span> -->
+                                                                                        $tglAgenda0 = explode("-", $agenda[0]->tgl_mulai);
+                                                                                        echo hari_ini(date('w',strtotime($agenda[0]->tgl_mulai))).", $tglAgenda0[2] ".getBulan((int)$tglAgenda0[1])." ".$tglAgenda0[0]; ?>                                                                                 
+                                                                                </span>                                                                               
                                                                         </div>
                                                                         <h4 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[0]->id_agenda); ?>" ><?php echo $agenda[0]->tema;?></a></h4></div>
                                                                 </div>
@@ -269,8 +264,8 @@
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">
                                                                             <?php 
-                                                                                $tglAgenda1 = explode("-", $agenda[1]->tgl_posting);
-                                                                                echo hari_ini(date('w',strtotime($agenda[1]->tgl_posting))).", $tglAgenda1[2] ".getBulan((int)$tglAgenda1[1])." ".$tglAgenda1[0]; ?>
+                                                                                $tglAgenda1 = explode("-", $agenda[1]->tgl_mulai);
+                                                                                echo hari_ini(date('w',strtotime($agenda[1]->tgl_mulai))).", $tglAgenda1[2] ".getBulan((int)$tglAgenda1[1])." ".$tglAgenda1[0]; ?>
                                                                         </span>                                                                        
                                                                     </div>
                                                                     <h4 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 14px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="<?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>" ><?php echo $agenda[1]->tema;?></a></h4></div>
@@ -283,8 +278,8 @@
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">
                                                                             <?php
-                                                                                $tglAgenda2 = explode("-", $agenda[2]->tgl_posting);
-                                                                                echo hari_ini(date('w',strtotime($agenda[0]->tgl_posting))).", $tglAgenda2[2] ".getBulan((int)$tglAgenda2[1])." ".$tglAgenda2[0]; 
+                                                                                $tglAgenda2 = explode("-", $agenda[2]->tgl_mulai);
+                                                                                echo hari_ini(date('w',strtotime($agenda[0]->tgl_mulai))).", $tglAgenda2[2] ".getBulan((int)$tglAgenda2[1])." ".$tglAgenda2[0]; 
                                                                              ?>
                                                                         </span>                                                                            
                                                                     </div>
@@ -298,8 +293,8 @@
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">
                                                                             <?php 
-                                                                                 $tglAgenda3 = explode("-", $agenda[3]->tgl_posting);
-                                                                                 echo hari_ini(date('w',strtotime($agenda[0]->tgl_posting))).", $tglAgenda3[2] ".getBulan((int)$tglAgenda3[1])." ".$tglAgenda3[0];
+                                                                                 $tglAgenda3 = explode("-", $agenda[3]->tgl_mulai);
+                                                                                 echo hari_ini(date('w',strtotime($agenda[0]->tgl_mulai))).", $tglAgenda3[2] ".getBulan((int)$tglAgenda3[1])." ".$tglAgenda3[0];
                                                                             ?>
                                                                         </span>                                                                       
                                                                     </div>

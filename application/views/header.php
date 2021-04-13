@@ -1,5 +1,4 @@
-            <!-- <div id="loadingku"></div> -->       
-            <div class="kingster-top-bar">
+                <div class="kingster-top-bar">
                 <div class="kingster-top-bar-background"></div>
                 <div class="kingster-top-bar-container kingster-container ">
                     <div class="kingster-top-bar-container-inner clearfix">                        

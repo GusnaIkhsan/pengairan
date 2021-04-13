@@ -131,8 +131,8 @@ class Model_agenda extends CI_model{
 
     function lastAgenda($limit){
         $data = $this->db->query("SELECT * FROM agenda                                 
-                                    ORDER BY id_agenda 
-                                    DESC LIMIT 0,$limit");;
+                                    ORDER BY tgl_mulai 
+                                    ASC LIMIT 0,$limit");;
         return $data->result();
     }
 }
