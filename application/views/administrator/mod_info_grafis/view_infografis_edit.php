@@ -14,10 +14,10 @@
           echo "<div class='col-md-12'>
                   <table class='table table-condensed table-bordered'>
                   <tbody>
-                    <tr><th width='120px' scope='row'>Mahasiswa</th>  <td><input type='number' min='0' class='form-control' name='mahasiswa' value='$mahasiswa' required></td></tr>                                                           
-                    <tr><th scope='row'>Program Studi</th>               <td><input type='number' min='0' class='form-control' name='program' value='$program' required></td></tr>                  
-                    <tr><th scope='row'>Tenaga Pendidik</th>               <td><input type='number' min='0' class='form-control' name='tendik' value='$tendik' required></td></tr>                  
-                    <tr><th scope='row'>Alumni</th>               <td><input type='number' min='0' class='form-control' name='alumni' value='$alumni' required></td></tr>";                                                                                                 
+                    <tr><th width='120px' scope='row'>Mahasiswa</th>  <td><input type='text' class='form-control' name='mahasiswa' value='$mahasiswa' required></td></tr>                                                           
+                    <tr><th scope='row'>Program Studi</th>               <td><input type='text' class='form-control' name='program' value='$program' required></td></tr>                  
+                    <tr><th scope='row'>Tenaga Pendidik</th>               <td><input type='text' class='form-control' name='tendik' value='$tendik' required></td></tr>                  
+                    <tr><th scope='row'>Alumni</th>               <td><input type='text' class='form-control' name='alumni' value='$alumni' required></td></tr>";                                                                                                 
                     echo "
                   </tbody>
                   </table>
