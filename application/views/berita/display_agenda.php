@@ -51,8 +51,7 @@
                                                 <?php echo $agenda['isi_agenda']; ?>  
                                                 <table style="width: 400px; margin-top: 20px;">
                                                     <tr>
-                                                        <th style="text-align: center;" colspan="2">Keterangan Tempat & Waktu</th>
-                                                        <!-- <th>asdas</th> -->
+                                                        <th style="text-align: center;" colspan="2">Keterangan Tempat & Waktu</th>                                                        
                                                     </tr>
                                                     <tr>
                                                         <td>Tempat</td>

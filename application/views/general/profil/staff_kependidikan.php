@@ -57,10 +57,10 @@
                                             <table>
                                                 <thead>
                                                     <tr>
-                                                        <td>No</td>
-                                                        <td>Nama</td>
-                                                        <td>Pelayanan</td>
-                                                        <td>Tupoksi</td>
+                                                        <th style="text-align:center">No</th>
+                                                        <th style="text-align:center">Nama</th>
+                                                        <th style="text-align:center">Pelayanan</th>
+                                                        <th style="text-align:center">Tupoksi</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>

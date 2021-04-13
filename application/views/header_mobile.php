@@ -4,7 +4,7 @@
                 <div class="kingster-logo  kingster-item-pdlr">
                     <div class="kingster-logo-inner">
                         <!-- <a class="" href="index.html"><img src="<?php echo base_url('asset/images/logo.png'); ?>" alt="" /></a> -->
-                        <a class="" href="<?php echo base_url('beranda'); ?>"><img src="<?php echo base_url('asset/logo/logoPengairan.png'); ?>" alt="" /></a>
+                        <a class="" href="<?php echo base_url('beranda'); ?>"><img style="55%;" src="<?php echo base_url('asset/logo/logoAir.png'); ?>" alt="" /></a>
                     </div>
                 </div>
                 

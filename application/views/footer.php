@@ -14,7 +14,7 @@
                         <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
                             <div id="text-2" class="widget widget_text kingster-widget">
                                 <div class="textwidget">
-                                    <p><img style="width: 80%;" src="<?php echo base_url('asset/logo/logoPengairanFooter.png'); ?>" alt="" />
+                                    <p><img style="width: 70%;" src="<?php echo base_url('asset/logo/logoAir.png'); ?>" alt="" />
                                         <br /> <span class="gdlr-core-space-shortcode" id="span_1dd7_10"></span>
                                         <br /> Jl. MT. Haryono 167,
                                         <br /> Malang, Jawa Timur
@@ -76,24 +76,12 @@
                         <div class="kingster-copyright-left kingster-item-pdlr">Copyright &copy; All Right Reserved <?php echo date('Y'); ?> Teknik Pengairan Universitas Brawijaya</div>
                         <div class="kingster-copyright-right kingster-item-pdlr">
                             <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_1dd7_112">
-                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="facebook">
-                                    <i class="fa fa-facebook" ></i>
-                                </a>
-                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="google-plus">
-                                    <i class="fa fa-google-plus" ></i>
-                                </a>
-                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin">
-                                    <i class="fa fa-linkedin" ></i>
-                                </a>
-                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="skype">
-                                    <i class="fa fa-skype" ></i>
-                                </a>
-                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter">
-                                    <i class="fa fa-twitter" ></i>
-                                </a>
-                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="instagram">
+                                <a href="https://www.instagram.com/pengairanftub.official" target="_blank" class="gdlr-core-social-network-icon" title="instagram">
                                     <i class="fa fa-instagram" ></i>
                                 </a>
+                                <a href="https://youtube.com/c/wreub " target="_blank" class="gdlr-core-social-network-icon" title="youtube">
+                                    <i class="fa fa-youtube" ></i>
+                                </a>                                                               
                             </div>
                         </div>
                     </div>

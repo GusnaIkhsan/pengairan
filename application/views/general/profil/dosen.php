@@ -51,15 +51,12 @@
                                     </div>
                                     <div class="gdlr-core-pbf-element">
                                         <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                            <!-- <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
-                                                Dosen
-                                            </div> -->
                                             <table>
                                                 <thead>
                                                     <tr>
-                                                        <td>No</td>
-                                                        <td>Nama</td>
-                                                        <td>Bidang Ilmu</td>
+                                                        <th style="text-align:center">No</td>
+                                                        <th style="text-align:center">Nama</th>
+                                                        <th style="text-align:center">Bidang Ilmu</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
