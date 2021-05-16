@@ -547,7 +547,7 @@ class DosenController extends CI_Controller {
     
     function dosen(){
         cek_session_admin();
-        $data['record'] = $this->model_app->view_ordering('dosen','id_dosen','ASC');        
+        $data['record'] = $this->model_app->view_ordering('dosen','urutan','ASC');        
         $this->template->load('administrator/template','administrator/mod_dosen/view_dosen',$data);
     }
 
@@ -577,7 +577,9 @@ class DosenController extends CI_Controller {
                     'publikasi'=>$this->input->post('publikasi'),
                     'linkpub'=>$this->input->post('linkpub'),
                     'buku'=>$this->input->post('buku'),
-                    'pengabdian'=>$this->input->post('pengabdian'));
+                    'pengabdian'=>$this->input->post('pengabdian'),
+                    'urutan'=>$this->input->post('urutan')
+                );
             }else{
                 $data = array(
                     'username'=>$this->session->username,
@@ -596,7 +598,9 @@ class DosenController extends CI_Controller {
                     'publikasi'=>$this->input->post('publikasi'),
                     'linkpub'=>$this->input->post('linkpub'),
                     'buku'=>$this->input->post('buku'),
-                    'pengabdian'=>$this->input->post('pengabdian'));
+                    'pengabdian'=>$this->input->post('pengabdian'),
+                    'urutan'=>$this->input->post('urutan')
+                );
             }
             $this->model_app->insert('dosen',$data);  
             redirect('dosen');
@@ -632,7 +636,9 @@ class DosenController extends CI_Controller {
                 			'publikasi'=>$this->input->post('publikasi'),
                 			'linkpub'=>$this->input->post('linkpub'),
                 			'buku'=>$this->input->post('buku'),
-                            'pengabdian'=>$this->input->post('pengabdian'));
+                            'pengabdian'=>$this->input->post('pengabdian'),
+                            'urutan'=>$this->input->post('urutan')
+                        );
                 if("default.png"!=$this->input->post('oldFile')){
                     unlink('asset/img_galeri/'.$this->input->post('oldFile'));
                 }
@@ -653,7 +659,9 @@ class DosenController extends CI_Controller {
                     'publikasi'=>$this->input->post('publikasi'),
                     'linkpub'=>$this->input->post('linkpub'),
                     'buku'=>$this->input->post('buku'),
-                    'pengabdian'=>$this->input->post('pengabdian'));
+                    'pengabdian'=>$this->input->post('pengabdian'),
+                    'urutan'=>$this->input->post('urutan')
+                );
             }
             $where = array('id_dosen' => $this->input->post('id_dosen'));
             $this->model_app->update('dosen', $data, $where);

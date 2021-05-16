@@ -82,9 +82,9 @@ class PresenterController extends CI_Controller {
 
     function showProfil($page){
         if('dosen'==$page){         
-            $data['record'] = $this->model_app->view_ordering('dosen','id_dosen','ASC');
+            $data['record'] = $this->model_app->view_ordering('dosen','urutan','ASC');
         }else if('staff-kependidikan'==$page){            
-            $data['record'] = $this->model_app->select_all('staff_pendidik');            
+            $data['record'] = $this->model_app->view_ordering('staff_pendidik','urutan','ASC');            
         }else{        
             $data['record'] ="";
         }

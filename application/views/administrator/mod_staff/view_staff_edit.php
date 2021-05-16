@@ -23,6 +23,7 @@
                     <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='foto' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
                       <a target='_BLANK' href='".base_url()."asset/foto_staff/$rows[foto]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto_staff/$rows[foto]'></a></td></tr>";
                     echo "</td></tr>
+                    <tr><th scope='row'>Urutan <span style=\"color: red;\">*</span></th> <td><input type='number' min=1 class='form-control' name='urutan' style='width:70px' value='$rows[urutan]' required></td></tr>
                   </tbody>
                   </table>
                 </div>

@@ -301,7 +301,7 @@ class StaffController extends CI_Controller {
 
     function staff_pendidik(){
         cek_session_admin();
-        $data['record'] = $this->model_app->view_ordering('staff_pendidik','id','DESC');
+        $data['record'] = $this->model_app->view_ordering('staff_pendidik','urutan','ASC');
         $this->template->load('administrator/template','administrator/mod_staff/view_staff',$data);
     }
 
@@ -324,7 +324,9 @@ class StaffController extends CI_Controller {
                     'penghargaan'=>$this->input->post('penghargaan'),                			
                     'penunjang'=>$this->input->post('penunjang'),
                     'uploader'=>$this->session->username,                 
-                    'foto'=>$hasil['file_name']);
+                    'foto'=>$hasil['file_name'],
+                    'urutan'=>$this->input->post('urutan'),
+                );
             }else{
                 $data = array(
                     'name'=>$this->input->post('name'),                           
@@ -336,7 +338,9 @@ class StaffController extends CI_Controller {
                     'penghargaan'=>$this->input->post('penghargaan'),                			
                     'penunjang'=>$this->input->post('penunjang'),
                     'uploader'=>$this->session->username,
-                    'foto'=>'default.png');
+                    'foto'=>'default.png',
+                    'urutan'=>$this->input->post('urutan'),
+                );
                 }
             $this->model_app->insert('staff_pendidik',$data);  
             redirect('staff');    
@@ -365,7 +369,9 @@ class StaffController extends CI_Controller {
                             'penghargaan'=>$this->input->post('penghargaan'),                			
                             'penunjang'=>$this->input->post('penunjang'),
                             'uploader'=>$this->session->username,                       
-                            'foto'=>$hasil['file_name']);
+                            'foto'=>$hasil['file_name'],
+                            'urutan'=>$this->input->post('urutan'),
+                        );
                 if("default.png"!=$this->input->post('oldFile')){
                     unlink('asset/foto_staff/'.$this->input->post('oldFile'));
                 }
@@ -378,7 +384,9 @@ class StaffController extends CI_Controller {
                             'pelatihan'=>$this->input->post('pelatihan'),
                             'penghargaan'=>$this->input->post('penghargaan'),                			
                             'penunjang'=>$this->input->post('penunjang'),
-                            'uploader'=>$this->session->username);              
+                            'uploader'=>$this->session->username,
+                            'urutan'=>$this->input->post('urutan'),
+                        );              
             }
             $where = array('id' => $this->input->post('id'));
             $this->model_app->update('staff_pendidik', $data, $where);

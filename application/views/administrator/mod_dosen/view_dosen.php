@@ -15,6 +15,7 @@
                         <th>Nama</th>
                         <th>NIS/NIDN</th>
                         <th>Pendidikan</th>                        
+                        <th>Urutan</th>                        
                         <th style='width:70px'>Action</th>
                       </tr>
                     </thead>
@@ -22,11 +23,12 @@
                   <?php 
                     $no = 1;
                     foreach ($record as $row){
-                    echo "<tr><td>$no</td>
+                    echo "<tr><td width='5%'>$no</td>
                               <td><img src='".base_url()."asset/img_galeri/$row[gbr_dosen]' width='50'></td>
                               <td width='20%'>$row[nm_dosen]</td>
                               <td width='10%'>$row[nidn]</td>
                               <td width='30%'>$row[pendidikan]</td>     
+                              <td width='5%'>$row[urutan]</td>     
                               <td><center>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."edit-dosen/$row[id_dosen]'><span class='glyphicon glyphicon-edit'></span></a>
                                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."delete-dosen/$row[id_dosen]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>

@@ -10,8 +10,7 @@
                     <div class="kingster-page-title-overlay"></div>
                     <div class="kingster-page-title-bottom-gradient"></div>
                     <div class="kingster-page-title-container kingster-container">
-                        <div class="kingster-page-title-content kingster-item-pdlr" id="div_983a_1">
-                            <!-- <div class="kingster-page-caption" id="div_983a_2">Know Us Better</div> -->
+                        <div class="kingster-page-title-content kingster-item-pdlr" id="div_983a_1">                       
                             <h1 class="kingster-page-title" id="h1_983a_0">Staff Kependidikan</h1>
                         </div>
                     </div>
@@ -50,10 +49,7 @@
                                         </div>
                                     </div>
                                     <div class="gdlr-core-pbf-element">
-                                        <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                            <!-- <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
-                                                Staff Kependidikan
-                                            </div> -->
+                                        <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">                                            
                                             <table>
                                                 <thead>
                                                     <tr>

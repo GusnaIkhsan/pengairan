@@ -10,8 +10,7 @@
                     <div class="kingster-page-title-overlay"></div>
                     <div class="kingster-page-title-bottom-gradient"></div>
                     <div class="kingster-page-title-container kingster-container">
-                        <div class="kingster-page-title-content kingster-item-pdlr" id="div_983a_1">
-                            <!-- <div class="kingster-page-caption" id="div_983a_2">Know Us Better</div> -->
+                        <div class="kingster-page-title-content kingster-item-pdlr" id="div_983a_1">                     
                             <h1 class="kingster-page-title" id="h1_983a_0">Dosen</h1>
                         </div>
                     </div>

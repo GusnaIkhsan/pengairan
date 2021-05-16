@@ -26,7 +26,8 @@
                     <tr><th scope='row'>Publikasi</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='publikasi'></textarea></td></tr>
                     <tr><th scope='row'>Link Publikasi</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='linkpub'></textarea></td></tr>
                     <tr><th scope='row'>Buku</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='buku'></textarea></td></tr>
-                    <tr><th scope='row'>Pengabdian</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pengabdian'></textarea></td></tr>                    
+                    <tr><th scope='row'>Pengabdian</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pengabdian'></textarea></td></tr>    
+                    <tr><th scope='row'>Urutan <span style=\"color: red;\">*</span></th> <td><input type='number' min=1 class='form-control' name='urutan' style='width:70px' required></td></tr>                
                   </tbody>
                   </table>
                 </div>

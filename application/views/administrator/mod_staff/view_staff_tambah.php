@@ -20,6 +20,7 @@
                     <tr><th scope='row'>Penghargaan & Paten</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'></textarea></td></tr>                    
                     <tr><th scope='row'>Aktivitas Penunjang</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penunjang'></textarea></td></tr>                    
                     <tr><th scope='row'>Foto</th>                    <td><input type='file' class='form-control' name='foto' accept=\"image/*\"></td></tr>
+                    <tr><th scope='row'>Urutan <span style=\"color: red;\">*</span></th> <td><input type='number' min=1 class='form-control' name='urutan' style='width:70px' required></td></tr>
                   </tbody>
                   </table>
                 </div>

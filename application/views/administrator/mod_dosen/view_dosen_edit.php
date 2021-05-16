@@ -21,8 +21,7 @@
                     <tr><th scope='row'>Email</th>   <td><input type='email' class='form-control' name='email' value='$rows[email]' required></td></tr>
                     <tr><th scope='row'>Blog Dosen</th>   <td><input type='text' class='form-control' name='blog' value='$rows[blog]'></td></tr>
                     <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='d' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
-                      <a target='_BLANK' href='".base_url()."asset/img_galeri/$rows[gbr_dosen]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/img_galeri/$rows[gbr_dosen]'></a></td></tr>";
-                                                                  //  if ($rows['gbr_dosen']!=''){ echo " Gambar Saat ini : <a target='_BLANK' href='".base_url()."asset/img_galeri/$rows[gbr_dosen]'>$rows[gbr_dosen]</a>"; } 
+                      <a target='_BLANK' href='".base_url()."asset/img_galeri/$rows[gbr_dosen]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/img_galeri/$rows[gbr_dosen]'></a></td></tr>";                                                                  
                     echo "</td></tr>
                     <tr><th scope='row'>Background Pendidikan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pendidikan' required>$rows[pendidikan]</textarea></td></tr>
                     <tr><th scope='row'>Penghargaan</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='penghargaan'>$rows[penghargaan]</textarea></td></tr>
@@ -30,7 +29,8 @@
                     <tr><th scope='row'>Publikasi</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='publikasi'>$rows[publikasi]</textarea></td></tr>
                     <tr><th scope='row'>Link Publikasi</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='linkpub'>$rows[linkpub]</textarea></td></tr>
                     <tr><th scope='row'>Buku</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='buku'>$rows[buku]</textarea></td></tr>
-                    <tr><th scope='row'>Pengabdian</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pengabdian'>$rows[pengabdian]</textarea></td></tr>  
+                    <tr><th scope='row'>Pengabdian</th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pengabdian'>$rows[pengabdian]</textarea></td></tr> 
+                    <tr><th scope='row'>Urutan <span style=\"color: red;\">*</span></th> <td><input type='number' min=1 class='form-control' name='urutan' style='width:70px' value='$rows[urutan]' required></td></tr> 
                   </tbody>
                   </table>
                 </div>

@@ -19,6 +19,7 @@
                         <th>NIP/NIK</th>
                         <th>Bidang Pelayanan</th>
                         <th>Tupoksi</th>
+                        <th>Urutan</th>
                         <th style='width:70px'>Action</th>
                       </tr>
                     </thead>
@@ -32,6 +33,7 @@
                               <td width='10%'>$row[nipnik]</td>
                               <td width='20%'>$row[pelayanan]</td>                          
                               <td width='20%'>$row[tupoksi]</td>                          
+                              <td width='20%'>$row[urutan]</td>                          
                               <td><center>
                               <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."edit-staff/$row[id]'><span class='glyphicon glyphicon-edit'></span></a>
                               <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."delete-staff/$row[id]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
