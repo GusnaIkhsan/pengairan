@@ -146,6 +146,7 @@ class Model_berita extends CI_model{
         
         if ($this->upload->do_upload('k')){
                 $hasil=$this->upload->data();
+                resize_and_crop($hasil['full_path'],$hasil['full_path'], 1800, 900);
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,
@@ -190,7 +191,6 @@ class Model_berita extends CI_model{
     }
 
     function list_berita_cepat(){
-        // if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
         $datadb = array('id_kategori'=>'61',
                         'id_kategori_prodi'=>'31',
                         'username'=>$this->session->username,
@@ -216,7 +216,6 @@ class Model_berita extends CI_model{
         $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
         $config['max_size'] = '5000'; // kb
         $this->load->library('upload', $config);
-            // if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
             if ($this->input->post('j') != ''){
                 $tag_seo = $this->input->post('j');
                 $tag=implode(',',$tag_seo);
@@ -232,6 +231,7 @@ class Model_berita extends CI_model{
 
             if ($this->upload->do_upload('k')){
                 $hasil=$this->upload->data();
+                resize_and_crop($hasil['full_path'],$hasil['full_path'], 1800, 900);
                     $datadb = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,
@@ -299,6 +299,7 @@ class Model_berita extends CI_model{
         
         if ($this->upload->do_upload('k')){
                 $hasil=$this->upload->data();
+                resize_and_crop($hasil['full_path'],$hasil['full_path'], 1800, 900);
                     $datadb = array('id_kategori'=>'61',
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,
@@ -356,6 +357,7 @@ class Model_berita extends CI_model{
 
             if ($this->upload->do_upload('k')){
                 $hasil=$this->upload->data();
+                resize_and_crop($hasil['full_path'],$hasil['full_path'], 1800, 900);
                     $datadb = array('id_kategori'=>'61',
                                     'id_kategori_prodi'=>$this->db->escape_str($this->input->post('kategori-prodi')),
                                     'username'=>$this->session->username,

@@ -14,7 +14,7 @@ class Model_agenda extends CI_model{
 
     function agenda($query = ""){
         if($query == ""){
-            return $this->db->query("SELECT * FROM agenda ORDER BY tgl_posting DESC");
+            return $this->db->query("SELECT * FROM agenda ORDER BY tgl_mulai ASC");
         } else {
             return $this->db->query("SELECT * FROM agenda WHERE tema like '%" . $query . "%' ORDER BY tgl_posting DESC");
         }
@@ -39,6 +39,7 @@ class Model_agenda extends CI_model{
 
             if ($this->upload->do_upload('c')){
                 $hasil=$this->upload->data();
+                resize_and_crop($hasil['full_path'],$hasil['full_path'], 1800, 900);
                     $datadb = array('tema'=>$this->db->escape_str($this->input->post('a')),
                                     'tema_seo'=>seo_title($this->input->post('a')),
                                     'isi_agenda'=>$this->input->post('b'),
@@ -91,6 +92,7 @@ class Model_agenda extends CI_model{
 
             if ($this->upload->do_upload('c')){
                 $hasil=$this->upload->data();
+                resize_and_crop($hasil['full_path'],$hasil['full_path'], 1800, 900);
                     $datadb = array('tema'=>$this->db->escape_str($this->input->post('a')),
                                     'tema_seo'=>seo_title($this->input->post('a')),
                                     'isi_agenda'=>$this->input->post('b'),

@@ -104,6 +104,8 @@ $route['critics-suggest'] = 'general/PresenterController/showAddressCriticsSugge
 $route['form/download']['GET'] = 'admin/DosenController/generate_template';
 $route['form/upload']['POST'] = 'admin/DosenController/recieve_from_upload_template';
 $route['fakultas']['GET'] = 'admin/DosenController/get_fakultas';
+$route['formstaff/download']['GET'] = 'admin/StaffController/generate_template';
+$route['formstaff/upload']['POST'] = 'admin/StaffController/recieve_from_upload_template';
 
 $route['dosen'] = 'admin/DosenController/dosen';
 $route['tambah-staff'] = 'admin/DosenController/tambah_dosen';

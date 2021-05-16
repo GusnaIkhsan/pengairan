@@ -49,7 +49,7 @@
                     </tr>
                     <tr><th scope='row'>URL File</th>               <td><input type='text' id='urlfile' class='form-control' readonly></td></tr>                                                  
                     <tr><th scope='row'>Isi Berita <span style=\"color: red;\">*</span></th>             <td><textarea id='editor1' class='ckeditor form-control' name='h' style='height:260px' required></textarea></td></tr>
-                    <tr><th scope='row'>Thumbnail</th>                 <td><input type='file' class='form-control' name='k' accept=\"image/*\"></td></tr>                    
+                    <tr><th scope='row'>Thumbnail (jpg/jpeg) <br> Max 5MB</th>                 <td><input type='file' class='form-control' name='k' accept=\"image/*\"></td></tr>                    
                     <tr><th scope='row'>Tag</th>                    <td>";
                                                                             foreach ($tag->result_array() as $tag){
                                                                                 echo "<span style='display:inline-block;'><input type=checkbox value='$tag[tag_seo]' name=j[]>$tag[nama_tag] &nbsp; &nbsp; &nbsp; </span>";
@@ -60,7 +60,7 @@
                 </div>
               </div>
               <div class='box-footer'>
-                    <button onclick=\"spinnerClick()\" type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
                     <a href='".base_url('administrator/listberita')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>

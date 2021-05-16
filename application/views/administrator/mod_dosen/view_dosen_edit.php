@@ -18,6 +18,7 @@
                     <tr><th width='120px' scope='row'>NIP/NIK</th>   <td><input type='text' class='form-control' name='nipnik' value='$rows[nipnik]' required></td></tr>
                     <tr><th scope='row'>NIDN</th>   <td><input type='text' class='form-control' name='nidn' value='$rows[nidn]' required></td></tr>
                     <tr><th scope='row'>Bidang Ilmu</th>   <td><input type='text' class='form-control' name='bidang' value='$rows[bidang]' required></td></tr>
+                    <tr><th scope='row'>Email</th>   <td><input type='email' class='form-control' name='email' value='$rows[email]' required></td></tr>
                     <tr><th scope='row'>Blog Dosen</th>   <td><input type='text' class='form-control' name='blog' value='$rows[blog]'></td></tr>
                     <tr><th scope='row'>Ganti Foto</th>          <td><input type='file' class='form-control' name='d' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
                       <a target='_BLANK' href='".base_url()."asset/img_galeri/$rows[gbr_dosen]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/img_galeri/$rows[gbr_dosen]'></a></td></tr>";
@@ -35,7 +36,7 @@
                 </div>
               
               <div class='box-footer'>
-                    <button onclick=\"spinnerClick()\" type='submit' name='submit' class='btn btn-info pull-right'>Simpan</button>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Simpan</button>
                     <a href='".base_url('dosen')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>

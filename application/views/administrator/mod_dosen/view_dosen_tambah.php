@@ -17,6 +17,7 @@
                     <tr><th width='120px' scope='row'>NIP/NIK <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='nipnik' required></td></tr>
                     <tr><th scope='row'>NIDN <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='nidn' required></td></tr>
                     <tr><th scope='row'>Bidang Ilmu <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='bidang' required></td></tr>
+                    <tr><th scope='row'>Email <span style=\"color: red;\">*</span></th>   <td><input type='email' class='form-control' name='email' required></td></tr>
                     <tr><th scope='row'>Blog Dosen</th>   <td><input type='text' class='form-control' name='blog'></td></tr>
                     <tr><th scope='row'>Foto</th>                    <td><input type='file' class='form-control' name='d' accept=\"image/*\"></td></tr>
                     <tr><th scope='row'>Background Pendidikan <span style=\"color: red;\">*</span></th>                 <td><textarea id='editor1' class='ckeditor form-control' name='pendidikan' required></textarea></td></tr>
@@ -31,7 +32,7 @@
                 </div>
               
               <div class='box-footer'>
-                    <button onclick=\"spinnerClick()\" type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
+                    <button type='submit' name='submit' class='btn btn-info pull-right'>Tambahkan</button>
                     <a href='".base_url('dosen')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>

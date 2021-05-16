@@ -37,7 +37,7 @@
                       </tr>
                       <tr><th scope='row'>URL File</th>               <td><input type='text' id='urlfile' class='form-control' readonly></td></tr>                                                       
                       <tr><th scope='row'>Isi Agenda</th>           <td><textarea id='editor1' class='ckeditor form-control' name='b' style='height:260px' required>$rows[isi_agenda]</textarea></td></tr>
-                      <tr><th scope='row'>Thumbnail</th>               <td><input type='file' class='form-control' name='c' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
+                      <tr><th scope='row'>Thumbnail (jpg/jpeg) <br> Max 5MB</th>               <td><input type='file' class='form-control' name='c' accept=\"image/*\"><i style='color:red'>Lihat Gambar Saat ini : </i><br>
                         <a target='_BLANK' href='".base_url()."asset/foto_agenda/$rows[gambar]'><img class='img-thumbnail' style='height:60px' src='".base_url()."asset/foto_agenda/$rows[gambar]'></a></td></tr>";                                                                          
                       echo "</td></tr>
                       </td></tr>
@@ -49,7 +49,7 @@
                 </div>
               </div>
               <div class='box-footer'>
-                    <button onclick=\"spinnerClick()\" type='submit' name='submit' class='btn btn-info  pull-right'>Simpan</button>
+                    <button type='submit' name='submit' class='btn btn-info  pull-right'>Simpan</button>
                     <a href='".base_url('administrator/agenda')."'><button type='button' class='btn btn-default'>Batal</button></a>
                     
                   </div>

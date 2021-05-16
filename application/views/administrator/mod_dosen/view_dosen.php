@@ -66,11 +66,8 @@
                       </div>
                     </form>
                     </div>
-                  <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
+                </div>                
               </div>
-              <!-- /.modal -->
 
               <script type="text/javascript">
 

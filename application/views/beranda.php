@@ -258,7 +258,7 @@
                                                         <div class="gdlr-core-item-list-wrap gdlr-core-column-30">
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                    <a href=" <?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" alt="" width="150" height="150" title="Student" /></a>
+                                                                    <a href=" <?php echo base_url('agenda/'.$agenda[1]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[1]->gambar); ?>" alt="Agenda" width="150" height="150" title="Agenda" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
@@ -272,7 +272,7 @@
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                    <a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[2]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_481869205" /></a>
+                                                                    <a href="<?php echo base_url('agenda/'.$agenda[2]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[2]->gambar); ?>" alt="Agenda" width="150" height="150" title="Agenda" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
@@ -287,7 +287,7 @@
                                                             </div>
                                                             <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
                                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                    <a href="<?php echo base_url('agenda/'.$agenda[3]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[3]->gambar); ?>" alt="" width="150" height="150" title="shutterstock_361397258" /></a>
+                                                                    <a href="<?php echo base_url('agenda/'.$agenda[3]->id_agenda); ?>"><img src="<?php echo base_url('asset/foto_agenda/'.$agenda[3]->gambar); ?>" alt="Agenda" width="150" height="150" title="Agenda" /></a>
                                                                 </div>
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">

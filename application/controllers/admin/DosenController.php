@@ -65,75 +65,80 @@ class DosenController extends CI_Controller {
         $spreadsheet->getActiveSheet()->getColumnDimension('E')->setAutoSize(true);
 
         $spreadsheet->getActiveSheet()->getStyle('A2:B2')->applyFromArray($styleHeader);
-        $spreadsheet->getActiveSheet()->getStyle('A10:C10')->applyFromArray($styleHeader);
-        $spreadsheet->getActiveSheet()->getStyle('A22:C22')->applyFromArray($styleHeader);
-        $spreadsheet->getActiveSheet()->getStyle('A34:E34')->applyFromArray($styleHeader);
-        $spreadsheet->getActiveSheet()->getStyle('A46:E46')->applyFromArray($styleHeader);
-        $spreadsheet->getActiveSheet()->getStyle('A58:B58')->applyFromArray($styleHeader);
-        $spreadsheet->getActiveSheet()->getStyle('A70:F70')->applyFromArray($styleHeader);
-        $spreadsheet->getActiveSheet()->getStyle('A82:C82')->applyFromArray($styleHeader);
+        $spreadsheet->getActiveSheet()->getStyle('A11:C11')->applyFromArray($styleHeader);
+        $spreadsheet->getActiveSheet()->getStyle('A23:C23')->applyFromArray($styleHeader);
+        $spreadsheet->getActiveSheet()->getStyle('A35:E35')->applyFromArray($styleHeader);
+        $spreadsheet->getActiveSheet()->getStyle('A47:E47')->applyFromArray($styleHeader);
+        $spreadsheet->getActiveSheet()->getStyle('A59:B59')->applyFromArray($styleHeader);
+        $spreadsheet->getActiveSheet()->getStyle('A71:F71')->applyFromArray($styleHeader);
+        $spreadsheet->getActiveSheet()->getStyle('A83:C83')->applyFromArray($styleHeader);
 
+        // Header
+        $spreadsheet->setActiveSheetIndex(0)
+        ->setCellValue('A2', 'Keterangan')
+        ->setCellValue('B2', 'Isi');
 
         $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A2', 'Atribut')
-        ->setCellValue('B2', 'Value');
-
-        $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A10', 'No')
-        ->setCellValue('B10', 'Pendidikan')
-        ->setCellValue('C10', 'Tahun');
+        ->setCellValue('A11', 'No')
+        ->setCellValue('B11', 'Background Pendidikan')
+        ->setCellValue('C11', 'Tahun');
         
         $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A22', 'No')
-        ->setCellValue('B22', 'Penghargaan')
-        ->setCellValue('C22', 'Tahun');
+        ->setCellValue('A23', 'No')
+        ->setCellValue('B23', 'Penghargaan')
+        ->setCellValue('C23', 'Tahun');
 
         $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A34', 'No')
-        ->setCellValue('B34', 'Judul Penelitian')
-        ->setCellValue('C34', 'Peneliti')
-        ->setCellValue('D34', 'Tahun')
-        ->setCellValue('E34', 'Sumber Dana');
+        ->setCellValue('A35', 'No')
+        ->setCellValue('B35', 'Judul Penelitian')
+        ->setCellValue('C35', 'Peneliti')
+        ->setCellValue('D35', 'Tahun')
+        ->setCellValue('E35', 'Sumber Dana');
 
         $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A46', 'No')
-        ->setCellValue('B46', 'Judul Artikel')
-        ->setCellValue('C46', 'Penulis')
-        ->setCellValue('D46', 'Tahun')
-        ->setCellValue('E46', 'Nama Jurnal');
+        ->setCellValue('A47', 'No')
+        ->setCellValue('B47', 'Judul Artikel')
+        ->setCellValue('C47', 'Penulis')
+        ->setCellValue('D47', 'Tahun')
+        ->setCellValue('E47', 'Nama Jurnal');
 
         $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A58', 'No')
-        ->setCellValue('B58', 'Link Publikasi');
+        ->setCellValue('A59', 'No')
+        ->setCellValue('B59', 'Publikasi')
+        ->setCellValue('C59', 'Link Publikasi');
 
         $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A70', 'No')
-        ->setCellValue('B70', 'Judul Buku')
-        ->setCellValue('C70', 'Penulis')
-        ->setCellValue('D70', 'Tahun')
-        ->setCellValue('E70', 'Penerbit')
-        ->setCellValue('F70', 'ISBN');
+        ->setCellValue('A71', 'No')
+        ->setCellValue('B71', 'Judul Buku')
+        ->setCellValue('C71', 'Penulis')
+        ->setCellValue('D71', 'Tahun')
+        ->setCellValue('E71', 'Penerbit')
+        ->setCellValue('F71', 'ISBN');
 
         $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A82', 'No')
-        ->setCellValue('B82', 'Kegiatan Pengabdian')
-        ->setCellValue('C82', 'Tahun');
+        ->setCellValue('A83', 'No')
+        ->setCellValue('B83', 'Pengabdian')
+        ->setCellValue('C83', 'Tahun');
 
+        // Kolom
         $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A3', 'Name')
-        ->setCellValue('A4', 'NIP')
-        ->setCellValue('A5', 'NIDN')
-        ->setCellValue('A6', 'Golongan/Pangkat')
+        ->setCellValue('A3', 'Nama')
+        ->setCellValue('A4', 'Golongan & Pangkat')
+        ->setCellValue('A5', 'NIP/NIK')
+        ->setCellValue('A6', 'NIDN')
         ->setCellValue('A7', 'Bidang Ilmu')
-        ->setCellValue('A8', 'Blog');    
+        ->setCellValue('A8', 'Email')
+        ->setCellValue('A9', 'Blog Dosen');    
 
-        for ($i = 3; $i < 9; $i++) {
+        for ($i = 3; $i < 10; $i++) {
             $spreadsheet->getActiveSheet()->getStyle('A' . $i)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('B' . $i)->applyFromArray($styleBody);
         }
+        $spreadsheet->getActiveSheet()->getStyle('A' . 9)->applyFromArray($styleFooter);
+        $spreadsheet->getActiveSheet()->getStyle('B' . 9)->applyFromArray($styleFooter);
 
         $count = 1;
-        for ($j = 11; $j < 21; $j++) {
+        for ($j = 12; $j < 22; $j++) {
             $spreadsheet->getActiveSheet()->getStyle('A' . $j)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('B' . $j)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('C' . $j)->applyFromArray($styleBody);
@@ -142,11 +147,16 @@ class DosenController extends CI_Controller {
                 $count,
                 \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_NUMERIC
             );
+            if ($j==21){
+                $spreadsheet->getActiveSheet()->getStyle('A' . $j)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('B' . $j)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('C' . $j)->applyFromArray($styleFooter);
+            }
             $count++;
         }
 
         $countPenghargaan = 1;
-        for ($k = 23; $k < 33; $k++) {
+        for ($k = 24; $k < 34; $k++) {
             $spreadsheet->getActiveSheet()->getStyle('A' . $k)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('B' . $k)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('C' . $k)->applyFromArray($styleBody);
@@ -155,11 +165,16 @@ class DosenController extends CI_Controller {
                 $countPenghargaan,
                 \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_NUMERIC
             );
+            if ($k==33){
+                $spreadsheet->getActiveSheet()->getStyle('A' . $k)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('B' . $k)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('C' . $k)->applyFromArray($styleFooter);
+            }
             $countPenghargaan++;
         }
 
         $countPenelitian = 1;
-        for ($l = 35; $l < 45; $l++) {
+        for ($l = 36; $l < 46; $l++) {
             $spreadsheet->getActiveSheet()->getStyle('A' . $l)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('B' . $l)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('C' . $l)->applyFromArray($styleBody);
@@ -170,11 +185,18 @@ class DosenController extends CI_Controller {
                 $countPenelitian,
                 \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_NUMERIC
             );
+            if ($l==45){
+                $spreadsheet->getActiveSheet()->getStyle('A' . $l)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('B' . $l)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('C' . $l)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('D' . $l)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('E' . $l)->applyFromArray($styleFooter);
+            }
             $countPenelitian++;
         }
 
         $countPublikasi = 1;
-        for ($m = 47; $m < 57; $m++) {
+        for ($m = 48; $m < 58; $m++) {
             $spreadsheet->getActiveSheet()->getStyle('A' . $m)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('B' . $m)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('C' . $m)->applyFromArray($styleBody);
@@ -185,11 +207,19 @@ class DosenController extends CI_Controller {
                 $countPublikasi,
                 \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_NUMERIC
             );
+            if ($m==57){
+                $spreadsheet->getActiveSheet()->getStyle('A' . $m)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('B' . $m)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('C' . $m)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('D' . $m)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('E' . $m)->applyFromArray($styleFooter);
+
+            }
             $countPublikasi++;
         }
 
         $countLink = 1;
-        for ($n = 59; $n < 69; $n++) {
+        for ($n = 60; $n < 70; $n++) {
             $spreadsheet->getActiveSheet()->getStyle('A' . $n)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('B' . $n)->applyFromArray($styleBody);           
             $spreadsheet->getActiveSheet()->getCell('A' . $n)
@@ -197,11 +227,16 @@ class DosenController extends CI_Controller {
                 $countLink,
                 \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_NUMERIC
             );
+            if ($n==69){
+                $spreadsheet->getActiveSheet()->getStyle('A' . $n)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('B' . $n)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('C' . $n)->applyFromArray($styleFooter);
+            }
             $countLink++;
         }
 
         $countBuku = 1;
-        for ($o = 71; $o < 81; $o++) {
+        for ($o = 72; $o < 82; $o++) {
             $spreadsheet->getActiveSheet()->getStyle('A' . $o)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('B' . $o)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('C' . $o)->applyFromArray($styleBody);
@@ -213,11 +248,19 @@ class DosenController extends CI_Controller {
                 $countBuku,
                 \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_NUMERIC
             );
+            if ($o==81){
+                $spreadsheet->getActiveSheet()->getStyle('A' . $o)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('B' . $o)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('C' . $o)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('D' . $o)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('E' . $o)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('F' . $o)->applyFromArray($styleFooter);
+            }
             $countBuku++;
         }
 
         $countPengabdian = 1;
-        for ($p = 83; $p < 93; $p++) {
+        for ($p = 84; $p < 94; $p++) {
             $spreadsheet->getActiveSheet()->getStyle('A' . $p)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('B' . $p)->applyFromArray($styleBody);
             $spreadsheet->getActiveSheet()->getStyle('C' . $p)->applyFromArray($styleBody);
@@ -226,46 +269,13 @@ class DosenController extends CI_Controller {
                 $countPengabdian,
                 \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_NUMERIC
             );
+            if ($p==93){
+                $spreadsheet->getActiveSheet()->getStyle('A' . $p)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('B' . $p)->applyFromArray($styleFooter);
+                $spreadsheet->getActiveSheet()->getStyle('C' . $p)->applyFromArray($styleFooter);
+            }
             $countPengabdian++;
         }
-
-        $spreadsheet->getActiveSheet()->getStyle('A' . 8)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('B' . 8)->applyFromArray($styleFooter);
-
-        $spreadsheet->getActiveSheet()->getStyle('A' . 20)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('B' . 20)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('C' . 20)->applyFromArray($styleFooter);
-
-        $spreadsheet->getActiveSheet()->getStyle('A' . 32)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('B' . 32)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('C' . 32)->applyFromArray($styleFooter);
-
-        $spreadsheet->getActiveSheet()->getStyle('A' . 44)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('B' . 44)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('C' . 44)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('D' . 44)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('E' . 44)->applyFromArray($styleFooter);
-
-        $spreadsheet->getActiveSheet()->getStyle('A' . 56)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('B' . 56)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('C' . 56)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('D' . 56)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('E' . 56)->applyFromArray($styleFooter);
-
-        $spreadsheet->getActiveSheet()->getStyle('A' . 68)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('B' . 68)->applyFromArray($styleFooter);
-
-        $spreadsheet->getActiveSheet()->getStyle('A' . 80)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('B' . 80)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('C' . 80)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('D' . 80)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('E' . 80)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('F' . 80)->applyFromArray($styleFooter);
-
-        $spreadsheet->getActiveSheet()->getStyle('A' . 92)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('B' . 92)->applyFromArray($styleFooter);
-        $spreadsheet->getActiveSheet()->getStyle('C' . 92)->applyFromArray($styleFooter);
-
 
         // $spreadsheet->getActiveSheet()->getProtection()->setSheet(true);
         // $spreadsheet->getActiveSheet()->getStyle('A1:Z1002')->getProtection()->setLocked(false);
@@ -309,11 +319,12 @@ class DosenController extends CI_Controller {
 
             // biodata
             $nama_dosen = $this->nullCheck($sheetData[2][1]);
-            $nipnik = $this->nullCheck($sheetData[3][1]);
-            $nidn = $this->nullCheck($sheetData[4][1]);
-            $golpang = $this->nullCheck($sheetData[5][1]);
+            $golpang = $this->nullCheck($sheetData[3][1]);
+            $nipnik = $this->nullCheck($sheetData[4][1]);
+            $nidn = $this->nullCheck($sheetData[5][1]);
             $bidang = $this->nullCheck($sheetData[6][1]);
-            $blog = $this->nullCheck($sheetData[7][1]);              
+            $email = $this->nullCheck($sheetData[7][1]);              
+            $blog = $this->nullCheck($sheetData[8][1]);              
             
             
             
@@ -329,7 +340,7 @@ class DosenController extends CI_Controller {
             $footer = "</thead>
                         </table>";
             $pendidikan = "";
-            for ($i = 10; $i < 20; $i++) {
+            for ($i = 11; $i < 21; $i++) {
                 if(empty($sheetData[$i][1])){
                     break;
                 }            
@@ -352,7 +363,7 @@ class DosenController extends CI_Controller {
                                             <th scope=\"col\" style=\"text-align: center;\">Tahun</th>
                                         </tr>";            
             $penghargaan = "";
-            for ($i = 22; $i < 32; $i++) {   
+            for ($i = 23; $i < 33; $i++) {   
                 if(empty($sheetData[$i][1])){
                     break;
                 }           
@@ -377,7 +388,7 @@ class DosenController extends CI_Controller {
                                             <th scope=\"col\" style=\"text-align: center;\">Sumber Dana</th>
                                         </tr>";
             $penelitian = "";
-            for ($i = 34; $i < 44; $i++) {        
+            for ($i = 35; $i < 45; $i++) {        
                 if(empty($sheetData[$i][1])){
                     break;
                 }      
@@ -406,7 +417,7 @@ class DosenController extends CI_Controller {
                                             <th scope=\"col\" style=\"text-align: center;\">Nama Jurnal</th>
                                         </tr>";
             $publikasi = "";
-            for ($i = 46; $i < 56; $i++) {  
+            for ($i = 47; $i < 57; $i++) {  
                 if(empty($sheetData[$i][1])){
                     break;
                 }            
@@ -429,16 +440,19 @@ class DosenController extends CI_Controller {
                                     <thead>
                                         <tr>
                                             <th scope=\"col\" style=\"text-align: left;\">No</th>
+                                            <th scope=\"col\" style=\"text-align: center;\">Publikasi</th>                                            
                                             <th scope=\"col\" style=\"text-align: center;\">Link Publikasi</th>                                            
                                         </tr>";
             $linkpub = "";
-            for ($i = 58; $i < 68; $i++) {    
+            for ($i = 59; $i < 69; $i++) {    
                 if(empty($sheetData[$i][1])){
                     break;
                 }          
-                $valLink = $sheetData[$i][1];
+                $valPub = $sheetData[$i][1];
+                $valLink = $sheetData[$i][2];
                 $linkpub .= "<tr>
                 <td>".$sheetData[$i][0]."</td>               
+                <td>".$valPub."</td>             
                 <td>".$valLink."</td>             
                 </tr>";
             }
@@ -456,7 +470,7 @@ class DosenController extends CI_Controller {
                                             <th scope=\"col\" style=\"text-align: center;\">ISBN</th>
                                         </tr>";
             $buku = "";
-            for ($i = 70; $i < 80; $i++) {     
+            for ($i = 71; $i < 81; $i++) {     
                 if(empty($sheetData[$i][1])){
                     break;
                 }         
@@ -485,7 +499,7 @@ class DosenController extends CI_Controller {
                                             <th scope=\"col\" style=\"text-align: center;\">Tahun</th>                                            
                                         </tr>";
             $pengabdian = "";
-            for ($i = 82; $i < 92; $i++) {    
+            for ($i = 83; $i < 93; $i++) {    
                 if(empty($sheetData[$i][1])){
                     break;
                 }          
@@ -507,6 +521,7 @@ class DosenController extends CI_Controller {
                 'nipnik'=>$nipnik,
                 'nidn'=>$nidn,
                 'bidang'=>$bidang,
+                'email'=>$email,
                 'blog'=>$blog,
                 'pendidikan'=>$pendidikan,
                 'gbr_dosen'=>"default.png",
@@ -518,8 +533,7 @@ class DosenController extends CI_Controller {
                 'pengabdian'=>$pengabdian,
             );
 
-            $data = $this->model_app->insert('dosen',$data);  
-            // print_r($data);            
+            $data = $this->model_app->insert('dosen',$data);         
         }else{
             return false;
         }
@@ -554,6 +568,7 @@ class DosenController extends CI_Controller {
                     'nipnik'=>$this->input->post('nipnik'),
                     'nidn'=>$this->input->post('nidn'),
                     'bidang'=>$this->input->post('bidang'),
+                    'email'=>$this->input->post('email'),
                     'blog'=>$this->input->post('blog'),
                     'pendidikan'=>$this->input->post('pendidikan'),
                     'gbr_dosen'=>$hasil['file_name'],
@@ -572,6 +587,7 @@ class DosenController extends CI_Controller {
                     'nipnik'=>$this->input->post('nipnik'),
                     'nidn'=>$this->input->post('nidn'),
                     'bidang'=>$this->input->post('bidang'),
+                    'email'=>$this->input->post('email'),
                     'blog'=>$this->input->post('blog'),
                     'pendidikan'=>$this->input->post('pendidikan'),
                     'gbr_dosen'=>'default.png',
@@ -607,6 +623,7 @@ class DosenController extends CI_Controller {
                 			'nipnik'=>$this->input->post('nipnik'),
                 			'nidn'=>$this->input->post('nidn'),
                 			'bidang'=>$this->input->post('bidang'),
+                            'email'=>$this->input->post('email'),
                 			'blog'=>$this->input->post('blog'),
                             'gbr_dosen'=>$hasil['file_name'],
                             'penghargaan'=>$this->input->post('penghargaan'),
@@ -628,6 +645,7 @@ class DosenController extends CI_Controller {
                     'nipnik'=>$this->input->post('nipnik'),
                     'nidn'=>$this->input->post('nidn'),
                     'bidang'=>$this->input->post('bidang'),
+                    'email'=>$this->input->post('email'),
                     'blog'=>$this->input->post('blog'),
                     'penghargaan'=>$this->input->post('penghargaan'),
                     'pendidikan'=>$this->input->post('pendidikan'),
