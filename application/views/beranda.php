@@ -142,8 +142,7 @@
                                             <div class="gdlr-core-block-item-title-inner clearfix">
                                                 <h3 class="gdlr-core-block-item-title" style="font-size: 24px ;font-style: normal ;text-transform: none ;letter-spacing: 0px ;color: #163269 ;">Berita terbaru</h3>
                                                 <div class="gdlr-core-block-item-title-divider" style="font-size: 24px ;border-bottom-color: #dcdcdc ;border-bottom-width: 2px ;"></div>
-                                            </div><a class="gdlr-core-block-item-read-more" href="<?php echo base_url('all-news'); ?>" target="_self" style="color: #3db166 ;">Selengkapnya</a></div>
-                                            <!-- </div><a class="gdlr-core-block-item-read-more" href="#" target="_self" style="color: #3db166 ;">Selengkapnya</a></div> -->
+                                            </div><a class="gdlr-core-block-item-read-more" href="<?php echo base_url('all-news'); ?>" target="_self" style="color: #3db166 ;">Selengkapnya</a></div>                                            
                                         <div class="gdlr-core-event-item-holder clearfix">
                                             <?php
                                                 foreach ($news as $key => $value) {                                                      
@@ -327,8 +326,7 @@
                                                             <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
                                                                 <?php $tanggalBerita = explode("-", $announc[$key]->tanggal); ?>
                                                                 <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
-                                                                <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
-                                                                <!-- <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span> -->
+                                                                <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>                                                               
                                                             </span>
                                                             <div class="gdlr-core-event-item-content-wrap">
                                                                 <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[$key]->id_berita); ?>" ><?php echo $announc[$key]->judul;?></a></h3>
@@ -336,36 +334,12 @@
                                                                     <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date" style="font-size: 11px ;">
                                                                         <?php echo $announc[$key]->hari.", ".$tanggalBerita[2]." ".getBulan((int)$tanggalBerita[1])." ".$tanggalBerita[0];?>
                                                                     </span>                                                                       
-                                                                </div>                                                        
-                                                                <!-- <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">Kingster Grand Hall</span></span>
-                                                                </div> -->
+                                                                </div>                                                                                                                        
                                                             </div>
                                                         </div>
                                                         <?php
                                                             }                                                                                                            
-                                                        ?>  
-                                                        <!-- <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;">
-                                                            <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
-                                                                <?php $tanggalBerita = explode("-", $announc[1]->tanggal); ?>
-                                                                <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
-                                                                <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
-                                                                <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
-                                                            </span>
-                                                            <div class="gdlr-core-event-item-content-wrap">
-                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[1]->id_berita); ?>" ><?php echo $announc[1]->judul;?></a></h3>                                                                
-                                                            </div>
-                                                        </div>
-                                                        <div class="gdlr-core-event-item-list gdlr-core-style-widget gdlr-core-item-pdlr  clearfix" style="margin-bottom: 38px ;">
-                                                            <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month">
-                                                                <?php $tanggalBerita = explode("-", $announc[2]->tanggal); ?>
-                                                                <span class="gdlr-core-date" ><?php echo $tanggalBerita[2]?></span>
-                                                                <span class="gdlr-core-month"><?php echo getBulan((int)$tanggalBerita[1])?></span>
-                                                                <span class="gdlr-core-year"><?php echo $tanggalBerita[0]?></span>
-                                                            </span>
-                                                            <div class="gdlr-core-event-item-content-wrap">
-                                                                <h3 class="gdlr-core-event-item-title"><a href="<?php echo base_url('pengumuman/'.$announc[2]->id_berita); ?>" ><?php echo $announc[2]->judul;?></a></h3>                                                                
-                                                            </div>
-                                                        </div> -->
+                                                        ?>                                                       
                                                     </div>
                                                 </div>
                                             </div>
@@ -388,16 +362,8 @@
                                         
                                         <div class="gdlr-core-tab-item-content-image-wrap clearfix" style="width: 620px;">
                                             <div class="gdlr-core-tab-item-image  gdlr-core-active">
-                                                <a class="gdlr-core-lightgallery gdlr-core-js " href="#">
-                                                <!-- <span><img src="<?php echo base_url('asset/img_galeri/back-vid.png'); ?>" width="800" height="800"  alt="" /></span> -->
-                                                    <!-- <span class="gdlr-core-tab-item-image-background" id="span_1dd7_1"  ></span> -->
-                                                    <!-- <iframe width="420" height="420"
-                                                    src="hhttps://www.youtube.com/embed/zS1YNfm4M40">
-                                                    </iframe> -->                                                    
-                                                    <!-- <iframe width="560" height="560" src="https://www.youtube.com/embed/bsbMNhYV5_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                                                    <iframe width="560" height="560" src="<?php echo $video[0]['youtube']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    <!-- <i class="fa fa-play" ></i> -->
-                                                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/zS1YNfm4M40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                                <a class="gdlr-core-lightgallery gdlr-core-js " href="#">                                              
+                                                    <iframe width="560" height="560" src="<?php echo $video[0]['youtube']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                                    
                                                 </a>
                                             </div>                                            
                                         </div>
@@ -408,15 +374,8 @@
                                                     <div style="margin-top: -20px; text-align: center;">
                                                         <h4 class="gdlr-core-event-item-title">Jurusan Teknik Pengairan</h4>                             
                                                     </div>
-                                                    <br>
-                                                    <!-- <p> Departemen Teknik Pengairan </p> -->
-                                                    <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                                                        <!-- <div class="gdlr-core-pbf-element">
-                                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 45px ;">
-                                                                <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 27px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">The Application Process</h3></div>
-                                                            </div>
-                                                        </div> -->
+                                                    <br>                                        
+                                                    <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">                                                        
                                                         <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first" data-skin="Blut Title Column Service">
                                                             <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
                                                                 <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
@@ -426,8 +385,7 @@
                                                                                 <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
                                                                                     <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/reading-book.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
                                                                                     <div class="gdlr-core-column-service-content-wrapper">
-                                                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                                                            <!-- <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_3">500</h3> -->
+                                                                                        <div class="gdlr-core-column-service-title-wrap">                                                                                            
                                                                                             <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3"><?php echo $infografis[0]["mahasiswa"]; ?></div>
                                                                                             <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Mahasiswa</div>
                                                                                         </div>
@@ -469,8 +427,7 @@
                                                                                 <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
                                                                                     <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/press-conference.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
                                                                                     <div class="gdlr-core-column-service-content-wrapper">
-                                                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                                                            <!-- <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_3">500</h3> -->
+                                                                                        <div class="gdlr-core-column-service-title-wrap">                                                                                            
                                                                                             <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3"><?php echo $infografis[0]["tendik"]; ?></div>
                                                                                             <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Tenaga Pendidik</div>
                                                                                         </div>
@@ -491,8 +448,7 @@
                                                                                 <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr" id="div_1dd7_11">
                                                                                     <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="<?php echo base_url('asset/upload/icon-2.png'); ?>" alt="" width="75" height="75" title="icon-4" /></div>
                                                                                     <div class="gdlr-core-column-service-content-wrapper">
-                                                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                                                            <!-- <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" id="h3_1dd7_3">500</h3> -->
+                                                                                        <div class="gdlr-core-column-service-title-wrap">                                                                                            
                                                                                             <div style="margin: -10px 0px;font-size: 40px ;color: #3db166 ;" id="h3_1dd7_3"><?php echo $infografis[0]["alumni"]; ?></div>
                                                                                             <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption" id="div_1dd7_12">Alumni</div>
                                                                                         </div>
