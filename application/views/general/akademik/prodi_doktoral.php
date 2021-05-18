@@ -40,19 +40,19 @@
                             <div class="gdlr-core-page-builder-body">
                                 <div class="gdlr-core-pbf-sidebar-wrapper ">
                                     <div class="gdlr-core-pbf-sidebar-container gdlr-core-line-height-0 clearfix gdlr-core-js gdlr-core-container">
-                                        <div class="gdlr-core-pbf-sidebar-content  gdlr-core-column-40 gdlr-core-pbf-sidebar-padding gdlr-core-line-height gdlr-core-column-extend-left" style="padding: 60px 10px 30px 0px;">
+                                        <div class="gdlr-core-pbf-sidebar-content  gdlr-core-column-40 gdlr-core-pbf-sidebar-padding gdlr-core-line-height gdlr-core-column-extend-right" style="padding: 60px 10px 30px 50px;">
                                             <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
                                             <div class="gdlr-core-pbf-sidebar-content-inner">
                                                 <div class="gdlr-core-pbf-element">
                                                     <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                                         <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">Doktoral Teknik Pengairan</h3>
+                                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 29px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none; margin-left: -21px;">Doktoral Teknik Pengairan</h3>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="gdlr-core-pbf-element">
                                                     <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix  gdlr-core-style-blog-full-with-frame" style="padding-bottom: 40px ;">
-                                                        <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
+                                                        <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows" style="text-align: justify;">
                                                             <h5><b>Visi</b></h5>
                                                             <p>Menjadi program studi unggulan yang terkemuka di tingkat ASEAN pada tahun 2020 dan di tingkat ASIA pada tahun 2025 melalui bidang pendidikan, penelitian dan pengabdian kepada masyarakat di bidang teknik sumber daya air, untuk memperkuat kepentingan masyarakat, bangsa dan negara.</p>
                                                             <br>
@@ -88,21 +88,77 @@
                                                         </div>                                  
                                                     </div>
                                                 </div>
+                                                <div class="gdlr-core-pbf-element" style="margin-left: -20px;">
+                                                    <div class="gdlr-core-accordion-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-accordion-style-background-title-icon gdlr-core-left-align gdlr-core-icon-pos-right">
+                                                        <div class="gdlr-core-accordion-item-tab clearfix  gdlr-core-active">
+                                                            <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
+                                                            <div class="gdlr-core-accordion-item-content-wrapper">
+                                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js  gdlr-core-skin-e-background gdlr-core-skin-e-content">Kurikulum</h4>
+                                                                <div class="gdlr-core-accordion-item-content">
+                                                                    <p>Provided by the KU Institute of Education, this programme is available by distance learning, allowing you to study flexibly while balancing work and personal lifes.</p>
+                                                                    <p>The MSc Finance (EG. Banking) deepens your understanding of banks and financial markets, and how they relate to performance. It will help you to advance your career in finance and policy.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="gdlr-core-accordion-item-tab clearfix ">
+                                                            <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
+                                                            <div class="gdlr-core-accordion-item-content-wrapper">
+                                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js  gdlr-core-skin-e-background gdlr-core-skin-e-content">Pengembangan Kurikulum</h4>
+                                                                <div class="gdlr-core-accordion-item-content">
+                                                                    <p>Provided by the KU Institute of Education, this programme is available by distance learning, allowing you to study flexibly while balancing work and personal lifes.</p>
+                                                                    <p>The MSc Finance (EG. Banking) deepens your understanding of banks and financial markets, and how they relate to performance. It will help you to advance your career in finance and policy.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="gdlr-core-accordion-item-tab clearfix ">
+                                                            <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
+                                                            <div class="gdlr-core-accordion-item-content-wrapper">
+                                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js  gdlr-core-skin-e-background gdlr-core-skin-e-content">Struktur Kurikulum</h4>
+                                                                <div class="gdlr-core-accordion-item-content">
+                                                                    <p>Provided by the KU Institute of Education, this programme is available by distance learning, allowing you to study flexibly while balancing work and personal lifes.</p>
+                                                                    <p>The MSc Finance (EG. Banking) deepens your understanding of banks and financial markets, and how they relate to performance. It will help you to advance your career in finance and policy.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="gdlr-core-accordion-item-tab clearfix ">
+                                                            <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
+                                                            <div class="gdlr-core-accordion-item-content-wrapper">
+                                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js  gdlr-core-skin-e-background gdlr-core-skin-e-content">Silabus</h4>
+                                                                <div class="gdlr-core-accordion-item-content">
+                                                                    <p>Provided by the KU Institute of Education, this programme is available by distance learning, allowing you to study flexibly while balancing work and personal lifes.</p>
+                                                                    <p>The MSc Finance (EG. Banking) deepens your understanding of banks and financial markets, and how they relate to performance. It will help you to advance your career in finance and policy.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="gdlr-core-accordion-item-tab clearfix ">
+                                                            <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
+                                                            <div class="gdlr-core-accordion-item-content-wrapper">
+                                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js  gdlr-core-skin-e-background gdlr-core-skin-e-content">Kalender Akademik</h4>
+                                                                <div class="gdlr-core-accordion-item-content">
+                                                                    <p>Provided by the KU Institute of Education, this programme is available by distance learning, allowing you to study flexibly while balancing work and personal lifes.</p>
+                                                                    <p>The MSc Finance (EG. Banking) deepens your understanding of banks and financial markets, and how they relate to performance. It will help you to advance your career in finance and policy.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  kingster-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height">
+                                        <div class="gdlr-core-pbf-sidebar-left gdlr-core-column-extend-left  kingster-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height">
                                             <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
-                                            <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
-                                                <!-- <div class="row" style="margin-bottom: 30px">
-                                                    <div class="col-md-10">
-                                                        <input type="search" class="form-control rounded" placeholder="Cari Pengumuman ..." aria-label="Search" aria-describedby="search-addon" id="input-search-announcement" />
+                                            <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">                                               
+                                                <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
+                                                    <h3 class="kingster-widget-title">Bidang Studi</h3><span class="clear"></span>
+                                                    <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">                                                                                                  
+                                                        <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('prodi/sarjana'); ?>">Sarjana Teknik Pengairan</a></div>                                                                                                                   
+                                                        <hr>                                                                           
+                                                        <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('prodi/magister'); ?>">Magister Teknik Pengairan</a></div>                                                                                                                        
+                                                        <hr>                                                        
+                                                        <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('prodi/doktoral'); ?>">Doktoral Teknik Pengairan</a></div>                                                                                                                            
                                                     </div>
-                                                    <div class="col-md-2" style="text-align: center; margin-left: -9px">
-                                                        <button type="button" style="width: 50px; height: 34px;" class="btn btn-primary" id="btn-search-announcement">
-                                                            <i class="fa fa-search"></i>
-                                                        </button>
-                                                    </div>
-                                                </div> -->
+                                                </div>                             
+                                            </div>
+                                            <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">                                   
                                                 <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
                                                     <h3 class="kingster-widget-title">Berita Terbaru</h3><span class="clear"></span>
                                                     <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
