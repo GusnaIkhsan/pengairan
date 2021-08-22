@@ -142,7 +142,7 @@
                                             <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;"></div>
                                             <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">                                               
                                                 <div id="gdlr-core-recent-post-widget-1" class="widget widget_gdlr-core-recent-post-widget kingster-widget">
-                                                    <h3 class="kingster-widget-title">Bidang Studi</h3><span class="clear"></span>
+                                                    <h3 class="kingster-widget-title">Program Studi</h3><span class="clear"></span>
                                                     <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">                                                                                                  
                                                         <div class="gdlr-core-recent-post-widget-title"><a href="<?php echo base_url('prodi/sarjana'); ?>">Sarjana Teknik Pengairan</a></div>                                                                                                                   
                                                         <hr>                                                                           

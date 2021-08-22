@@ -47,7 +47,9 @@
                                 <div class="menu-campus-life-container">
                                     <ul id="menu-campus-life" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
                                         <li class="menu-item"><a href="https://teknik.ub.ac.id/" target="blank">Fakultas Teknik</a></li>
+                                        <li class="menu-item"><a href="https://bppft.ub.ac.id/" target="blank">BPPM FTUB</a></li>
                                         <li class="menu-item"><a href="https://jurnalpengairan.ub.ac.id/" target="blank">Jurnal Teknik Pengairan</a></li>
+                                        <li class="menu-item"><a href="https://jtresda.ub.ac.id/" target="blank">JTRESDA</a></li>
                                         <li class="menu-item"><a href="http://hmp.ub.ac.id/">Himpunan Mahasiswa Pengairan</a></li>                                        
                                     </ul>
                                 </div>
@@ -61,9 +63,9 @@
                                         <li class="menu-item"><a href="https://selma.ub.ac.id/" target="blank">SELMA</a></li>
                                         <li class="menu-item"><a href="https://bais.ub.ac.id/" target="blank">BAIS</a></li>
                                         <li class="menu-item"><a href="https://siam.ub.ac.id/" target="blank">SIAM</a></li>
-                                        <li class="menu-item"><a href="https://siuda.ub.ac.id/" target="blank">SIUDA</a></li>
                                         <li class="menu-item"><a href="https://siado.ub.ac.id/" target="blank">SIADO</a></li>
                                         <li class="menu-item"><a href="https://simpeg.ub.ac.id/" target="blank">SIMPEG</a></li>
+                                        <li class="menu-item"><a href="https://ub-care.ub.ac.id/" target="blank">UBCARE</a></li>
                                     </ul>
                                 </div>
                             </div>

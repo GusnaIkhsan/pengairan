@@ -2,25 +2,40 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Playlist extends CI_Controller {
 	public function index(){
-			$jumlah= $this->model_utama->view('playlist')->num_rows();
-			$config['base_url'] = base_url().'playlist/index/'.$this->uri->segment(3);
-			$config['total_rows'] = $jumlah;
-			$config['per_page'] = 25; 	
-			if ($this->uri->segment('4')==''){
-				$dari = 0;
-			}else{
-				$dari = $this->uri->segment('4');
-			}
-			$data['title'] = "Playlist";
-			$data['description'] = description();
-			$data['keywords'] = keywords();
-			if (is_numeric($dari)) {
-				$data['playlist'] = $this->model_utama->view_where_ordering_limit('playlist',array('aktif' => 'Y'),'id_playlist','DESC',$dari,$config['per_page']);
-			}else{
-				redirect('main');
-			}
-			$this->pagination->initialize($config);
-			$this->template->load('phpmu-one/template','phpmu-one/playlist',$data);
+			// $jumlah= $this->model_utama->view('playlist')->num_rows();
+			// $config['base_url'] = base_url().'playlist/index/'.$this->uri->segment(3);
+			// $config['total_rows'] = $jumlah;
+			// $config['per_page'] = 25; 	
+			// if ($this->uri->segment('4')==''){
+			// 	$dari = 0;
+			// }else{
+			// 	$dari = $this->uri->segment('4');
+			// }
+			// $data['title'] = "Playlist";
+			// $data['description'] = description();
+			// $data['keywords'] = keywords();
+			// if (is_numeric($dari)) {
+			// 	$data['playlist'] = $this->model_utama->view_where_ordering_limit('playlist',array('aktif' => 'Y'),'id_playlist','DESC',$dari,$config['per_page']);
+			// }else{
+			// 	redirect('main');
+			// }
+			// $this->pagination->initialize($config);
+			// $this->template->load('phpmu-one/template','phpmu-one/playlist',$data);
+			$limit = $this->model_app->select_where("general_setting","id","1");        
+			$data['news'] = $this->model_berita->lastNews(3);
+			$data['announc'] = $this->model_berita->lastAnnouncement(3);
+			$data['headline'] = $this->model_berita->headLine($limit[0]['value']);
+			$data['agenda'] = $this->model_agenda->lastAgenda(4);
+			$data['video'] = $this->model_app->view_where_ordering('video',array('aktif'=>'Y'),'id_video','DESC');
+			$data['infografis'] = $this->model_app->select_all('info_grafis');                           
+			$dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
+					$this->load->view('global_css');
+					$this->load->view('header_mobile', $dataHeader);
+					$this->load->view('header', $dataHeader);
+			$this->load->view('beranda', $data);
+			$this->load->view('footer');
+			$this->load->view('specificJS/beranda_js');
+			$this->load->view('global_js');
 	}
 
 	public function detail(){
