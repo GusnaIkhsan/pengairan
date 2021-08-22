@@ -156,8 +156,8 @@ class Administrator extends CI_Controller {
 			$data['tag'] = $this->model_berita->tag_berita();
             $data['record'] = $this->model_berita->kategori_berita();
             $data['prodi'] = $this->model_berita->get_prodi();
-            $data['foto'] = $this->model_app->select_all('foto');
-            $data['file'] = $this->model_app->select_all('file');
+            $data['foto'] = $this->model_app->view_ordering('foto','id','desc');
+            $data['file'] = $this->model_app->view_ordering('file','id','desc');
 			$this->template->load('administrator/template','administrator/mod_berita/view_berita_tambah',$data);
 		}
 	}
@@ -183,8 +183,8 @@ class Administrator extends CI_Controller {
 			$data['record'] = $this->model_berita->kategori_berita();
             $data['rows'] = $this->model_berita->list_berita_edit($id)->row_array();
             $data['prodi'] = $this->model_berita->get_prodi();
-            $data['foto'] = $this->model_app->select_all('foto');
-            $data['file'] = $this->model_app->select_all('file');
+            $data['foto'] = $this->model_app->view_ordering('foto','id','desc');
+            $data['file'] = $this->model_app->view_ordering('file','id','desc');
 			$this->template->load('administrator/template','administrator/mod_berita/view_berita_edit',$data);
 		}
 	}
@@ -214,8 +214,8 @@ class Administrator extends CI_Controller {
 		}else{
 			$data['tag'] = $this->model_berita->tag_berita();
             $data['prodi'] = $this->model_berita->get_prodi();
-            $data['foto'] = $this->model_app->select_all('foto');
-            $data['file'] = $this->model_app->select_all('file');
+            $data['foto'] = $this->model_app->view_ordering('foto','id','desc');
+            $data['file'] = $this->model_app->view_ordering('file','id','desc');
 			$this->template->load('administrator/template','administrator/mod_pengumuman/view_pengumuman_tambah',$data);
 		}
     }
@@ -230,8 +230,8 @@ class Administrator extends CI_Controller {
 			$data['tag'] = $this->model_berita->tag_berita();			
             $data['rows'] = $this->model_berita->list_berita_edit($id)->row_array();
             $data['prodi'] = $this->model_berita->get_prodi();
-            $data['foto'] = $this->model_app->select_all('foto');
-            $data['file'] = $this->model_app->select_all('file');
+            $data['foto'] = $this->model_app->view_ordering('foto','id','desc');
+            $data['file'] = $this->model_app->view_ordering('file','id','desc');
 			$this->template->load('administrator/template','administrator/mod_pengumuman/view_pengumuman_edit',$data);
 		}
 	}
@@ -604,8 +604,8 @@ class Administrator extends CI_Controller {
 			$this->model_agenda->agenda_tambah();
 			redirect('administrator/agenda');
 		}else{
-            $data['foto'] = $this->model_app->select_all('foto');
-            $data['file'] = $this->model_app->select_all('file');
+            $data['foto'] = $this->model_app->view_ordering('foto','id','desc');
+            $data['file'] = $this->model_app->view_ordering('file','id','desc');
 			$this->template->load('administrator/template','administrator/mod_agenda/view_agenda_tambah',$data);
 		}
 	}
@@ -618,8 +618,8 @@ class Administrator extends CI_Controller {
 			redirect('administrator/agenda');
 		}else{
 			$data['rows'] = $this->model_agenda->agenda_edit($id)->row_array();
-            $data['foto'] = $this->model_app->select_all('foto');
-            $data['file'] = $this->model_app->select_all('file');
+            $data['foto'] = $this->model_app->view_ordering('foto','id','desc');
+            $data['file'] = $this->model_app->view_ordering('file','id','desc');
 			$this->template->load('administrator/template','administrator/mod_agenda/view_agenda_edit',$data);
 		}
 	}

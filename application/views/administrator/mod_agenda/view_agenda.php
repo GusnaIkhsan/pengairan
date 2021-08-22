@@ -26,7 +26,7 @@
                     $tgl_selesai = tgl_indo($row['tgl_selesai']);
                     $tgl_posting = tgl_indo($row['tgl_posting']);
                     echo "<tr><td>$no</td>
-                              <td>$row[tema]</td>
+                              <td><a href='".base_url()."agenda/$row[id_agenda]'>$row[tema]</a></td>
                               <td>$tgl_posting</td>
                               <td>$tgl_mulai</td>
                               <td>$tgl_selesai</td>

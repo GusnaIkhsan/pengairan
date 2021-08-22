@@ -66,7 +66,7 @@
                                                     ?>
                                                     <tr>
                                                         <td><?php echo $count?></td>
-                                                        <td><a href="<?php echo base_url('staff').'/'.$val['id']; ?>"><?php echo $val['name']?></a></td>
+                                                        <td style="text-align:left; padding-left:1%"><a href="<?php echo base_url('staff').'/'.$val['id']; ?>"><?php echo $val['name']?></a></td>
                                                         <td><?php echo $val['pelayanan']?></td>
                                                         <td><?php echo $val['tupoksi']?></td>
                                                     </tr>

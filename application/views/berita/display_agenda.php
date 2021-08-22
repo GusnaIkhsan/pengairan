@@ -48,26 +48,32 @@
                                     <article id="post-1268" class="post-1268 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-post-format tag-news">
                                         <div class="kingster-single-article clearfix">
                                             <div class="kingster-single-article-content">
-                                                <?php echo $agenda['isi_agenda']; ?>  
+                                                <?php echo $agenda['isi_agenda']; ?>                                                
                                                 <table style="width: 400px; margin-top: 20px;">
                                                     <tr>
                                                         <th style="text-align: center;" colspan="2">Keterangan Tempat & Waktu</th>                                                        
                                                     </tr>
                                                     <tr>
+                                                        <?php if(!empty($agenda['tempat'])){?>
                                                         <td>Tempat</td>
                                                         <td><?php echo $agenda['tempat']; ?></td>
+                                                        <?php } ?>
                                                     </tr>
                                                     <tr>
                                                         <?php $tgl_mulai = explode("-", $agenda['tgl_mulai']); ?> 
                                                         <?php $tgl_selesai = explode("-", $agenda['tgl_selesai']); ?> 
+                                                        <?php if(!empty($agenda['tgl_mulai'])){?>
                                                         <td>Tanggal</td>
                                                         <td><?php echo "$tgl_mulai[2]-$tgl_mulai[1]-$tgl_mulai[0]"." s/d "."$tgl_selesai[2]-$tgl_selesai[1]-$tgl_selesai[0]"; ?></td>
+                                                        <?php } ?>
                                                     </tr>
                                                     <tr>
+                                                        <?php if(!empty($agenda['jam'])){?>
                                                         <td>Jam</td>
                                                         <td><?php echo $agenda['jam']; ?></td>
+                                                        <?php } ?>
                                                     </tr>
-                                                </table>                                                                                                                                         
+                                                </table>                                                                                                                                                                                       
                                             </div>
                                         </div>
                                     </article>

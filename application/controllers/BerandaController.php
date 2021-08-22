@@ -37,7 +37,6 @@ class BerandaController extends CI_Controller {
 		$this->load->view('all_news', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
-		// $this->load->view('specificJs/all_news_js');
 		$this->load->view('all_news_js');
 	}
 
@@ -78,7 +77,6 @@ class BerandaController extends CI_Controller {
 		$this->load->view('all_announcement', $data);
 		$this->load->view('footer');
 		$this->load->view('global_js');
-		// $this->load->view('specificJs/all_announcement_js');
 		$this->load->view('all_announcement_js');
 	}
 
@@ -108,8 +106,7 @@ class BerandaController extends CI_Controller {
         $this->load->view('header', $dataHeader);
 		$this->load->view('all_contents', $data);
 		$this->load->view('footer');
-		$this->load->view('global_js');
-		// $this->load->view('specificJs/all_contents_js');
+		$this->load->view('global_js');		
 		$this->load->view('all_contents_js');
 	}
 }

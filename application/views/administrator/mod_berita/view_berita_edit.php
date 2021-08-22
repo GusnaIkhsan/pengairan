@@ -86,4 +86,5 @@
                 var nameFile = document.getElementById("file").value;
                 document.getElementById("urlfile").value = '<?php echo base_url('asset/files/'); ?>'+'/'+nameFile;
               });
+
             </script>

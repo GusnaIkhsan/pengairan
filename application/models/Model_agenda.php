@@ -1,7 +1,7 @@
 <?php 
 class Model_agenda extends CI_model{
     function agenda_terbaru($limit){
-        return $this->db->query("SELECT * FROM agenda ORDER BY tgl_posting DESC LIMIT $limit");
+        return $this->db->query("SELECT * FROM agenda ORDER BY tgl_mulai DESC LIMIT $limit");
     }
 
     function agenda_detail($id){
@@ -14,7 +14,7 @@ class Model_agenda extends CI_model{
 
     function agenda($query = ""){
         if($query == ""){
-            return $this->db->query("SELECT * FROM agenda ORDER BY tgl_mulai ASC");
+            return $this->db->query("SELECT * FROM agenda ORDER BY tgl_mulai DESC");
         } else {
             return $this->db->query("SELECT * FROM agenda WHERE tema like '%" . $query . "%' ORDER BY tgl_posting DESC");
         }
@@ -46,6 +46,7 @@ class Model_agenda extends CI_model{
                                     'tempat'=>$this->db->escape_str($this->input->post('d')),
                                     'pengirim'=>"",
                                     'gambar'=>$hasil['file_name'],
+                                    'headline'=>$this->db->escape_str($this->input->post('h')),
                                     'tgl_mulai'=>$mulai,
                                     'tgl_selesai'=>$selesai,
                                     'tgl_posting'=>$tanggal,
@@ -59,6 +60,7 @@ class Model_agenda extends CI_model{
                                     'tempat'=>$this->db->escape_str($this->input->post('d')),
                                     'pengirim'=>"",
                                     'gambar'=>"default_agenda.jpg",
+                                    'headline'=>$this->db->escape_str($this->input->post('h')),
                                     'tgl_mulai'=>$mulai,
                                     'tgl_selesai'=>$selesai,
                                     'tgl_posting'=>$tanggal,
@@ -99,6 +101,7 @@ class Model_agenda extends CI_model{
                                     'tempat'=>$this->db->escape_str($this->input->post('d')),
                                     'pengirim'=>"",
                                     'gambar'=>$hasil['file_name'],
+                                    'headline'=>$this->db->escape_str($this->input->post('h')),
                                     'tgl_mulai'=>$mulai,
                                     'tgl_selesai'=>$selesai,
                                     'tgl_posting'=>$tanggal,
@@ -113,7 +116,8 @@ class Model_agenda extends CI_model{
                                     'tema_seo'=>seo_title($this->input->post('a')),
                                     'isi_agenda'=>$this->input->post('b'),
                                     'tempat'=>$this->db->escape_str($this->input->post('d')),
-                                    'pengirim'=>"",                                  
+                                    'pengirim'=>"",
+                                    'headline'=>$this->db->escape_str($this->input->post('h')),                                  
                                     'tgl_mulai'=>$mulai,
                                     'tgl_selesai'=>$selesai,
                                     'tgl_posting'=>$tanggal,
@@ -134,7 +138,7 @@ class Model_agenda extends CI_model{
     function lastAgenda($limit){
         $data = $this->db->query("SELECT * FROM agenda                                 
                                     ORDER BY tgl_mulai 
-                                    ASC LIMIT 0,$limit");;
+                                    DESC LIMIT 0,$limit");;
         return $data->result();
     }
 }

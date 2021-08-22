@@ -53,8 +53,9 @@
                                             <table>
                                                 <thead>
                                                     <tr>
-                                                        <th style="text-align:center">No</td>
+                                                        <th width=50 style="text-align:center">No</td>
                                                         <th style="text-align:center">Nama</th>
+                                                        <th style="text-align:center">Email</th>
                                                         <th style="text-align:center">Bidang Ilmu</th>
                                                     </tr>
                                                 </thead>
@@ -65,8 +66,9 @@
                                                     ?>
                                                     <tr>
                                                         <td><?php echo $count?></td>
-                                                        <td><a href="<?php echo base_url('dosen').'/'.$val['id_dosen']; ?>"><?php echo $val['nm_dosen']?></a></td>
-                                                        <td><?php echo $val['bidang']?></td>
+                                                        <td style="text-align:left; padding-left:1%"><a href="<?php echo base_url('dosen').'/'.$val['id_dosen']; ?>"><?php echo $val['nm_dosen']?></a></td>
+                                                        <td style="text-align:left; padding-left:1%"><?php echo $val['email']?></td>
+                                                        <td style="text-align:left; padding-left:1%"><?php echo $val['bidang']?></td>
                                                     </tr>
 
                                                     <?php

@@ -363,7 +363,7 @@
                                         <div class="gdlr-core-tab-item-content-image-wrap clearfix" style="width: 620px;">
                                             <div class="gdlr-core-tab-item-image  gdlr-core-active">
                                                 <a class="gdlr-core-lightgallery gdlr-core-js " href="#">                                              
-                                                    <iframe width="560" height="560" src="<?php echo $video[0]['youtube']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                                    
+                                                    <iframe width="700" height="560" src="<?php echo $video[0]['youtube']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                                    
                                                 </a>
                                             </div>                                            
                                         </div>

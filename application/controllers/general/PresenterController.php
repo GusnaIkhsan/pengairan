@@ -123,7 +123,16 @@ class PresenterController extends CI_Controller {
     // Prodi
     function showProdi($page){
         $dataHeader['menu'] = $this->model_menu->getPrimaryMenu();
-        $data['last_news'] = $this->model_berita->lastNews(3);
+        if('sarjana'==$page){
+            $news = $this->model_berita->lastNewsProdi(3,31);
+        }else if('magister'==$page){
+            $news = $this->model_berita->lastNewsProdi(3,41);
+        }else if('doktoral'==$page){
+            $news = $this->model_berita->lastNewsProdi(3,61);
+        }else{
+            $news = $this->model_berita->lastNews(3);
+        }        
+        $data['last_news'] = $news;
         $this->load->view('global_css');
         $this->load->view('header_mobile', $dataHeader);
         $this->load->view('header', $dataHeader);

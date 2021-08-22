@@ -13,6 +13,7 @@
                       <input type='hidden' name='id' value=''>
                       <tr><th width='120px' scope='row'>Tema <span style=\"color: red;\">*</span></th>   <td><input type='text' class='form-control' name='a' required></td></tr>";
                       echo "<tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date'></td></tr>
+                      <tr><th scope='row'>Headline</th>               <td><input type='radio' name='h' value='Y'> Ya &nbsp; <input type='radio' name='h' value='N' checked> Tidak</td></tr>
                       <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
                                                                               <option value='' selected>- Pilih Foto -</option>";
                                                                               foreach ($foto as $row){
@@ -34,7 +35,7 @@
                       <tr><th scope='row'>Thumbnail (jpg/jpeg) <br> Max 5MB</th>               <td><input type='file' class='form-control' name='c' accept=\"image/*\"></td></tr>
                       <tr><th scope='row'>Tempat</th>               <td><input type='text' class='form-control' name='d'></td></tr>
                       <tr><th scope='row'>Jam <small>s/d</small> Selesai</th><td><input type='text' class='form-control' name='e'></td></tr>
-                      <tr><th scope='row'>Tgl <small>s/d</small> Selesai</th><td><input type='text' class='form-control' id='rangepicker' name='f'></td></tr>                      
+                      <tr><th scope='row'>Tgl <small>s/d</small> Selesai</th><td><input type='text' class='form-control' id='rangepicker' name='f' required></td></tr>                      
                     </tbody>
                   </table>
                 </div>

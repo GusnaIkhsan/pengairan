@@ -450,6 +450,19 @@ class Model_berita extends CI_model{
         return $data->result();
     }
 
+    function lastNewsProdi($limit, $prodi){
+        $data = $this->db->query("SELECT berita.* FROM berita 
+                                    left join users 
+                                    on berita.username=users.username 
+                                    left join kategori                                     
+                                    on berita.id_kategori=kategori.id_kategori 
+                                    left join prodi
+                                    on berita.id_kategori_prodi=prodi.id_prodi
+                                    where status='Y' and kategori.id_kategori not in (61) and prodi.id_prodi=$prodi  ORDER BY tanggal DESC, jam 
+                                    DESC LIMIT 0,$limit");
+        return $data->result();
+    }
+
     function lastAnnouncement($limit){
         $data = $this->db->query("SELECT berita.* FROM berita                                 
                                     left join kategori 

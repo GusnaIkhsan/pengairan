@@ -19,7 +19,8 @@
                       <input type='hidden' name='oldFile' value='$rows[gambar]'>
                       <tr><th width='120px' scope='row'>Tema</th>   <td><input type='text' class='form-control' name='a' value='$rows[tema]' required></td></tr>";
                       echo "<tr><th scope='row'>Tanggal</th>            <td><input type='date' class='form-control' name='date' value='$rows[tgl_posting]'></td></tr>
-                      <tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
+                      <tr><th scope='row'>Headline</th>               <td>"; if ($rows['headline']=='Y'){ echo "<input type='radio' name='h' value='Y' checked> Ya &nbsp; <input type='radio' name='h' value='N'> Tidak"; }else{ echo "<input type='radio' name='h' value='Y'> Ya &nbsp; <input type='radio' name='h' value='N' checked> Tidak"; }                    
+                      echo "<tr><th scope='row'>Daftar Foto</th>               <td><select name='foto' id='foto' class='form-control'>
                                                                               <option value='' selected>- Pilih Foto -</option>";
                                                                               foreach ($foto as $row){
                                                                                 echo "<option value='$row[name_gmbr]'>$row[name]</option>";
@@ -43,7 +44,7 @@
                       </td></tr>
                       <tr><th scope='row'>Tempat</th>               <td><input type='text' class='form-control' name='d' value='$rows[tempat]'></td></tr>
                       <tr><th scope='row'>Jam <small>s/d</small> Selesai</th><td><input type='text' class='form-control' name='e' value='$rows[jam]'></td></tr>
-                      <tr><th scope='row'>Tgl <small>s/d</small> Selesai</th><td><input type='text' class='form-control' id='rangepicker' name='f' value='$tanggalmulaiselesai'></td></tr>                      
+                      <tr><th scope='row'>Tgl <small>s/d</small> Selesai</th><td><input type='text' class='form-control' id='rangepicker' name='f' value='$tanggalmulaiselesai' required></td></tr>                      
                     </tbody>
                   </table>
                 </div>
